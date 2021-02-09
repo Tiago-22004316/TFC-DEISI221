@@ -17,18 +17,22 @@ import javax.validation.Valid
 class UsersAPIController(val userRepository: UserRepository) {
 
     @GetMapping(value = ["/list"])
-    fun listUsers(@RequestParam("age") age: Int?, model: ModelMap): List<User> {
+    fun listUsers(@RequestParam("age") age: Int?): List<User> {
         val users = if (age == null) {
             userRepository.findAll()  // get all users from DB
         } else {
-            model["age"] = age
             userRepository.findByAge(age)
         }
         return users
     }
 
     @PostMapping(value = ["/new"])
-    fun createOrUpdateUser(@Valid @RequestBody userForm: UserForm) : ResponseEntity<UserForm> {
+    fun createOrUpdateUser(@Valid @RequestBody userForm: UserForm,
+                            bindingResult: BindingResult) : ResponseEntity<UserForm> {
+
+        if (bindingResult.hasErrors()) {
+            return ResponseEntity(userForm, HttpStatus.FORBIDDEN)
+        }
 
         val user: User =
                 if (userForm.userId.isNullOrBlank()) {  // new user

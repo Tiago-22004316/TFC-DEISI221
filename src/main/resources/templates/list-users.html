@@ -9,6 +9,9 @@
     <div class="alert alert-info" th:if="${message}" th:text="${message}">
         Message...
     </div>
+    <div class="alert alert-error" th:if="${error}" th:text="${error}">
+        Message...
+    </div>
     <h1>Listagem de utilizadores</h1>
     <form th:action="@{/users/list}" method="get">
         <label>Apenas utilizadores com idade:</label>
