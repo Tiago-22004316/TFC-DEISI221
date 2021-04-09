@@ -8,6 +8,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import pt.ulusofona.tfc.trabalho.dao.User
 import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.UserRepository
+import java.security.Principal
 import javax.validation.Valid
 
 @Controller
@@ -15,7 +16,7 @@ import javax.validation.Valid
 class UsersController(val userRepository: UserRepository) {
 
     @GetMapping(value = ["/list"])
-    fun listUsers(@RequestParam("age") age: Int?, model: ModelMap): String {
+    fun listUsers(@RequestParam("age") age: Int?, model: ModelMap, principal: Principal?): String {
         val users = if (age == null) {
             userRepository.findAll()  // get all users from DB
         } else {
