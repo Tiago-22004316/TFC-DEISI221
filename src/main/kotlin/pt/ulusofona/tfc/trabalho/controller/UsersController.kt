@@ -1,20 +1,26 @@
 package pt.ulusofona.tfc.trabalho.controller
 
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken
 import org.springframework.stereotype.Controller
 import org.springframework.ui.ModelMap
 import org.springframework.validation.BindingResult
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
+import pt.ulusofona.tfc.trabalho.OrcidApiBinding
 import pt.ulusofona.tfc.trabalho.dao.User
 import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.UserRepository
 import java.security.Principal
+import javax.annotation.Resource
 import javax.validation.Valid
 
 
 @Controller
 @RequestMapping("/users")
 class UsersController(val userRepository: UserRepository) {
+
+    @Resource(name = "orcidApiBinding")
+    var orcidApiBinding: OrcidApiBinding? = null
 
     @GetMapping(value = ["/list"])
     fun listUsers(@RequestParam("age") age: Int?, model: ModelMap, principal: Principal?): String {
@@ -74,5 +80,17 @@ class UsersController(val userRepository: UserRepository) {
             redirectAttributes.addFlashAttribute("message", "Utilizador editado com sucesso")
         }
         return "redirect:/users/list"
+    }
+
+    @GetMapping(value = ["/orcid"])
+    fun showOrcidRecord(model: ModelMap, principal: Principal?): String {
+
+        val oauth2Principal = principal as OAuth2AuthenticationToken
+        val oAuth2User = oauth2Principal.principal
+
+        val response = orcidApiBinding?.getRecord(oAuth2User.getAttribute("sub")!!)
+        println("response = ${response}")
+
+        return ""
     }
 }
