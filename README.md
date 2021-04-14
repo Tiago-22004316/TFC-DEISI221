@@ -26,3 +26,12 @@ grant all privileges on trabalho.* to 'trabalho'@'localhost';
  [estes passos](https://info.orcid.org/documentation/api-tutorials/api-tutorial-read-data-on-a-record/#Get_some_client_credentials)
  Nota: registar com um email @mailinator.com pois a sandbox só envia emails para esse provider
 * Atualizar as credenciais (clientId, clientSecret) no application.properties
+
+## Acesso à API do Ciencia Vitae
+
+### Pré-requisitos
+* Instalar certificado (substituir o caminho para o Java)
+    keytool -import -alias ulusofona -keystore /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/lib/security/cacerts -file playdev.ulusofona.pt.cer
+    
+### Experimentar (o id é o ciência id do investigador)    
+* Chamar http://localhost:8080/users/showCV?id=7B17-D35E-668E
