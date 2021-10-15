@@ -17,6 +17,11 @@ grant all privileges on trabalho.* to 'trabalho'@'localhost';
 
 * Se necessário, alterar o src/main/resources/application.properties com o nome da BD, nome e pass do utilizador
 
+## (Opcional) Autenticação por user/pass
+
+* Indicar na classe WebSecurityConfiguration quais são os urls que devem estar atrás do login
+* A aplicação passará a pedir login para esses urls. O login default é: user / 123
+
 ## (Opcional) Autenticação através do orcid
 
 * Verificar se foram acrescentadas as dependências spring-boot-starter-security e spring-security-oauth2-client no pom.xml 
