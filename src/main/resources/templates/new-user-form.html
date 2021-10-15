@@ -15,7 +15,7 @@
             <div class="col-sm-9">
                 <input th:field="*{name}" type="text" class="form-control" id="name" maxlength="100"/>
                 <p class="help-block" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</p>
-                <p class="help-block" th:if="${!#fields.hasErrors('name')}">O nome do utilizador</p>
+                <p class="help-block" th:if="${!#fields.hasErrors('name')}">Nome do utilizador</p>
             </div>
         </div>
         <div class="form-group" th:classappend="${#fields.hasErrors('age')} ? 'has-error' : ''">
@@ -23,7 +23,7 @@
             <div class="col-sm-9">
                 <input th:field="*{age}" type="text" class="form-control" id="age" maxlength="3"/>
                 <p class="help-block" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Error</p>
-                <p class="help-block" th:if="${!#fields.hasErrors('age')}">O nome do utilizador</p>
+                <p class="help-block" th:if="${!#fields.hasErrors('age')}">Idade do utilizador</p>
             </div>
         </div>
         <div class="form-group">
@@ -36,7 +36,7 @@
             </div>
         </div>
     </form>
-</form>
+</div>
 
 <div th:replace="layout/layout :: footer"></div>
 </body>
