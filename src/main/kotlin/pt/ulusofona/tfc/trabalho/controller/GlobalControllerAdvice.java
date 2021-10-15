@@ -1,8 +1,8 @@
 package pt.ulusofona.tfc.trabalho.controller;
 // Created by palves
 
-import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-import org.springframework.security.oauth2.core.user.OAuth2User;
+//import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
+//import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -14,12 +14,13 @@ public class GlobalControllerAdvice {
     @ModelAttribute("username")
     public String getUsername(Principal principal) {
         if (principal != null) {
-            if (principal instanceof OAuth2AuthenticationToken) {
-                OAuth2AuthenticationToken oauth2Principal = (OAuth2AuthenticationToken) principal;
-                OAuth2User oAuth2User = oauth2Principal.getPrincipal();
-                return oAuth2User.getAttribute("given_name") +
-                        " " + oAuth2User.getAttribute("family_name");
-            }
+            // uncomment this for orcid authentication
+//            if (principal instanceof OAuth2AuthenticationToken) {
+//                OAuth2AuthenticationToken oauth2Principal = (OAuth2AuthenticationToken) principal;
+//                OAuth2User oAuth2User = oauth2Principal.getPrincipal();
+//                return oAuth2User.getAttribute("given_name") +
+//                        " " + oAuth2User.getAttribute("family_name");
+//            }
             return principal.getName();
         }
         return "";

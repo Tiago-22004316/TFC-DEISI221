@@ -6,11 +6,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMapper
-import org.springframework.security.oauth2.core.oidc.user.OidcUserAuthority
-import org.springframework.security.oauth2.core.user.OAuth2UserAuthority
+//import org.springframework.security.oauth2.core.oidc.user.OidcUserAuthority
+//import org.springframework.security.oauth2.core.user.OAuth2UserAuthority
 import java.util.*
 
-@Configuration
+// uncomment this for orcid authentication
+// @Configuration
 class OauthSecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
@@ -30,23 +31,24 @@ class OauthSecurityConfiguration : WebSecurityConfigurerAdapter() {
     private fun userAuthoritiesMapper(): GrantedAuthoritiesMapper {
         return GrantedAuthoritiesMapper { authorities: Collection<GrantedAuthority?> ->
             val mappedAuthorities: MutableSet<GrantedAuthority> = HashSet()
-            authorities.forEach { authority ->
-                if (authority is OidcUserAuthority) {
-                    val oidcUserAuthority = authority
-                    throw RuntimeException("Shouldn't be here")
-
-                } else if (authority is OAuth2UserAuthority) {
-
-                    val oauth2UserAuthority = authority
-                    val userAttributes = oauth2UserAuthority.attributes
-
-                    // TODO: Ir buscar a um ficheiro os id's dos admins
-                    if (userAttributes["id"] == "https://sandbox.orcid.org/0000-0003-2187-5116") {
-                        mappedAuthorities.add(SimpleGrantedAuthority("ROLE_ADMIN"))
-                    }
-                    mappedAuthorities.add(SimpleGrantedAuthority("ROLE_USER"))
-                }
-            }
+            // uncomment this for orcid authentication
+//            authorities.forEach { authority ->
+//                if (authority is OidcUserAuthority) {
+//                    val oidcUserAuthority = authority
+//                    throw RuntimeException("Shouldn't be here")
+//
+//                } else if (authority is OAuth2UserAuthority) {
+//
+//                    val oauth2UserAuthority = authority
+//                    val userAttributes = oauth2UserAuthority.attributes
+//
+//                    // TODO: Ir buscar a um ficheiro os id's dos admins
+//                    if (userAttributes["id"] == "https://sandbox.orcid.org/0000-0003-2187-5116") {
+//                        mappedAuthorities.add(SimpleGrantedAuthority("ROLE_ADMIN"))
+//                    }
+//                    mappedAuthorities.add(SimpleGrantedAuthority("ROLE_USER"))
+//                }
+//            }
             mappedAuthorities
         }
     }
