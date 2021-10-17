@@ -1,5 +1,10 @@
 # Aplicação exemplo em Spring Boot
 
+## Pré-requisitos
+
+* JDK 11 ou superior instalado
+* MySQL 8 ou superior instalado
+
 ## Passos a seguir
 
 * Instalar MySQL e pôr a correr (anotar a password associada ao root!)
