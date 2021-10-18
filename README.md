@@ -5,6 +5,13 @@
 * JDK 11 ou superior instalado
 * MySQL 8 ou superior instalado
 
+## Vídeos explicativos
+
+* [Parte 1](https://www.youtube.com/watch?v=A06XXUxjp9M) Configuração do projeto; Arquitetura de uma aplicação Spring; Controllers
+* [Parte 2](https://www.youtube.com/watch?v=Sx5g3tCkljQ) Layouts
+* [Parte 3](https://www.youtube.com/watch?v=SpcmL41yOa8) Formulários
+* [Parte 4](https://www.youtube.com/watch?v=xr_mVfsWIKs) Base de Dados
+
 ## Passos a seguir
 
 * Instalar MySQL e pôr a correr (anotar a password associada ao root!)
