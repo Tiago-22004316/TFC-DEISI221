@@ -1,14 +1,9 @@
 package pt.ulusofona.tfc.trabalho.controller
 
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.ObjectMapper
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.client.support.BasicAuthenticationInterceptor
 import org.springframework.stereotype.Controller
 import org.springframework.ui.ModelMap
 import org.springframework.validation.BindingResult
 import org.springframework.web.bind.annotation.*
-import org.springframework.web.client.RestTemplate
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import pt.ulusofona.tfc.trabalho.dao.User
 import pt.ulusofona.tfc.trabalho.form.UserForm
@@ -20,12 +15,6 @@ import javax.validation.Valid
 @Controller
 @RequestMapping("/users")
 class UsersController(val userRepository: UserRepository) {
-
-    @Value("\${ciencia.vitae.token}")
-    lateinit var token: String
-
-    @Value("\${ciencia.vitae.secret}")
-    lateinit var secret: String
 
     @GetMapping(value = ["/list"])
     fun listUsers(@RequestParam("age") age: Int?, model: ModelMap, principal: Principal?): String {
@@ -60,8 +49,8 @@ class UsersController(val userRepository: UserRepository) {
 
     @PostMapping(value = ["/new"])
     fun createOrUpdateUser(@Valid @ModelAttribute("userForm") userForm: UserForm,
-                   bindingResult: BindingResult,
-                   redirectAttributes: RedirectAttributes) : String {
+                           bindingResult: BindingResult,
+                           redirectAttributes: RedirectAttributes) : String {
 
         if (bindingResult.hasErrors()) {
             return "new-user-form"
@@ -85,24 +74,5 @@ class UsersController(val userRepository: UserRepository) {
             redirectAttributes.addFlashAttribute("message", "Utilizador editado com sucesso")
         }
         return "redirect:/users/list"
-    }
-
-    @GetMapping(value = ["/showCV"])
-    fun showCienciaVitae(@RequestParam(name="id") id: String, model: ModelMap): String {
-
-        val restTemplate = RestTemplate()
-        restTemplate.interceptors.add(BasicAuthenticationInterceptor(token, secret))
-        val response = restTemplate.getForEntity("https://vitaeapi.playdev.ulusofona.pt/curriculum/$id", String::class.java)
-
-        val mapper = ObjectMapper()
-        val root: JsonNode = mapper.readTree(response.body)
-        val fullName = root.at("/identifying-info/person-info/full-name").asText()
-
-        val article = root.at("/outputs/output/0/conference-paper/paper-title")
-
-        model["fullName"] = fullName
-        model["article"] = article
-
-        return "cv"
     }
 }

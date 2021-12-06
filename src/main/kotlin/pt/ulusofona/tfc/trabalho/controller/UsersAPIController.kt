@@ -28,7 +28,7 @@ class UsersAPIController(val userRepository: UserRepository) {
 
     @PostMapping(value = ["/new"])
     fun createOrUpdateUser(@Valid @RequestBody userForm: UserForm,
-                            bindingResult: BindingResult) : ResponseEntity<UserForm> {
+                           bindingResult: BindingResult) : ResponseEntity<UserForm> {
 
         if (bindingResult.hasErrors()) {
             return ResponseEntity(userForm, HttpStatus.FORBIDDEN)
