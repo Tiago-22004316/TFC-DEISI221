@@ -24,7 +24,7 @@ public class FormularioController(val formularioRepository: FormularioRepository
     }
 
     @PostMapping(value = ["/new"])
-    fun formForm(@Valid @ModelAttribute("FormularioForm") formularioForm: FormularioForm,
+    fun formForm(@Valid @ModelAttribute("formularioForm") formularioForm: FormularioForm,
                  bindingResult: BindingResult,
                  redirectAttributes: RedirectAttributes) : String{
 
@@ -33,9 +33,15 @@ public class FormularioController(val formularioRepository: FormularioRepository
         }
 
         //guardar na base de dados
-        val form = Formulario(processId = formularioForm.processId!!,
+        val form = Formulario(
+                processId = formularioForm.processId!!,
                 a2 = formularioForm.a2,
                 b2 = formularioForm.b2,
+                a3 = formularioForm.a3,
+                b3 = formularioForm.b3,
+                c3 = formularioForm.c3,
+                d3 = formularioForm.d3,
+                d3_1 = formularioForm.d3_1,
                 a5 = formularioForm.a5,
                 b5 = formularioForm.b5,
                 b5_1 = formularioForm.b5_1)

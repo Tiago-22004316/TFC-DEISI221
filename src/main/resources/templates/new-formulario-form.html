@@ -6,6 +6,7 @@
 <div th:replace="layout/layout :: header"></div>
 
 <div class="container">
+    <h1 class="page-header">Inserir Dados do Processo</h1>
 
     <!--1-->
     <form th:object="${formularioForm}" method="post" th:action="@{/form/new}" class="form-horizontal">
@@ -30,6 +31,33 @@
             </div>
         </div>
 
+        <!--3-->
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Dever de gestão processual:</label>
+            <br>
+            <!--<p>Foi adotado algum mecanismo de simplificação de agilização do processo?</p>-->
+            <div class="col-sm-9">
+                <input th:field="*{a5}" type="radio" id="5A" name="seccao_5" value="true">
+                <label for="5A">Não</label>
+                <br>
+                <input th:field="*{b5}" type="radio" id="5B" name="seccao_5" value="true">
+                <label for="5B">Sim</label>
+                <br>
+            </div>
+            <label for="b5_1" class="col-sm-3 control-label">Qual?</label>
+            <div class="col-sm-9">
+                <input th:field="*{b5_1}" name="seccao_5" type="text" class="form-control" id="b5_1" maxlength="100"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-9">
+                <input type="submit" value="Submeter" class="btn btn-primary" />
+            </div>
+        </div>
         <!--5-->
         <div class="form-group">
             <label class="col-sm-3 control-label">Dever de gestão processual:</label>
