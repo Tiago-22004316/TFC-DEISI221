@@ -16,16 +16,16 @@ class OauthSecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity) {
         http
-            .csrf().disable()
-            .authorizeRequests()
-        //                .antMatchers("/**").authenticated() // Block this
-            //                .antMatchers("/**", "/Intranet**").permitAll() // Allow this for all
-            .anyRequest().authenticated()
-            .and().logout().logoutSuccessUrl("/").permitAll()
-            .and()
-            .oauth2Login()
+                .csrf().disable()
+                .authorizeRequests()
+                //                .antMatchers("/**").authenticated() // Block this
+                //                .antMatchers("/**", "/Intranet**").permitAll() // Allow this for all
+                .anyRequest().authenticated()
+                .and().logout().logoutSuccessUrl("/").permitAll()
+                .and()
+                .oauth2Login()
                 .userInfoEndpoint()
-                    .userAuthoritiesMapper(userAuthoritiesMapper())
+                .userAuthoritiesMapper(userAuthoritiesMapper())
     }
 
     private fun userAuthoritiesMapper(): GrantedAuthoritiesMapper {
