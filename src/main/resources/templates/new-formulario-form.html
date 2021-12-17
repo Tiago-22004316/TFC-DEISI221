@@ -21,59 +21,32 @@
         <!--2-->
         <div class="form-group">
             <label class="col-sm-3 control-label">Relação jurídica material:</label>
-            <br>
             <div class="col-sm-9">
-                <input th:field="*{a2}" type="radio" id="2A" name="pergunta_2" value="true">
-                <label for="2A">Situação contratual individual</label>
+                <input th:field="*{a2}" type="checkbox" class="grupo-2">
+                <label th:for="${#ids.prev('a2')}">Situação contratual individual</label>
                 <br>
-                <input th:field="*{b2}" type="radio" id="2B" name="pergunta_2" value="true">
-                <label for="2B">Múltiplas situações contratuais individuais</label>
+                <input th:field="*{b2}" type="checkbox" class="grupo-2">
+                <label th:for="${#ids.prev('b2')}">Múltiplas situações contratuais individuais</label>
             </div>
         </div>
 
         <!--3-->
-        <div class="form-group">
-            <label class="col-sm-3 control-label">Dever de gestão processual:</label>
-            <br>
-            <!--<p>Foi adotado algum mecanismo de simplificação de agilização do processo?</p>-->
-            <div class="col-sm-9">
-                <input th:field="*{a5}" type="radio" id="5A" name="seccao_5" value="true">
-                <label for="5A">Não</label>
-                <br>
-                <input th:field="*{b5}" type="radio" id="5B" name="seccao_5" value="true">
-                <label for="5B">Sim</label>
-                <br>
-            </div>
-            <label for="b5_1" class="col-sm-3 control-label">Qual?</label>
-            <div class="col-sm-9">
-                <input th:field="*{b5_1}" name="seccao_5" type="text" class="form-control" id="b5_1" maxlength="100"/>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-sm-3">
-
-            </div>
-            <div class="col-sm-9">
-                <input type="submit" value="Submeter" class="btn btn-primary" />
-            </div>
-        </div>
-        <!--5-->
-        <div class="form-group">
-            <label class="col-sm-3 control-label">Dever de gestão processual:</label>
-            <br>
-            <!--<p>Foi adotado algum mecanismo de simplificação de agilização do processo?</p>-->
-            <div class="col-sm-9">
-                <input th:field="*{a5}" type="radio" id="5A" name="seccao_5" value="true">
-                <label for="5A">Não</label>
-                <br>
-                <input th:field="*{b5}" type="radio" id="5B" name="seccao_5" value="true">
-                <label for="5B">Sim</label>
-                <br>
-            </div>
-            <label for="b5_1" class="col-sm-3 control-label">Qual?</label>
-            <div class="col-sm-9">
-                <input th:field="*{b5_1}" name="seccao_5" type="text" class="form-control" id="b5_1" maxlength="100"/>
+        <div class="panel panel-default">
+            <div class="panel-heading">Dever de gestão processual</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Foi adotado algum mecanismo de simplificação de agilização do processo?</label>
+                    <div class="col-sm-9">
+                        <input th:field="*{a5}" type="checkbox" class="grupo-5">
+                        <label th:for="${#ids.prev('a5')}">Não</label>
+                        <br>
+                        <input th:field="*{b5}" type="checkbox" class="grupo-5">
+                        <label th:for="${#ids.prev('b5')}">Sim</label>
+                        <br>
+                        <label th:for="b5_1">Qual?</label>
+                        <input th:field="*{b5_1}" type="text" class="form-control" maxlength="100"/>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -89,5 +62,18 @@
 </div>
 
 <div th:replace="layout/layout :: footer"></div>
+<script>
+    function mutuallyExclusive(groupName) {
+        $('.' + groupName).click(function() {
+            $('.' + groupName).prop("checked", false);
+            $(this).prop("checked", true);
+        });
+    }
+
+    $(document).ready(function() {
+        let groups = [ "grupo-2", "grupo-5" ]
+        groups.forEach(mutuallyExclusive)
+    });
+</script>
 </body>
 </html>
