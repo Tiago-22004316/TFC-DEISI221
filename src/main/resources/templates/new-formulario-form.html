@@ -22,29 +22,29 @@
         <div class="form-group">
             <label class="col-sm-3 control-label">Relação jurídica material:</label>
             <div class="col-sm-9">
-                <input th:field="*{a2}" type="checkbox" class="grupo-2">
-                <label th:for="${#ids.prev('a2')}">Situação contratual individual</label>
+                <input th:field="*{s2_A}" type="checkbox" class="grupo-2">
+                <label th:for="${#ids.prev('s2_A')}">Situação contratual individual</label>
                 <br>
-                <input th:field="*{b2}" type="checkbox" class="grupo-2">
-                <label th:for="${#ids.prev('b2')}">Múltiplas situações contratuais individuais</label>
+                <input th:field="*{s2_B}" type="checkbox" class="grupo-2">
+                <label th:for="${#ids.prev('s2_B')}">Múltiplas situações contratuais individuais</label>
             </div>
         </div>
 
-        <!--3-->
+        <!--5-->
         <div class="panel panel-default">
             <div class="panel-heading">Dever de gestão processual</div>
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Foi adotado algum mecanismo de simplificação de agilização do processo?</label>
                     <div class="col-sm-9">
-                        <input th:field="*{a5}" type="checkbox" class="grupo-5">
-                        <label th:for="${#ids.prev('a5')}">Não</label>
+                        <input th:field="*{s5_A}" type="checkbox" class="grupo-5">
+                        <label th:for="${#ids.prev('s5_A')}">Não</label>
                         <br>
-                        <input th:field="*{b5}" type="checkbox" class="grupo-5">
-                        <label th:for="${#ids.prev('b5')}">Sim</label>
+                        <input th:field="*{s5_B}" type="checkbox" class="grupo-5">
+                        <label th:for="${#ids.prev('s5_B')}">Sim</label>
                         <br>
-                        <label th:for="b5_1">Qual?</label>
-                        <input th:field="*{b5_1}" type="text" class="form-control" maxlength="100"/>
+                        <label th:for="s5_B_1">Qual?</label>
+                        <input th:field="*{s5_B_1}" type="text" class="form-control" maxlength="100"/>
                     </div>
                 </div>
             </div>
