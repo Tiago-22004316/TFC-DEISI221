@@ -9,12 +9,24 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import pt.ulusofona.tfc.trabalho.form.FormularioForm
-import pt.ulusofona.tfc.trabalho.repository.FormularioRepository
+import pt.ulusofona.tfc.trabalho.repository.*
 import javax.validation.Valid
 
 @Controller
 @RequestMapping("/form")
-public class FormularioController(val formularioRepository: FormularioRepository)  {
+public class FormularioController(val formularioRepository: S13FormularioRepository,
+                                  s1FormularioRepository: S1FormularioRepository,
+                                  s2FormularioRepository: S2FormularioRepository,
+                                  s3FormularioRepository: S3FormularioRepository,
+                                  s4FormularioRepository: S4FormularioRepository,
+                                  s5FormularioRepository: S5FormularioRepository,
+                                  s6FormularioRepository: S6FormularioRepository,
+                                  s7FormularioRepository: S7FormularioRepository,
+                                  s8FormularioRepository: S8FormularioRepository,
+                                  s9FormularioRepository: S9FormularioRepository,
+                                  s10FormularioRepository: S10FormularioRepository,
+                                  s11FormularioRepository: S11FormularioRepository,
+                                  s12FormularioRepository: S12FormularioRepository)  {
 
     @GetMapping(value = ["/new"])
     fun showFormularioForm(model:ModelMap): String {
@@ -39,7 +51,8 @@ public class FormularioController(val formularioRepository: FormularioRepository
                 s3_1 = formularioForm.s3_1,
                 s3_2 = formularioForm.s3_2,
                 s3_3 = formularioForm.s3_2,
-                s3_4 = formularioForm.s3_4,
+                s3_4_A = formularioForm.s3_4_A,
+                s3_4_B= formularioForm.s3_4_B,
                 s3_4_1 = formularioForm.s3_4_1,
                 s4_1_A = formularioForm.s4_1_A,
                 s4_1_A_n = formularioForm.s4_1_A,

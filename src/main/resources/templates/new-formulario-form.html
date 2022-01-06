@@ -20,13 +20,71 @@
 
         <!--2-->
         <div class="form-group">
-            <label class="col-sm-3 control-label">Relação jurídica material:</label>
+            <label class="col-sm-3 control-label">2 - Relação jurídica material:</label>
             <div class="col-sm-9">
                 <input th:field="*{s2_A}" type="checkbox" class="grupo-2">
                 <label th:for="${#ids.prev('s2_A')}">Situação contratual individual</label>
                 <br>
                 <input th:field="*{s2_B}" type="checkbox" class="grupo-2">
                 <label th:for="${#ids.prev('s2_B')}">Múltiplas situações contratuais individuais</label>
+            </div>
+        </div>
+
+        <!--3-->
+        <div class="panel panel-default">
+            <div class="panel-heading">3 - Duração do processo</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
+                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label th:for="s3_2">Data da propositura da ação:</label>
+                        <input th:field="*{s5_B_1}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label th:for="s3_3">Data da prolação da sentença:</label>
+                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label class="col-sm-3 control-label">Trânsito em julgado</label>
+                        <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3">
+                        <label th:for="${#ids.prev('s3_4_A')}">Não</label>
+                        <br>
+                        <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3">
+                        <label th:for="${#ids.prev('s3_4_B')}">Sim</label>
+                        <br>
+                        <label th:for="s3_4_1">Data do trânsito em julgado: </label>
+                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--4-->
+        <div class="panel panel-default">
+            <div class="panel-heading">4 - Conhecimento da irregularidade, propositura da ação e fase dos articulados</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
+                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label th:for="s3_2">Data da propositura da ação:</label>
+                        <input th:field="*{s5_B_1}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label th:for="s3_3">Data da prolação da sentença:</label>
+                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
+                        <br>
+                        <label class="col-sm-3 control-label">Trânsito em julgado</label>
+                        <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3">
+                        <label th:for="${#ids.prev('s3_4_A')}">Não</label>
+                        <br>
+                        <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3">
+                        <label th:for="${#ids.prev('s3_4_B')}">Sim</label>
+                        <br>
+                        <label th:for="s3_4_1">Data do trânsito em julgado: </label>
+                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100"/>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -71,7 +129,7 @@
     }
 
     $(document).ready(function() {
-        let groups = [ "grupo-2", "grupo-5" ]
+        let groups = [ "grupo-2", "grupo-5", "grupo-3" ]
         groups.forEach(mutuallyExclusive)
     });
 </script>
