@@ -1,9 +1,8 @@
 package pt.ulusofona.tfc.trabalho.repository
 
 import org.springframework.data.jpa.repository.JpaRepository
-import pt.ulusofona.tfc.trabalho.dao.S13Formulário
-import pt.ulusofona.tfc.trabalho.dao.S4Formulário
+import pt.ulusofona.tfc.trabalho.dao.S4Formulario
 
-interface S4FormularioRepository: JpaRepository<S4Formulário, Long> {
+interface S4FormularioRepository: JpaRepository<S4Formulario, Long> {
 
 }

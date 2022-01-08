@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-data class S3Formulário(
+data class S3Formulario(
         @Id @GeneratedValue
         //secção 3
         var s3_1 : String = "",

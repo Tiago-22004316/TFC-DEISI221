@@ -5,7 +5,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-data class S10Formulário(
+data class S10Formulario(
         @Id @GeneratedValue
         //secção 10
                 //10.1

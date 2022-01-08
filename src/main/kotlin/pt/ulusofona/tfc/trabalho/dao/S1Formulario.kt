@@ -5,11 +5,11 @@ import javax.persistence.GeneratedValue
 import javax.persistence.Id
 
 @Entity
-data class S2Formulário(
+data class S1Formulario(
         @Id @GeneratedValue
-        //secção 2
-        var s2_A : Boolean,
-        var s2_B : Boolean,
+        //secção 1
+        val id: Long = 0,
+        var processId: String,
         ) {
 
 }
