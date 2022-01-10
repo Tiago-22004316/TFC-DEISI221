@@ -322,7 +322,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                 s12_4_b = formularioForm.s12_4_b)
         s12FormularioRepository.save(s12FormularioDAO)
 
-        val s13FormularioDAO = S13Formulario( s13_1_2_a = formularioForm.s13_1_2_a,
+        /*val s13FormularioDAO = S13Formulario( s13_1_2_a = formularioForm.s13_1_2_a,
                 s13_1_2_b = formularioForm.s13_1_2_b,
                 s13_1_3_a = formularioForm.s13_1_3_a,
                 s13_1_3_b = formularioForm.s13_1_3_b,
@@ -370,7 +370,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                 s13_3_o = formularioForm.s13_3_o,
                 s13_3_p = formularioForm.s13_3_p,
                 s13_3_q = formularioForm.s13_3_q)
-        s13FormularioRepository.save(s13FormularioDAO)
+        s13FormularioRepository.save(s13FormularioDAO)*/
 
         // se ele chegou aqui, teve sucesso
         redirectAttributes.addFlashAttribute("message", "Processo inserido com sucesso")

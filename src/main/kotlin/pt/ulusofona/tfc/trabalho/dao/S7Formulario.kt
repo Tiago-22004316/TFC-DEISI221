@@ -8,6 +8,7 @@ import javax.persistence.Id
 data class S7Formulario(
         @Id @GeneratedValue
         //secção 7
+        val id: Long = 0,
                 //7.1
         var s7_1 : Boolean = false,
         var s7_1_A : Boolean = false,
@@ -116,6 +117,4 @@ data class S7Formulario(
         var s7_5_J_f : String = "",
         var s7_5_L : Boolean = false,
         var s7_5_L_f : String = "",
-        ) {
-
-}
+        )

@@ -8,6 +8,7 @@ import javax.persistence.Id
 data class S3Formulario(
         @Id @GeneratedValue
         //secção 3
+        val id: Long = 0,
         var s3_1 : String = "",
         var s3_2 : String = "",
         var s3_3 : String = "",
@@ -16,6 +17,4 @@ data class S3Formulario(
         var s3_4_B : Boolean = false,
         var s3_4_1 : String = "",
 
-        ) {
-
-}
+        )

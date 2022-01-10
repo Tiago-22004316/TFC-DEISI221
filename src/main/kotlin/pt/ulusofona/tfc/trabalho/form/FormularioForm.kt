@@ -325,7 +325,7 @@ data class FormularioForm(
         var s12_4_1_a: Boolean = false,
         var s12_4_1_b : Boolean = false,
 
-        //secção 13
+        /*//secção 13
         //13.1.2
         var s13_1_2_a : Boolean = false,
         var s13_1_2_b : Boolean = false,
@@ -379,5 +379,5 @@ data class FormularioForm(
         var s13_3_n : Boolean = false,
         var s13_3_o : Boolean = false,
         var s13_3_p : Boolean = false,
-        var s13_3_q : Boolean = false,
+        var s13_3_q : Boolean = false,*/
 )

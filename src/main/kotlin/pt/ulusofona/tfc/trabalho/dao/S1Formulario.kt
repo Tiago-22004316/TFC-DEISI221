@@ -10,6 +10,4 @@ data class S1Formulario(
         //secção 1
         val id: Long = 0,
         var processId: String,
-        ) {
-
-}
+        )

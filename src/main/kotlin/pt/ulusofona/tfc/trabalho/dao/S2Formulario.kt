@@ -8,8 +8,7 @@ import javax.persistence.Id
 data class S2Formulario(
         @Id @GeneratedValue
         //secção 2
+        val id: Long = 0,
         var s2_A : Boolean,
         var s2_B : Boolean,
-        ) {
-
-}
+        )
