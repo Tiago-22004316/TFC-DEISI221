@@ -10,7 +10,7 @@ data class S13Formulario(
        //secção 13
         val id: Long = 0,
                 //13.1.2
-        /*var s13_1_2_a : Boolean = false,
+        var s13_1_2_a : Boolean = false,
         var s13_1_2_b : Boolean = false,
                 //13.1.3
         var s13_1_3_a : Boolean = false,
@@ -63,4 +63,4 @@ data class S13Formulario(
         var s13_3_o : Boolean = false,
         var s13_3_p : Boolean = false,
         var s13_3_q : Boolean = false,
-        */)
+)
