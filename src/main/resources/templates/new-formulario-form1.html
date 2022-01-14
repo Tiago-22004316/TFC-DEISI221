@@ -9,7 +9,7 @@
     <h1 class="page-header">Inserir Dados do Processo</h1>
 
     <!--1-->
-    <form th:object="${formularioForm}" method="post" th:action="@{/form/new}" class="form-horizontal">
+    <form th:object="${formularioForm1}" method="post" th:action="@{/form/1}" class="form-horizontal">
         <div class="form-group" th:classappend="${#fields.hasErrors('processId')} ? 'has-error' : ''">
             <label for="processId" class="col-sm-3 control-label">Processo nº:</label>
             <div class="col-sm-9">
@@ -46,6 +46,8 @@
                         <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
                         <br>
                         <label class="col-sm-3 control-label">Trânsito em julgado</label>
+                        <br>
+                        <br>
                         <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3">
                         <label th:for="${#ids.prev('s3_4_A')}">Não</label>
                         <br>
@@ -65,24 +67,54 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
-                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100"/>
+                        <label class="col-sm-3 control-label">4.1 - Conhecimento inicial da irregularidade</label>
                         <br>
-                        <label th:for="s3_2">Data da propositura da ação:</label>
-                        <input th:field="*{s5_B_1}" type="date" class="form-control" maxlength="100"/>
                         <br>
-                        <label th:for="s3_3">Data da prolação da sentença:</label>
-                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
                         <br>
-                        <label class="col-sm-3 control-label">Trânsito em julgado</label>
-                        <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3">
-                        <label th:for="${#ids.prev('s3_4_A')}">Não</label>
+                        <input th:field="*{s4_1_A}" type="checkbox" class="grupo-4-1">
+                        <label th:for="${#ids.prev('s4_1_A')}">A - Pela ACT, através da participação prevista no nº 3 do art. 15º da Lei nº 107/2009l</label>
                         <br>
-                        <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3">
-                        <label th:for="${#ids.prev('s3_4_B')}">Sim</label>
+                        <input th:field="*{s4_1_A_s}" type="checkbox" class="grupo-4-1-e">
+                        <label th:for="${#ids.prev('s4_1_A_s')}">Sim</label>
                         <br>
-                        <label th:for="s3_4_1">Data do trânsito em julgado: </label>
-                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100"/>
+                        <input th:field="*{s4_1_A_n}" type="checkbox" class="grupo-4-1-e">
+                        <label th:for="${#ids.prev('s4_1_A_s')}">Não</label>
+                        <br>
+                        <br>
+                        <input th:field="*{s4_1_B}" type="checkbox" class="grupo-4-1">
+                        <label th:for="${#ids.prev('s4_1_B')}">B - Por qualauer outro meio.</label>
+                        <br>
+                        <label th:for="s4_1_B_f">Qual?</label>
+                        <input th:field="*{s4_1_B_f}" type="text" class="form-control" maxlength="100"/>
+                        <br>
+                        <br>
+                        <label class="col-sm-3 control-label">4.2 - Petição Inicial</label>
+                        <br>
+                        <br>
+                        <input th:field="*{s4_2_A}" type="checkbox" class="grupo-4-2">
+                        <label th:for="${#ids.prev('s4_2_A')}">A - Pedido único</label>
+                        <br>
+                        <input th:field="*{s4_2_B}" type="checkbox" class="grupo-4-2">
+                        <label th:for="${#ids.prev('s4_1_B')}">B - Cumulação de pedidos.</label>
+                        <br>
+                        <label th:for="s4_2_B_f">Qual?</label>
+                        <input th:field="*{s4_2_B_f}" type="text" class="form-control" maxlength="100"/>
+                        <br>
+                        <label class="col-sm-3 control-label">4.2.1 - Quanto ao pedido e causa de pedir,
+                            há alguma vicissitude digna de nota? </label>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <input th:field="*{s4_2_1_A}" type="checkbox" class="grupo-4-2-1">
+                        <label th:for="${#ids.prev('s4_2_1_A')}">A - Não</label>
+                        <br>
+                        <input th:field="*{s4_2_1_B}" type="checkbox" class="grupo-4-2-1">
+                        <label th:for="${#ids.prev('s4_2_1_B')}">B - Sim</label>
+                        <br>
+                        <label th:for="s4_2_1_B_f">Qual?</label>
+                        <input th:field="*{s4_2_1_B_f}" type="text" class="form-control" maxlength="100"/>
+                        <br>
                     </div>
                 </div>
             </div>
@@ -129,7 +161,11 @@
     }
 
     $(document).ready(function() {
-        let groups = [ "grupo-2", "grupo-5", "grupo-3" ]
+        let groups = [ "grupo-2",
+            "grupo-5",
+            "grupo-3",
+            "grupo-4-1", "grupo-4-1-e",
+            "grupo-4-2","grupo-4-2-1"]
         groups.forEach(mutuallyExclusive)
     });
 </script>
