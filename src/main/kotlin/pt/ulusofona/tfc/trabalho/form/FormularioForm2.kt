@@ -98,6 +98,8 @@ data class FormularioForm2(
         var s7_4_2_L_f : String = "",
         var s7_4_2_M : Boolean = false,
         var s7_4_2_M_f : String = "",
+        var s7_4_2_N : Boolean = false,
+        var s7_4_2_N_f : String = "",
         var s7_4_2_O : Boolean = false,
         //7.5
         var s7_5 : Boolean = false,
@@ -146,7 +148,6 @@ data class FormularioForm2(
         var s9_4 : Boolean = false,
         var s9_4_A : Boolean = false,
         var s9_4_B : Boolean = false,
-        var s9_4_B_f : String = "",
         var s9_4_C : Boolean = false,
         var s9_4_C_f : String = "",
         var s9_4_D : Boolean = false,

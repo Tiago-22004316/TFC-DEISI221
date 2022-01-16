@@ -99,6 +99,8 @@ data class S7Formulario(
         var s7_4_2_L_f : String = "",
         var s7_4_2_M : Boolean = false,
         var s7_4_2_M_f : String = "",
+        var s7_4_2_N : Boolean = false,
+        var s7_4_2_N_f : String = "",
         var s7_4_2_O : Boolean = false,
                 //7.5
         var s7_5 : Boolean = false,

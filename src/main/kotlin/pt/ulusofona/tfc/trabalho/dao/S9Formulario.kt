@@ -36,7 +36,6 @@ data class S9Formulario(
         var s9_4 : Boolean = false,
         var s9_4_A : Boolean = false,
         var s9_4_B : Boolean = false,
-        var s9_4_B_f : String = "",
         var s9_4_C : Boolean = false,
         var s9_4_C_f : String = "",
         var s9_4_D : Boolean = false,
