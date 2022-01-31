@@ -45,15 +45,19 @@
                         <label th:for="s3_3">Data da prolação da sentença:</label>
                         <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
                         <br>
-                        <label class="col-sm-3 control-label">Trânsito em julgado</label>
-                        <br>
-                        <br>
-                        <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3">
-                        <label th:for="${#ids.prev('s3_4_A')}">Não</label>
-                        <br>
-                        <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3">
-                        <label th:for="${#ids.prev('s3_4_B')}">Sim</label>
-                        <br>
+
+                        <label class="control-label">Trânsito em julgado</label>
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3"> Não
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3"> Sim
+                            </label>
+                        </div>
+                        <br/>
                         <label th:for="s3_4_1">Data do trânsito em julgado: </label>
                         <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100"/>
                     </div>
@@ -67,19 +71,23 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <label class="col-sm-3 control-label">4.1 - Conhecimento inicial da irregularidade</label>
-                        <br>
-                        <br>
-                        <br>
-                        <input th:field="*{s4_1_A}" type="checkbox" class="grupo-4-1">
-                        <label th:for="${#ids.prev('s4_1_A')}">A - Pela ACT, através da participação prevista no nº 3 do art. 15º da Lei nº 107/2009l</label>
-                        <br>
-                        <input th:field="*{s4_1_A_s}" type="checkbox" class="grupo-4-1-e">
-                        <label th:for="${#ids.prev('s4_1_A_s')}">Sim</label>
-                        <br>
-                        <input th:field="*{s4_1_A_n}" type="checkbox" class="grupo-4-1-e">
-                        <label th:for="${#ids.prev('s4_1_A_s')}">Não</label>
-                        <br>
+                        <label class="control-label">4.1 - Conhecimento inicial da irregularidade</label>
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s4_1_A}" type="checkbox" class="grupo-4-1"> A - Pela ACT, através da participação prevista no nº 3 do art. 15º da Lei nº 107/2009l
+                            </label>
+                            <div class="checkbox indent">
+                                <label>
+                                    <input th:field="*{s4_1_A_s}" type="checkbox" class="grupo-4-1-e"> Sim
+                                </label>
+                            </div>
+                            <div class="checkbox indent">
+                                <label>
+                                    <input th:field="*{s4_1_A_n}" type="checkbox" class="grupo-4-1-e"> Não
+                                </label>
+                            </div>
+                        </div>
+
                         <br>
                         <input th:field="*{s4_1_B}" type="checkbox" class="grupo-4-1">
                         <label th:for="${#ids.prev('s4_1_B')}">B - Por qualauer outro meio.</label>
