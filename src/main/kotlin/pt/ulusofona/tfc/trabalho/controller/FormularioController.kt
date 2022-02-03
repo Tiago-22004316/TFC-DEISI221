@@ -3,16 +3,15 @@ package pt.ulusofona.tfc.trabalho.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import pt.ulusofona.tfc.trabalho.dao.*
 import pt.ulusofona.tfc.trabalho.form.FormularioForm1
 import pt.ulusofona.tfc.trabalho.form.FormularioForm2
 import pt.ulusofona.tfc.trabalho.form.FormularioForm3
+import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.*
+import java.security.Principal
 import javax.validation.Valid
 
 @Controller
@@ -30,6 +29,61 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                                   val s10FormularioRepository: S10FormularioRepository,
                                   val s11FormularioRepository: S11FormularioRepository,
                                   val s12FormularioRepository: S12FormularioRepository)  {
+
+    @GetMapping(value = ["/list"])
+    fun listProcesso(model: ModelMap, principal: Principal?): String {
+
+        val processo = s1FormularioRepository.findAll()  // get all users from DB
+        model["processo"] = processo
+
+        return "list-forms"
+    }
+
+    @GetMapping(value = ["/edit/{processId}"])
+    fun showUserForm(@PathVariable("processId") processId: String, model: ModelMap): String {
+
+        val s1Optional = s1FormularioRepository.findByProcessId(processId)
+        val s2Optional = s2FormularioRepository.findByProcessId(processId)
+        val s3Optional = s3FormularioRepository.findByProcessId(processId)
+        val s4Optional = s4FormularioRepository.findByProcessId(processId)
+        val s5Optional = s5FormularioRepository.findByProcessId(processId)
+        val s6Optional = s6FormularioRepository.findByProcessId(processId)
+        val s7Optional = s7FormularioRepository.findByProcessId(processId)
+        val s8Optional = s8FormularioRepository.findByProcessId(processId)
+        val s9Optional = s9FormularioRepository.findByProcessId(processId)
+        val s10Optional = s10FormularioRepository.findByProcessId(processId)
+        val s11Optional = s11FormularioRepository.findByProcessId(processId)
+        val s12Optional = s12FormularioRepository.findByProcessId(processId)
+        val s13Optional = s13FormularioRepository.findByProcessId(processId)
+
+        if (s1Optional.isPresent && s2Optional.isPresent &&
+            s3Optional.isPresent && s4Optional.isPresent &&
+            s5Optional.isPresent && s6Optional.isPresent &&
+            s7Optional.isPresent && s8Optional.isPresent &&
+            s9Optional.isPresent && s10Optional.isPresent &&
+            s11Optional.isPresent && s12Optional.isPresent &&
+            s13Optional.isPresent) {
+
+            val s1 = s1Optional.get()
+            val s2 = s2Optional.get()
+            val s3 = s3Optional.get()
+            val s4 = s4Optional.get()
+            val s5 = s5Optional.get()
+            val s6 = s6Optional.get()
+            val s7 = s7Optional.get()
+            val s8 = s8Optional.get()
+            val s9 = s9Optional.get()
+            val s10 = s10Optional.get()
+            val s11 = s11Optional.get()
+            val s12 = s12Optional.get()
+            val s13 = s13Optional.get()
+
+            //fazer o resto, tendo em conta q é passar as secções para os respetivos forms ---------> SECA
+            model["userForm"] = UserForm(userId = user.id.toString(), name = user.name, age = user.age)
+        }
+
+        return "new-user-form"
+    }
 
     @GetMapping(value = ["/1"])
     fun showFormularioForm1(model:ModelMap): String {
@@ -416,6 +470,6 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
         // se ele chegou aqui, teve sucesso
         redirectAttributes.addFlashAttribute("message", "Processo inserido com sucesso")
 
-        return ""
+        return "redirect:/form/list"
     }
 }

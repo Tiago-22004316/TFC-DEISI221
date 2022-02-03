@@ -5,4 +5,6 @@ import pt.ulusofona.tfc.trabalho.dao.S5Formulario
 
 interface S5FormularioRepository: JpaRepository<S5Formulario, Long> {
 
+    fun findByProcessId(processId : String) : S5Formulario
+
 }

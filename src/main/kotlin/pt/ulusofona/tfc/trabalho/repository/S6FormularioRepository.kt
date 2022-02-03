@@ -5,4 +5,6 @@ import pt.ulusofona.tfc.trabalho.dao.S6Formulario
 
 interface S6FormularioRepository: JpaRepository<S6Formulario, Long> {
 
+    fun findByProcessId(processId : String) : S6Formulario
+
 }

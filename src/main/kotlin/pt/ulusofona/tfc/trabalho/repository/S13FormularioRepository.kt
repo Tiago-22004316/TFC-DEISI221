@@ -5,4 +5,6 @@ import pt.ulusofona.tfc.trabalho.dao.S13Formulario
 
 interface S13FormularioRepository: JpaRepository<S13Formulario, Long> {
 
+    fun findByProcessId(processId : String) : S13Formulario
+
 }
