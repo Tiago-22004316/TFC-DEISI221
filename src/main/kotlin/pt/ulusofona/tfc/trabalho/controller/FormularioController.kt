@@ -38,7 +38,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
 
         return "list-forms"
     }
-
+/*
     @GetMapping(value = ["/edit/{processId}"])
     fun showUserForm(@PathVariable("processId") processId: String, model: ModelMap): String {
 
@@ -84,7 +84,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
 
         return "new-user-form"
     }
-
+*/
     @GetMapping(value = ["/1"])
     fun showFormularioForm1(model:ModelMap): String {
         model["formularioForm1"] = FormularioForm1()

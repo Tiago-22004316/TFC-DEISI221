@@ -9,6 +9,7 @@ data class S13Formulario(
         @Id @GeneratedValue
        //secção 13
         val id: Long = 0,
+        var processId: String,
                 //13.1.2
         var s13_1_2_a : Boolean = false,
         var s13_1_2_b : Boolean = false,

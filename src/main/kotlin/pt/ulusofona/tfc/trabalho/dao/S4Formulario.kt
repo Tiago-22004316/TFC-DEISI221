@@ -9,6 +9,7 @@ data class S4Formulario(
         @Id @GeneratedValue
         //secção 4
         val id: Long = 0,
+        var processId: String,
                 //4.1
         var s4_1_A : Boolean = false,
         var s4_1_A_s : Boolean = false,

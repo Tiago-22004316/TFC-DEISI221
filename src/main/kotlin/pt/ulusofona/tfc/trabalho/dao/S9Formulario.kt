@@ -9,6 +9,7 @@ data class S9Formulario(
         @Id @GeneratedValue
         //secção 9
         val id: Long = 0,
+        var processId: String,
                 //9.1
         var s9_1 : Boolean = false,
         var s9_1_A : Boolean = false,
