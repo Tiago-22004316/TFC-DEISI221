@@ -9,7 +9,7 @@ import pt.ulusofona.tfc.trabalho.dao.*
 import pt.ulusofona.tfc.trabalho.form.FormularioForm1
 import pt.ulusofona.tfc.trabalho.form.FormularioForm2
 import pt.ulusofona.tfc.trabalho.form.FormularioForm3
-import pt.ulusofona.tfc.trabalho.form.UserForm
+//import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.*
 import java.security.Principal
 import javax.validation.Valid
@@ -57,12 +57,12 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
         val s13Optional = s13FormularioRepository.findByProcessId(processId)
 
         if (s1Optional.isPresent && s2Optional.isPresent &&
-            s3Optional.isPresent && s4Optional.isPresent &&
-            s5Optional.isPresent && s6Optional.isPresent &&
-            s7Optional.isPresent && s8Optional.isPresent &&
-            s9Optional.isPresent && s10Optional.isPresent &&
-            s11Optional.isPresent && s12Optional.isPresent &&
-            s13Optional.isPresent) {
+                s3Optional.isPresent && s4Optional.isPresent &&
+                s5Optional.isPresent && s6Optional.isPresent &&
+                s7Optional.isPresent && s8Optional.isPresent &&
+                s9Optional.isPresent && s10Optional.isPresent &&
+                s11Optional.isPresent && s12Optional.isPresent &&
+                s13Optional.isPresent) {
 
             val s1 = s1Optional.get()
             val s2 = s2Optional.get()
@@ -118,10 +118,10 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
         val s1FormularioDAO = S1Formulario(processId = formularioForm1.processId!!)
         s1FormularioRepository.save(s1FormularioDAO)
 
-        val s2FormularioDAO = S2Formulario(s2_A = formularioForm1.s2_A, s2_B = formularioForm1.s2_B)
+        val s2FormularioDAO = S2Formulario(processId = formularioForm1.processId!!, s2_A = formularioForm1.s2_A, s2_B = formularioForm1.s2_B)
         s2FormularioRepository.save(s2FormularioDAO)
 
-        val s3FormularioDAO = S3Formulario(s3_1 = formularioForm1.s3_1,
+        val s3FormularioDAO = S3Formulario(processId = formularioForm1.processId!!, s3_1 = formularioForm1.s3_1,
                 s3_2 = formularioForm1.s3_2,
                 s3_3 = formularioForm1.s3_2,
                 s3_4_A = formularioForm1.s3_4_A,
@@ -129,7 +129,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                 s3_4_1 = formularioForm1.s3_4_1)
         s3FormularioRepository.save(s3FormularioDAO)
 
-        val s4FormularioDAO = S4Formulario(s4_1_A = formularioForm1.s4_1_A,
+        val s4FormularioDAO = S4Formulario(processId = formularioForm1.processId!!, s4_1_A = formularioForm1.s4_1_A,
                 s4_1_A_n = formularioForm1.s4_1_A,
                 s4_1_A_s = formularioForm1.s4_1_A_s,
                 s4_1_B = formularioForm1.s4_1_B,
@@ -177,12 +177,12 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                 s4_6_D = formularioForm1.s4_6_D)
         s4FormularioRepository.save(s4FormularioDAO)
 
-        val s5FormularioDAO = S5Formulario(s5_A = formularioForm1.s5_A,
+        val s5FormularioDAO = S5Formulario(processId = formularioForm1.processId!!, s5_A = formularioForm1.s5_A,
                 s5_B = formularioForm1.s5_B,
                 s5_B_1 = formularioForm1.s5_B_1)
         s5FormularioRepository.save(s5FormularioDAO)
 
-        val s6FormularioDAO = S6Formulario(s6_A = formularioForm1.s6_A,
+        val s6FormularioDAO = S6Formulario(processId = formularioForm1.processId!!, s6_A = formularioForm1.s6_A,
                 s6_B = formularioForm1.s6_B,
                 s6_C = formularioForm1.s6_C,
                 s6_D = formularioForm1.s6_D,

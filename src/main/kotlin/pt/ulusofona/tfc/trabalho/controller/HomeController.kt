@@ -9,6 +9,7 @@ class HomeController {
     @GetMapping(value = ["/"])
     fun home(): String{
         println("Chamei o home")
-        return "home"
+
+        return "redirect:/form/list"
     }
 }
