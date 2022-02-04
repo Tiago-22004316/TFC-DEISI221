@@ -9,7 +9,7 @@ data class S3Formulario(
         @Id @GeneratedValue
         //secção 3
         val id: Long = 0,
-        var processId: String,
+        var processId: String = "",
         var s3_1 : String = "",
         var s3_2 : String = "",
         var s3_3 : String = "",

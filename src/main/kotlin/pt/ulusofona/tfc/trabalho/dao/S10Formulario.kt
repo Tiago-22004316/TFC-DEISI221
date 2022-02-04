@@ -9,7 +9,7 @@ data class S10Formulario(
         @Id @GeneratedValue
         //secção 10
         val id: Long = 0,
-        var processId: String,
+        var processId: String = "",
                 //10.1
         var s10_1_a : Boolean = false,
         var s10_1_b : Boolean = false,

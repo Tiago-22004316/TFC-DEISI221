@@ -9,6 +9,6 @@ data class S8Formulario(
         @Id @GeneratedValue
         //secção 8
         val id: Long = 0,
-        var processId: String,
+        var processId: String = "",
         var s8 : String = ""
         )

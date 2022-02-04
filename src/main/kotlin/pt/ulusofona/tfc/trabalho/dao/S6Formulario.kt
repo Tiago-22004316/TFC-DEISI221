@@ -9,7 +9,7 @@ data class S6Formulario(
         @Id @GeneratedValue
         //secção 6
         val id: Long = 0,
-        var processId: String,
+        var processId: String = "",
                 //6.0
         var s6_A : Boolean = false,
         var s6_B : Boolean = false,

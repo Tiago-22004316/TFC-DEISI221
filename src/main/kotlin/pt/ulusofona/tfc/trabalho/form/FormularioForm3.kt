@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull
 //124
 data class FormularioForm3(
 
+        var processId: String = "",
         //secção 10
         //10.1
         var s10_1_a : Boolean = false,
