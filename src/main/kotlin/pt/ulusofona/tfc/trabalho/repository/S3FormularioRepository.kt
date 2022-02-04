@@ -5,6 +5,6 @@ import pt.ulusofona.tfc.trabalho.dao.S3Formulario
 
 interface S3FormularioRepository: JpaRepository<S3Formulario, Long> {
 
-    fun findByProcessId(processId : String) : S3Formulario
+    fun findByProcessId(processId : String) : S3Formulario?
 
 }

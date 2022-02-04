@@ -42,54 +42,40 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
     @GetMapping(value = ["/edit/{processId}"])
     fun editForm(@PathVariable("processId") processId: String, model: ModelMap): String {
 
+        //ir buscar á database
         val s1DB = s1FormularioRepository.findByProcessId(processId)
         val s2DB = s2FormularioRepository.findByProcessId(processId)
-//        val s3Optional = s3FormularioRepository.findByProcessId(processId)
-//        val s4Optional = s4FormularioRepository.findByProcessId(processId)
-//        val s5Optional = s5FormularioRepository.findByProcessId(processId)
-//        val s6Optional = s6FormularioRepository.findByProcessId(processId)
-//        val s7Optional = s7FormularioRepository.findByProcessId(processId)
-//        val s8Optional = s8FormularioRepository.findByProcessId(processId)
-//        val s9Optional = s9FormularioRepository.findByProcessId(processId)
-//        val s10Optional = s10FormularioRepository.findByProcessId(processId)
-//        val s11Optional = s11FormularioRepository.findByProcessId(processId)
-//        val s12Optional = s12FormularioRepository.findByProcessId(processId)
-//        val s13Optional = s13FormularioRepository.findByProcessId(processId)
+        val s3DB = s3FormularioRepository.findByProcessId(processId)
+        val s4DB = s4FormularioRepository.findByProcessId(processId)
+        val s5DB = s5FormularioRepository.findByProcessId(processId)
+        val s6DB = s6FormularioRepository.findByProcessId(processId)
+        val s7DB = s7FormularioRepository.findByProcessId(processId)
+        val s8DB = s8FormularioRepository.findByProcessId(processId)
+        val s9DB = s9FormularioRepository.findByProcessId(processId)
+        val s10DB = s10FormularioRepository.findByProcessId(processId)
+        val s11DB = s11FormularioRepository.findByProcessId(processId)
+        val s12DB = s12FormularioRepository.findByProcessId(processId)
+        val s13DB = s13FormularioRepository.findByProcessId(processId)
 
-//        if (s1Optional.isPresent && s2Optional.isPresent &&
-//            s3Optional.isPresent && s4Optional.isPresent &&
-//            s5Optional.isPresent && s6Optional.isPresent &&
-//            s7Optional.isPresent && s8Optional.isPresent &&
-//            s9Optional.isPresent && s10Optional.isPresent &&
-//            s11Optional.isPresent && s12Optional.isPresent &&
-//            s13Optional.isPresent) {
-//
-//            val s1 = s1Optional.get()
-//            val s2 = s2Optional.get()
-//            val s3 = s3Optional.get()
-//            val s4 = s4Optional.get()
-//            val s5 = s5Optional.get()
-//            val s6 = s6Optional.get()
-//            val s7 = s7Optional.get()
-//            val s8 = s8Optional.get()
-//            val s9 = s9Optional.get()
-//            val s10 = s10Optional.get()
-//            val s11 = s11Optional.get()
-//            val s12 = s12Optional.get()
-//            val s13 = s13Optional.get()
-//
-//            //fazer o resto, tendo em conta q é passar as secções para os respetivos forms ---------> SECA
-//            model["userForm"] = UserForm(userId = user.id.toString(), name = user.name, age = user.age)
-//        }
-
+        // criar forms
         val formularioForm1 = FormularioForm1()
+        val formularioForm2 = FormularioForm2()
+        val formularioForm3 = FormularioForm3()
+
         formularioForm1.processId = processId
+        formularioForm2.processId = processId
+        formularioForm3.processId = processId
+
+        // começar a preencher os forms ( esperar q os campos sejam reajustados )
         if (s2DB != null) {
             formularioForm1.s2_A = s2DB.s2_A
             formularioForm1.s2_B = s2DB.s2_B
         }
 
         model["formularioForm1"] = formularioForm1
+        model["formularioForm2"] = formularioForm2
+        model["formularioForm3"] = formularioForm3
+
         return "new-formulario-form1"
     }
 
