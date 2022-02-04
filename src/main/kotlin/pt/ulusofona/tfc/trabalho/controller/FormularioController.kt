@@ -9,7 +9,7 @@ import pt.ulusofona.tfc.trabalho.dao.*
 import pt.ulusofona.tfc.trabalho.form.FormularioForm1
 import pt.ulusofona.tfc.trabalho.form.FormularioForm2
 import pt.ulusofona.tfc.trabalho.form.FormularioForm3
-import pt.ulusofona.tfc.trabalho.form.UserForm
+//import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.*
 import java.security.Principal
 import javax.validation.Valid
@@ -239,7 +239,7 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
             s2FormularioRepository.save(s2DB)
 
             // TODO falta fazer as restantes secções
-        
+
         }
 
         return "redirect:/form/2"

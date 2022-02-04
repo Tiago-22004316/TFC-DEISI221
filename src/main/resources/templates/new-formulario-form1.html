@@ -228,21 +228,24 @@
                         <br>
                         <br>
                         <br>
-                        <input th:field="*{s4_6_A}" type="checkbox">
-                        <label th:for="${#ids.prev('s4_6_A')}">A - Alegação do Empregador de que outra pessoa é responsável</label>
-                        <br>
-                        <input th:field="*{s4_6_B}" type="checkbox">
-                        <label th:for="${#ids.prev('s4_6_B')}">B - Transmissão global do estabelecimento</label>
-                        <br>
-                        <input th:field="*{s4_6_C}" type="checkbox">
-                        <label th:for="${#ids.prev('s4_6_C')}">C - Por determinação judicial</label>
-                        <br>
-                        <input th:field="*{s4_6_D}" type="checkbox">
-                        <label th:for="${#ids.prev('s4_6_D')}">D - Outra situação</label>
-                        <br>
-                        <label th:for="s4_6_1_f">4.6.1 - Qual?</label>
-                        <input th:field="*{s4_6_1_f}" type="text" class="form-control" maxlength="100"/>
-                        <br>
+                        <!-- 4.6 -->
+                        <div class="col-sm-9">
+                            <input th:field="*{s4_6_A}" type="checkbox">
+                            <label th:for="${#ids.prev('s4_6_A')}">A - Alegação do Empregador de que outra pessoa é responsável</label>
+                            <br>
+                            <input th:field="*{s4_6_B}" type="checkbox">
+                            <label th:for="${#ids.prev('s4_6_B')}">B - Transmissão global do estabelecimento</label>
+                            <br>
+                            <input th:field="*{s4_6_C}" type="checkbox">
+                            <label th:for="${#ids.prev('s4_6_C')}">C - Por determinação judicial</label>
+                            <br>
+                            <input th:field="*{s4_6_D}" type="checkbox">
+                            <label th:for="${#ids.prev('s4_6_D')}">D - Outra situação</label>
+                            <br>
+                            <label th:for="s4_6_1_f">4.6.1 - Qual?</label>
+                            <input th:field="*{s4_6_1_f}" type="text" class="form-control" maxlength="100"/>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -254,6 +257,7 @@
             <div class="panel-body">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Foi adotado algum mecanismo de simplificação de agilização do processo?</label>
+                    <!-- 5 -->
                     <div class="col-sm-9">
                         <input th:field="*{s5_A}" type="checkbox" class="grupo-5">
                         <label th:for="${#ids.prev('s5_A')}">Não</label>
@@ -297,11 +301,9 @@
                         <br>
                     </div>
                     <br>
+                    <!-- 6.1 -->
                     <div class="col-sm-9">
-                        <label class="col-sm-3 control-label">6.1 - Houve discussão sobre a tutela do interesse público?</label>
-                        <br>
-                        <br>
-                        <br>
+                        <label class="col-sm-12 control-label">6.1 - Houve discussão sobre a tutela do interesse público?</label>
                         <br>
                         <input th:field="*{s6_1_A}" type="checkbox" class="grupo-6-1">
                         <label th:for="${#ids.prev('s6_1_A')}">Não</label>
@@ -313,6 +315,7 @@
                         <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100"/>
                     </div>
                     <br>
+                    <!-- 6.2 -->
                     <div class="col-sm-9">
                         <input th:field="*{s6_2}" type="checkbox">
                         <label th:for="${#ids.prev('s6_2')}">Reconhecimento de litispendência ou caso julgado - Ação proposta por iniciativa do trabalhador sob a forma do processo declarativo comum</label>
@@ -327,6 +330,7 @@
                         <label th:for="s6_3_f">Descrição da situação:</label>
                         <input th:field="*{s6_3_f}" type="text" class="form-control" maxlength="100"/>
                     </div>
+
                 </div>
             </div>
         </div>
