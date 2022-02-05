@@ -248,42 +248,145 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             return "new-formulario-form2"
         }
 
-        val s8FormularioDAO = S8Formulario(s8 = formularioForm2.s8)
+        val s8FormularioDAO = S8Formulario(processId = formularioForm2.processId,
+            s8_1 = formularioForm2.s8_1,
+            s8_2 = formularioForm2.s8_2,
+            s8_3 = formularioForm2.s8_3,
+            s8_3_A = formularioForm2.s8_3_A,
+            s8_3_A_f = formularioForm2.s8_3_A_f,
+            s8_3_B = formularioForm2.s8_3_B,
+            s8_3_B_f = formularioForm2.s8_3_B_f,
+            s8_3_C = formularioForm2.s8_3_C,
+            s8_3_C_f = formularioForm2.s8_3_C_f,
+            s8_4 = formularioForm2.s8_4,
+            s8_4_A = formularioForm2.s8_4_A,
+            s8_4_B = formularioForm2.s8_4_B,
+            s8_4_C = formularioForm2.s8_4_C,
+            s8_4_D = formularioForm2.s8_4_D,
+            s8_4_E = formularioForm2.s8_4_E,
+            s8_4_F = formularioForm2.s8_4_F,
+            s8_4_G = formularioForm2.s8_4_G,
+            s8_4_H = formularioForm2.s8_4_H,
+            s8_4_I = formularioForm2.s8_4_I,
+            s8_4_J = formularioForm2.s8_4_J,
+            s8_4_J_f = formularioForm2.s8_4_J_f,
+            s8_5 = formularioForm2.s8_5,
+            s8_5_f = formularioForm2.s8_5_f
+            )
         s8FormularioRepository.save(s8FormularioDAO)
 
-        val s9FormularioDAO = S9Formulario(s9_1 = formularioForm2.s9_1,
-                s9_1_A = formularioForm2.s9_1_A,
-                s9_1_B = formularioForm2.s9_1_B,
-                s9_1_C = formularioForm2.s9_1_C,
-                s9_1_D = formularioForm2.s9_1_D,
-                s9_1_E = formularioForm2.s9_1_E,
-                s9_1_E_f = formularioForm2.s9_1_E_f,
-                s9_2 = formularioForm2.s9_2,
+        val s9FormularioDAO = S9Formulario(processId = formularioForm2.processId,
+                s9_1_1 = formularioForm2.s9_1_1,
+                s9_1_1_A = formularioForm2.s9_1_1_A,
+                s9_1_1_B = formularioForm2.s9_1_1_B,
+                s9_1_1_B_f = formularioForm2.s9_1_1_B_f,
                 s9_2_A = formularioForm2.s9_2_A,
                 s9_2_B = formularioForm2.s9_2_B,
                 s9_2_C = formularioForm2.s9_2_C,
-                s9_2_D = formularioForm2.s9_1_D,
+                s9_2_D = formularioForm2.s9_2_D,
                 s9_2_E = formularioForm2.s9_2_E,
                 s9_2_F = formularioForm2.s9_2_F,
                 s9_2_G = formularioForm2.s9_2_G,
-                s9_2_G_f = formularioForm2.s9_2_G_f,
-                s9_3 = formularioForm2.s9_3,
-                s9_3_A = formularioForm2.s9_3_A,
-                s9_3_B = formularioForm2.s9_3_B,
-                s9_3_B_f = formularioForm2.s9_3_B_f,
-                s9_4 = formularioForm2.s9_4,
-                s9_4_A = formularioForm2.s9_4_A,
-                s9_4_B = formularioForm2.s9_4_B,
-                s9_4_C = formularioForm2.s9_4_C,
-                s9_4_C_f = formularioForm2.s9_4_C_f,
-                s9_4_D = formularioForm2.s9_4_D,
-                s9_4_D_f = formularioForm2.s9_4_D_f,
-                s9_4_E = formularioForm2.s9_4_E,
-                s9_4_E_f = formularioForm2.s9_4_E_f,
-                s9_4_F = formularioForm2.s9_4_F,
-                s9_4_F_f = formularioForm2.s9_4_F_f,
-                s9_4_1 = formularioForm2.s9_4_1)
+                s9_2_H = formularioForm2.s9_2_H,
+                s9_2_I = formularioForm2.s9_2_I,
+                s9_2_I_f = formularioForm2.s9_2_I_f,
+                s9_2_J = formularioForm2.s9_2_J,
+                s9_2_J_f = formularioForm2.s9_2_J_f,
+                s9_2_L_f = formularioForm2.s9_2_L_f,
+                s9_2_L = formularioForm2.s9_2_L,
+                s9_2_M_f = formularioForm2.s9_2_M_f,
+                s9_2_M = formularioForm2.s9_2_M
+                )
         s9FormularioRepository.save(s9FormularioDAO)
+
+        val s10FormularioDAO = S10Formulario(processId = formularioForm2.processId,
+                s10_1 = formularioForm2.s10_1,
+                s10_2 = formularioForm2.s10_2,
+                s10_2_A = formularioForm2.s10_2_A,
+                s10_2_B = formularioForm2.s10_2_B,
+                s10_2_C = formularioForm2.s10_2_C,
+                s10_2_1 = formularioForm2.s10_2_1,
+                s10_3 = formularioForm2.s10_3
+                )
+        s10FormularioRepository.save(s10FormularioDAO)
+
+        val s11FormularioDAO = S11Formulario(processId = formularioForm2.processId,
+            s11_1_A = formularioForm2.s11_1_A,
+            s11_1_B = formularioForm2.s11_1_B,
+            s11_1_B_f = formularioForm2.s11_1_B_f,
+            s11_1_C = formularioForm2.s11_1_C,
+            s11_1_C_f = formularioForm2.s11_1_C_f,
+            s11_2_A = formularioForm2.s11_2_A,
+            s11_2_B = formularioForm2.s11_2_B,
+            s11_2_C = formularioForm2.s11_2_C,
+            s11_2_D = formularioForm2.s11_2_D,
+            s11_2_E = formularioForm2.s11_2_E,
+            s11_2_F = formularioForm2.s11_2_F,
+            s11_2_G = formularioForm2.s11_2_G,
+            s11_2_H = formularioForm2.s11_2_H,
+            s11_2_I = formularioForm2.s11_2_I,
+            s11_2_I_f = formularioForm2.s11_2_I_f,
+            s11_2_J = formularioForm2.s11_2_J,
+            s11_2_J_f = formularioForm2.s11_2_J_f,
+            s11_2_L = formularioForm2.s11_2_L,
+            s11_2_L_f = formularioForm2.s11_2_L_f,
+            s11_2_M = formularioForm2.s11_2_M,
+            s11_2_M_f = formularioForm2.s11_2_M_f
+            )
+        s11FormularioRepository.save(s11FormularioDAO)
+
+        val s12FormularioDAO = S12Formulario(processId = formularioForm2.processId,
+            s12_A = formularioForm2.s12_A,
+            s12_B = formularioForm2.s12_B,
+            s12_C = formularioForm2.s12_C,
+            s12_D = formularioForm2.s12_D,
+            s12_D_f = formularioForm2.s12_D_f
+            )
+        s12FormularioRepository.save(s12FormularioDAO)
+
+        val s13FormularioDAO = S13Formulario(processId = formularioForm2.processId,
+            s13_1_A = formularioForm2.s13_1_A,
+            s13_1_B = formularioForm2.s13_1_B,
+            s13_1_B_f = formularioForm2.s13_1_B_f,
+            s13_2_A = formularioForm2.s13_2_A,
+            s13_2_B = formularioForm2.s13_2_B,
+            s13_2_C = formularioForm2.s13_2_C,
+            s13_2_D = formularioForm2.s13_2_D,
+            s13_2_E = formularioForm2.s13_2_E,
+            s13_2_F = formularioForm2.s13_2_F,
+            s13_2_G = formularioForm2.s13_2_G,
+            s13_2_H = formularioForm2.s13_2_H,
+            s13_2_I = formularioForm2.s13_2_I,
+            s13_2_J = formularioForm2.s13_2_J,
+            s13_2_J_f = formularioForm2.s13_2_J_f,
+            s13_2_L = formularioForm2.s13_2_L,
+            s13_2_L_f = formularioForm2.s13_2_L_f,
+            s13_2_M = formularioForm2.s13_2_M,
+            s13_2_M_f = formularioForm2.s13_2_M_f,
+            s13_2_N = formularioForm2.s13_2_N,
+            s13_2_N_f = formularioForm2.s13_2_N_f,
+            s13_2_O = formularioForm2.s13_2_O
+            )
+        s13FormularioRepository.save(s13FormularioDAO)
+
+        val s14FormularioDAO = S14Formulario(processId = formularioForm2.processId,
+            s14_A = formularioForm2.s14_A,
+            s14_B = formularioForm2.s14_B,
+            s14_C = formularioForm2.s14_C,
+            s14_D = formularioForm2.s14_D,
+            s14_E = formularioForm2.s14_E,
+            s14_F = formularioForm2.s14_F,
+            s14_G = formularioForm2.s14_G,
+            s14_H = formularioForm2.s14_H,
+            s14_H_f = formularioForm2.s14_H_f,
+            s14_I = formularioForm2.s14_I,
+            s14_I_f = formularioForm2.s14_I_f,
+            s14_J = formularioForm2.s14_J,
+            s14_J_f = formularioForm2.s14_J_f,
+            s14_L = formularioForm2.s14_L,
+            s14_L_f = formularioForm2.s14_L_f
+            )
+        s14FormularioRepository.save(s14FormularioDAO)
 
         return "redirect:/form/3"
     }
