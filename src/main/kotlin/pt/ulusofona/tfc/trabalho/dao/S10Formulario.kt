@@ -21,8 +21,6 @@ data class S10Formulario(
         var s10_2_1 : String = "",
         //10.3
         var s10_3 : Boolean = false,
-
-
         /*
                 //10.1
         var s10_1_a : Boolean = false,

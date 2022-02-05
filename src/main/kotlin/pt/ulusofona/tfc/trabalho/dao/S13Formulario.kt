@@ -10,6 +10,30 @@ data class S13Formulario(
        //secção 13
         val id: Long = 0,
         var processId: String = "",
+        //13.1
+        var s13_1_A : Boolean = false,
+        var s13_1_B : Boolean = false,
+        var s13_1_B_f : String = "",
+        //13.2
+        var s13_2_A : Boolean = false,
+        var s13_2_B : Boolean = false,
+        var s13_2_C : Boolean = false,
+        var s13_2_D : Boolean = false,
+        var s13_2_E : Boolean = false,
+        var s13_2_F : Boolean = false,
+        var s13_2_G : Boolean = false,
+        var s13_2_H : Boolean = false,
+        var s13_2_I : Boolean = false,
+        var s13_2_J : Boolean = false,
+        var s13_2_J_f : String = "",
+        var s13_2_L : Boolean = false,
+        var s13_2_L_f : String = "",
+        var s13_2_M : Boolean = false,
+        var s13_2_M_f : String = "",
+        var s13_2_N : Boolean = false,
+        var s13_2_N_f : String = "",
+        var s13_2_O : Boolean = false,
+        /*
                 //13.1.2
         var s13_1_2_a : Boolean = false,
         var s13_1_2_b : Boolean = false,
@@ -64,4 +88,6 @@ data class S13Formulario(
         var s13_3_o : Boolean = false,
         var s13_3_p : Boolean = false,
         var s13_3_q : Boolean = false,
+
+         */
 )
