@@ -28,6 +28,7 @@ data class S7Formulario(
         var s7_1_L_f : String = "",
         var s7_1_M : Boolean = false,
         var s7_1_M_f : String = "",
+        /*
                 //7.2
         var s7_2 : Boolean = false,
                 //7.2.1
@@ -120,4 +121,5 @@ data class S7Formulario(
         var s7_5_J_f : String = "",
         var s7_5_L : Boolean = false,
         var s7_5_L_f : String = "",
+        */
         )
