@@ -10,7 +10,15 @@ data class S6Formulario(
         //secção 6
         val id: Long = 0,
         var processId: String = "",
-                //6.0
+                //6
+        var s6_A : Boolean = false,
+        var s6_B : Boolean = false,
+        var s6_B_f : String = "",
+        //6.1
+        var s6_1_A : Boolean = false,
+        var s6_1_B : Boolean = false,
+        var s6_1_B_f : String = "",
+        /*
         var s6_A : Boolean = false,
         var s6_B : Boolean = false,
         var s6_C : Boolean = false,
@@ -42,4 +50,6 @@ data class S6Formulario(
                 //6.6
         var s6_6 : Boolean = false,
         var s6_6_f : String = "",
+         */
+
         )
