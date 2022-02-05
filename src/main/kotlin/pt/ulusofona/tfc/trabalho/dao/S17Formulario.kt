@@ -7,61 +7,37 @@ import javax.persistence.Id
 @Entity
 data class S17Formulario(
         @Id @GeneratedValue
-       //secção 13
+       //secção 17
         val id: Long = 0,
         var processId: String = "",
-                //13.1.2
-        var s13_1_2_a : Boolean = false,
-        var s13_1_2_b : Boolean = false,
-                //13.1.3
-        var s13_1_3_a : Boolean = false,
-        var s13_1_3_b : Boolean = false,
-        var s13_1_3_c : Boolean = false,
-        var s13_1_3_d : Boolean = false,
-                //13.1.4
-        var s13_1_4_a : Boolean = false,
-        var s13_1_4_b : Boolean = false,
-        var s13_1_4_c : Boolean = false,
-        var s13_1_4_d : Boolean = false,
-        var s13_1_4_d_f: String = "",
-                //13.1.5
-        var s13_1_5_a : Boolean = false,
-        var s13_1_5_b : Boolean = false,
-        var s13_1_5_c : Boolean = false,
-        var s13_1_5_d : Boolean = false,
-        var s13_1_5_e : Boolean = false,
-        var s13_1_5_F : Boolean = false,
-        var s13_1_5_g : Boolean = false,
-        var s13_1_5_h : Boolean = false,
-        var s13_1_5_i : Boolean = false,
-        var s13_1_5_j : Boolean = false,
-        var s13_1_5_l : Boolean = false,
-                //13.2
-        var s13_2_a : Boolean = false,
-        var s13_2_b : Boolean = false,
-        var s13_2_c : Boolean = false,
-        var s13_2_d : Boolean = false,
-        var s13_2_e : Boolean = false,
-        var s13_2_F : Boolean = false,
-        var s13_2_g : Boolean = false,
-        var s13_2_h : Boolean = false,
-        var s13_2_i : Boolean = false,
-        var s13_2_i_f : String = "",
-                //13.3
-        var s13_3_a : Boolean = false,
-        var s13_3_b : Boolean = false,
-        var s13_3_c : Boolean = false,
-        var s13_3_d : Boolean = false,
-        var s13_3_e : Boolean = false,
-        var s13_3_F : Boolean = false,
-        var s13_3_g : Boolean = false,
-        var s13_3_h : Boolean = false,
-        var s13_3_i : Boolean = false,
-        var s13_3_j : Boolean = false,
-        var s13_3_l : Boolean = false,
-        var s13_3_m : Boolean = false,
-        var s13_3_n : Boolean = false,
-        var s13_3_o : Boolean = false,
-        var s13_3_p : Boolean = false,
-        var s13_3_q : Boolean = false,
+        //17
+        var s17_A : Boolean = false,
+        var s17_B : Boolean = false,
+        var s17_C : Boolean = false,
+        var s17_D : Boolean = false,
+        var s17_E : Boolean = false,
+        var s17_E_f : String = "",
+        var s17_F : Boolean = false,
+        //17.1
+        var s17_1_A : Boolean = false,
+        var s17_1_B : Boolean = false,
+        var s17_1_B_f : String = "",
+        //17.2
+        var s17_2 : Boolean = false,
+        var s17_2_f : String = "",
+        //17.3
+        var s17_3 : Boolean = false,
+        var s17_3_f : String = "",
+        //17.4
+        var s17_4 : Boolean = false,
+        var s17_4_1_A : Boolean = false,
+        var s17_4_1_B : Boolean = false,
+        var s17_4_2_A : Boolean = false,
+        var s17_4_2_B : Boolean = false,
+        var s17_4_2_B_f : String = "",
+        //17.5
+        var s17_5 : Boolean = false,
+        //17.6
+        var s17_6 : Boolean = false,
+        var s17_6_f : String = "",
 )
