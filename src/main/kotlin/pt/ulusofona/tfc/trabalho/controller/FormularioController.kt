@@ -16,8 +16,7 @@ import javax.validation.Valid
 
 @Controller
 @RequestMapping("/form")
-public class FormularioController(val s13FormularioRepository: S13FormularioRepository,
-                                  val s1FormularioRepository: S1FormularioRepository,
+public class FormularioController(val s1FormularioRepository: S1FormularioRepository,
                                   val s2FormularioRepository: S2FormularioRepository,
                                   val s3FormularioRepository: S3FormularioRepository,
                                   val s4FormularioRepository: S4FormularioRepository,
@@ -28,7 +27,16 @@ public class FormularioController(val s13FormularioRepository: S13FormularioRepo
                                   val s9FormularioRepository: S9FormularioRepository,
                                   val s10FormularioRepository: S10FormularioRepository,
                                   val s11FormularioRepository: S11FormularioRepository,
-                                  val s12FormularioRepository: S12FormularioRepository)  {
+                                  val s12FormularioRepository: S12FormularioRepository,
+                                  val s13FormularioRepository: S13FormularioRepository,
+                                  val s14FormularioRepository: S14FormularioRepository,
+                                  val s15FormularioRepository: S15FormularioRepository,
+                                  val s16FormularioRepository: S16FormularioRepository,
+                                  val s17FormularioRepository: S17FormularioRepository,
+                                  val s18FormularioRepository: S18FormularioRepository,
+                                  val s19FormularioRepository: S19FormularioRepository,
+                                  val s20FormularioRepository: S20FormularioRepository,
+                                  val s21FormularioRepository: S21FormularioRepository,)  {
 
     @GetMapping(value = ["/list"])
     fun listProcesso(model: ModelMap, principal: Principal?): String {
