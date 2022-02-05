@@ -116,15 +116,15 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
 
         val processId = formularioForm1.processId!!  // it is safe doing this since processId is a mandatory field
-        val s1DB = s1FormularioRepository.findByProcessId(processId)
-
-        if (s1DB == null) {  // new form
 
             //guardar na base de dados
             val s1FormularioDAO = S1Formulario(processId = processId)
             s1FormularioRepository.save(s1FormularioDAO)
 
-            val s2FormularioDAO = S2Formulario(processId = processId, s2_A = formularioForm1.s2_A, s2_B = formularioForm1.s2_B)
+            val s2FormularioDAO = S2Formulario(processId = processId,
+                s2_A = formularioForm1.s2_A,
+                s2_B = formularioForm1.s2_B
+                )
             s2FormularioRepository.save(s2FormularioDAO)
 
             val s3FormularioDAO = S3Formulario(
@@ -203,7 +203,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             )
             s6FormularioRepository.save(s6FormularioDAO)
 
-            val s7FormularioDAO = S7Formulario(s7_1 = formularioForm1.s7_1,
+            val s7FormularioDAO = S7Formulario(processId = processId,
+                    s7_1 = formularioForm1.s7_1,
                     s7_1_A = formularioForm1.s7_1_A,
                     s7_1_B = formularioForm1.s7_1_B,
                     s7_1_C = formularioForm1.s7_1_C,
@@ -222,17 +223,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     s7_1_M_f = formularioForm1.s7_1_M_f,
                     )
             s7FormularioRepository.save(s7FormularioDAO)
-
-        } else {  // edit
-
-            val s2DB = s2FormularioRepository.findByProcessId(processId)!!
-            s2DB.s2_A = formularioForm1.s2_A
-            s2DB.s2_B = formularioForm1.s2_B
-            s2FormularioRepository.save(s2DB)
-
-            // TODO falta fazer as restantes secções
-
-        }
 
         return "redirect:/form/2"
     }
