@@ -10,6 +10,13 @@ data class S12Formulario(
         //secção 12
         val id: Long = 0,
         var processId: String = "",
+        var s12_A : Boolean = false,
+        var s12_B : Boolean = false,
+        var s12_C : Boolean = false,
+        var s12_D : Boolean = false,
+        var s12_D_f : String = "",
+
+        /*
                 //12.1
         var s12_1_a : Boolean = false,
         var s12_1_b : Boolean = false,
@@ -51,4 +58,6 @@ data class S12Formulario(
         var s12_4_b : Boolean = false,
         var s12_4_1_a: Boolean = false,
         var s12_4_1_b : Boolean = false,
+
+         */
         )
