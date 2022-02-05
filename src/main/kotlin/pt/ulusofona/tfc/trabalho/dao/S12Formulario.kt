@@ -10,7 +10,7 @@ data class S12Formulario(
         //secção 12
         val id: Long = 0,
         var processId: String = "",
-
+        //12
         var s12_A : Boolean = false,
         var s12_B : Boolean = false,
         var s12_C : Boolean = false,

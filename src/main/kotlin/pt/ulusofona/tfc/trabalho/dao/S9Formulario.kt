@@ -10,8 +10,8 @@ data class S9Formulario(
         //secção 9
         val id: Long = 0,
         var processId: String = "",
-                //9.1
-                //9.1.1
+        //9.1
+        //9.1.1
         var s9_1_1 : Boolean = false,
         var s9_1_1_A : Boolean = false,
         var s9_1_1_B : Boolean = false,

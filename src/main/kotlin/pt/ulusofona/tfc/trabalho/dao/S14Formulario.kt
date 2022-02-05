@@ -7,10 +7,10 @@ import javax.persistence.Id
 @Entity
 data class S14Formulario(
         @Id @GeneratedValue
-       //secção 13
+       //secção 14
         val id: Long = 0,
         var processId: String = "",
-
+        //14
         var s14_A : Boolean = false,
         var s14_B : Boolean = false,
         var s14_C : Boolean = false,
