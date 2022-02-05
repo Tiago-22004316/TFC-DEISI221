@@ -86,11 +86,11 @@ data class FormularioForm3(
         var s18_4_1 : String = "",
         //secção 19
         //19.1
-        var s19_1_a : Boolean = false,
-        var s19_1_b : Boolean = false,
-        var s10_1_c : Boolean = false,
-        var s19_1_d : Boolean = false,
-        var s19_1_e : Boolean = false,
+        var s19_1_A : Boolean = false,
+        var s19_1_B : Boolean = false,
+        var s19_1_C : Boolean = false,
+        var s19_1_D : Boolean = false,
+        var s19_1_E : Boolean = false,
         var s19_1_F : Boolean = false,
         var s19_1_F_f : String = "",
         //19.2
