@@ -10,31 +10,31 @@ data class S21Formulario(
        //secção 21
         val id: Long = 0,
         var processId: String = "",
-        //21.1
+                //21.1
         var s21_1_A : Boolean = false,
         var s21_1_B : Boolean = false,
         var s21_1_C : Boolean = false,
         var s21_1_D: Boolean = false,
         var s21_1_E : Boolean = false,
-        //21.1.1
+                //21.1.1
         var s21_1_1 : String = "",
-        //21.1.2
+                //21.1.2
         var s21_1_2_A : Boolean = false,
         var s21_1_2_B : Boolean = false,
         var s21_1_2_B_f : String = "",
-        //21.3
+                //21.3
         var s21_3_A : Boolean = false,
         var s21_3_B : Boolean = false,
         var s21_3_C : Boolean = false,
         var s21_3_D : Boolean = false,
         var s21_3_E : Boolean = false,
-        //21.3.1
+                //21.3.1
         var s21_3_1 : String = "",
-        //21.3.2
+                //21.3.2
         var s21_3_2_A : Boolean = false,
         var s21_3_2_B : Boolean = false,
         var s21_3_2_B_f : String = "",
-        //21.4
+                //21.4
         var s21_4_A : Boolean = false,
         var s21_4_B : Boolean = false,
         var s21_4_1_A: Boolean = false,

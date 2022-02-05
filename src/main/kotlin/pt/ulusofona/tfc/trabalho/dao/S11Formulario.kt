@@ -10,13 +10,13 @@ data class S11Formulario(
         //secção 11
         val id: Long = 0,
         var processId: String = "",
-        //11.1
+                //11.1
         var s11_1_A : Boolean = false,
         var s11_1_B : Boolean = false,
         var s11_1_B_f : String = "",
         var s11_1_C : Boolean = false,
         var s11_1_C_f : String = "",
-        //11.2
+                //11.2
         var s11_2_A : Boolean = false,
         var s11_2_B : Boolean = false,
         var s11_2_C : Boolean = false,
@@ -33,8 +33,4 @@ data class S11Formulario(
         var s11_2_L_f : String = "",
         var s11_2_M : Boolean = false,
         var s11_2_M_f : String = "",
-        /*
-                //11.1
-        var s11_1 : String = "",
-         */
         )

@@ -10,8 +10,8 @@ data class S16Formulario(
        //secção 13
         val id: Long = 0,
         var processId: String = "",
-        //16.1
-        var s5_A : Boolean = false,
-        var s5_B : Boolean = false,
-        var s5_B_f : String,
+                //16.1
+        var s16_1_A : Boolean = false,
+        var s16_1_B : Boolean = false,
+        var s16_1_B_f : String,
 )

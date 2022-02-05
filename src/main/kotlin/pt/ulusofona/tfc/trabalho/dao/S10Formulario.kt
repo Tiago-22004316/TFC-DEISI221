@@ -10,30 +10,15 @@ data class S10Formulario(
         //secção 10
         val id: Long = 0,
         var processId: String = "",
-        //10.1
+                //10.1
         var s10_1 : Boolean = false,
-        //10.2
+                //10.2
         var s10_2 : Boolean = false,
         var s10_2_A : Boolean = false,
         var s10_2_B : Boolean = false,
         var s10_2_C : Boolean = false,
-        //10.2.1
+                //10.2.1
         var s10_2_1 : String = "",
-        //10.3
-        var s10_3 : Boolean = false,
-        /*
-                //10.1
-        var s10_1_a : Boolean = false,
-        var s10_1_b : Boolean = false,
-        var s10_1_c : Boolean = false,
-        var s10_1_d : Boolean = false,
-        var s10_1_e : Boolean = false,
-        var s10_1_F : Boolean = false,
-        var s10_1_F_f : String = "",
-                //10.2
-        var s10_2 : String = "",
                 //10.3
-        var s10_3_1 : String = "",
-        var s10_3_2 : String = "",
-         */
+        var s10_3 : Boolean = false,
         )

@@ -10,25 +10,21 @@ data class S5Formulario(
         //secção 5
         val id: Long = 0,
         var processId: String = "",
-        //5.1
-        //var s5_A : Boolean = false,
-        //var s5_B : Boolean = false,
-        //var s5_B_1 : String,
-        //5.2
+                //5.2
         var s5_2_a : Boolean = false,
         var s5_2_b : Boolean = false,
-        //5.3
+                //5.3
         var s5_3_a : Boolean = false,
         var s5_3_b : Boolean = false,
         var s5_3_c : Boolean = false,
         var s5_3_d : Boolean = false,
-        //5.4
+                //5.4
         var s5_4_a : Boolean = false,
         var s5_4_b : Boolean = false,
         var s5_4_c : Boolean = false,
         var s5_4_d : Boolean = false,
         var s5_4_d_f: String = "",
-        //5.5
+                //5.5
         var s5_5_a : Boolean = false,
         var s5_5_b : Boolean = false,
         var s5_5_c : Boolean = false,
@@ -40,7 +36,7 @@ data class S5Formulario(
         var s5_5_i : Boolean = false,
         var s5_5_j : Boolean = false,
         var s5_5_l : Boolean = false,
-        //5.6
+                //5.6
         var s5_6_a : Boolean = false,
         var s5_6_b : Boolean = false,
         var s5_6_c : Boolean = false,
@@ -51,7 +47,7 @@ data class S5Formulario(
         var s5_6_h : Boolean = false,
         var s5_6_i : Boolean = false,
         var s5_6_i_f : String = "",
-        //5.6.1
+                //5.6.1
         var s5_6_1_a : Boolean = false,
         var s5_6_1_b : Boolean = false,
         var s5_6_1_c : Boolean = false,
