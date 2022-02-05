@@ -15,7 +15,7 @@ data class FormularioForm3(
         //16.1
         var s16_1_A : Boolean = false,
         var s16_1_B : Boolean = false,
-        var s16_1_B_f : String,
+        var s16_1_B_f : String = "",
         //secção 17
         //17
         var s17_A : Boolean = false,

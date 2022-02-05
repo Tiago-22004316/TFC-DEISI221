@@ -13,5 +13,5 @@ data class S16Formulario(
                 //16.1
         var s16_1_A : Boolean = false,
         var s16_1_B : Boolean = false,
-        var s16_1_B_f : String,
+        var s16_1_B_f : String = "",
 )
