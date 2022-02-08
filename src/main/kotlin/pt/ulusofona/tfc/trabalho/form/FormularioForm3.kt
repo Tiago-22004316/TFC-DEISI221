@@ -114,6 +114,18 @@ data class FormularioForm3(
         var s21_1_2_A : Boolean = false,
         var s21_1_2_B : Boolean = false,
         var s21_1_2_B_f : String = "",
+        //21.2
+        var s21_2_A : Boolean = false,
+        var s21_2_B : Boolean = false,
+        var s21_2_C : Boolean = false,
+        var s21_2_D : Boolean = false,
+        var s21_2_E : Boolean = false,
+        //21.2.1
+        var s21_2_1 : String = "",
+        //21.2.2
+        var s21_2_2_A : Boolean = false,
+        var s21_2_2_B : Boolean = false,
+        var s21_2_2_B_f : String = "",
         //21.3
         var s21_3_A : Boolean = false,
         var s21_3_B : Boolean = false,
