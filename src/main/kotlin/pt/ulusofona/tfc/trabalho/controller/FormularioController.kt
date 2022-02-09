@@ -167,7 +167,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
 
         if (s7DB != null) {
-            formularioForm1.s7_1 = s7DB.s7_1
             formularioForm1.s7_1_A = s7DB.s7_1_A
             formularioForm1.s7_1_B = s7DB.s7_1_B
             formularioForm1.s7_1_C = s7DB.s7_1_C
@@ -565,7 +564,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             s6FormularioRepository.save(s6FormularioDAO)
 
             val s7FormularioDAO = S7Formulario(processId = processId,
-                    s7_1 = formularioForm1.s7_1,
                     s7_1_A = formularioForm1.s7_1_A,
                     s7_1_B = formularioForm1.s7_1_B,
                     s7_1_C = formularioForm1.s7_1_C,

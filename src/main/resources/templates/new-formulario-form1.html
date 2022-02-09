@@ -113,13 +113,16 @@
                     <!-- 5.2 -->
                     <div class="col-sm-9">
                         <label class="control-label">5.2 - Género</label>
-                        <div class="checkbox indent">
-                            <input th:field="*{s5_2_A}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s5_2_A')}">A - Feminino</label>
-                            <br>
-                            <input th:field="*{s5_2_B}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s5_2_B')}">B - Masculino</label>
-                            <br>
+                        <div class="checkbox">
+                            <div class="checkbox indent">
+                                <label>
+                                    <input th:field="*{s5_2_A}" type="checkbox" class="">A - Feminino
+                                </label>
+                                <br>
+                                <input th:field="*{s5_2_B}" type="checkbox" class="">
+                                <label th:for="${#ids.prev('s5_2_B')}">B - Masculino</label>
+                                <br>
+                            </div>
                         </div>
                     </div>
                     <!-- 5.3 -->
@@ -210,29 +213,29 @@
                             <input th:field="*{s5_6_B}" type="checkbox" class="grupo-5-6">
                             <label th:for="${#ids.prev('s5_6_B')}">B - Establecimento Individual de Responsabilidade Limitada (EIRL)</label>
                             <br>
+                            <input th:field="*{s5_6_C}" type="checkbox" class="grupo-5-6">
+                            <label th:for="${#ids.prev('s5_6_C')}">C - Sociedade em nome coletivo</label>
+                            <br>
                             <input th:field="*{s5_6_D}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_D')}">C - Sociedade em nome coletivo</label>
+                            <label th:for="${#ids.prev('s5_6_D')}">D - Sociedade unipessoal por quotas</label>
                             <br>
                             <input th:field="*{s5_6_E}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_E')}">D - Sociedade unipessoal por quotas</label>
+                            <label th:for="${#ids.prev('s5_6_E')}">E - Sociedade em nome coletivo</label>
                             <br>
                             <input th:field="*{s5_6_F}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_F')}">E - Sociedade em nome coletivo</label>
+                            <label th:for="${#ids.prev('s5_6_F')}">F - Sociedade por quotas</label>
                             <br>
                             <input th:field="*{s5_6_G}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_G')}">F - Sociedade por quotas</label>
+                            <label th:for="${#ids.prev('s5_6_G')}">G - Sociedade anónima</label>
                             <br>
                             <input th:field="*{s5_6_H}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_H')}">G - Sociedade anónima</label>
+                            <label th:for="${#ids.prev('s5_6_H')}">H - Cooperativa</label>
                             <br>
                             <input th:field="*{s5_6_I}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_I')}">H - Cooperativa</label>
+                            <label th:for="${#ids.prev('s5_6_I')}">I - Outro arranjo societário</label>
                             <br>
-                            <input th:field="*{s5_6_I_f}" type="checkbox" class="grupo-5-6">
-                            <label th:for="${#ids.prev('s5_6_I_f')}">I - Outro arranjo societário</label>
-                            <br>
-                            <label th:for="s5_4_D_f">Qual?</label>
-                            <input th:field="*{s5_4_D_f}" type="text" class="form-control" maxlength="100"/>
+                            <label th:for="s5_6_I_f">Qual?</label>
+                            <input th:field="*{s5_6_I_f}" type="text" class="form-control" maxlength="100"/>
                             <br>
                         </div>
                     </div>
@@ -318,31 +321,44 @@
                 <div class="form-group">
                     <!--6-->
                     <div class="col-sm-9">
-                        <div class="checkbox indent">
-                            <input th:field="*{s6_A}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s6_A')}">A - Pedido único</label>
-                            <br>
-                            <input th:field="*{s6_B}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s6_B')}">B - Cumulação de pedidos</label>
-                            <br>
-                            <label th:for="s6_B_f">Qual?</label>
-                            <input th:field="*{s6_B_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
+                        <div class="checkbox">
+                            <div class="checkbox indent">
+                                <label>
+                                    <input th:field="*{s6_A}" type="checkbox" class="">A - Pedido único
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s6_B}" type="checkbox" class="">B - Cumulação de pedidos
+                                </label>
+                                <br>
+                                <label>
+                                    Qual?
+                                    <input th:field="*{s6_B_f}" type="text" class="form-control" maxlength="100"/>
+                                </label>
+                                <br>
+                            </div>
                         </div>
                         <!--6.1-->
                         <label class="control-label">6.1 - Quanto ao pedido e causa de pedir, há alguma vicissitude digna de nota?</label>
                         <div class="col-sm-9">
-                            <div class="checkbox indent">
-                                <input th:field="*{s6_1_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s6_1_A')}">A - Não</label>
-                                <br>
-                                <input th:field="*{s6_1_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s6_1_B')}">B - Sim</label>
-                                <br>
-                                <label th:for="s6_1_B_f">Qual?</label>
-                                <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100"/>
-                                <br>
+                            <div class="checkbox">
+                                <div class="checkbox indent">
+                                    <label>
+                                        <input th:field="*{s6_1_A}" type="checkbox" class="">A - Não
+                                    </label>
+                                    <br>
+                                    <label>
+                                        <input th:field="*{s6_1_B}" type="checkbox" class="">B - Sim
+                                    </label>
+                                    <br>
+                                    <label>
+                                        Qual?
+                                        <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100"/>
+                                    </label>
+                                    <br>
+                                </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -350,69 +366,91 @@
 
         <!-- 7 -->
         <div class="panel panel-default">
-            <div class="panel-heading">5 - Aspectos de natureza sociológica</div>
+            <div class="panel-heading">7 - Produção de provas Ministério Público</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <label class="control-label">5.1 - Trabalhador  </label>
                     <br>
                     <!-- 7.1 -->
                     <div class="col-sm-9">
-                        <label class="control-label">5.2 - Género</label>
-                        <div class="checkbox indent">
-                            <input th:field="*{s7_1_A}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_A')}">A - Depoimento de parte (da parte contrária)</label>
-                            <br>
-                            <input th:field="*{s7_1_B}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_B')}">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT</label>
-                            <br>
-                            <input th:field="*{s7_1_C}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_C')}">C - Requerimento para que a parte contrária apresente documentos</label>
-                            <br>
-                            <input th:field="*{s7_1_D}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_D')}">D - Requisição de documentos a organismos oficiais</label>
-                            <br>
-                            <input th:field="*{s7_1_E}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_E')}">E - Requisição de documentos às partes</label>
-                            <br>
-                            <input th:field="*{s7_1_F}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_F')}">F - Requisição de documentos a terceiros</label>
-                            <br>
-                            <input th:field="*{s7_1_G}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_G')}">G - Testemunhas (com algum vínculo à Ré)</label>
-                            <br>
-                            <input th:field="*{s7_1_H}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_H')}">H - Testemunhas (sem vínculo à Ré)</label>
-                            <br>
-                            <input th:field="*{s7_1_I}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_I')}">I - Prova pericial</label>
-                            <br>
-                            <label th:for="s7_1_I_f">Qual?</label>
-                            <input th:field="*{s7_1_I_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
-                            <input th:field="*{s7_1_J}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_J')}">J - Prova por inspeção judicial</label>
-                            <br>
-                            <label th:for="s7_1_J_f">Qual?</label>
-                            <input th:field="*{s7_1_J_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
-                            <input th:field="*{s7_1_L}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_L')}">L - Verificação não judicial qualificada</label>
-                            <br>
-                            <label th:for="s7_1_L_f">Qual?</label>
-                            <input th:field="*{s7_1_L_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
-                            <input th:field="*{s7_1_M}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s7_1_M')}">M - Outra</label>
-                            <br>
-                            <label th:for="s7_1_M_f">Qual?</label>
-                            <input th:field="*{s7_1_M_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
+                        <label class="control-label">7.1 - Meios de prova apresentados pelo Ministério Público:</label>
+                        <div class="checkbox">
+                            <div class="checkbox indent">
+                                <label>
+                                    <input th:field="*{s7_1_A}" type="checkbox" class="">A - Depoimento de parte (da parte contrária)
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_B}" type="checkbox" class="">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_C}" type="checkbox" class="">C - Requerimento para que a parte contrária apresente documentos
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_D}" type="checkbox" class="">D - Requisição de documentos a organismos oficiais
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_E}" type="checkbox" class="">E - Requisição de documentos às partes
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_F}" type="checkbox" class="">F - Requisição de documentos a terceiros
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_G}" type="checkbox" class="">G - Testemunhas (com algum vínculo à Ré)
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_H}" type="checkbox" class="">H - Testemunhas (sem vínculo à Ré)
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_I}" type="checkbox" class="">I - Prova pericial
+                                </label>
+                                <br>
+                                <label>
+                                    Qual?
+                                    <input th:field="*{s7_1_I_f}" type="text" class="form-control" maxlength="100"/>
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_J}" type="checkbox" class="">J - Prova por inspeção judicial
+                                </label>
+                                <br>
+                                <label>
+                                    Qual?
+                                    <input th:field="*{s7_1_J_f}" type="text" class="form-control" maxlength="100"/>
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_L}" type="checkbox" class="">L - Verificação não judicial qualificada
+                                </label>
+                                <br>
+                                <label>
+                                    Qual?
+                                    <input th:field="*{s7_1_L_f}" type="text" class="form-control" maxlength="100"/>
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s7_1_M}" type="checkbox" class="">M - Outra
+                                </label>
+                                <br>
+                                <label>
+                                    Qual?
+                                    <input th:field="*{s7_1_M_f}" type="text" class="form-control" maxlength="100"/>
+                                </label>
+                                <br>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- botões -->
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
@@ -422,6 +460,7 @@
                 </div>
             </div>
         </div>
+
     </form>
 </div>
 
