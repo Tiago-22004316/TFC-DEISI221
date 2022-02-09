@@ -51,7 +51,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
     fun editForm(@PathVariable("processId") processId: String, model: ModelMap): String {
 
         //ir buscar á database
-        val s1DB = s1FormularioRepository.findByProcessId(processId)
         val s2DB = s2FormularioRepository.findByProcessId(processId)
         val s3DB = s3FormularioRepository.findByProcessId(processId)
         val s4DB = s4FormularioRepository.findByProcessId(processId)
@@ -64,6 +63,14 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         val s11DB = s11FormularioRepository.findByProcessId(processId)
         val s12DB = s12FormularioRepository.findByProcessId(processId)
         val s13DB = s13FormularioRepository.findByProcessId(processId)
+        val s14DB = s14FormularioRepository.findByProcessId(processId)
+        val s15DB = s15FormularioRepository.findByProcessId(processId)
+        val s16DB = s16FormularioRepository.findByProcessId(processId)
+        val s17DB = s17FormularioRepository.findByProcessId(processId)
+        val s18DB = s18FormularioRepository.findByProcessId(processId)
+        val s19DB = s19FormularioRepository.findByProcessId(processId)
+        val s20DB = s20FormularioRepository.findByProcessId(processId)
+        val s21DB = s21FormularioRepository.findByProcessId(processId)
 
         // criar forms
         val formularioForm1 = FormularioForm1()
@@ -78,6 +85,360 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         if (s2DB != null) {
             formularioForm1.s2_A = s2DB.s2_A
             formularioForm1.s2_B = s2DB.s2_B
+        }
+
+        if (s3DB != null) {
+            formularioForm1.s3_1 = s3DB.s3_1
+            formularioForm1.s3_2 = s3DB.s3_2
+            formularioForm1.s3_3 = s3DB.s3_3
+            formularioForm1.s3_4 = s3DB.s3_4
+            formularioForm1.s3_4_A = s3DB.s3_4_A
+            formularioForm1.s3_4_B = s3DB.s3_4_B
+            formularioForm1.s3_4_1 = s3DB.s3_4_1
+            formularioForm1.s3_4_2 = s3DB.s3_4_2
+        }
+
+        if (s4DB != null) {
+            formularioForm1.s4_2 = s4DB.s4_2
+            formularioForm1.s4_2_A = s4DB.s4_2_A
+            formularioForm1.s4_2_B = s4DB.s4_2_B
+            formularioForm1.s4_3 = s4DB.s4_3
+            formularioForm1.s4_3_f = s4DB.s4_3_f
+        }
+
+        if (s5DB != null) {
+            formularioForm1.s5_2_A = s5DB.s5_2_A
+            formularioForm1.s5_2_B = s5DB.s5_2_B
+            formularioForm1.s5_3_A = s5DB.s5_3_A
+            formularioForm1.s5_3_B = s5DB.s5_3_B
+            formularioForm1.s5_3_C = s5DB.s5_3_C
+            formularioForm1.s5_3_D = s5DB.s5_3_D
+            formularioForm1.s5_4_A = s5DB.s5_4_A
+            formularioForm1.s5_4_B = s5DB.s5_4_B
+            formularioForm1.s5_4_C = s5DB.s5_4_C
+            formularioForm1.s5_4_D = s5DB.s5_4_D
+            formularioForm1.s5_4_D_f = s5DB.s5_4_D_f
+            formularioForm1.s5_5_A = s5DB.s5_5_A
+            formularioForm1.s5_5_B = s5DB.s5_5_B
+            formularioForm1.s5_5_C = s5DB.s5_5_C
+            formularioForm1.s5_5_D = s5DB.s5_5_D
+            formularioForm1.s5_5_E = s5DB.s5_5_E
+            formularioForm1.s5_5_F = s5DB.s5_5_F
+            formularioForm1.s5_5_G = s5DB.s5_5_G
+            formularioForm1.s5_5_H = s5DB.s5_5_H
+            formularioForm1.s5_5_I = s5DB.s5_5_I
+            formularioForm1.s5_5_J = s5DB.s5_5_J
+            formularioForm1.s5_5_L = s5DB.s5_5_L
+            formularioForm1.s5_6_A = s5DB.s5_6_A
+            formularioForm1.s5_6_B = s5DB.s5_6_B
+            formularioForm1.s5_6_C = s5DB.s5_6_C
+            formularioForm1.s5_6_D = s5DB.s5_6_D
+            formularioForm1.s5_6_E = s5DB.s5_6_E
+            formularioForm1.s5_6_F = s5DB.s5_6_F
+            formularioForm1.s5_6_G = s5DB.s5_6_G
+            formularioForm1.s5_6_H = s5DB.s5_6_H
+            formularioForm1.s5_6_I = s5DB.s5_6_I
+            formularioForm1.s5_6_I_f = s5DB.s5_6_I_f
+            formularioForm1.s5_6_1_A = s5DB.s5_6_1_A
+            formularioForm1.s5_6_1_B = s5DB.s5_6_1_B
+            formularioForm1.s5_6_1_C = s5DB.s5_6_1_C
+            formularioForm1.s5_6_1_D = s5DB.s5_6_1_D
+            formularioForm1.s5_6_1_E = s5DB.s5_6_1_E
+            formularioForm1.s5_6_1_F = s5DB.s5_6_1_F
+            formularioForm1.s5_6_1_G = s5DB.s5_6_1_G
+            formularioForm1.s5_6_1_H = s5DB.s5_6_1_H
+            formularioForm1.s5_6_1_I = s5DB.s5_6_1_I
+            formularioForm1.s5_6_1_J = s5DB.s5_6_1_J
+            formularioForm1.s5_6_1_L = s5DB.s5_6_1_L
+            formularioForm1.s5_6_1_M = s5DB.s5_6_1_M
+            formularioForm1.s5_6_1_N = s5DB.s5_6_1_N
+            formularioForm1.s5_6_1_O = s5DB.s5_6_1_O
+            formularioForm1.s5_6_1_P = s5DB.s5_6_1_P
+            formularioForm1.s5_6_1_Q = s5DB.s5_6_1_Q
+        }
+
+        if (s6DB != null) {
+            formularioForm1.s6_A = s6DB.s6_A
+            formularioForm1.s6_B = s6DB.s6_B
+            formularioForm1.s6_B_f = s6DB.s6_B_f
+            formularioForm1.s6_1_A = s6DB.s6_1_A
+            formularioForm1.s6_1_B = s6DB.s6_1_B
+            formularioForm1.s6_1_B_f = s6DB.s6_1_B_f
+        }
+
+        if (s7DB != null) {
+            formularioForm1.s7_1 = s7DB.s7_1
+            formularioForm1.s7_1_A = s7DB.s7_1_A
+            formularioForm1.s7_1_B = s7DB.s7_1_B
+            formularioForm1.s7_1_C = s7DB.s7_1_C
+            formularioForm1.s7_1_D = s7DB.s7_1_D
+            formularioForm1.s7_1_E = s7DB.s7_1_E
+            formularioForm1.s7_1_F = s7DB.s7_1_F
+            formularioForm1.s7_1_G = s7DB.s7_1_G
+            formularioForm1.s7_1_H = s7DB.s7_1_H
+            formularioForm1.s7_1_I = s7DB.s7_1_I
+            formularioForm1.s7_1_I_f = s7DB.s7_1_I_f
+            formularioForm1.s7_1_J = s7DB.s7_1_J
+            formularioForm1.s7_1_J_f = s7DB.s7_1_J_f
+            formularioForm1.s7_1_L = s7DB.s7_1_L
+            formularioForm1.s7_1_L_f = s7DB.s7_1_L_f
+            formularioForm1.s7_1_M = s7DB.s7_1_M
+            formularioForm1.s7_1_M_f = s7DB.s7_1_M_f
+        }
+
+        if (s8DB != null) {
+            formularioForm2.s8_1 = s8DB.s8_1
+            formularioForm2.s8_2 = s8DB.s8_2
+            formularioForm2.s8_3 = s8DB.s8_3
+            formularioForm2.s8_3_A = s8DB.s8_3_A
+            formularioForm2.s8_3_A_f = s8DB.s8_3_A_f
+            formularioForm2.s8_3_B = s8DB.s8_3_B
+            formularioForm2.s8_3_B_f = s8DB.s8_3_B_f
+            formularioForm2.s8_3_C = s8DB.s8_3_C
+            formularioForm2.s8_3_C_f = s8DB.s8_3_C_f
+            formularioForm2.s8_4 = s8DB.s8_4
+            formularioForm2.s8_4_A = s8DB.s8_4_A
+            formularioForm2.s8_4_B = s8DB.s8_4_B
+            formularioForm2.s8_4_C = s8DB.s8_4_C
+            formularioForm2.s8_4_D = s8DB.s8_4_D
+            formularioForm2.s8_4_E = s8DB.s8_4_E
+            formularioForm2.s8_4_F = s8DB.s8_4_F
+            formularioForm2.s8_4_G = s8DB.s8_4_G
+            formularioForm2.s8_4_H = s8DB.s8_4_H
+            formularioForm2.s8_4_I = s8DB.s8_4_I
+            formularioForm2.s8_4_J = s8DB.s8_4_J
+            formularioForm2.s8_4_J_f = s8DB.s8_4_J_f
+            formularioForm2.s8_5 = s8DB.s8_5
+            formularioForm2.s8_5_f = s8DB.s8_5_f
+        }
+
+        if (s9DB != null) {
+            formularioForm2.s9_1_1 = s9DB.s9_1_1
+            formularioForm2.s9_1_1_A = s9DB.s9_1_1_A
+            formularioForm2.s9_1_1_B = s9DB.s9_1_1_B
+            formularioForm2.s9_1_1_B_f = s9DB.s9_1_1_B_f
+            formularioForm2.s9_2_A = s9DB.s9_2_A
+            formularioForm2.s9_2_B = s9DB.s9_2_B
+            formularioForm2.s9_2_C = s9DB.s9_2_C
+            formularioForm2.s9_2_D = s9DB.s9_2_D
+            formularioForm2.s9_2_E = s9DB.s9_2_E
+            formularioForm2.s9_2_F = s9DB.s9_2_F
+            formularioForm2.s9_2_G = s9DB.s9_2_G
+            formularioForm2.s9_2_H = s9DB.s9_2_H
+            formularioForm2.s9_2_I = s9DB.s9_2_I
+            formularioForm2.s9_2_I_f = s9DB.s9_2_I_f
+            formularioForm2.s9_2_J = s9DB.s9_2_J
+            formularioForm2.s9_2_J_f = s9DB.s9_2_J_f
+            formularioForm2.s9_2_L = s9DB.s9_2_L
+            formularioForm2.s9_2_L_f = s9DB.s9_2_L_f
+            formularioForm2.s9_2_M = s9DB.s9_2_M
+            formularioForm2.s9_2_M_f = s9DB.s9_2_M_f
+        }
+
+        if (s10DB != null) {
+            formularioForm2.s10_1 = s10DB.s10_1
+            formularioForm2.s10_2 = s10DB.s10_2
+            formularioForm2.s10_2_A = s10DB.s10_2_A
+            formularioForm2.s10_2_B = s10DB.s10_2_B
+            formularioForm2.s10_2_C = s10DB.s10_2_C
+            formularioForm2.s10_2_1 = s10DB.s10_2_1
+            formularioForm2.s10_3 = s10DB.s10_3
+        }
+
+        if (s11DB != null) {
+            formularioForm2.s11_1_A = s11DB.s11_1_A
+            formularioForm2.s11_1_B = s11DB.s11_1_B
+            formularioForm2.s11_1_B_f = s11DB.s11_1_B_f
+            formularioForm2.s11_1_C = s11DB.s11_1_C
+            formularioForm2.s11_1_C_f = s11DB.s11_1_C_f
+            formularioForm2.s11_2_A = s11DB.s11_2_A
+            formularioForm2.s11_2_B = s11DB.s11_2_B
+            formularioForm2.s11_2_C = s11DB.s11_2_C
+            formularioForm2.s11_2_D = s11DB.s11_2_D
+            formularioForm2.s11_2_E = s11DB.s11_2_E
+            formularioForm2.s11_2_F = s11DB.s11_2_F
+            formularioForm2.s11_2_G = s11DB.s11_2_G
+            formularioForm2.s11_2_H = s11DB.s11_2_H
+            formularioForm2.s11_2_I = s11DB.s11_2_I
+            formularioForm2.s11_2_I_f = s11DB.s11_2_I_f
+            formularioForm2.s11_2_J = s11DB.s11_2_J
+            formularioForm2.s11_2_J_f = s11DB.s11_2_J_f
+            formularioForm2.s11_2_L = s11DB.s11_2_L
+            formularioForm2.s11_2_L_f = s11DB.s11_2_L_f
+            formularioForm2.s11_2_M = s11DB.s11_2_M
+            formularioForm2.s11_2_M_f = s11DB.s11_2_M_f
+        }
+
+        if (s12DB != null) {
+            formularioForm2.s12_A = s12DB.s12_A
+            formularioForm2.s12_B = s12DB.s12_B
+            formularioForm2.s12_C = s12DB.s12_C
+            formularioForm2.s12_D = s12DB.s12_D
+            formularioForm2.s12_D_f = s12DB.s12_D_f
+        }
+
+        if (s13DB != null) {
+            formularioForm2.s13_1_A = s13DB.s13_1_A
+            formularioForm2.s13_1_B = s13DB.s13_1_B
+            formularioForm2.s13_1_B_f = s13DB.s13_1_B_f
+            formularioForm2.s13_2_A = s13DB.s13_2_A
+            formularioForm2.s13_2_B = s13DB.s13_2_B
+            formularioForm2.s13_2_C = s13DB.s13_2_C
+            formularioForm2.s13_2_D = s13DB.s13_2_D
+            formularioForm2.s13_2_E = s13DB.s13_2_E
+            formularioForm2.s13_2_F = s13DB.s13_2_F
+            formularioForm2.s13_2_G = s13DB.s13_2_G
+            formularioForm2.s13_2_H = s13DB.s13_2_H
+            formularioForm2.s13_2_I = s13DB.s13_2_I
+            formularioForm2.s13_2_J = s13DB.s13_2_J
+            formularioForm2.s13_2_J_f = s13DB.s13_2_J_f
+            formularioForm2.s13_2_L = s13DB.s13_2_L
+            formularioForm2.s13_2_L_f = s13DB.s13_2_L_f
+            formularioForm2.s13_2_M = s13DB.s13_2_M
+            formularioForm2.s13_2_M_f = s13DB.s13_2_M_f
+            formularioForm2.s13_2_N = s13DB.s13_2_N
+            formularioForm2.s13_2_N_f = s13DB.s13_2_N_f
+            formularioForm2.s13_2_O = s13DB.s13_2_O
+        }
+
+        if (s14DB != null) {
+            formularioForm2.s14_A = s14DB.s14_A
+            formularioForm2.s14_B = s14DB.s14_B
+            formularioForm2.s14_C = s14DB.s14_C
+            formularioForm2.s14_D = s14DB.s14_D
+            formularioForm2.s14_E = s14DB.s14_E
+            formularioForm2.s14_F = s14DB.s14_F
+            formularioForm2.s14_G = s14DB.s14_G
+            formularioForm2.s14_H = s14DB.s14_H
+            formularioForm2.s14_H_f = s14DB.s14_H_f
+            formularioForm2.s14_I = s14DB.s14_I
+            formularioForm2.s14_I_f = s14DB.s14_I_f
+            formularioForm2.s14_J = s14DB.s14_J
+            formularioForm2.s14_J_f = s14DB.s14_J_f
+            formularioForm2.s14_L = s14DB.s14_L
+            formularioForm2.s14_L_f = s14DB.s14_L_f
+        }
+
+        if (s15DB != null) {
+            formularioForm3.s15 = s15DB.s15
+        }
+
+        if (s16DB != null) {
+            formularioForm3.s16_1_A = s16DB.s16_1_A
+            formularioForm3.s16_1_B = s16DB.s16_1_B
+            formularioForm3.s16_1_B_f = s16DB.s16_1_B_f
+
+        }
+
+        if (s17DB != null) {
+            formularioForm3.s17_A = s17DB.s17_A
+            formularioForm3.s17_B = s17DB.s17_B
+            formularioForm3.s17_C = s17DB.s17_C
+            formularioForm3.s17_D = s17DB.s17_D
+            formularioForm3.s17_E = s17DB.s17_E
+            formularioForm3.s17_E_f = s17DB.s17_E_f
+            formularioForm3.s17_F = s17DB.s17_F
+            formularioForm3.s17_1_A = s17DB.s17_1_A
+            formularioForm3.s17_1_B = s17DB.s17_1_B
+            formularioForm3.s17_1_B_f = s17DB.s17_1_B_f
+            formularioForm3.s17_2 = s17DB.s17_2
+            formularioForm3.s17_2_f = s17DB.s17_2_f
+            formularioForm3.s17_3 = s17DB.s17_3
+            formularioForm3.s17_3_f = s17DB.s17_3_f
+            formularioForm3.s17_4 = s17DB.s17_4
+            formularioForm3.s17_4_1_A = s17DB.s17_4_1_A
+            formularioForm3.s17_4_1_B = s17DB.s17_4_1_B
+            formularioForm3.s17_4_2_A = s17DB.s17_4_2_A
+            formularioForm3.s17_4_2_B = s17DB.s17_4_2_B
+            formularioForm3.s17_4_2_B_f = s17DB.s17_4_2_B_f
+            formularioForm3.s17_5 = s17DB.s17_5
+            formularioForm3.s17_6 = s17DB.s17_6
+            formularioForm3.s17_6_f = s17DB.s17_6_f
+        }
+
+        if (s18DB != null) {
+            formularioForm3.s18_1 = s18DB.s18_1
+            formularioForm3.s18_1_A = s18DB.s18_1_A
+            formularioForm3.s18_1_B = s18DB.s18_1_B
+            formularioForm3.s18_1_C = s18DB.s18_1_C
+            formularioForm3.s18_1_D = s18DB.s18_1_D
+            formularioForm3.s18_1_E = s18DB.s18_1_E
+            formularioForm3.s18_1_E_f = s18DB.s18_1_E_f
+            formularioForm3.s18_2 = s18DB.s18_2
+            formularioForm3.s18_2_A = s18DB.s18_2_A
+            formularioForm3.s18_2_B = s18DB.s18_2_B
+            formularioForm3.s18_2_C = s18DB.s18_2_C
+            formularioForm3.s18_2_D = s18DB.s18_2_D
+            formularioForm3.s18_2_E = s18DB.s18_2_E
+            formularioForm3.s18_2_F = s18DB.s18_2_F
+            formularioForm3.s18_2_G = s18DB.s18_2_G
+            formularioForm3.s18_2_G_f = s18DB.s18_2_G_f
+            formularioForm3.s18_3_A = s18DB.s18_3_A
+            formularioForm3.s18_3_B = s18DB.s18_3_B
+            formularioForm3.s18_3_B_f = s18DB.s18_3_B_f
+            formularioForm3.s18_4 = s18DB.s18_4
+            formularioForm3.s18_4_A = s18DB.s18_4_A
+            formularioForm3.s18_4_B = s18DB.s18_4_B
+            formularioForm3.s18_4_C = s18DB.s18_4_C
+            formularioForm3.s18_4_C_f = s18DB.s18_4_C_f
+            formularioForm3.s18_4_D = s18DB.s18_4_D
+            formularioForm3.s18_4_D_f = s18DB.s18_4_D_f
+            formularioForm3.s18_4_E = s18DB.s18_4_E
+            formularioForm3.s18_4_E_f = s18DB.s18_4_E_f
+            formularioForm3.s18_4_F = s18DB.s18_4_F
+            formularioForm3.s18_4_F_f = s18DB.s18_4_F_f
+            formularioForm3.s18_4_1 = s18DB.s18_4_1
+        }
+
+        if (s19DB != null) {
+            formularioForm3.s19_1_A = s19DB.s19_1_A
+            formularioForm3.s19_1_B = s19DB.s19_1_B
+            formularioForm3.s19_1_C = s19DB.s19_1_C
+            formularioForm3.s19_1_D = s19DB.s19_1_D
+            formularioForm3.s19_1_E = s19DB.s19_1_E
+            formularioForm3.s19_1_F = s19DB.s19_1_F
+            formularioForm3.s19_1_F_f = s19DB.s19_1_F_f
+            formularioForm3.s19_2 = s19DB.s19_2
+            formularioForm3.s19_3_1 = s19DB.s19_3_1
+            formularioForm3.s19_3_2 = s19DB.s19_3_2
+        }
+
+        if (s20DB != null) {
+            formularioForm3.s20_1 = s20DB.s20_1
+        }
+
+        if (s21DB != null) {
+            formularioForm3.s21_1_A = s21DB.s21_1_A
+            formularioForm3.s21_1_B = s21DB.s21_1_B
+            formularioForm3.s21_1_C = s21DB.s21_1_C
+            formularioForm3.s21_1_D = s21DB.s21_1_D
+            formularioForm3.s21_1_E = s21DB.s21_1_E
+            formularioForm3.s21_1_1 = s21DB.s21_1_1
+            formularioForm3.s21_1_2_A = s21DB.s21_1_2_A
+            formularioForm3.s21_1_2_B = s21DB.s21_1_2_B
+            formularioForm3.s21_1_2_B_f = s21DB.s21_1_2_B_f
+            formularioForm3.s21_2_A = s21DB.s21_2_A
+            formularioForm3.s21_2_B = s21DB.s21_2_B
+            formularioForm3.s21_2_C = s21DB.s21_2_C
+            formularioForm3.s21_2_D = s21DB.s21_2_D
+            formularioForm3.s21_2_E = s21DB.s21_2_E
+            formularioForm3.s21_2_1 = s21DB.s21_2_1
+            formularioForm3.s21_2_2_A = s21DB.s21_2_2_A
+            formularioForm3.s21_2_2_B = s21DB.s21_2_2_B
+            formularioForm3.s21_2_2_B_f = s21DB.s21_2_2_B_f
+            formularioForm3.s21_3_A = s21DB.s21_3_A
+            formularioForm3.s21_3_B = s21DB.s21_3_B
+            formularioForm3.s21_3_C = s21DB.s21_3_C
+            formularioForm3.s21_3_D = s21DB.s21_3_D
+            formularioForm3.s21_3_E = s21DB.s21_3_E
+            formularioForm3.s21_3_1 = s21DB.s21_3_1
+            formularioForm3.s21_3_2_A = s21DB.s21_3_2_A
+            formularioForm3.s21_3_2_B = s21DB.s21_3_2_B
+            formularioForm3.s21_3_2_B_f = s21DB.s21_3_2_B_f
+            formularioForm3.s21_4_A = s21DB.s21_4_A
+            formularioForm3.s21_4_B = s21DB.s21_4_B
+            formularioForm3.s21_4_1_A = s21DB.s21_4_1_A
+            formularioForm3.s21_4_1_B = s21DB.s21_4_1_B
         }
 
         model["formularioForm1"] = formularioForm1

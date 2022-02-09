@@ -8,14 +8,17 @@ import javax.validation.constraints.NotNull
 data class FormularioForm3(
 
         var processId: String = "",
+
         //secção 15
         //15
         var s15 : String = "",
+
         //secção 16
         //16.1
         var s16_1_A : Boolean = false,
         var s16_1_B : Boolean = false,
         var s16_1_B_f : String = "",
+
         //secção 17
         //17
         var s17_A : Boolean = false,
@@ -47,6 +50,7 @@ data class FormularioForm3(
         //17.6
         var s17_6 : Boolean = false,
         var s17_6_f : String = "",
+
         //secção 18
         //18.1
         var s18_1 : Boolean = false,
@@ -84,6 +88,7 @@ data class FormularioForm3(
         var s18_4_F_f : String = "",
         //18.4.1
         var s18_4_1 : String = "",
+
         //secção 19
         //19.1
         var s19_1_A : Boolean = false,
@@ -98,9 +103,11 @@ data class FormularioForm3(
         //19.3
         var s19_3_1 : String = "",
         var s19_3_2 : String = "",
+
         //secção 20
         //20.1
         var s20_1 : String = "",
+
         //secção 21
         //21.1
         var s21_1_A : Boolean = false,

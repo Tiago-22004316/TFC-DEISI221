@@ -13,6 +13,7 @@ data class FormularioForm1(
         //secção 1
         var s2_A : Boolean = false,
         var s2_B : Boolean = false,
+
         //secção 3
         //3.1
         var s3_1 : String = "",
@@ -28,6 +29,7 @@ data class FormularioForm1(
         var s3_4_1 : String = "",
         //3.4.2
         var s3_4_2 : Boolean = false,
+
         //secção 4
         //4.2
         var s4_2 : Boolean = false,
@@ -36,6 +38,7 @@ data class FormularioForm1(
         //4.3
         var s4_3 : Boolean = false,
         var s4_3_f : String = "",
+
         //secção 5
         //5.2
         var s5_2_A : Boolean = false,
@@ -91,6 +94,7 @@ data class FormularioForm1(
         var s5_6_1_O : Boolean = false,
         var s5_6_1_P : Boolean = false,
         var s5_6_1_Q : Boolean = false,
+
         //secção 6
         //6
         var s6_A : Boolean = false,

@@ -37,6 +37,7 @@ data class FormularioForm2(
         //8.5
         var s8_5 : Boolean = false,
         var s8_5_f : String = "",
+
         //secção 9
         //9.1
         //9.1.1
@@ -61,6 +62,7 @@ data class FormularioForm2(
         var s9_2_L_f : String = "",
         var s9_2_M : Boolean = false,
         var s9_2_M_f : String = "",
+
         //secção 10
         //10.1
         var s10_1 : Boolean = false,
@@ -73,6 +75,7 @@ data class FormularioForm2(
         var s10_2_1 : String = "",
         //10.3
         var s10_3 : Boolean = false,
+
         //secção 11
         //11.1
         var s11_1_A : Boolean = false,
@@ -97,12 +100,14 @@ data class FormularioForm2(
         var s11_2_L_f : String = "",
         var s11_2_M : Boolean = false,
         var s11_2_M_f : String = "",
+
         //secção 12
         var s12_A : Boolean = false,
         var s12_B : Boolean = false,
         var s12_C : Boolean = false,
         var s12_D : Boolean = false,
         var s12_D_f : String = "",
+
         //secção 13
         //13.1
         var s13_1_A : Boolean = false,
@@ -127,6 +132,7 @@ data class FormularioForm2(
         var s13_2_N : Boolean = false,
         var s13_2_N_f : String = "",
         var s13_2_O : Boolean = false,
+
         //secção 14
         //14
         var s14_A : Boolean = false,
