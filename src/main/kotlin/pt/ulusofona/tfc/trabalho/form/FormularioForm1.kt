@@ -94,6 +94,11 @@ data class FormularioForm1(
         var s5_6_1_O : Boolean = false,
         var s5_6_1_P : Boolean = false,
         var s5_6_1_Q : Boolean = false,
+        var s5_6_1_R : Boolean = false,
+        var s5_6_1_S : Boolean = false,
+        var s5_6_1_T : Boolean = false,
+        var s5_6_1_U : Boolean = false,
+        var s5_6_1_V : Boolean = false,
 
         //secção 6
         //6
@@ -106,7 +111,6 @@ data class FormularioForm1(
         var s6_1_B_f : String = "",
         //secção 7
         //7.1
-        var s7_1 : Boolean = false,
         var s7_1_A : Boolean = false,
         var s7_1_B : Boolean = false,
         var s7_1_C : Boolean = false,

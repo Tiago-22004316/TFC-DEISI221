@@ -52,7 +52,7 @@
             <div class="panel-heading">17 - Vicissitudes processuais</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
+                    <div>
                         <div class="checkbox indent">
                             <div class="col-sm-9">
                                 <input th:field="*{s17_A}" type="checkbox" class="">
@@ -437,26 +437,26 @@
                                 <label th:for="${#ids.prev('s21_2_E')}">E - por um terceiro interveniente.</label>
                                 <br>
                             </div>
-                        <!-- 21.2.1 -->
-                        <div class="col-sm-9">
-                            <label th:for="s21_2_1">21.2.1 - Síntese dos principais fundamentos:</label>
-                            <input th:field="*{s21_2_1}" type="text" class="form-control" maxlength="100"/>
-                            <br>
+                            <!-- 21.2.1 -->
+                            <div class="col-sm-9">
+                                <label th:for="s21_2_1">21.2.1 - Síntese dos principais fundamentos:</label>
+                                <input th:field="*{s21_2_1}" type="text" class="form-control" maxlength="100"/>
+                                <br>
+                            </div>
+                            <!-- 21.2.2 -->
+                            <div class="col-sm-9">
+                                <label class="control-label">21.2.2 - Reforma da decisão a quo?</label>
+                                <input th:field="*{s21_2_2_A}" type="checkbox" class="">
+                                <label th:for="${#ids.prev('s21_2_2_A')}">A - Não</label>
+                                <br>
+                                <input th:field="*{s21_2_2_B}" type="checkbox" class="">
+                                <label th:for="${#ids.prev('s21_2_2_B')}">B - Sim. </label>
+                                <br>
+                                <label th:for="s21_2_2_B_f">Síntese das razões:</label>
+                                <input th:field="*{s21_2_2_B_f}" type="text" class="form-control" maxlength="100"/>
+                                <br>
+                            </div>
                         </div>
-                        <!-- 21.2.2 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">21.2.2 - Reforma da decisão a quo?</label>
-                            <input th:field="*{s21_2_2_A}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s21_2_2_A')}">A - Não</label>
-                            <br>
-                            <input th:field="*{s21_2_2_B}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s21_2_2_B')}">B - Sim. </label>
-                            <br>
-                            <label th:for="s21_2_2_B_f">Síntese das razões:</label>
-                            <input th:field="*{s21_2_2_B_f}" type="text" class="form-control" maxlength="100"/>
-                            <br>
-                        </div>
-                    </div>
                         <!-- 21.3 -->
                         <div class="col-sm-9">
                             <label class="control-label">21.3 - Houve recurso para o Tribunal Constitucional?</label>
@@ -498,27 +498,27 @@
                                     </div>
                                 </div>
                             </div>
-                        <!-- 21.4 -->
-                        <div class="col-sm-9">
-                        <label class="control-label">21.4 - Decisão com trânsito em julgado:</label>
-                        <input th:field="*{s21_4_A}" type="checkbox" class="">
-                        <label th:for="${#ids.prev('s21_4_A')}">A - procedente</label>
-                        <br>
-                        <input th:field="*{s21_4_B}" type="checkbox" class="">
-                        <label th:for="${#ids.prev('s21_4_B')}">B - improcedente</label>
-                        <br>
-                        <!-- 21.3.1 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">21.4.1 - Decisão com trânsito em julgado: no mesmo sentido da decisão de primeira instância?</label>
-                            <input th:field="*{s21_4_1_A}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s21_4_1_A')}">A - sim</label>
-                            <br>
-                            <input th:field="*{s21_4_1_B}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s21_4_1_B')}">B - não</label>
-                            <br>
+                            <!-- 21.4 -->
+                            <div class="col-sm-9">
+                                <label class="control-label">21.4 - Decisão com trânsito em julgado:</label>
+                                <input th:field="*{s21_4_A}" type="checkbox" class="">
+                                <label th:for="${#ids.prev('s21_4_A')}">A - procedente</label>
+                                <br>
+                                <input th:field="*{s21_4_B}" type="checkbox" class="">
+                                <label th:for="${#ids.prev('s21_4_B')}">B - improcedente</label>
+                                <br>
+                                <!-- 21.3.1 -->
+                                <div class="col-sm-9">
+                                    <label class="control-label">21.4.1 - Decisão com trânsito em julgado: no mesmo sentido da decisão de primeira instância?</label>
+                                    <input th:field="*{s21_4_1_A}" type="checkbox" class="">
+                                    <label th:for="${#ids.prev('s21_4_1_A')}">A - sim</label>
+                                    <br>
+                                    <input th:field="*{s21_4_1_B}" type="checkbox" class="">
+                                    <label th:for="${#ids.prev('s21_4_1_B')}">B - não</label>
+                                    <br>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
                     </div>
                 </div>
             </div>
