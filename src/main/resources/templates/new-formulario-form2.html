@@ -248,14 +248,14 @@
                     <!-- 10.1 -->
                     <div class="checkbox">
                         <label>
-                            <input th:field="*{s10_1}" type="checkbox" class="">10.1 - Não houve intervenção
+                            <input th:field="*{s10_1}" type="checkbox" class="grupo-10">10.1 - Não houve intervenção
                         </label>
                         <br>
                     </div>
                         <!-- 10.2 -->
                     <div class="checkbox">
                         <label>
-                            <input th:field="*{s10_2}" type="checkbox" class="">10.2 - Assistente do Ministério Público  aderindo a PI
+                            <input th:field="*{s10_2}" type="checkbox" class="grupo-10">10.2 - Assistente do Ministério Público  aderindo a PI
                         </label>
                         <br>
                     </div>
@@ -263,15 +263,15 @@
                             <div class="checkbox">
                                 <div class="checkbox indent">
                                     <label>
-                                        <input th:field="*{s10_2_A}" type="checkbox" class="">A - Assistente do beneficiário da prestação aderindo à Contestação
+                                        <input th:field="*{s10_2_A}" type="checkbox" class="grupo-10-2">A - Assistente do beneficiário da prestação aderindo à Contestação
                                     </label>
                                     <br>
                                     <label>
-                                        <input th:field="*{s10_2_B}" type="checkbox" class="">B - Apresenta articulado próprio e alinha-se com o Ministério Público
+                                        <input th:field="*{s10_2_B}" type="checkbox" class="grupo-10-2">B - Apresenta articulado próprio e alinha-se com o Ministério Público
                                     </label>
                                     <br>
                                     <label>
-                                        <input th:field="*{s10_2_C}" type="checkbox" class="">C - Apresenta articulado próprio e alinha-se com a parte Ré
+                                        <input th:field="*{s10_2_C}" type="checkbox" class="grupo-10-2">C - Apresenta articulado próprio e alinha-se com a parte Ré
                                     </label>
                                     <br>
                                 </div>
@@ -288,7 +288,7 @@
                         <!-- 10.3 -->
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s10_3}" type="checkbox" class="">10.3 - Intervenção principal
+                                <input th:field="*{s10_3}" type="checkbox" class="grupo-10">10.3 - Intervenção principal
                             </label>
                             <br>
                         </div>
@@ -611,8 +611,8 @@
 
         <!-- botões -->
         <div class="form-group">
-            <div class="col-sm-9">
-                <input type="submit" value="Submeter" class="btn btn-primary" />
+            <div class="col-sm-9" style="display:inline-block; width:130px;">
+                <input type="submit" value="Gravar" class="btn btn-primary"/>
             </div>
         </div>
     </form>
@@ -628,10 +628,9 @@
     }
 
     $(document).ready(function() {
-        let groups = [ "grupo-7","grupo-7-1-e", "grupo-7-2-1-e",
-                        "grupo-7-2-2-e","grupo-7-3-1-e","grupo-7-3-2-e","grupo-7-4-1-e",
-                        "grupo-7-4-2-e","grupo-7-5-e","grupo-9","grupo-9-1-e","grupo-9-2-e",
-                        "grupo-9-3-e","grupo-9-4-e"]
+        let groups = [
+            "grupo-10", "grupo-10-2"
+        ]
         groups.forEach(mutuallyExclusive)
     });
 </script>
