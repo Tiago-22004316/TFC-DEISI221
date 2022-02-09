@@ -14,90 +14,120 @@
             <div class="panel-heading">8 - Defesa</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
-                        <div class="col-sm-9">
-                            <!-- 8.1 -->
-                            <input th:field="*{s8_1}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s8_1')}">8.1 - Sem defesa </label>
+                    <div class="col-sm-9">
+                        <!-- 8.1 -->
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_1}" type="checkbox" class="">8.1 - Sem defesa
+                            </label>
                             <br>
-                            <!-- 8.2 -->
-                            <div class="col-sm-9">
-                                <input th:field="*{s8_2}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s8_2')}">8.2 - Defesa por impugnação</label>
-                                <br>
-                            </div>
-                            <!-- 8.3 -->
-                            <div class="col-sm-9">
-                                <input th:field="*{s8_3}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s8_3')}">8.3 - Defesa por exceção perentória</label>
-                                <br>
+                        </div>
+                        <!-- 8.2 -->
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_2}" type="checkbox" class="">8.2 - Defesa por impugnação
+                            </label>
+                            <br>
+                        </div>
+                        <!-- 8.3 -->
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_3}" type="checkbox" class="">8.3 - Defesa por exceção perentória
+                            </label>
+                            <br>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="checkbox">
                                 <div class="checkbox indent">
-                                    <input th:field="*{s8_3_A}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_3_A')}">A - Causa que impede o efeito jurídico pretendido.</label>
+                                    <label>
+                                        <input th:field="*{s8_3_A}" type="checkbox" class="">A - Causa que impede o efeito jurídico pretendido.
+                                    </label>
                                     <br>
                                     <label th:for="s8_3_A_f">Qual?</label>
                                     <input th:field="*{s8_3_A_f}" type="text" class="form-control" maxlength="100"/>
                                     <br>
-                                    <input th:field="*{s8_3_B}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_3_B')}">B - Causa que modifica o efeito jurídico pretendido.</label>
+                                    <label>
+                                        <input th:field="*{s8_3_B}" type="checkbox" class="">B - Causa que modifica o efeito jurídico pretendido.
+                                    </label>
                                     <br>
                                     <label th:for="s8_3_B_f">Qual?</label>
                                     <input th:field="*{s8_3_B_f}" type="text" class="form-control" maxlength="100"/>
                                     <br>
-                                    <input th:field="*{s8_3_C}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_3_C')}">C - Causa que extingue o efeito jurídico pretendido.</label>
+                                    <label>
+                                        <input th:field="*{s8_3_C}" type="checkbox" class="">C - Causa que extingue o efeito jurídico pretendido.
+                                    </label>
                                     <br>
                                     <label th:for="s8_3_C_f">Qual?</label>
                                     <input th:field="*{s8_3_C_f}" type="text" class="form-control" maxlength="100"/>
                                     <br>
                                 </div>
                             </div>
-                            <!-- 8.4 -->
-                            <div class="col-sm-9">
-                                <input th:field="*{s8_4}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s8_4')}">8.4 - Defesa por exceção dilatória /nulidade processual.</label>
-                                <br>
+                        </div>
+                        <!-- 8.4 -->
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_4}" type="checkbox" class="">8.4 - Defesa por exceção dilatória /nulidade processual.
+                            </label>
+                            <br>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="checkbox">
                                 <div class="checkbox indent">
-                                    <input th:field="*{s8_4_A}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_A')}">A - Incompetência absoluta do tribunal – competência internacional</label>
+                                    <label>
+                                        <input th:field="*{s8_4_A}" type="checkbox" class="">A - Incompetência absoluta do tribunal – competência internacional
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_B}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_B')}">B - Incompetência absoluta do tribunal – pacto privativo de jurisdição permitido por convenção internacional</label>
+                                    <label>
+                                        <input th:field="*{s8_4_B}" type="checkbox" class="">B - Incompetência absoluta do tribunal – pacto privativo de jurisdição permitido por convenção internacional
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_C}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_C')}">C - Incompetência relativa do tribunal – competência territorial</label>
+                                    <label>
+                                        <input th:field="*{s8_4_C}" type="checkbox" class="">C - Incompetência relativa do tribunal – competência territorial
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_D}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_D')}">D - Nulidade de todo o processo – Ineptidão da Petição Inicial</label>
+                                    <label>
+                                        <input th:field="*{s8_4_D}" type="checkbox" class="">D - Nulidade de todo o processo – Ineptidão da Petição Inicial
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_E}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_E')}">E - Nulidade de todo o processo – falta de citação ou nulidade da citação</label>
+                                    <label>
+                                        <input th:field="*{s8_4_E}" type="checkbox" class="">E - Nulidade de todo o processo – falta de citação ou nulidade da citação
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_F}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_F')}">F - Nulidade de todo o processo – outra nulidade</label>
+                                    <label>
+                                        <input th:field="*{s8_4_F}" type="checkbox" class="">F - Nulidade de todo o processo – outra nulidade
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_G}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_G')}">G - Pluralidade subjetiva subsidiária (fora dos casos do art. 39º do CPC)</label>
+                                    <label>
+                                        <input th:field="*{s8_4_G}" type="checkbox" class="">G - Pluralidade subjetiva subsidiária (fora dos casos do art. 39º do CPC)
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_H}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_H')}">H - Litispendência</label>
+                                    <label>
+                                        <input th:field="*{s8_4_H}" type="checkbox" class="">H - Litispendência
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_I}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_I')}">I - Caso julgado</label>
+                                    <label>
+                                        <input th:field="*{s8_4_I}" type="checkbox" class="">I - Caso julgado
+                                    </label>
                                     <br>
-                                    <input th:field="*{s8_4_J}" type="checkbox" class="">
-                                    <label th:for="${#ids.prev('s8_4_J')}">J - Outra</label>
+                                    <label>
+                                        <input th:field="*{s8_4_J}" type="checkbox" class="">J - Outra
+                                    </label>
                                     <br>
                                     <label th:for="s8_4_J_f">Qual?</label>
                                     <input th:field="*{s8_4_J_f}" type="text" class="form-control" maxlength="100"/>
                                     <br>
                                 </div>
                             </div>
-                            <!-- 8.5 -->
-                            <div class="col-sm-9">
-                                <input th:field="*{s8_5}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s8_5')}">8.5 - Arguição da inconstitucionalidade da ARECT?</label>
-                                <br>
+                        </div>
+                        <!-- 8.5 -->
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_5}" type="checkbox" class="">8.5 - Arguição da inconstitucionalidade da ARECT?
+                            </label>
+                            <br>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="checkbox">
                                 <label th:for="s8_5_f">Descrição sucinta dos argumentos:</label>
                                 <input th:field="*{s8_5_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
@@ -115,72 +145,89 @@
             <div class="panel-body">
                 <label class="control-label">9.1 - Alegações do Empregador:</label>
                 <div class="form-group">
-                    <div class="checkbox">
-                        <!-- 9.1.1 -->
-                        <div class="col-sm-9">
-                            <input th:field="*{s9_1_1}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s9_1_1')}">9.1.1 - Em torno da existência de outra modalidade contratual.</label>
+                    <!-- 9.1.1 -->
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s9_1_1}" type="checkbox" class="">9.1.1 - Em torno da existência de outra modalidade contratual.
+                            </label>
                             <br>
                             <div class="checkbox indent">
-                                <input th:field="*{s9_1_1_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_1_1_A')}">A - Prestação de serviços</label>
+                                <label>
+                                    <input th:field="*{s9_1_1_A}" type="checkbox" class="">A - Prestação de serviços
+                                </label>
                                 <br>
-                                <input th:field="*{s9_1_1_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_1_1_B')}">B - Outras</label>
+                                <label>
+                                    <input th:field="*{s9_1_1_B}" type="checkbox" class="">B - Outras
+                                </label>
                                 <br>
                                 <label th:for="s9_1_1_B_f">Quais?</label>
                                 <input th:field="*{s9_1_1_B_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
                             </div>
                         </div>
-                        <!-- 9.2 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">9.2 - Meios de prova apresentados pelo Empregador</label>
+                    </div>
+                    <!-- 9.2 -->
+                    <div class="col-sm-9">
+                        <label class="control-label">9.2 - Meios de prova apresentados pelo Empregador</label>
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s9_2_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_A')}">A - Declaração de parte</label>
+                                <label>
+                                    <input th:field="*{s9_2_A}" type="checkbox" class="">A - Declaração de parte
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_B')}">B - Apresentação de documentos por iniciativa própria</label>
+                                <label>
+                                    <input th:field="*{s9_2_B}" type="checkbox" class="">B - Apresentação de documentos por iniciativa própria
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_C')}">C - Requerimento para que a parte contrária apresente documentos</label>
+                                <label>
+                                    <input th:field="*{s9_2_C}" type="checkbox" class="">C - Requerimento para que a parte contrária apresente documentos
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_D}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_D')}">D - Requisição de documentos a organismos oficiais</label>
+                                <label>
+                                    <input th:field="*{s9_2_D}" type="checkbox" class="">D - Requisição de documentos a organismos oficiais
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_E}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_E')}">E - Requisição de documentos às partes</label>
+                                <label>
+                                    <input th:field="*{s9_2_E}" type="checkbox" class="">E - Requisição de documentos às partes
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_F}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_F')}">F - Requisição de documentos a terceiros</label>
+                                <label>
+                                    <input th:field="*{s9_2_F}" type="checkbox" class="">F - Requisição de documentos a terceiros
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_G}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_G')}">G - Testemunhas (com algum vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s9_2_G}" type="checkbox" class="">G - Testemunhas (com algum vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_H}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_H')}">H - Testemunhas (sem vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s9_2_H}" type="checkbox" class="">H - Testemunhas (sem vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s9_2_I}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_I')}">I - Prova pericial.</label>
+                                <label>
+                                    <input th:field="*{s9_2_I}" type="checkbox" class="">I - Prova pericial.
+                                </label>
                                 <br>
                                 <label th:for="s9_2_I_f">Objeto da perícia:</label>
                                 <input th:field="*{s9_2_I_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s9_2_J}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_J')}">J - Prova por inspeção judicial.</label>
+                                <label>
+                                    <input th:field="*{s9_2_J}" type="checkbox" class="">J - Prova por inspeção judicial.
+                                </label>
                                 <br>
                                 <label th:for="s9_2_J_f">Objeto da inspeção:</label>
                                 <input th:field="*{s9_2_J_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s9_2_L}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_L')}">L - Verificação não judicial qualificada.</label>
+                                <label>
+                                    <input th:field="*{s9_2_L}" type="checkbox" class="">L - Verificação não judicial qualificada.
+                                </label>
                                 <br>
                                 <label th:for="s9_2_L_f">Objeto da verificação:</label>
                                 <input th:field="*{s9_2_L_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s9_2_M}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s9_2_M')}">M - Outra</label>
+                                <label>
+                                    <input th:field="*{s9_2_M}" type="checkbox" class="">M - Outra
+                                </label>
                                 <br>
                                 <label th:for="s9_2_M_f">Qual?</label>
                                 <input th:field="*{s9_2_M_f}" type="text" class="form-control" maxlength="100"/>
@@ -197,40 +244,52 @@
             <div class="panel-heading">10 - Intervenção do trabalhador - doutrina da decisão</div>
             <div class="panel-body">
                 <div class="form-group">
+                    <div class="col-sm-9">
+                    <!-- 10.1 -->
                     <div class="checkbox">
-                        <!-- 10.1 -->
-                        <div class="col-sm-9">
-                            <input th:field="*{s10_1}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s10_1')}">10.1 - Não houve intervenção</label>
-                            <br>
-                        </div>
+                        <label>
+                            <input th:field="*{s10_1}" type="checkbox" class="">10.1 - Não houve intervenção
+                        </label>
+                        <br>
+                    </div>
                         <!-- 10.2 -->
+                    <div class="checkbox">
+                        <label>
+                            <input th:field="*{s10_2}" type="checkbox" class="">10.2 - Assistente do Ministério Público  aderindo a PI
+                        </label>
+                        <br>
+                    </div>
                         <div class="col-sm-9">
-                            <input th:field="*{s10_2}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s10_2')}">10.2 - Assistente do Ministério Público  aderindo a PI</label>
-                            <br>
-                            <div class="checkbox indent">
-                                <input th:field="*{s10_2_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s10_2_A')}">A - Assistente do beneficiário da prestação aderindo à Contestação</label>
-                                <br>
-                                <input th:field="*{s10_2_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s10_2_B')}">B - Apresenta articulado próprio e alinha-se com o Ministério Público</label>
-                                <br>
-                                <input th:field="*{s10_2_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s10_2_C')}">C - Apresenta articulado próprio e alinha-se com a parte Ré</label>
-                                <br>
+                            <div class="checkbox">
+                                <div class="checkbox indent">
+                                    <label>
+                                        <input th:field="*{s10_2_A}" type="checkbox" class="">A - Assistente do beneficiário da prestação aderindo à Contestação
+                                    </label>
+                                    <br>
+                                    <label>
+                                        <input th:field="*{s10_2_B}" type="checkbox" class="">B - Apresenta articulado próprio e alinha-se com o Ministério Público
+                                    </label>
+                                    <br>
+                                    <label>
+                                        <input th:field="*{s10_2_C}" type="checkbox" class="">C - Apresenta articulado próprio e alinha-se com a parte Ré
+                                    </label>
+                                    <br>
+                                </div>
                             </div>
                             <!-- 10.2.1 -->
                             <div class="col-sm-9">
-                                <label th:for="s10_2_1">10.2.1 - Descrição sucinta das suas alegações:</label>
-                                <input th:field="*{s10_2_1}" type="text" class="form-control" maxlength="100"/>
-                                <br>
+                                <div class="checkbox">
+                                    <label th:for="s10_2_1">10.2.1 - Descrição sucinta das suas alegações:</label>
+                                    <input th:field="*{s10_2_1}" type="text" class="form-control" maxlength="100"/>
+                                    <br>
+                                </div>
                             </div>
                         </div>
                         <!-- 10.3 -->
-                        <div class="col-sm-9">
-                            <input th:field="*{s10_3}" type="checkbox" class="">
-                            <label th:for="${#ids.prev('s10_3')}">10.3 - Intervenção principal</label>
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s10_3}" type="checkbox" class="">10.3 - Intervenção principal
+                            </label>
                             <br>
                         </div>
                     </div>
@@ -243,76 +302,93 @@
             <div class="panel-heading">11 - Produção de provas trabalhador</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
-                        <!-- 11.1 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">11.1 - Alegações do Trabalhador: </label>
+                    <!-- 11.1 -->
+                    <div class="col-sm-9">
+                        <label class="control-label">11.1 - Alegações do Trabalhador: </label>
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s11_1_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_1_A')}">A - Em torno da existência do contrato de trabalho</label>
+                                <label>
+                                    <input th:field="*{s11_1_A}" type="checkbox" class="">A - Em torno da existência do contrato de trabalho
+                                </label>
                                 <br>
-                                <input th:field="*{s11_1_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_1_B')}">B - Em torno da existência de outra modalidade contratual.</label>
+                                <label>
+                                    <input th:field="*{s11_1_B}" type="checkbox" class="">B - Em torno da existência de outra modalidade contratual.
+                                </label>
                                 <br>
                                 <label th:for="s11_1_B_f">Qual?</label>
                                 <input th:field="*{s11_1_B_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s11_1_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_1_C')}">C - Outras</label>
+                                <label>
+                                    <input th:field="*{s11_1_C}" type="checkbox" class="">C - Outras
+                                </label>
                                 <br>
                                 <label th:for="s11_1_C_f">Quais?</label>
                                 <input th:field="*{s11_1_C_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
                             </div>
                         </div>
-                        <!-- 11.2 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">11.2 - Meios de prova apresentados pelo Trabalhador:</label>
+                    </div>
+                    <!-- 11.2 -->
+                    <div class="col-sm-9">
+                        <label class="control-label">11.2 - Meios de prova apresentados pelo Trabalhador:</label>
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s11_2_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_A')}">A - Depoimento de parte</label>
+                                <label>
+                                    <input th:field="*{s11_2_A}" type="checkbox" class="">A - Depoimento de parte
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_B')}">B - Apresentação de documentos por iniciativa própria</label>
+                                <label>
+                                    <input th:field="*{s11_2_B}" type="checkbox" class="">B - Apresentação de documentos por iniciativa própria
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_C')}">C - Requerimento para que a parte contrária apresente documentos</label>
+                                <label>
+                                    <input th:field="*{s11_2_C}" type="checkbox" class="">C - Requerimento para que a parte contrária apresente documentos
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_D}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_D')}">D - Requisição de documentos a organismos oficiais</label>
+                                <label>
+                                    <input th:field="*{s11_2_D}" type="checkbox" class="">D - Requisição de documentos a organismos oficiais
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_E}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_E')}">E - Requisição de documentos às partes</label>
+                                <label>
+                                    <input th:field="*{s11_2_E}" type="checkbox" class="">E - Requisição de documentos às partes
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_F}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_F')}">F - Requisição de documentos a terceiros</label>
+                                <label>
+                                    <input th:field="*{s11_2_F}" type="checkbox" class="">F - Requisição de documentos a terceiros
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_G}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_G')}">G - Testemunhas (com algum vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s11_2_G}" type="checkbox" class="">G - Testemunhas (com algum vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_H}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_H')}">H - Testemunhas (sem vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s11_2_H}" type="checkbox" class="">H - Testemunhas (sem vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s11_2_I}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_I')}">I - Prova pericial.</label>
+                                <label>
+                                    <input th:field="*{s11_2_I}" type="checkbox" class="">I - Prova pericial.
+                                </label>
                                 <br>
                                 <label th:for="s11_2_I_f">Objeto da perícia:</label>
                                 <input th:field="*{s11_2_I_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s11_2_J}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_J')}">J - Prova por inspeção judicial.</label>
+                                <label>
+                                    <input th:field="*{s11_2_J}" type="checkbox" class="">J - Prova por inspeção judicial.
+                                </label>
                                 <br>
                                 <label th:for="s11_2_J_f">Objeto da inspeção:</label>
                                 <input th:field="*{s11_2_J_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s11_2_L}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_L')}">L - Verificação não judicial qualificada.</label>
+                                <label>
+                                    <input th:field="*{s11_2_L}" type="checkbox" class="">L - Verificação não judicial qualificada.
+                                </label>
                                 <br>
                                 <label th:for="s11_2_L_f">Objeto da verificação:</label>
                                 <input th:field="*{s11_2_L_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s11_2_M}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s11_2_M')}">Outra.</label>
+                                <label>
+                                    <input th:field="*{s11_2_M}" type="checkbox" class="">Outra.
+                                </label>
                                 <br>
                                 <label th:for="s11_2_M_f">Qual?</label>
                                 <input th:field="*{s11_2_M_f}" type="text" class="form-control" maxlength="100"/>
@@ -329,20 +405,24 @@
             <div class="panel-heading">12 - Intervenção de terceiros</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
-                        <div class="col-sm-9">
+                    <div class="col-sm-9">
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s12_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s12_A')}">A - Alegação do Empregador de que outra pessoa é responsável</label>
+                                <label>
+                                    <input th:field="*{s12_A}" type="checkbox" class="">A - Alegação do Empregador de que outra pessoa é responsável
+                                </label>
                                 <br>
-                                <input th:field="*{s12_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s12_B')}">B - Transmissão global do estabelecimento</label>
+                                <label>
+                                    <input th:field="*{s12_B}" type="checkbox" class="">B - Transmissão global do estabelecimento
+                                </label>
                                 <br>
-                                <input th:field="*{s12_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s12_C')}">C - Por determinação judicial</label>
+                                <label>
+                                    <input th:field="*{s12_C}" type="checkbox" class="">C - Por determinação judicial
+                                </label>
                                 <br>
-                                <input th:field="*{s12_D}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s12_D')}">D - Outra situação.</label>
+                                <label>
+                                    <input th:field="*{s12_D}" type="checkbox" class="">D - Outra situação.
+                                </label>
                                 <br>
                                 <label th:for="s12_D_f">Qual?</label>
                                 <input th:field="*{s12_D_f}" type="text" class="form-control" maxlength="100"/>
@@ -359,79 +439,97 @@
             <div class="panel-heading">13 - Produção de provas terceiro</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
-                        <!-- 13.1 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">13.1 - Alegações do Terceiro:</label>
+                    <!-- 13.1 -->
+                    <div class="col-sm-9">
+                        <label class="control-label">13.1 - Alegações do Terceiro:</label>
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s13_1_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_1_A')}">A - Ilegitimidade</label>
+                                <label>
+                                    <input th:field="*{s13_1_A}" type="checkbox" class="">A - Ilegitimidade
+                                </label>
                                 <br>
-                                <input th:field="*{s13_1_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_1_B')}">B - Outra.</label>
+                                <label>
+                                    <input th:field="*{s13_1_B}" type="checkbox" class="">B - Outra.
+                                </label>
                                 <br>
                                 <label th:for="s13_1_B_f">Qual?</label>
                                 <input th:field="*{s13_1_B_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
                             </div>
                         </div>
-                        <!-- 13.2 -->
-                        <div class="col-sm-9">
-                            <label class="control-label">13.2 - Meios de prova requeridos e utilizados pelo Terceiro</label>
+                    </div>
+                    <!-- 13.2 -->
+                    <div class="col-sm-9">
+                        <label class="control-label">13.2 - Meios de prova requeridos e utilizados pelo Terceiro</label>
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s13_2_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_A')}">A - Declaração de parte</label>
+                                <label>
+                                    <input th:field="*{s13_2_A}" type="checkbox" class="">A - Declaração de parte
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_B')}">B - Depoimento de parte</label>
+                                <label>
+                                    <input th:field="*{s13_2_B}" type="checkbox" class="">B - Depoimento de parte
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_C')}">C - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT</label>
+                                <label>
+                                    <input th:field="*{s13_2_C}" type="checkbox" class="">C - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_D}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_D')}">D - Requerimento para que a parte contrária apresente documentos</label>
+                                <label>
+                                    <input th:field="*{s13_2_D}" type="checkbox" class="">D - Requerimento para que a parte contrária apresente documentos
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_E}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_E')}">E - Requisição de documentos a organismos oficiais</label>
+                                <label>
+                                    <input th:field="*{s13_2_E}" type="checkbox" class="">E - Requisição de documentos a organismos oficiais
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_F}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_F')}">F - Requisição de documentos às partes</label>
+                                <label>
+                                    <input th:field="*{s13_2_F}" type="checkbox" class="">F - Requisição de documentos às partes
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_G}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_G')}">G - Requisição de documentos a terceiros</label>
+                                <label>
+                                    <input th:field="*{s13_2_G}" type="checkbox" class="">G - Requisição de documentos a terceiros
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_H}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_H')}">H - Testemunhas (com algum vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s13_2_H}" type="checkbox" class="">H - Testemunhas (com algum vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_I}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_I')}">I - Testemunhas (sem vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s13_2_I}" type="checkbox" class="">I - Testemunhas (sem vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s13_2_J}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_J')}">J - Prova pericial.</label>
+                                <label>
+                                    <input th:field="*{s13_2_J}" type="checkbox" class="">J - Prova pericial.
+                                </label>
                                 <br>
                                 <label th:for="s13_2_J_f">Objeto da perícia:</label>
                                 <input th:field="*{s13_2_J_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s13_2_L}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_L')}">L - Prova por inspeção judicial.</label>
+                                <label>
+                                    <input th:field="*{s13_2_L}" type="checkbox" class="">L - Prova por inspeção judicial.
+                                </label>
                                 <br>
                                 <label th:for="s13_2_L_f">Objeto da inspeção:</label>
                                 <input th:field="*{s13_2_L_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s13_2_M}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_M')}">M - Verificação não judicial qualificada.</label>
+                                <label>
+                                    <input th:field="*{s13_2_M}" type="checkbox" class="">M - Verificação não judicial qualificada.
+                                </label>
                                 <br>
                                 <label th:for="s13_2_M_f">Objeto da verificação:</label>
                                 <input th:field="*{s13_2_M_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s13_2_N}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_N')}">N - Outra.</label>
+                                <label>
+                                    <input th:field="*{s13_2_N}" type="checkbox" class="">N - Outra.
+                                </label>
                                 <br>
                                 <label th:for="s13_2_N_f">Qual?</label>
                                 <input th:field="*{s13_2_N_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s13_2_O}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s13_2_O')}">O - Poder inquisitório em matéria alegatória / poder instrutório para a prova dos factos pelo tribunal</label>
+                                <label>
+                                    <input th:field="*{s13_2_O}" type="checkbox" class="">O - Poder inquisitório em matéria alegatória / poder instrutório para a prova dos factos pelo tribunal
+                                </label>
                                 <br>
                             </div>
                         </div>
@@ -445,50 +543,61 @@
             <div class="panel-heading">14 - Produção de provas determinadas pelo tribunal</div>
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="checkbox">
-                        <div class="col-sm-9">
+                    <div class="col-sm-9">
+                        <div class="checkbox">
                             <div class="checkbox indent">
-                                <input th:field="*{s14_A}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_A')}">A - Esclarecimentos / Depoimento de parte</label>
+                                <label>
+                                    <input th:field="*{s14_A}" type="checkbox" class="">A - Esclarecimentos / Depoimento de parte
+                                </label>
                                 <br>
-                                <input th:field="*{s14_B}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_B')}">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT</label>
+                                <label>
+                                    <input th:field="*{s14_B}" type="checkbox" class="">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
+                                </label>
                                 <br>
-                                <input th:field="*{s14_C}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_C')}">C - Requisição de documentos a organismos oficiais</label>
+                                <label>
+                                    <input th:field="*{s14_C}" type="checkbox" class="">C - Requisição de documentos a organismos oficiais
+                                </label>
                                 <br>
-                                <input th:field="*{s14_D}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_D')}">D - Requisição de documentos às partes</label>
+                                <label>
+                                    <input th:field="*{s14_D}" type="checkbox" class="">D - Requisição de documentos às partes
+                                </label>
                                 <br>
-                                <input th:field="*{s14_E}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_E')}">E - Requisição de documentos a terceiros</label>
+                                <label>
+                                    <input th:field="*{s14_E}" type="checkbox" class="">E - Requisição de documentos a terceiros
+                                </label>
                                 <br>
-                                <input th:field="*{s14_F}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_F')}">F - Testemunhas (com algum vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s14_F}" type="checkbox" class="">F - Testemunhas (com algum vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s14_G}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_G')}">G - Testemunhas (sem vínculo à Ré)</label>
+                                <label>
+                                    <input th:field="*{s14_G}" type="checkbox" class="">G - Testemunhas (sem vínculo à Ré)
+                                </label>
                                 <br>
-                                <input th:field="*{s14_H}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_H')}">H - Prova pericial.</label>
+                                <label>
+                                    <input th:field="*{s14_H}" type="checkbox" class="">H - Prova pericial.
+                                </label>
                                 <br>
                                 <label th:for="s14_H_f">Objeto da perícia:</label>
                                 <input th:field="*{s14_H_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s14_I}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_I')}">I - Prova por inspeção judicial.</label>
+                                <label>
+                                    <input th:field="*{s14_I}" type="checkbox" class="">I - Prova por inspeção judicial.
+                                </label>
                                 <br>
                                 <label th:for="s14_I_f">Objeto da inspeção:</label>
                                 <input th:field="*{s14_I_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s14_J}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_J')}">J - Verificação não judicial qualificada.</label>
+                                <label>
+                                    <input th:field="*{s14_J}" type="checkbox" class="">J - Verificação não judicial qualificada.
+                                </label>
                                 <br>
                                 <label th:for="s14_J_f">Objeto da verificação:</label>
                                 <input th:field="*{s14_J_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s14_L}" type="checkbox" class="">
-                                <label th:for="${#ids.prev('s14_L')}">L - Outra.</label>
+                                <label>
+                                    <input th:field="*{s14_L}" type="checkbox" class="">L - Outra.
+                                </label>
                                 <br>
                                 <label th:for="s14_L_f">Qual?</label>
                                 <input th:field="*{s14_L_f}" type="text" class="form-control" maxlength="100"/>
