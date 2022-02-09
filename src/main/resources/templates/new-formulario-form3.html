@@ -31,10 +31,10 @@
                         <div class="checkbox">
                             <label class="control-label">16.1 - Foi adotado algum mecanismo de simplificação e agilização do processo?</label>
                             <div class="checkbox indent">
-                                <input th:field="*{s16_1_A}" type="checkbox" class="">
+                                <input th:field="*{s16_1_A}" type="checkbox" class="grupo-16">
                                 <label th:for="${#ids.prev('s16_1_A')}">A - Não</label>
                                 <br>
-                                <input th:field="*{s16_1_B}" type="checkbox" class="">
+                                <input th:field="*{s16_1_B}" type="checkbox" class="grupo-16">
                                 <label th:for="${#ids.prev('s16_1_B')}">B - Sim</label>
                                 <br>
                                 <label th:for="s16_1_B_f">Qual?</label>
@@ -55,25 +55,25 @@
                     <div>
                         <div class="checkbox indent">
                             <div class="col-sm-9">
-                                <input th:field="*{s17_A}" type="checkbox" class="">
+                                <input th:field="*{s17_A}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_A')}">A - Conciliação com a participação do trabalhador</label>
                                 <br>
-                                <input th:field="*{s17_B}" type="checkbox" class="">
+                                <input th:field="*{s17_B}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_B')}">B - Conciliação sem a participação do trabalhador</label>
                                 <br>
-                                <input th:field="*{s17_C}" type="checkbox" class="">
+                                <input th:field="*{s17_C}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_C')}">C - Desistência da instância com a participação do trabalhador</label>
                                 <br>
-                                <input th:field="*{s17_D}" type="checkbox" class="">
+                                <input th:field="*{s17_D}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_D')}">D - Desistência da instância sem a participação do trabalhador</label>
                                 <br>
-                                <input th:field="*{s17_E}" type="checkbox" class="">
+                                <input th:field="*{s17_E}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_E')}">E - Outras vicissitudes.</label>
                                 <br>
                                 <label th:for="s17_E_f">Quais?</label>
                                 <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="100"/>
                                 <br>
-                                <input th:field="*{s17_F}" type="checkbox" class="">
+                                <input th:field="*{s17_F}" type="checkbox" class="grupo-17">
                                 <label th:for="${#ids.prev('s17_F')}">F - Sem vicissitudes dignas de nota.</label>
                                 <br>
                             </div>
@@ -82,10 +82,10 @@
                         <div class="col-sm-9">
                             <label class="control-label">17.1 - Houve discussão sobre a tutela do interesse público?</label>
                             <div class="checkbox indent">
-                                <input th:field="*{s17_1_A}" type="checkbox" class="">
+                                <input th:field="*{s17_1_A}" type="checkbox" class="grupo17-1">
                                 <label th:for="${#ids.prev('s17_1_A')}">A - Não</label>
                                 <br>
-                                <input th:field="*{s17_1_B}" type="checkbox" class="">
+                                <input th:field="*{s17_1_B}" type="checkbox" class="grupo17-1">
                                 <label th:for="${#ids.prev('s17_1_B')}">B - Sim</label>
                                 <br>
                                 <label th:for="s17_1_B_f">Se sim, quais os principais argumentos?</label>
@@ -120,10 +120,10 @@
                             <div class="col-sm-9">
                                 <div class="checkbox indent">
                                     <label class="control-label">17.4.1 - Tutela cautelar concedida? </label>
-                                    <input th:field="*{s17_4_1_A}" type="checkbox" class="">
+                                    <input th:field="*{s17_4_1_A}" type="checkbox" class="grupo-17-4-1">
                                     <label th:for="${#ids.prev('s17_4_1_A')}">A - Não</label>
                                     <br>
-                                    <input th:field="*{s17_4_1_B}" type="checkbox" class="">
+                                    <input th:field="*{s17_4_1_B}" type="checkbox" class="grupo-17-4-1">
                                     <label th:for="${#ids.prev('s17_4_1_B')}">B - Sim</label>
                                     <br>
                                 </div>
@@ -135,7 +135,7 @@
                                     <input th:field="*{s17_4_2_A}" type="checkbox" class="">
                                     <label th:for="${#ids.prev('s17_4_2_A')}">A - Não</label>
                                     <br>
-                                    <input th:field="*{s17_4_2_B}" type="checkbox" class="">
+                                    <input th:field="*{s17_4_2_B}" type="checkbox" class="grupo-17-4-2">
                                     <label th:for="${#ids.prev('s17_4_2_B')}">B - Sim.</label>
                                     <br>
                                     <label th:for="s17_4_2_B_f">Se sim, em que termos?</label>
@@ -176,19 +176,19 @@
                             <label th:for="${#ids.prev('s18_1')}">18.1 - Extinção da instância </label>
                             <br>
                             <div class="checkbox indent">
-                                <input th:field="*{s18_1_A}" type="checkbox" class="">
+                                <input th:field="*{s18_1_A}" type="checkbox" class="grupo-18-1">
                                 <label th:for="${#ids.prev('s18_1_A')}">A - Julgamento</label>
                                 <br>
-                                <input th:field="*{s18_1_B}" type="checkbox" class="">
+                                <input th:field="*{s18_1_B}" type="checkbox" class="grupo-18-1">
                                 <label th:for="${#ids.prev('s18_1_B')}">B - Transação</label>
                                 <br>
-                                <input th:field="*{s18_1_C}" type="checkbox" class="">
+                                <input th:field="*{s18_1_C}" type="checkbox" class="grupo-18-1">
                                 <label th:for="${#ids.prev('s18_1_C')}">C - Impossibilidade superveniente da lide</label>
                                 <br>
-                                <input th:field="*{s18_1_D}" type="checkbox" class="">
+                                <input th:field="*{s18_1_D}" type="checkbox" class="grupo-18-1">
                                 <label th:for="${#ids.prev('s18_1_D')}">D - Inutilidade superveniente da lide</label>
                                 <br>
-                                <input th:field="*{s18_1_E}" type="checkbox" class="">
+                                <input th:field="*{s18_1_E}" type="checkbox" class="grupo-18-1">
                                 <label th:for="${#ids.prev('s18_1_E')}">E - Outra.</label>
                                 <br>
                                 <label th:for="s18_1_E_f">Qual?</label>
@@ -198,29 +198,29 @@
                         </div>
                         <!-- 18.2 -->
                         <div class="col-sm-9">
-                            <input th:field="*{s18_2}" type="checkbox" class="">
+                            <input th:field="*{s18_2}" type="checkbox" class="grupo-18-2">
                             <label th:for="${#ids.prev('s18_2')}">18.2 - Absolvição do Empregador da instância </label>
                             <br>
                             <div class="checkbox indent">
-                                <input th:field="*{s18_2_A}" type="checkbox" class="">
+                                <input th:field="*{s18_2_A}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_A')}">A - Incompetência absoluta do tribunal – competência internacional</label>
                                 <br>
-                                <input th:field="*{s18_2_B}" type="checkbox" class="">
+                                <input th:field="*{s18_2_B}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_B')}">B - Incompetência relativa do tribunal – divisão judicial do território</label>
                                 <br>
-                                <input th:field="*{s18_2_C}" type="checkbox" class="">
+                                <input th:field="*{s18_2_C}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_C')}">C - Nulidade de todo o processo</label>
                                 <br>
-                                <input th:field="*{s18_2_D}" type="checkbox" class="">
+                                <input th:field="*{s18_2_D}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_D')}">D - Pluralidade subjetiva subsidiária – fora dos casos do art. 39º do CPC</label>
                                 <br>
-                                <input th:field="*{s18_2_E}" type="checkbox" class="">
+                                <input th:field="*{s18_2_E}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_E')}">E - Litispendência</label>
                                 <br>
-                                <input th:field="*{s18_2_F}" type="checkbox" class="">
+                                <input th:field="*{s18_2_F}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_F')}">F - Caso julgado</label>
                                 <br>
-                                <input th:field="*{s18_2_G}" type="checkbox" class="">
+                                <input th:field="*{s18_2_G}" type="checkbox" class="grupo-18-2">
                                 <label th:for="${#ids.prev('s18_2_G')}">G - Outra.</label>
                                 <br>
                                 <label th:for="s18_2_G_f">Qual?</label>
@@ -232,10 +232,10 @@
                         <div class="col-sm-9">
                             <label class="control-label">18.3 - </label>
                             <div class="checkbox indent">
-                                <input th:field="*{s18_3_A}" type="checkbox" class="">
+                                <input th:field="*{s18_3_A}" type="checkbox" class="grupo-18-3">
                                 <label th:for="${#ids.prev('s18_3_A')}">A - Procedência total</label>
                                 <br>
-                                <input th:field="*{s18_3_B}" type="checkbox" class="">
+                                <input th:field="*{s18_3_B}" type="checkbox" class="grupo-18-3">
                                 <label th:for="${#ids.prev('s18_3_B')}">B - Procedência parcial.</label>
                                 <br>
                                 <label th:for="s18_3_B_f">Decaimento:</label>
@@ -302,22 +302,22 @@
                         <div class="col-sm-9">
                             <label class="control-label">19.1 - Situação de fraude:</label>
                             <div class="checkbox indent">
-                                <input th:field="*{s19_1_A}" type="checkbox" class="">
+                                <input th:field="*{s19_1_A}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_A')}">A - falsos recibos verdes</label>
                                 <br>
-                                <input th:field="*{s19_1_B}" type="checkbox" class="">
+                                <input th:field="*{s19_1_B}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_B')}">B - falsos  estagiários</label>
                                 <br>
-                                <input th:field="*{s19_1_C}" type="checkbox" class="">
+                                <input th:field="*{s19_1_C}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_C')}">C - falsos bolseiros</label>
                                 <br>
-                                <input th:field="*{s19_1_D}" type="checkbox" class="">
+                                <input th:field="*{s19_1_D}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_D')}">D - falsos voluntários</label>
                                 <br>
-                                <input th:field="*{s19_1_E}" type="checkbox" class="">
+                                <input th:field="*{s19_1_E}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_E')}">E - trabalho com o auxílio de plataformas digitais</label>
                                 <br>
-                                <input th:field="*{s19_1_F}" type="checkbox" class="">
+                                <input th:field="*{s19_1_F}" type="checkbox" class="grupo19-1">
                                 <label th:for="${#ids.prev('s19_1_F')}">F - outro tipo de trabalho à distância.</label>
                                 <br>
                                 <label th:for="s19_1_F_f">Outro:</label>
@@ -405,10 +405,10 @@
                             <div class="col-sm-9">
                                 <label class="control-label">21.1.2 - Reforma da sentença?</label>
                                 <div class="checkbox indent">
-                                    <input th:field="*{s21_1_2_A}" type="checkbox" class="">
+                                    <input th:field="*{s21_1_2_A}" type="checkbox" class="grupo-21-1-2">
                                     <label th:for="${#ids.prev('s21_1_2_A')}">A - Não</label>
                                     <br>
-                                    <input th:field="*{s21_1_2_B}" type="checkbox" class="">
+                                    <input th:field="*{s21_1_2_B}" type="checkbox" class="grupo-21-1-2">
                                     <label th:for="${#ids.prev('s21_1_2_B')}">B - Sim. </label>
                                     <br>
                                     <label th:for="s21_1_2_B_f">Síntese das razões:</label>
@@ -446,10 +446,10 @@
                             <!-- 21.2.2 -->
                             <div class="col-sm-9">
                                 <label class="control-label">21.2.2 - Reforma da decisão a quo?</label>
-                                <input th:field="*{s21_2_2_A}" type="checkbox" class="">
+                                <input th:field="*{s21_2_2_A}" type="checkbox" class="grupo-21-2-2">
                                 <label th:for="${#ids.prev('s21_2_2_A')}">A - Não</label>
                                 <br>
-                                <input th:field="*{s21_2_2_B}" type="checkbox" class="">
+                                <input th:field="*{s21_2_2_B}" type="checkbox" class="grupo-21-2-2">
                                 <label th:for="${#ids.prev('s21_2_2_B')}">B - Sim. </label>
                                 <br>
                                 <label th:for="s21_2_2_B_f">Síntese das razões:</label>
@@ -486,10 +486,10 @@
                                 <div class="col-sm-9">
                                     <label class="control-label">21.3.2- Reforma da decisão a quo?</label>
                                     <div class="checkbox indent">
-                                        <input th:field="*{s21_3_2_A}" type="checkbox" class="">
+                                        <input th:field="*{s21_3_2_A}" type="checkbox" class="grupo-21-3-2">
                                         <label th:for="${#ids.prev('s21_3_2_A')}">A - Não</label>
                                         <br>
-                                        <input th:field="*{s21_3_2_B}" type="checkbox" class="">
+                                        <input th:field="*{s21_3_2_B}" type="checkbox" class="grupo-21-3-2">
                                         <label th:for="${#ids.prev('s21_3_2_B')}">B - Sim. </label>
                                         <br>
                                         <label th:for="s21_3_2_B_f">Síntese das razões:</label>
@@ -501,19 +501,19 @@
                             <!-- 21.4 -->
                             <div class="col-sm-9">
                                 <label class="control-label">21.4 - Decisão com trânsito em julgado:</label>
-                                <input th:field="*{s21_4_A}" type="checkbox" class="">
+                                <input th:field="*{s21_4_A}" type="checkbox" class="grupo-21-4">
                                 <label th:for="${#ids.prev('s21_4_A')}">A - procedente</label>
                                 <br>
-                                <input th:field="*{s21_4_B}" type="checkbox" class="">
+                                <input th:field="*{s21_4_B}" type="checkbox" class="grupo-21-4">
                                 <label th:for="${#ids.prev('s21_4_B')}">B - improcedente</label>
                                 <br>
-                                <!-- 21.3.1 -->
+                                <!-- 21.4.1 -->
                                 <div class="col-sm-9">
                                     <label class="control-label">21.4.1 - Decisão com trânsito em julgado: no mesmo sentido da decisão de primeira instância?</label>
-                                    <input th:field="*{s21_4_1_A}" type="checkbox" class="">
+                                    <input th:field="*{s21_4_1_A}" type="checkbox" class="grupo-21-4-1">
                                     <label th:for="${#ids.prev('s21_4_1_A')}">A - sim</label>
                                     <br>
-                                    <input th:field="*{s21_4_1_B}" type="checkbox" class="">
+                                    <input th:field="*{s21_4_1_B}" type="checkbox" class="grupo-21-4-1">
                                     <label th:for="${#ids.prev('s21_4_1_B')}">B - não</label>
                                     <br>
                                 </div>
@@ -537,7 +537,13 @@
     }
 
     $(document).ready(function() {
-        let groups = [  ]
+        let groups = [
+            "grupo-16",
+            "grupo-17","grupo17-1","grupo-17-4-1","grupo-17-4-2",
+            "grupo-18-1","grupo-18-2","grupo-18-3",
+            "grupo19-1",
+            "grupo-21-1-2","grupo-21-2-2","grupo-21-3-2","grupo-21-4","grupo-21-4-1"
+        ]
         groups.forEach(mutuallyExclusive)
     });
 </script>

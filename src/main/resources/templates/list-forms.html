@@ -12,6 +12,15 @@
     <div class="alert alert-error" th:if="${error}" th:text="${error}">
         Message...
     </div>
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="col-sm-9">
+                    <button onclick="window.location.href='/form/1'">Novo Processo</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <table class="table" th:if="${!processo.isEmpty()}">
         <thead>
             <tr>
