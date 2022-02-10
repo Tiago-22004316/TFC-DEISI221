@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: s3cret
+      MYSQL_DATABASE: trabjus
+      MYSQL_USER: trabjus
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./db:/var/lib/mysql
+
+  drop-project:
+    image: pedroalv3s/trabjus
+    restart: "on-failure"
+    environment:
+      DB_URL: jdbc:mysql://db:3306/trabjus?connectTimeout=0&socketTimeout=0&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USERNAME: trabjus
+      DB_PASSWORD: password
+    ports:
+      - "8080:8080"
+    links:
+      - db

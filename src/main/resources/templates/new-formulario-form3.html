@@ -6,8 +6,17 @@
 <div th:replace="layout/layout :: header"></div>
 
 <div class="container">
-    <h1 class="page-header">Inserir Dados do Processo</h1>
-    <form th:object="${formularioForm3}" method="post" th:action="@{/form/3}" class="form-horizontal">
+    <h1 class="page-header">Inserir Dados do Processo (página 3)</h1>
+    <form th:object="${formularioForm3}" method="post" th:action="@{/form/edit/{processId}/3(processId=${formularioForm3.processId})}" class="form-horizontal">
+
+        <!--1-->
+        <div class="form-group" th:classappend="${#fields.hasErrors('processId')} ? 'has-error' : ''">
+            <label for="processId" class="col-sm-3 control-label">Processo nº:</label>
+            <div class="col-sm-9">
+                <input th:field="*{processId}" type="text" class="form-control" id="processId" maxlength="50" th:readonly="${formularioForm3.edit}" />
+                <p class="help-block" th:if="${#fields.hasErrors('processId')}" th:errors="*{processId}">Error</p>
+            </div>
+        </div>
 
         <!-- 15 -->
         <div class="panel panel-default">
@@ -613,17 +622,18 @@
             </div>
         </div>
 
+        <!-- botões -->
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
-                    <div class="col-sm-9" style="display:inline-block; width:130px;">
-                        <input type="submit" value="Submeter" class="btn btn-primary"/>
-                    </div>
+                    <input type="submit" name="operation" value="Gravar" class="btn btn-primary"/>
+                    <input type="submit" name="operation" value="Submeter" class="btn btn-success"/>
                 </div>
             </div>
         </div>
 
     </form>
+    <br/>
 </div>
 
 <div th:replace="layout/layout :: footer"></div>

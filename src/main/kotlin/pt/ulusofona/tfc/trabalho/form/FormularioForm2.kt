@@ -8,6 +8,13 @@ import javax.validation.constraints.NotNull
 data class FormularioForm2(
 
         var processId: String = "",
+
+        // pode ser "Gravar" ou "Avançar >>"
+        var operation: String = "",
+
+        var edit: Boolean = false,
+
+
         //secção 8
         //8.1
         var s8_1 : Boolean = false,

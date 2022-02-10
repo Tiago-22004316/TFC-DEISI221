@@ -9,6 +9,11 @@ data class FormularioForm3(
 
         var processId: String = "",
 
+        // pode ser "Gravar" ou "Submeter"
+        var operation: String = "",
+
+        var edit: Boolean = false,
+
         //secção 15
         //15
         var s15 : String = "",

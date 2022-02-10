@@ -3,13 +3,21 @@ package pt.ulusofona.tfc.trabalho.form
 import javax.validation.constraints.Min
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
+import javax.validation.constraints.Size
 
 
 data class FormularioForm1(
 
         //secção 1
         @field:NotEmpty(message = "Erro: O número do processo tem que estar preenchido")
+        @field:Size(max = 50, message = "Erro: O número de processo não pode ter mais do que 50 caracteres")
         var processId: String = "",
+
+        // pode ser "Gravar" ou "Avançar >>"
+        var operation: String = "",
+
+        var edit: Boolean = false,
+
         //secção 1
         var s2_A : Boolean = false,
         var s2_B : Boolean = false,

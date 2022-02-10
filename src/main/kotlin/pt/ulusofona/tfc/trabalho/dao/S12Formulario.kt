@@ -1,5 +1,6 @@
 package pt.ulusofona.tfc.trabalho.dao
 
+import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
@@ -9,6 +10,8 @@ data class S12Formulario(
         @Id @GeneratedValue
         //secção 12
         val id: Long = 0,
+
+        @Column(length = 50, unique = true)
         var processId: String = "",
         //12
         var s12_A : Boolean = false,
