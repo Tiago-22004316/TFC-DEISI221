@@ -12,7 +12,7 @@ services:
       - ./db:/var/lib/mysql
 
   drop-project:
-    image: pedroalv3s/trabjus
+    image: trabjus
     restart: "on-failure"
     environment:
       DB_URL: jdbc:mysql://db:3306/trabjus?connectTimeout=0&socketTimeout=0&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
