@@ -1056,10 +1056,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
 
-    @PostMapping(value = ["/3"])
-    fun formForm(@Valid @ModelAttribute("formularioForm3") formularioForm3: FormularioForm3,
-                 bindingResult: BindingResult,
-                 redirectAttributes: RedirectAttributes) : String {
+    @PostMapping(value = [ "/edit/{processId}/3"])
+    fun postFormularioForm3(@Valid @ModelAttribute("formularioForm3") formularioForm3: FormularioForm3,
+                            @PathVariable("processId") processIdParam: String?,
+                            bindingResult: BindingResult, model:ModelMap,
+                            redirectAttributes: RedirectAttributes) : String {
 
         if (bindingResult.hasErrors()) {
             return "new-formulario-form3"
@@ -1184,9 +1185,17 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             )
         s21FormularioRepository.save(s21FormularioDAO)
 
-        // se ele chegou aqui, teve sucesso
-        redirectAttributes.addFlashAttribute("message", "Processo inserido com sucesso")
 
-        return "redirect:/form/list"
+        when (formularioForm3.operation) {
+            "Gravar" -> {
+                redirectAttributes.addFlashAttribute("message", "Página 3 do formulário gravada. Pode continuar a preencher")
+                return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
+            }
+            "Avançar >>" -> {
+                redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
+                return "redirect:/form/list"
+            }
+            else -> throw Exception("invalid operation: ${formularioForm3.operation}")
+        }
     }
 }

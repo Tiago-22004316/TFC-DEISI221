@@ -7,6 +7,11 @@
 
 <div class="container">
     <h1 class="page-header">Inserir Dados do Processo (página 3)</h1>
+
+    <div th:if="${message}">
+        <div class="alert alert-info" th:text="${message}"/>
+    </div>
+
     <form th:object="${formularioForm3}" method="post" th:action="@{/form/edit/{processId}/3(processId=${formularioForm3.processId})}" class="form-horizontal">
 
         <!--1-->
