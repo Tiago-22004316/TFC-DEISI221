@@ -11,6 +11,7 @@ data class S1Formulario(
         var estado : String = "",
         var lastUpdate : Date,
         var comarca : String = "",
+        var juizo : String = "",
 
         @Column(length = 50, unique = true)
         var processId: String = ""
