@@ -103,11 +103,11 @@ data class FormularioForm3(
         var s19_1_E : Boolean = false,
         var s19_1_F : Boolean = false,
         var s19_1_F_f : String = "",
-        //19.2
-        var s19_2 : String = "",
-        //19.3
-        var s19_3_1 : String = "",
-        var s19_3_2 : String = "",
+        //19.1.1
+        var s19_1_1 : String = "",
+        //19.2.1
+        var s19_2_1 : String = "",
+        var s19_2_2 : String = "",
 
         //secção 20
         //20.1

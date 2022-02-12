@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head th:replace="layout/layout :: head (pageTitle='Novo Processo')">
 </head>
 <body>
@@ -142,8 +142,8 @@
                         </div>
                         <div class="col-sm-9">
                             <div class="checkbox">
-                                <label th:for="s8_5_f">Descrição sucinta dos argumentos:</label>
-                                <input th:field="*{s8_5_f}" type="text" class="form-control" maxlength="100"/>
+                                <label for="s8_5_f">Descrição sucinta dos argumentos:</label>
+                                <textarea id="s8_5_f" name="s8_5_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                                 <br>
                                 <br>
                             </div>
@@ -293,8 +293,8 @@
                             <!-- 10.2.1 -->
                             <div class="col-sm-9">
                                 <div class="checkbox">
-                                    <label th:for="s10_2_1">10.2.1 - Descrição sucinta das suas alegações:</label>
-                                    <input th:field="*{s10_2_1}" type="text" class="form-control" maxlength="100"/>
+                                    <label for="s10_2_1">10.2.1 - Descrição sucinta das suas alegações:</label>
+                                    <textarea id="s10_2_1" name="s10_2_1" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                                     <br>
                                 </div>
                             </div>

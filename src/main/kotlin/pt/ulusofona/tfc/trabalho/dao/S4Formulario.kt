@@ -13,11 +13,11 @@ data class S4Formulario(
 
         @Column(length = 50, unique = true)
         var processId: String = "",
-                //4.2
-        var s4_2 : Boolean = false,
-        var s4_2_A : Boolean = false,
-        var s4_2_B : Boolean = false,
-                //4.3
-        var s4_3 : Boolean = false,
-        var s4_3_f : String = "",
+                //4.1.1
+        var s4_1_1 : Boolean = false,
+        var s4_1_1_A : Boolean = false,
+        var s4_1_1_B : Boolean = false,
+                //4.1.2
+        var s4_1_2 : Boolean = false,
+        var s4_1_2_f : String = "",
         )
