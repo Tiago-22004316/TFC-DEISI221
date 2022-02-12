@@ -19,9 +19,22 @@
             <div class="col-sm-9">
                 <input th:field="*{processId}" type="text" class="form-control" id="processId" maxlength="50" th:readonly="${formularioForm1.edit}" />
                 <p class="help-block" th:if="${#fields.hasErrors('processId')}" th:errors="*{processId}">Error</p>
+                <br>
                 <!-- 1.1 -->
                 <div class="col-sm-9">
-                        <!-- ver como se faz um dropdown -->
+                    <!-- ver como se faz um dropdown -->
+                    <label for="comarca">Comarca:</label>
+                    <select name="comarca" id="comarca">
+                        <option value=""></option>
+                        <option value="Juízo do Trabalho de Lisboa">Juízo do Trabalho de Lisboa</option>
+                        <option value="Juízo do Trabalho de Cascais">Juízo do Trabalho de Cascais</option>
+                        <option value="Juízo do Trabalho de Sintra">Juízo do Trabalho de Sintra</option>
+                        <option value="Juízo do Trabalho de Loures">Juízo do Trabalho de Loures</option>
+                        <option value="Juízo do Trabalho de Vila Nova de Gaia">Juízo do Trabalho de Vila Nova de Gaia </option>
+                        <option value="Juízo do Trabalho do Porto">Juízo do Trabalho do Porto</option>
+                        <option value="Juízo do Trabalho da Maia">Juízo do Trabalho da Maia</option>
+                        <option value="Juízo do Trabalho de Valongo">Juízo do Trabalho de Valongo </option>
+                    </select>
                 </div>
             </div>
         </div>
