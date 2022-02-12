@@ -1,5 +1,6 @@
 package pt.ulusofona.tfc.trabalho.form
 
+import java.util.*
 import javax.validation.constraints.Min
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.NotNull
@@ -15,7 +16,7 @@ data class FormularioForm1(
 
         // pode ser "Gravar" ou "Avançar >>"
         var operation: String = "",
-
+        var comarca : String = "",
         var edit: Boolean = false,
 
         //secção 1

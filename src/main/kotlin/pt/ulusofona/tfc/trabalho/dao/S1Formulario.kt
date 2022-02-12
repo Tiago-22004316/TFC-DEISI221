@@ -9,7 +9,7 @@ data class S1Formulario(
         //secção 1
         val id: Long = 0,
         var estado : String = "",
-        var lastUpdate : Date,
+        //var lastUpdate : Date,
         var comarca : String = "",
 
         @Column(length = 50, unique = true)
