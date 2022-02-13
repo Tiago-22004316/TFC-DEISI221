@@ -181,9 +181,22 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm1.s7_1_M_f = s7DB.s7_1_M_f
         }
 
+        //verificar se vai so ler ou editar/criar o form
+        val s1DB = s1FormularioRepository.findByProcessId(processId)
+
+        if (s1DB != null && s1DB.estado == "Submetido" ) {
+            model["formularioForm1"] = formularioForm1
+
+            formularioForm1.edit = true
+            formularioForm1.submetido = true
+            model["url"] = "edit/${processId}/1"
+
+            return "new-formulario-form1"
+        }
         model["formularioForm1"] = formularioForm1
 
         formularioForm1.edit = true
+        formularioForm1.submetido = false
         model["url"] = "edit/${processId}/1"
 
         return "new-formulario-form1"
@@ -339,8 +352,21 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm2.s14_L_f = s14DB.s14_L_f
         }
 
+        //verificar se vai so ler ou editar/criar o form
+        val s1DB = s1FormularioRepository.findByProcessId(processId)
+
+        if (s1DB != null && s1DB.estado == "Submetido" ) {
+            model["formularioForm2"] = formularioForm2
+            formularioForm2.edit = true
+            formularioForm2.submetido = true
+            model["url"] = "edit/${processId}/2"
+
+            return "new-formulario-form2"
+        }
+
         model["formularioForm2"] = formularioForm2
         formularioForm2.edit = true
+        formularioForm2.submetido = false
         model["url"] = "edit/${processId}/2"
 
         return "new-formulario-form2"
@@ -485,8 +511,22 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm3.s21_4_1_B = s21DB.s21_4_1_B
         }
 
+        //verificar se vai so ler ou editar/criar o form
+        val s1DB = s1FormularioRepository.findByProcessId(processId)
+
+        if (s1DB != null && s1DB.estado == "Submetido" ) {
+            model["formularioForm3"] = formularioForm3
+
+            formularioForm3.submetido = true
+            formularioForm3.edit = true
+            model["url"] = "edit/${processId}/3"
+
+            return "new-formulario-form3"
+        }
+
         model["formularioForm3"] = formularioForm3
 
+        formularioForm3.submetido = false
         formularioForm3.edit = true
         model["url"] = "edit/${processId}/3"
 
