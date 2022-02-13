@@ -45,11 +45,11 @@
             <div class="col-sm-9">
                 <div class="checkbox">
                     <label>
-                        <input th:field="*{s2_A}" type="checkbox" class="grupo-2">Situação contratual individual
+                        <input th:field="*{s2_A}" type="checkbox" class="grupo-2" th:readonly="${formularioForm1.submetido}">Situação contratual individual
                     </label>
                     <br>
                     <label>
-                        <input th:field="*{s2_B}" type="checkbox" class="grupo-2">Múltiplas situações contratuais individuais
+                        <input th:field="*{s2_B}" type="checkbox" class="grupo-2" th:readonly="${formularioForm1.submetido}">Múltiplas situações contratuais individuais
                     </label>
                 </div>
             </div>
@@ -62,32 +62,32 @@
                 <div class="form-group">
                     <div class="col-sm-9">
                         <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
-                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100"/>
+                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                         <br>
                         <label th:for="s3_2">Data da propositura da ação:</label>
-                        <input th:field="*{s3_2}" type="date" class="form-control" maxlength="100"/>
+                        <input th:field="*{s3_2}" type="date" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                         <br>
                         <label th:for="s3_3">Data da prolação da sentença:</label>
-                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100"/>
+                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                         <br>
                         <label class="control-label">Trânsito em julgado</label>
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3"> Não
+                                <input th:field="*{s3_4_A}" type="checkbox" class="grupo-3" th:readonly="${formularioForm1.submetido}"> Não
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3"> Sim
+                                <input th:field="*{s3_4_B}" type="checkbox" class="grupo-3" th:readonly="${formularioForm1.submetido}"> Sim
                             </label>
                         </div>
                         <br/>
                         <label th:for="s3_4_1">Data do trânsito em julgado: </label>
-                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100"/>
+                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s3_4_2}" type="checkbox" class="grupo-3">Não é possível apurar
+                                    <input th:field="*{s3_4_2}" type="checkbox" class="grupo-3" th:readonly="${formularioForm1.submetido}">Não é possível apurar
                                 </label>
                             </div>
                         </div>
@@ -106,28 +106,28 @@
                         <div class="checkbox">
                             <!-- 4.1.1 -->
                             <label>
-                                <input th:field="*{s4_1_1}" type="checkbox" class="grupo-4-1"> 4.1.1 - Pela ACT, através da participação prevista no nº 3 do art. 15º da Lei nº 107/2009
+                                <input th:field="*{s4_1_1}" type="checkbox" class="grupo-4-1" th:readonly="${formularioForm1.submetido}"> 4.1.1 - Pela ACT, através da participação prevista no nº 3 do art. 15º da Lei nº 107/2009
                                 Participação, como assistente, de associação sindical representativa durante a tramitação da fase administrativa da ação inspetiva ?
                             </label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s4_1_1_A}" type="checkbox" class="grupo-4-3-e">A -  Sim
+                                    <input th:field="*{s4_1_1_A}" type="checkbox" class="grupo-4-3-e" th:readonly="${formularioForm1.submetido}">A -  Sim
                                 </label>
                             </div>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s4_1_1_B}" type="checkbox" class="grupo-4-3-e">B - Não
+                                    <input th:field="*{s4_1_1_B}" type="checkbox" class="grupo-4-3-e" th:readonly="${formularioForm1.submetido}">B - Não
                                 </label>
                             </div>
                             <!-- 4.1.2 -->
                             <div>
                                 <label>
-                                    <input th:field="*{s4_1_2}" type="checkbox" class="grupo-4-1">4.1.2 - Por qualquer outro meio
+                                    <input th:field="*{s4_1_2}" type="checkbox" class="grupo-4-1" th:readonly="${formularioForm1.submetido}">4.1.2 - Por qualquer outro meio
                                 </label>
                             </div>
                             <div>
                                 <label th:for="s4_1_2">Qual?</label>
-                                <input th:field="*{s4_1_2_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s4_1_2_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                             </div>
                         </div>
                     </div>
@@ -148,11 +148,11 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s5_1_1_A}" type="checkbox" class="grupo-5-2">A - Feminino
+                                    <input th:field="*{s5_1_1_A}" type="checkbox" class="grupo-5-2" th:readonly="${formularioForm1.submetido}">A - Feminino
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_1_B}" type="checkbox" class="grupo-5-2">B - Masculino
+                                    <input th:field="*{s5_1_1_B}" type="checkbox" class="grupo-5-2" th:readonly="${formularioForm1.submetido}">B - Masculino
                                 </label>
                                 <br>
                             </div>
@@ -164,19 +164,19 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s5_1_2_A}" type="checkbox" class="grupo-5-3">A - Entre 16 e 24 anos
+                                    <input th:field="*{s5_1_2_A}" type="checkbox" class="grupo-5-3" th:readonly="${formularioForm1.submetido}">A - Entre 16 e 24 anos
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_2_B}" type="checkbox" class="grupo-5-3">B - Entre 25 e 34 anos
+                                    <input th:field="*{s5_1_2_B}" type="checkbox" class="grupo-5-3" th:readonly="${formularioForm1.submetido}">B - Entre 25 e 34 anos
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_2_C}" type="checkbox" class="grupo-5-3">C - Entre 35 e 44 anos
+                                    <input th:field="*{s5_1_2_C}" type="checkbox" class="grupo-5-3" th:readonly="${formularioForm1.submetido}">C - Entre 35 e 44 anos
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_2_D}" type="checkbox" class="grupo-5-3">D - Com 45 e mais anos
+                                    <input th:field="*{s5_1_2_D}" type="checkbox" class="grupo-5-3" th:readonly="${formularioForm1.submetido}">D - Com 45 e mais anos
                                 </label>
                                 <br>
                             </div>
@@ -188,23 +188,23 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s5_1_3_A}" type="checkbox" class="grupo-5-4">A - Não é possível identificar
+                                    <input th:field="*{s5_1_3_A}" type="checkbox" class="grupo-5-4" th:readonly="${formularioForm1.submetido}">A - Não é possível identificar
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_3_B}" type="checkbox" class="grupo-5-4">B - Português
+                                    <input th:field="*{s5_1_3_B}" type="checkbox" class="grupo-5-4"th:readonly="${formularioForm1.submetido}">B - Português
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_3_C}" type="checkbox" class="grupo-5-4">C - Cidadadão do espaço Europeu
+                                    <input th:field="*{s5_1_3_C}" type="checkbox" class="grupo-5-4" th:readonly="${formularioForm1.submetido}">C - Cidadadão do espaço Europeu
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_3_D}" type="checkbox" class="grupo-5-4">D - Cidadão com outra nacionalidade
+                                    <input th:field="*{s5_1_3_D}" type="checkbox" class="grupo-5-4" th:readonly="${formularioForm1.submetido}">D - Cidadão com outra nacionalidade
                                 </label>
                                 <br>
                                 <label>
-                                    Qual?<input th:field="*{s5_1_3_D_f}" type="text" class="form-control" maxlength="100"/>
+                                    Qual?<input th:field="*{s5_1_3_D_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                                 </label>
                                 <br>
                             </div>
@@ -216,47 +216,47 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s5_1_4_A}" type="checkbox" class="grupo-5-5">A - Não é possível identificar
+                                    <input th:field="*{s5_1_4_A}" type="checkbox" class="grupo-5-5" th:readonly="${formularioForm1.submetido}">A - Não é possível identificar
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_B}" type="checkbox" class="grupo-5-5">B - Sem escolaridade formal
+                                    <input th:field="*{s5_1_4_B}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">B - Sem escolaridade formal
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_C}" type="checkbox" class="grupo-5-5">C - Ensino básico incompleto
+                                    <input th:field="*{s5_1_4_C}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">C - Ensino básico incompleto
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_D}" type="checkbox" class="grupo-5-5">D - Ensino básico completo
+                                    <input th:field="*{s5_1_4_D}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">D - Ensino básico completo
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_E}" type="checkbox" class="grupo-5-5">E - Ensino secundário incompleto
+                                    <input th:field="*{s5_1_4_E}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">E - Ensino secundário incompleto
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_F}" type="checkbox" class="grupo-5-5">F - Ensino secundário completo
+                                    <input th:field="*{s5_1_4_F}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">F - Ensino secundário completo
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_G}" type="checkbox" class="grupo-5-5">G - Ensino técnico/profissionalizante
+                                    <input th:field="*{s5_1_4_G}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">G - Ensino técnico/profissionalizante
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_H}" type="checkbox" class="grupo-5-5">H - Ensino superior incompleto
+                                    <input th:field="*{s5_1_4_H}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">H - Ensino superior incompleto
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_I}" type="checkbox" class="grupo-5-5">I - Licenciatura
+                                    <input th:field="*{s5_1_4_I}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">I - Licenciatura
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_J}" type="checkbox" class="grupo-5-5">J - Mestrado
+                                    <input th:field="*{s5_1_4_J}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">J - Mestrado
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_1_4_L}" type="checkbox" class="grupo-5-5">L - Doutoramento
+                                    <input th:field="*{s5_1_4_L}" type="checkbox" class="grupo-5-5"th:readonly="${formularioForm1.submetido}">L - Doutoramento
                                 </label>
                                 <br>
                             </div>
@@ -268,39 +268,39 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s5_2_A}" type="checkbox" class="grupo-5-6">A - Empresário em nome individual
+                                    <input th:field="*{s5_2_A}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">A - Empresário em nome individual
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_B}" type="checkbox" class="grupo-5-6">B - Establecimento Individual de Responsabilidade Limitada (EIRL)
+                                    <input th:field="*{s5_2_B}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">B - Establecimento Individual de Responsabilidade Limitada (EIRL)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_C}" type="checkbox" class="grupo-5-6">C - Sociedade em nome coletivo
+                                    <input th:field="*{s5_2_C}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">C - Sociedade em nome coletivo
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_D}" type="checkbox" class="grupo-5-6">D - Sociedade unipessoal por quotas
+                                    <input th:field="*{s5_2_D}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">D - Sociedade unipessoal por quotas
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_E}" type="checkbox" class="grupo-5-6">E - Sociedade em nome coletivo
+                                    <input th:field="*{s5_2_E}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">E - Sociedade em nome coletivo
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_F}" type="checkbox" class="grupo-5-6">F - Sociedade por quotas
+                                    <input th:field="*{s5_2_F}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">F - Sociedade por quotas
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_G}" type="checkbox" class="grupo-5-6">G - Sociedade anónima
+                                    <input th:field="*{s5_2_G}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">G - Sociedade anónima
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_H}" type="checkbox" class="grupo-5-6">H - Cooperativa
+                                    <input th:field="*{s5_2_H}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">H - Cooperativa
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s5_2_I}" type="checkbox" class="grupo-5-6">I - Outro arranjo societário
+                                    <input th:field="*{s5_2_I}" type="checkbox" class="grupo-5-6"th:readonly="${formularioForm1.submetido}">I - Outro arranjo societário
                                 </label>
                                 <br>
                                 <label th:for="s5_2_I">Qual?</label>
@@ -417,15 +417,15 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s6_A}" type="checkbox" class="grupo-6">A - Pedido único
+                                    <input th:field="*{s6_A}" type="checkbox" class="grupo-6"th:readonly="${formularioForm1.submetido}">A - Pedido único
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s6_B}" type="checkbox" class="grupo-6">B - Cumulação de pedidos
+                                    <input th:field="*{s6_B}" type="checkbox" class="grupo-6"th:readonly="${formularioForm1.submetido}">B - Cumulação de pedidos
                                 </label>
                                 <br>
                                 <label th:for="s6_B_f">Qual?</label>
-                                <input th:field="*{s6_B_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s6_B_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                             </div>
                         </div>
@@ -435,15 +435,15 @@
                             <div class="checkbox">
                                 <div class="checkbox indent">
                                     <label>
-                                        <input th:field="*{s6_1_A}" type="checkbox" class="grupo-6-1">A - Não
+                                        <input th:field="*{s6_1_A}" type="checkbox" class="grupo-6-1"th:readonly="${formularioForm1.submetido}">A - Não
                                     </label>
                                     <br>
                                     <label>
-                                        <input th:field="*{s6_1_B}" type="checkbox" class="grupo-6-1">B - Sim
+                                        <input th:field="*{s6_1_B}" type="checkbox" class="grupo-6-1"th:readonly="${formularioForm1.submetido}">B - Sim
                                     </label>
                                     <br>
                                     <label th:for="s6_1_B_f">Qual?</label>
-                                    <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100"/>
+                                    <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                     <br>
                                 </div>
                             </div>
@@ -465,64 +465,64 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s7_1_A}" type="checkbox" class="grupo-7">A - Depoimento de parte (da parte contrária)
+                                    <input th:field="*{s7_1_A}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">A - Depoimento de parte (da parte contrária)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_B}" type="checkbox" class="grupo-7">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
+                                    <input th:field="*{s7_1_B}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_C}" type="checkbox" class="grupo-7">C - Requerimento para que a parte contrária apresente documentos
+                                    <input th:field="*{s7_1_C}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">C - Requerimento para que a parte contrária apresente documentos
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_D}" type="checkbox" class="grupo-7">D - Requisição de documentos a organismos oficiais
+                                    <input th:field="*{s7_1_D}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">D - Requisição de documentos a organismos oficiais
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_E}" type="checkbox" class="grupo-7">E - Requisição de documentos às partes
+                                    <input th:field="*{s7_1_E}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">E - Requisição de documentos às partes
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_F}" type="checkbox" class="grupo-7">F - Requisição de documentos a terceiros
+                                    <input th:field="*{s7_1_F}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">F - Requisição de documentos a terceiros
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_G}" type="checkbox" class="grupo-7">G - Testemunhas (com algum vínculo à Ré)
+                                    <input th:field="*{s7_1_G}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">G - Testemunhas (com algum vínculo à Ré)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_H}" type="checkbox" class="grupo-7">H - Testemunhas (sem vínculo à Ré)
+                                    <input th:field="*{s7_1_H}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">H - Testemunhas (sem vínculo à Ré)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_I}" type="checkbox" class="grupo-7">I - Prova pericial
+                                    <input th:field="*{s7_1_I}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">I - Prova pericial
                                 </label>
                                 <br>
                                 <label th:for="s7_1_I_f">Qual?</label>
-                                <input th:field="*{s7_1_I_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s7_1_I_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_J}" type="checkbox" class="grupo-7">J - Prova por inspeção judicial
+                                    <input th:field="*{s7_1_J}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">J - Prova por inspeção judicial
                                 </label>
                                 <br>
                                 <label th:for="s7_1_J_f">Qual?</label>
-                                <input th:field="*{s7_1_J_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s7_1_J_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_L}" type="checkbox" class="grupo-7">L - Verificação não judicial qualificada
+                                    <input th:field="*{s7_1_L}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">L - Verificação não judicial qualificada
                                 </label>
                                 <br>
                                 <label th:for="s7_1_L_f">Qual?</label>
-                                <input th:field="*{s7_1_L_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s7_1_L_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_M}" type="checkbox" class="grupo-7">M - Outra
+                                    <input th:field="*{s7_1_M}" type="checkbox" class="grupo-7"th:readonly="${formularioForm1.submetido}">M - Outra
                                 </label>
                                 <br>
                                 <label th:for="s7_1_M_f">Qual?</label>
-                                <input th:field="*{s7_1_M_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s7_1_M_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                             </div>
                         </div>

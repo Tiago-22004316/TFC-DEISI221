@@ -46,15 +46,15 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s16_1_A}" type="checkbox" class="grupo-16">A - Não
+                                    <input th:field="*{s16_1_A}" type="checkbox" class="grupo-16"th:readonly="${formularioForm3.submetido}">A - Não
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s16_1_B}" type="checkbox" class="grupo-16">B - Sim
+                                    <input th:field="*{s16_1_B}" type="checkbox" class="grupo-16"th:readonly="${formularioForm3.submetido}">B - Sim
                                 </label>
                                 <br>
                                 <label th:for="s16_1_B_f">Qual?</label>
-                                <input th:field="*{s16_1_B_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s16_1_B_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                                 <br>
                             </div>
                         </div>
@@ -71,30 +71,30 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_A}" type="checkbox" class="grupo-17">A - Conciliação com a participação do trabalhador
+                                <input th:field="*{s17_A}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">A - Conciliação com a participação do trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s17_B}" type="checkbox" class="grupo-17">B - Conciliação sem a participação do trabalhador
+                                <input th:field="*{s17_B}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">B - Conciliação sem a participação do trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s17_C}" type="checkbox" class="grupo-17">C - Desistência da instância com a participação do trabalhador
+                                <input th:field="*{s17_C}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">C - Desistência da instância com a participação do trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s17_D}" type="checkbox" class="grupo-17">D - Desistência da instância sem a participação do trabalhador
+                                <input th:field="*{s17_D}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">D - Desistência da instância sem a participação do trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s17_E}" type="checkbox" class="grupo-17">E - Outras vicissitudes.
+                                <input th:field="*{s17_E}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">E - Outras vicissitudes.
                             </label>
                             <br>
                             <label th:for="s17_E_f">Quais?</label>
-                            <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                             <label>
-                                <input th:field="*{s17_F}" type="checkbox" class="grupo-17">F - Sem vicissitudes dignas de nota.
+                                <input th:field="*{s17_F}" type="checkbox" class="grupo-17"th:readonly="${formularioForm3.submetido}">F - Sem vicissitudes dignas de nota.
                             </label>
                             <br>
                         </div>
@@ -104,11 +104,11 @@
                         <label class="control-label">17.1 - Houve discussão sobre a tutela do interesse público?</label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s17_1_A}" type="checkbox" class="grupo17-1">A - Não
+                                <input th:field="*{s17_1_A}" type="checkbox" class="grupo17-1"th:readonly="${formularioForm3.submetido}">A - Não
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s17_1_B}" type="checkbox" class="grupo17-1">B - Sim
+                                <input th:field="*{s17_1_B}" type="checkbox" class="grupo17-1"th:readonly="${formularioForm3.submetido}">B - Sim
                             </label>
                             <br>
                             <label for="s17_1_B_f">17.1.1 - Se sim, quais os principais argumentos?</label>
@@ -120,7 +120,7 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_2}" type="checkbox" class="">17.2 - Reconhecimento de litispendência ou caso julgado - Ação proposta por iniciativa do trabalhador sob a forma do processo declarativo comum.
+                                <input th:field="*{s17_2}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">17.2 - Reconhecimento de litispendência ou caso julgado - Ação proposta por iniciativa do trabalhador sob a forma do processo declarativo comum.
                             </label>
                             <br>
                             <label for="s17_2_f">Descrição da situação:</label>
@@ -132,7 +132,7 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_3}" type="checkbox" class="">17.3 - Reconhecimento da inexistência de listispendência em sentido técnico - Suspensão da  instância para evitar decisões contraditórias.
+                                <input th:field="*{s17_3}" type="checkbox" class=""th:readonly="${formularioForm2.submetido}">17.3 - Reconhecimento da inexistência de listispendência em sentido técnico - Suspensão da  instância para evitar decisões contraditórias.
                             </label>
                             <br>
                             <label for="s17_3_f">Descrição da situação:</label>
@@ -144,7 +144,7 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_4}" type="checkbox" class="">17.4 - Procedimento cautelar intentado pelo MP de suspensão do despedimento
+                                <input th:field="*{s17_4}" type="checkbox" class=""th:readonly="${formularioForm2.submetido}">17.4 - Procedimento cautelar intentado pelo MP de suspensão do despedimento
                             </label>
                             <br>
                         </div>
@@ -153,11 +153,11 @@
                             <label class="control-label">17.4.1 - Tutela cautelar concedida? </label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s17_4_1_A}" type="checkbox" class="grupo-17-4-1">A - Não
+                                    <input th:field="*{s17_4_1_A}" type="checkbox" class="grupo-17-4-1"th:readonly="${formularioForm3.submetido}">A - Não
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s17_4_1_B}" type="checkbox" class="grupo-17-4-1">B - Sim
+                                    <input th:field="*{s17_4_1_B}" type="checkbox" class="grupo-17-4-1"th:readonly="${formularioForm3.submetido}">B - Sim
                                 </label>
                                 <br>
                             </div>
@@ -167,15 +167,15 @@
                             <label class="control-label">17.4.2- Audição prévia do trabalhador</label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s17_4_2_A}" type="checkbox" class="">A - Não
+                                    <input th:field="*{s17_4_2_A}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">A - Não
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s17_4_2_B}" type="checkbox" class="grupo-17-4-2">B - Sim.
+                                    <input th:field="*{s17_4_2_B}" type="checkbox" class="grupo-17-4-2"th:readonly="${formularioForm3.submetido}">B - Sim.
                                 </label>
                                 <br>
                                 <label th:for="s17_4_2_B_f">Se sim, em que termos?</label>
-                                <input th:field="*{s17_4_2_B_f}" type="text" class="form-control" maxlength="100"/>
+                                <input th:field="*{s17_4_2_B_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                                 <br>
                             </div>
                         </div>
@@ -184,7 +184,7 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_5}" type="checkbox" class="">17.5 - Procedimento cautelar de suspensão do despedimento – notícia no processo de que a suspensão foi pedida autonomamente pelo trabalhador
+                                <input th:field="*{s17_5}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">17.5 - Procedimento cautelar de suspensão do despedimento – notícia no processo de que a suspensão foi pedida autonomamente pelo trabalhador
                             </label>
                             <br>
                         </div>
@@ -193,11 +193,11 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s17_6}" type="checkbox" class="">17.6 - Inversão do contencioso.
+                                <input th:field="*{s17_6}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">17.6 - Inversão do contencioso.
                             </label>
                             <br>
                             <label th:for="s17_6_f">Descrição da situação:</label>
-                            <input th:field="*{s17_6_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s17_6_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -214,33 +214,33 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s18_1}" type="checkbox" class="">18.1 - Extinção da instância
+                                <input th:field="*{s18_1}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">18.1 - Extinção da instância
                             </label>
                             <br>
                         </div>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s18_1_A}" type="checkbox" class="grupo-18-1">A - Julgamento
+                                <input th:field="*{s18_1_A}" type="checkbox" class="grupo-18-1"th:readonly="${formularioForm3.submetido}">A - Julgamento
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_1_B}" type="checkbox" class="grupo-18-1">B - Transação
+                                <input th:field="*{s18_1_B}" type="checkbox" class="grupo-18-1"th:readonly="${formularioForm3.submetido}">B - Transação
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_1_C}" type="checkbox" class="grupo-18-1">C - Impossibilidade superveniente da lide
+                                <input th:field="*{s18_1_C}" type="checkbox" class="grupo-18-1"th:readonly="${formularioForm3.submetido}">C - Impossibilidade superveniente da lide
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_1_D}" type="checkbox" class="grupo-18-1">D - Inutilidade superveniente da lide
+                                <input th:field="*{s18_1_D}" type="checkbox" class="grupo-18-1"th:readonly="${formularioForm3.submetido}">D - Inutilidade superveniente da lide
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_1_E}" type="checkbox" class="grupo-18-1">E - Outra.
+                                <input th:field="*{s18_1_E}" type="checkbox" class="grupo-18-1"th:readonly="${formularioForm3.submetido}">E - Outra.
                             </label>
                             <br>
                             <label th:for="s18_1_E_f">Qual?</label>
-                            <input th:field="*{s18_1_E_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_1_E_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -248,41 +248,41 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s18_2}" type="checkbox" class="grupo-18-2">18.2 - Absolvição do Empregador da instância
+                                <input th:field="*{s18_2}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">18.2 - Absolvição do Empregador da instância
                                 </label>
                             <br>
                         </div>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s18_2_A}" type="checkbox" class="grupo-18-2">A - Incompetência absoluta do tribunal – competência internacional
+                                <input th:field="*{s18_2_A}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">A - Incompetência absoluta do tribunal – competência internacional
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_B}" type="checkbox" class="grupo-18-2">B - Incompetência relativa do tribunal – divisão judicial do território
+                                <input th:field="*{s18_2_B}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">B - Incompetência relativa do tribunal – divisão judicial do território
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_C}" type="checkbox" class="grupo-18-2">C - Nulidade de todo o processo
+                                <input th:field="*{s18_2_C}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">C - Nulidade de todo o processo
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_D}" type="checkbox" class="grupo-18-2">D - Pluralidade subjetiva subsidiária – fora dos casos do art. 39º do CPC
+                                <input th:field="*{s18_2_D}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">D - Pluralidade subjetiva subsidiária – fora dos casos do art. 39º do CPC
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_E}" type="checkbox" class="grupo-18-2">E - Litispendência
+                                <input th:field="*{s18_2_E}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">E - Litispendência
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_F}" type="checkbox" class="grupo-18-2">F - Caso julgado
+                                <input th:field="*{s18_2_F}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">F - Caso julgado
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_2_G}" type="checkbox" class="grupo-18-2">G - Outra.
+                                <input th:field="*{s18_2_G}" type="checkbox" class="grupo-18-2"th:readonly="${formularioForm3.submetido}">G - Outra.
                             </label>
                             <br>
                             <label th:for="s18_2_G_f">Qual?</label>
-                            <input th:field="*{s18_2_G_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_2_G_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -291,15 +291,15 @@
                         <label class="control-label">18.3 - </label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s18_3_A}" type="checkbox" class="grupo-18-3">A - Procedência total
+                                <input th:field="*{s18_3_A}" type="checkbox" class="grupo-18-3"th:readonly="${formularioForm3.submetido}">A - Procedência total
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_3_B}" type="checkbox" class="grupo-18-3">B - Procedência parcial.
+                                <input th:field="*{s18_3_B}" type="checkbox" class="grupo-18-3"th:readonly="${formularioForm3.submetido}">B - Procedência parcial.
                             </label>
                             <br>
                             <label th:for="s18_3_B_f">Decaimento:</label>
-                            <input th:field="*{s18_3_B_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_3_B_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -307,46 +307,46 @@
                     <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s18_4}" type="checkbox" class="">18.4 - Improcedência
+                                <input th:field="*{s18_4}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">18.4 - Improcedência
                             </label>
                             <br>
                         </div>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s18_4_A}" type="checkbox" class="">A - Défice alegatório
+                                <input th:field="*{s18_4_A}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">A - Défice alegatório
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_4_B}" type="checkbox" class="">B - Défice probatório
+                                <input th:field="*{s18_4_B}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">B - Défice probatório
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s18_4_C}" type="checkbox" class="">C - Causa que impede o efeito jurídico pretendido.
+                                <input th:field="*{s18_4_C}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">C - Causa que impede o efeito jurídico pretendido.
                             </label>
                             <br>
                             <label th:for="s18_4_C_f">Qual?</label>
-                            <input th:field="*{s18_4_C_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_4_C_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                             <label>
-                                <input th:field="*{s18_4_D}" type="checkbox" class="">D - Causa que modifica o efeito jurídico pretendido.
+                                <input th:field="*{s18_4_D}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">D - Causa que modifica o efeito jurídico pretendido.
                             </label>
                             <br>
                             <label th:for="s18_4_D_f">Qual?</label>
-                            <input th:field="*{s18_4_D_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_4_D_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                             <label>
-                                <input th:field="*{s18_4_E}" type="checkbox" class="">E - Causa que extingue o efeito jurídico pretendido.
+                                <input th:field="*{s18_4_E}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">E - Causa que extingue o efeito jurídico pretendido.
                             </label>
                             <br>
                             <label th:for="s18_4_E_f">Qual?</label>
-                            <input th:field="*{s18_4_E_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_4_E_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                             <label>
-                                <input th:field="*{s18_4_F}" type="checkbox" class="">F - Outra.
+                                <input th:field="*{s18_4_F}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">F - Outra.
                             </label>
                             <br>
                             <label th:for="s18_4_F_f">Qual?</label>
-                            <input th:field="*{s18_4_F_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s18_4_F_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                         <!-- 18.4.1 -->
@@ -370,37 +370,37 @@
                         <label class="control-label">19.1 - Situação de fraude:</label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s19_1_A}" type="checkbox" class="grupo19-1">A - falsos recibos verdes
+                                <input th:field="*{s19_1_A}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">A - falsos recibos verdes
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s19_1_B}" type="checkbox" class="grupo19-1">B - falsos  estagiários
+                                <input th:field="*{s19_1_B}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">B - falsos  estagiários
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s19_1_C}" type="checkbox" class="grupo19-1">C - falsos bolseiros
+                                <input th:field="*{s19_1_C}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">C - falsos bolseiros
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s19_1_D}" type="checkbox" class="grupo19-1">D - falsos voluntários
+                                <input th:field="*{s19_1_D}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">D - falsos voluntários
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s19_1_E}" type="checkbox" class="grupo19-1">E - trabalho com o auxílio de plataformas digitais
+                                <input th:field="*{s19_1_E}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">E - trabalho com o auxílio de plataformas digitais
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s19_1_F}" type="checkbox" class="grupo19-1">F - outro tipo de trabalho à distância.
+                                <input th:field="*{s19_1_F}" type="checkbox" class="grupo19-1"th:readonly="${formularioForm3.submetido}">F - outro tipo de trabalho à distância.
                             </label>
                             <br>
                             <label th:for="s19_1_F_f">Outro:</label>
-                            <input th:field="*{s19_1_F_f}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s19_1_F_f}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                         <!-- 19.1.1 -->
                         <div class="col-sm-9">
                             <label th:for="s19_1_1">19.1.1 - Atividade contratada:</label>
-                            <input th:field="*{s19_1_1}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s19_1_1}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                         <!-- 19.2.2 -->
                         <div class="col-sm-9">
                             <label th:for="s19_2_2">19.2.2 - Data do início do vínculo (facto dado como provado):</label>
-                            <input th:field="*{s19_2_2}" type="text" class="form-control" maxlength="100"/>
+                            <input th:field="*{s19_2_2}" type="text" class="form-control" maxlength="100"th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -449,23 +449,23 @@
                         <label class="control-label">21.1 - Houve recurso para o Tribunal da Relação?</label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s21_1_A}" type="checkbox" class="">A - Não
+                                <input th:field="*{s21_1_A}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">A - Não
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_1_B}" type="checkbox" class="">B - pelo Ministério Público
+                                <input th:field="*{s21_1_B}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">B - pelo Ministério Público
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_1_C}" type="checkbox" class="">C - pelo trabalhador
+                                <input th:field="*{s21_1_C}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">C - pelo trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_1_D}" type="checkbox" class="">D - pelo empregador
+                                <input th:field="*{s21_1_D}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">D - pelo empregador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_1_E}" type="checkbox" class="">E - por um terceiro interveniente.
+                                <input th:field="*{s21_1_E}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">E - por um terceiro interveniente.
                             </label>
                             <br>
                         </div>
@@ -481,11 +481,11 @@
                             <label class="control-label">21.1.2 - Reforma da sentença?</label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s21_1_2_A}" type="checkbox" class="grupo-21-1-2">A - Não
+                                    <input th:field="*{s21_1_2_A}" type="checkbox" class="grupo-21-1-2"th:readonly="${formularioForm3.submetido}">A - Não
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s21_1_2_B}" type="checkbox" class="grupo-21-1-2">B - Sim.
+                                    <input th:field="*{s21_1_2_B}" type="checkbox" class="grupo-21-1-2"th:readonly="${formularioForm3.submetido}">B - Sim.
                                 </label>
                                 <br>
                                 <label th:for="s21_1_2_B_f">Síntese das razões:</label>
@@ -499,23 +499,23 @@
                         <label class="control-label">21.2 - Houve recurso para o Supremo Tribunal de Justiça?</label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s21_2_A}" type="checkbox" class="">A - Não
+                                <input th:field="*{s21_2_A}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">A - Não
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_2_B}" type="checkbox" class="">B - pelo Ministério Público
+                                <input th:field="*{s21_2_B}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">B - pelo Ministério Público
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_2_C}" type="checkbox" class="">C - pelo trabalhador
+                                <input th:field="*{s21_2_C}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">C - pelo trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_2_D}" type="checkbox" class="">D - pelo empregador
+                                <input th:field="*{s21_2_D}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">D - pelo empregador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_2_E}" type="checkbox" class="">E - por um terceiro interveniente.
+                                <input th:field="*{s21_2_E}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">E - por um terceiro interveniente.
                             </label>
                             <br>
                         </div>
@@ -531,11 +531,11 @@
                             <label class="control-label">21.2.2 - Reforma da decisão a quo?</label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s21_2_2_A}" type="checkbox" class="grupo-21-2-2">A - Não
+                                    <input th:field="*{s21_2_2_A}" type="checkbox" class="grupo-21-2-2"th:readonly="${formularioForm3.submetido}">A - Não
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s21_2_2_B}" type="checkbox" class="grupo-21-2-2">B - Sim.
+                                    <input th:field="*{s21_2_2_B}" type="checkbox" class="grupo-21-2-2"th:readonly="${formularioForm3.submetido}">B - Sim.
                                 </label>
                                 <br>
                                 <label for="s21_2_2_B_f">Síntese das razões:</label>
@@ -549,23 +549,23 @@
                         <label class="control-label">21.3 - Houve recurso para o Tribunal Constitucional?</label>
                         <div class="checkbox indent">
                             <label>
-                                <input th:field="*{s21_3_A}" type="checkbox" class="">A - Não
+                                <input th:field="*{s21_3_A}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">A - Não
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_3_B}" type="checkbox" class="">B - pelo Ministério Público
+                                <input th:field="*{s21_3_B}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">B - pelo Ministério Público
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_3_C}" type="checkbox" class="">C - pelo trabalhador
+                                <input th:field="*{s21_3_C}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">C - pelo trabalhador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_3_D}" type="checkbox" class="">D - pelo empregador
+                                <input th:field="*{s21_3_D}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">D - pelo empregador
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_3_E}" type="checkbox" class="">E - por um terceiro interveniente.
+                                <input th:field="*{s21_3_E}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">E - por um terceiro interveniente.
                             </label>
                             <br>
                             <br>
@@ -580,11 +580,11 @@
                                 <label class="control-label">21.3.2- Reforma da decisão a quo?</label>
                                 <div class="checkbox indent">
                                     <label>
-                                        <input th:field="*{s21_3_2_A}" type="checkbox" class="grupo-21-3-2">A - Não
+                                        <input th:field="*{s21_3_2_A}" type="checkbox" class="grupo-21-3-2"th:readonly="${formularioForm3.submetido}">A - Não
                                     </label>
                                     <br>
                                     <label>
-                                        <input th:field="*{s21_3_2_B}" type="checkbox" class="grupo-21-3-2">B - Sim.
+                                        <input th:field="*{s21_3_2_B}" type="checkbox" class="grupo-21-3-2"th:readonly="${formularioForm3.submetido}">B - Sim.
                                     </label>
                                     <br>
                                     <label th:for="s21_3_2_B_f">Síntese das razões:</label>
@@ -599,11 +599,11 @@
                         <label class="control-label">21.4 - Decisão com trânsito em julgado:</label>
                         <div class="checkbox">
                             <label>
-                                <input th:field="*{s21_4_A}" type="checkbox" class="grupo-21-4">A - procedente
+                                <input th:field="*{s21_4_A}" type="checkbox" class="grupo-21-4"th:readonly="${formularioForm3.submetido}">A - procedente
                             </label>
                             <br>
                             <label>
-                                <input th:field="*{s21_4_B}" type="checkbox" class="grupo-21-4">B - improcedente
+                                <input th:field="*{s21_4_B}" type="checkbox" class="grupo-21-4"th:readonly="${formularioForm3.submetido}">B - improcedente
                             </label>
                             <br>
                         </div>
@@ -613,11 +613,11 @@
                             <label class="control-label">21.4.1 - Decisão com trânsito em julgado: no mesmo sentido da decisão de primeira instância?</label>
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s21_4_1_A}" type="checkbox" class="grupo-21-4-1">A - sim
+                                    <input th:field="*{s21_4_1_A}" type="checkbox" class="grupo-21-4-1"th:readonly="${formularioForm3.submetido}">A - sim
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s21_4_1_B}" type="checkbox" class="grupo-21-4-1">B - não
+                                    <input th:field="*{s21_4_1_B}" type="checkbox" class="grupo-21-4-1"th:readonly="${formularioForm3.submetido}">B - não
                                 </label>
                                 <br>
                             </div>
