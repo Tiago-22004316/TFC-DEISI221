@@ -12,6 +12,8 @@ import pt.ulusofona.tfc.trabalho.form.FormularioForm3
 //import pt.ulusofona.tfc.trabalho.form.UserForm
 import pt.ulusofona.tfc.trabalho.repository.*
 import java.security.Principal
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.validation.Valid
 
 @Controller
@@ -748,7 +750,14 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         redirectAttributes.addFlashAttribute("message", "Página 1 do formulário gravada. Pode continuar a preencher")
         when (formularioForm1.operation) {
-            "Gravar" -> return "redirect:/form/edit/${processId}/1"  // volta a mostrar a página 1 em edição
+            "Gravar" -> {
+                val s1DB = s1FormularioRepository.findByProcessId(processId)
+                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                if (s1DB != null) {
+                    s1DB.lastUpdate = data1.format(Date())
+                }
+                return "redirect:/form/edit/${processId}/1"
+            }  // volta a mostrar a página 1 em edição
             "Avançar >>" -> return "redirect:/form/edit/${processId}/2"
             else -> throw Exception("invalid operation: ${formularioForm1.operation}")
         }
@@ -1060,7 +1069,14 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         redirectAttributes.addFlashAttribute("message", "Página 2 do formulário gravada. Pode continuar a preencher")
         when (formularioForm2.operation) {
-            "Gravar" -> return "redirect:/form/edit/${processId}/2"  // volta a mostrar a página 2 em edição
+            "Gravar" -> {
+                val s1DB = s1FormularioRepository.findByProcessId(processId)
+                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                if (s1DB != null) {
+                    s1DB.lastUpdate = data1.format(Date())
+                }
+                return "redirect:/form/edit/${processId}/2"}  // volta a mostrar a página 2 em edição
+
             "Avançar >>" -> return "redirect:/form/edit/${processId}/3"
             else -> throw Exception("invalid operation: ${formularioForm2.operation}")
         }
@@ -1324,14 +1340,22 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
         when (formularioForm3.operation) {
+
             "Gravar" -> {
+                val s1DB = s1FormularioRepository.findByProcessId(processId)
                 redirectAttributes.addFlashAttribute("message", "Página 3 do formulário gravada. Pode continuar a preencher")
+                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                if (s1DB != null) {
+                    s1DB.lastUpdate = data1.format(Date())
+                }
                 return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
             }
             "Submeter" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
+                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
                 if (s1DB != null){
                     s1DB.estado = "Submetido"
+                    s1DB.lastUpdate = data1.format(Date())
                 }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"

@@ -8,8 +8,8 @@ data class S1Formulario(
         @Id @GeneratedValue
         //secção 1
         val id: Long = 0,
-        var estado : String = "",
-        //var lastUpdate : Date,
+        var estado : String = "Edição",
+        var lastUpdate : String = "",
         var comarca : String = "",
         var juizo : String = "",
 
