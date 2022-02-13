@@ -1078,124 +1078,249 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             return "new-formulario-form3"
         }
 
-        val s15FormularioDAO = S15Formulario(processId = formularioForm3.processId,
-                s15 = formularioForm3.s15,
-        )
-        s15FormularioRepository.save(s15FormularioDAO)
+        val processId = formularioForm3.processId!!
 
-        val s16FormularioDAO = S16Formulario(processId = formularioForm3.processId,
-                s16_1_A = formularioForm3.s16_1_A,
-                s16_1_B = formularioForm3.s16_1_B,
-                s16_1_B_f = formularioForm3.s16_1_B_f,
-        )
-        s16FormularioRepository.save(s16FormularioDAO)
+        //ir buscar á database
 
-        val s17FormularioDAO = S17Formulario(processId = formularioForm3.processId,
-                s17_A = formularioForm3.s17_A,
-                s17_B = formularioForm3.s17_B,
-                s17_C = formularioForm3.s17_C,
-                s17_D = formularioForm3.s17_D,
-                s17_E = formularioForm3.s17_E,
-                s17_E_f = formularioForm3.s17_E_f,
-                s17_F = formularioForm3.s17_F,
-                s17_1_A = formularioForm3.s17_1_A,
-                s17_1_B = formularioForm3.s17_1_B,
-                s17_1_B_f = formularioForm3.s17_1_B_f,
-                s17_2 = formularioForm3.s17_2,
-                s17_2_f = formularioForm3.s17_2_f,
-                s17_3 = formularioForm3.s17_3,
-                s17_3_f = formularioForm3.s17_3_f,
-                s17_4 = formularioForm3.s17_4,
-                s17_4_1_A = formularioForm3.s17_4_1_A,
-                s17_4_1_B = formularioForm3.s17_4_1_B,
-                s17_4_2_A = formularioForm3.s17_4_2_A,
-                s17_4_2_B = formularioForm3.s17_4_2_B,
-                s17_4_2_B_f = formularioForm3.s17_4_2_B_f,
-                s17_5 = formularioForm3.s17_5,
-                s17_6 = formularioForm3.s17_6,
-                s17_6_f = formularioForm3.s17_6_f,
-        )
-        s17FormularioRepository.save(s17FormularioDAO)
+        val s15DB = s15FormularioRepository.findByProcessId(processId)
+        val s16DB = s16FormularioRepository.findByProcessId(processId)
+        val s17DB = s17FormularioRepository.findByProcessId(processId)
+        val s18DB = s18FormularioRepository.findByProcessId(processId)
+        val s19DB = s19FormularioRepository.findByProcessId(processId)
+        val s20DB = s20FormularioRepository.findByProcessId(processId)
+        val s21DB = s21FormularioRepository.findByProcessId(processId)
 
-        val s18FormularioDAO = S18Formulario(processId = formularioForm3.processId,
-                s18_1 = formularioForm3.s18_1,
-                s18_1_A = formularioForm3.s18_1_A,
-                s18_1_B = formularioForm3.s18_1_B,
-                s18_1_C = formularioForm3.s18_1_C,
-                s18_1_D = formularioForm3.s18_1_D,
-                s18_1_E = formularioForm3.s18_1_E,
-                s18_1_E_f = formularioForm3.s18_1_E_f,
-                s18_2 = formularioForm3.s18_2,
-                s18_2_A = formularioForm3.s18_2_A,
-                s18_2_B = formularioForm3.s18_2_B,
-                s18_2_C = formularioForm3.s18_2_C,
-                s18_2_D = formularioForm3.s18_2_D,
-                s18_2_E = formularioForm3.s18_2_E,
-                s18_2_F = formularioForm3.s18_2_F,
-                s18_2_G = formularioForm3.s18_2_G,
-                s18_2_G_f = formularioForm3.s18_2_G_f,
-                s18_3_A = formularioForm3.s18_3_A,
-                s18_3_B = formularioForm3.s18_3_B,
-                s18_3_B_f = formularioForm3.s18_3_B_f,
-                s18_4 = formularioForm3.s18_4,
-                s18_4_A = formularioForm3.s18_4_A,
-                s18_4_B = formularioForm3.s18_4_B,
-                s18_4_C = formularioForm3.s18_4_C,
-                s18_4_C_f = formularioForm3.s18_4_C_f,
-                s18_4_D = formularioForm3.s18_4_D,
-                s18_4_D_f = formularioForm3.s18_4_D_f,
-                s18_4_E = formularioForm3.s18_4_E,
-                s18_4_E_f = formularioForm3.s18_4_E_f,
-                s18_4_F = formularioForm3.s18_4_F,
-                s18_4_F_f = formularioForm3.s18_4_F_f,
-                s18_4_1 = formularioForm3.s18_4_1,
-        )
-        s18FormularioRepository.save(s18FormularioDAO)
 
-        val s19FormularioDAO = S19Formulario(processId = formularioForm3.processId,
-                s19_1_A = formularioForm3.s19_1_A,
-                s19_1_B = formularioForm3.s19_1_B,
-                s19_1_C = formularioForm3.s19_1_C,
-                s19_1_D = formularioForm3.s19_1_D,
-                s19_1_E = formularioForm3.s19_1_E,
-                s19_1_F = formularioForm3.s19_1_F,
-                s19_1_F_f = formularioForm3.s19_1_F_f,
-                s19_1_1 = formularioForm3.s19_1_1,
-                s19_2_1 = formularioForm3.s19_2_1,
-                s19_2_2 = formularioForm3.s19_2_2,
-        )
-        s19FormularioRepository.save(s19FormularioDAO)
+        if(s15DB != null){
+            s15DB.s15 = formularioForm3.s15
+        } else {
+            val s15FormularioDAO = S15Formulario(processId = formularioForm3.processId,
+                    s15 = formularioForm3.s15,
+            )
+            s15FormularioRepository.save(s15FormularioDAO)
+        }
 
-        val s20FormularioDAO = S20Formulario(processId = formularioForm3.processId,
-                s20_1 = formularioForm3.s20_1,
-        )
-        s20FormularioRepository.save(s20FormularioDAO)
+        if (s16DB != null){
+            s16DB.s16_1_A = formularioForm3.s16_1_A
+            s16DB.s16_1_B = formularioForm3.s16_1_B
+            s16DB.s16_1_B_f = formularioForm3.s16_1_B_f
+        } else {
+            val s16FormularioDAO = S16Formulario(processId = formularioForm3.processId,
+                    s16_1_A = formularioForm3.s16_1_A,
+                    s16_1_B = formularioForm3.s16_1_B,
+                    s16_1_B_f = formularioForm3.s16_1_B_f,
+            )
+            s16FormularioRepository.save(s16FormularioDAO)
+        }
 
-        val s21FormularioDAO = S21Formulario(processId = formularioForm3.processId,
-                s21_1_A = formularioForm3.s21_1_A,
-                s21_1_B = formularioForm3.s21_1_B,
-                s21_1_C = formularioForm3.s21_1_C,
-                s21_1_D = formularioForm3.s21_1_D,
-                s21_1_E = formularioForm3.s21_1_E,
-                s21_1_1 = formularioForm3.s21_1_1,
-                s21_1_2_A = formularioForm3.s21_1_2_A,
-                s21_1_2_B = formularioForm3.s21_1_2_B,
-                s21_1_2_B_f = formularioForm3.s21_1_2_B_f,
-                s21_3_A = formularioForm3.s21_3_A,
-                s21_3_B = formularioForm3.s21_3_B,
-                s21_3_C = formularioForm3.s21_3_C,
-                s21_3_D = formularioForm3.s21_3_D,
-                s21_3_E = formularioForm3.s21_3_E,
-                s21_3_1 = formularioForm3.s21_3_1,
-                s21_3_2_A = formularioForm3.s21_3_2_A,
-                s21_3_2_B = formularioForm3.s21_3_2_B,
-                s21_3_2_B_f = formularioForm3.s21_3_2_B_f,
-                s21_4_A = formularioForm3.s21_4_A,
-                s21_4_B = formularioForm3.s21_4_B,
-                s21_4_1_A = formularioForm3.s21_4_1_A,
-                s21_4_1_B = formularioForm3.s21_4_1_B,
-        )
-        s21FormularioRepository.save(s21FormularioDAO)
+        if(s17DB != null){
+            s17DB.s17_A = formularioForm3.s17_A
+            s17DB.s17_B = formularioForm3.s17_B
+            s17DB.s17_C = formularioForm3.s17_C
+            s17DB.s17_D = formularioForm3.s17_D
+            s17DB.s17_E = formularioForm3.s17_E
+            s17DB.s17_E_f = formularioForm3.s17_E_f
+            s17DB.s17_F = formularioForm3.s17_F
+            s17DB.s17_1_A = formularioForm3.s17_1_A
+            s17DB.s17_1_B = formularioForm3.s17_1_B
+            s17DB.s17_1_B_f = formularioForm3.s17_1_B_f
+            s17DB.s17_2 = formularioForm3.s17_2
+            s17DB.s17_2_f = formularioForm3.s17_2_f
+            s17DB.s17_3 = formularioForm3.s17_3
+            s17DB.s17_3_f = formularioForm3.s17_3_f
+            s17DB.s17_4 = formularioForm3.s17_4
+            s17DB.s17_4_1_A = formularioForm3.s17_4_1_A
+            s17DB.s17_4_1_B = formularioForm3.s17_4_1_B
+            s17DB.s17_4_2_A = formularioForm3.s17_4_2_A
+            s17DB.s17_4_2_B = formularioForm3.s17_4_2_B
+            s17DB.s17_4_2_B_f = formularioForm3.s17_4_2_B_f
+            s17DB.s17_5 = formularioForm3.s17_5
+            s17DB.s17_6 = formularioForm3.s17_6
+            s17DB.s17_6_f = formularioForm3.s17_6_f
+        } else {
+            val s17FormularioDAO = S17Formulario(processId = formularioForm3.processId,
+                    s17_A = formularioForm3.s17_A,
+                    s17_B = formularioForm3.s17_B,
+                    s17_C = formularioForm3.s17_C,
+                    s17_D = formularioForm3.s17_D,
+                    s17_E = formularioForm3.s17_E,
+                    s17_E_f = formularioForm3.s17_E_f,
+                    s17_F = formularioForm3.s17_F,
+                    s17_1_A = formularioForm3.s17_1_A,
+                    s17_1_B = formularioForm3.s17_1_B,
+                    s17_1_B_f = formularioForm3.s17_1_B_f,
+                    s17_2 = formularioForm3.s17_2,
+                    s17_2_f = formularioForm3.s17_2_f,
+                    s17_3 = formularioForm3.s17_3,
+                    s17_3_f = formularioForm3.s17_3_f,
+                    s17_4 = formularioForm3.s17_4,
+                    s17_4_1_A = formularioForm3.s17_4_1_A,
+                    s17_4_1_B = formularioForm3.s17_4_1_B,
+                    s17_4_2_A = formularioForm3.s17_4_2_A,
+                    s17_4_2_B = formularioForm3.s17_4_2_B,
+                    s17_4_2_B_f = formularioForm3.s17_4_2_B_f,
+                    s17_5 = formularioForm3.s17_5,
+                    s17_6 = formularioForm3.s17_6,
+                    s17_6_f = formularioForm3.s17_6_f,
+            )
+            s17FormularioRepository.save(s17FormularioDAO)
+        }
+
+        if (s18DB != null){
+            s18DB.s18_1 = formularioForm3.s18_1
+            s18DB.s18_1_A = formularioForm3.s18_1_A
+            s18DB.s18_1_B = formularioForm3.s18_1_B
+            s18DB.s18_1_C = formularioForm3.s18_1_C
+            s18DB.s18_1_D = formularioForm3.s18_1_D
+            s18DB.s18_1_E = formularioForm3.s18_1_E
+            s18DB.s18_1_E_f = formularioForm3.s18_1_E_f
+            s18DB.s18_2 = formularioForm3.s18_2
+            s18DB.s18_2_A = formularioForm3.s18_2_A
+            s18DB.s18_2_B = formularioForm3.s18_2_B
+            s18DB.s18_2_C = formularioForm3.s18_2_C
+            s18DB.s18_2_D = formularioForm3.s18_2_D
+            s18DB.s18_2_E = formularioForm3.s18_2_E
+            s18DB.s18_2_F = formularioForm3.s18_2_F
+            s18DB.s18_2_G = formularioForm3.s18_2_G
+            s18DB.s18_2_G_f = formularioForm3.s18_2_G_f
+            s18DB.s18_3_A = formularioForm3.s18_3_A
+            s18DB.s18_3_B = formularioForm3.s18_3_B
+            s18DB.s18_3_B_f = formularioForm3.s18_3_B_f
+            s18DB.s18_4 = formularioForm3.s18_4
+            s18DB.s18_4_A = formularioForm3.s18_4_A
+            s18DB.s18_4_B = formularioForm3.s18_4_B
+            s18DB.s18_4_C = formularioForm3.s18_4_C
+            s18DB.s18_4_C_f = formularioForm3.s18_4_C_f
+            s18DB.s18_4_D = formularioForm3.s18_4_D
+            s18DB.s18_4_D_f = formularioForm3.s18_4_D_f
+            s18DB.s18_4_E = formularioForm3.s18_4_E
+            s18DB.s18_4_E_f = formularioForm3.s18_4_E_f
+            s18DB.s18_4_F = formularioForm3.s18_4_F
+            s18DB.s18_4_F_f = formularioForm3.s18_4_F_f
+            s18DB.s18_4_1 = formularioForm3.s18_4_1
+        } else {
+            val s18FormularioDAO = S18Formulario(processId = formularioForm3.processId,
+                    s18_1 = formularioForm3.s18_1,
+                    s18_1_A = formularioForm3.s18_1_A,
+                    s18_1_B = formularioForm3.s18_1_B,
+                    s18_1_C = formularioForm3.s18_1_C,
+                    s18_1_D = formularioForm3.s18_1_D,
+                    s18_1_E = formularioForm3.s18_1_E,
+                    s18_1_E_f = formularioForm3.s18_1_E_f,
+                    s18_2 = formularioForm3.s18_2,
+                    s18_2_A = formularioForm3.s18_2_A,
+                    s18_2_B = formularioForm3.s18_2_B,
+                    s18_2_C = formularioForm3.s18_2_C,
+                    s18_2_D = formularioForm3.s18_2_D,
+                    s18_2_E = formularioForm3.s18_2_E,
+                    s18_2_F = formularioForm3.s18_2_F,
+                    s18_2_G = formularioForm3.s18_2_G,
+                    s18_2_G_f = formularioForm3.s18_2_G_f,
+                    s18_3_A = formularioForm3.s18_3_A,
+                    s18_3_B = formularioForm3.s18_3_B,
+                    s18_3_B_f = formularioForm3.s18_3_B_f,
+                    s18_4 = formularioForm3.s18_4,
+                    s18_4_A = formularioForm3.s18_4_A,
+                    s18_4_B = formularioForm3.s18_4_B,
+                    s18_4_C = formularioForm3.s18_4_C,
+                    s18_4_C_f = formularioForm3.s18_4_C_f,
+                    s18_4_D = formularioForm3.s18_4_D,
+                    s18_4_D_f = formularioForm3.s18_4_D_f,
+                    s18_4_E = formularioForm3.s18_4_E,
+                    s18_4_E_f = formularioForm3.s18_4_E_f,
+                    s18_4_F = formularioForm3.s18_4_F,
+                    s18_4_F_f = formularioForm3.s18_4_F_f,
+                    s18_4_1 = formularioForm3.s18_4_1,
+            )
+            s18FormularioRepository.save(s18FormularioDAO)
+        }
+
+        if(s19DB != null){
+            s19DB.s19_1_A = formularioForm3.s19_1_A
+            s19DB.s19_1_B = formularioForm3.s19_1_B
+            s19DB.s19_1_C = formularioForm3.s19_1_C
+            s19DB.s19_1_D = formularioForm3.s19_1_D
+            s19DB.s19_1_E = formularioForm3.s19_1_E
+            s19DB.s19_1_F = formularioForm3.s19_1_F
+            s19DB.s19_1_F_f = formularioForm3.s19_1_F_f
+            s19DB.s19_1_1 = formularioForm3.s19_1_1
+            s19DB.s19_2_1 = formularioForm3.s19_2_1
+            s19DB.s19_2_2 = formularioForm3.s19_2_2
+        } else {
+            val s19FormularioDAO = S19Formulario(processId = formularioForm3.processId,
+                    s19_1_A = formularioForm3.s19_1_A,
+                    s19_1_B = formularioForm3.s19_1_B,
+                    s19_1_C = formularioForm3.s19_1_C,
+                    s19_1_D = formularioForm3.s19_1_D,
+                    s19_1_E = formularioForm3.s19_1_E,
+                    s19_1_F = formularioForm3.s19_1_F,
+                    s19_1_F_f = formularioForm3.s19_1_F_f,
+                    s19_1_1 = formularioForm3.s19_1_1,
+                    s19_2_1 = formularioForm3.s19_2_1,
+                    s19_2_2 = formularioForm3.s19_2_2,
+            )
+            s19FormularioRepository.save(s19FormularioDAO)
+        }
+
+        if (s20DB != null){
+            s20DB.s20_1 = formularioForm3.s20_1
+        } else {
+            val s20FormularioDAO = S20Formulario(processId = formularioForm3.processId,
+                    s20_1 = formularioForm3.s20_1,
+            )
+            s20FormularioRepository.save(s20FormularioDAO)
+        }
+
+        if (s21DB != null){
+            s21DB.s21_1_A = formularioForm3.s21_1_A
+            s21DB.s21_1_B = formularioForm3.s21_1_B
+            s21DB.s21_1_C = formularioForm3.s21_1_C
+            s21DB.s21_1_D = formularioForm3.s21_1_D
+            s21DB.s21_1_E = formularioForm3.s21_1_E
+            s21DB.s21_1_1 = formularioForm3.s21_1_1
+            s21DB.s21_1_2_A = formularioForm3.s21_1_2_A
+            s21DB.s21_1_2_B = formularioForm3.s21_1_2_B
+            s21DB.s21_1_2_B_f = formularioForm3.s21_1_2_B_f
+            s21DB.s21_3_A = formularioForm3.s21_3_A
+            s21DB.s21_3_B = formularioForm3.s21_3_B
+            s21DB.s21_3_C = formularioForm3.s21_3_C
+            s21DB.s21_3_D = formularioForm3.s21_3_D
+            s21DB.s21_3_E = formularioForm3.s21_3_E
+            s21DB.s21_3_1 = formularioForm3.s21_3_1
+            s21DB.s21_3_2_A = formularioForm3.s21_3_2_A
+            s21DB.s21_3_2_B = formularioForm3.s21_3_2_B
+            s21DB.s21_3_2_B_f = formularioForm3.s21_3_2_B_f
+            s21DB.s21_4_A = formularioForm3.s21_4_A
+            s21DB.s21_4_B = formularioForm3.s21_4_B
+            s21DB.s21_4_1_A = formularioForm3.s21_4_1_A
+            s21DB.s21_4_1_B = formularioForm3.s21_4_1_B
+        } else {
+            val s21FormularioDAO = S21Formulario(processId = formularioForm3.processId,
+                    s21_1_A = formularioForm3.s21_1_A,
+                    s21_1_B = formularioForm3.s21_1_B,
+                    s21_1_C = formularioForm3.s21_1_C,
+                    s21_1_D = formularioForm3.s21_1_D,
+                    s21_1_E = formularioForm3.s21_1_E,
+                    s21_1_1 = formularioForm3.s21_1_1,
+                    s21_1_2_A = formularioForm3.s21_1_2_A,
+                    s21_1_2_B = formularioForm3.s21_1_2_B,
+                    s21_1_2_B_f = formularioForm3.s21_1_2_B_f,
+                    s21_3_A = formularioForm3.s21_3_A,
+                    s21_3_B = formularioForm3.s21_3_B,
+                    s21_3_C = formularioForm3.s21_3_C,
+                    s21_3_D = formularioForm3.s21_3_D,
+                    s21_3_E = formularioForm3.s21_3_E,
+                    s21_3_1 = formularioForm3.s21_3_1,
+                    s21_3_2_A = formularioForm3.s21_3_2_A,
+                    s21_3_2_B = formularioForm3.s21_3_2_B,
+                    s21_3_2_B_f = formularioForm3.s21_3_2_B_f,
+                    s21_4_A = formularioForm3.s21_4_A,
+                    s21_4_B = formularioForm3.s21_4_B,
+                    s21_4_1_A = formularioForm3.s21_4_1_A,
+                    s21_4_1_B = formularioForm3.s21_4_1_B,
+            )
+            s21FormularioRepository.save(s21FormularioDAO)
+        }
 
 
         when (formularioForm3.operation) {
@@ -1203,7 +1328,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 redirectAttributes.addFlashAttribute("message", "Página 3 do formulário gravada. Pode continuar a preencher")
                 return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
             }
-            "Avançar >>" -> {
+            "Submetido >>" -> {
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"
             }
