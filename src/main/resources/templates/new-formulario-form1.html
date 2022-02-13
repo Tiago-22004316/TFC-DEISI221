@@ -16,40 +16,46 @@
         <!--1-->
         <div class="form-group" th:classappend="${#fields.hasErrors('processId')} ? 'has-error' : ''">
             <label for="processId" class="col-sm-3 control-label">Processo nº:</label>
-            <div class="col-sm-9">
+            <div class="col-sm-6">
                 <input th:field="*{processId}" type="text" class="form-control" id="processId" maxlength="50" th:readonly="${formularioForm1.edit}" />
                 <p class="help-block" th:if="${#fields.hasErrors('processId')}" th:errors="*{processId}">Error</p>
-                <br>
-                <!-- 1.1 -->
-                <div class="col-sm-9">
-                    <!-- ver como se faz um dropdown -->
-                    <label for="comarca">Comarca:</label>
-                    <select name="comarca" id="comarca">
-                        <option value=""></option>
-                        <option value="Comarca de Lisboa">Comarca de Lisboa</option>
-                        <option value="Comarca de Lisboa Oeste">Comarca de Lisboa Oeste</option>
-                        <option value="Comarca de Lisboa Norte">Comarca de Lisboa Norte</option>
-                        <option value="Comarca do Porto">Comarca do Porto</option>
-                    </select>
-                </div>
-                <!-- 1.2 -->
-                <div class="col-sm-9">
-                    <!-- ver como se faz um dropdown -->
-                    <label for="juizo">Comarca:</label>
-                    <select name="juizo" id="juizo">
-                        <option value=""></option>
-                        <option value="Juízo do Trabalho de Lisboa">Juízo do Trabalho de Lisboa</option>
-                        <option value="Juízo do Trabalho de Cascais">Juízo do Trabalho de Cascais</option>
-                        <option value="Juízo do Trabalho de Sintra">Juízo do Trabalho de Sintra</option>
-                        <option value="Juízo do Trabalho de Loures">Juízo do Trabalho de Loures</option>
-                        <option value="Juízo do Trabalho de Vila Nova de Gaia">Juízo do Trabalho de Vila Nova de Gaia </option>
-                        <option value="Juízo do Trabalho do Porto">Juízo do Trabalho do Porto</option>
-                        <option value="Juízo do Trabalho da Maia">Juízo do Trabalho da Maia</option>
-                        <option value="Juízo do Trabalho de Valongo">Juízo do Trabalho de Valongo </option>
-                    </select>
-                </div>
             </div>
         </div>
+
+        <!-- 1.1 -->
+        <div class="form-group" th:classappend="${#fields.hasErrors('comarca')} ? 'has-error' : ''">
+            <label for="comarca" class="col-sm-3 control-label">Comarca</label>
+            <div class="col-sm-6">
+                <select th:field="*{comarca}" class="form-control" id="comarca">
+                    <option value="" th:selected="${formularioForm1.comarca==''}"></option>
+                    <option value="Lisboa" th:selected="${formularioForm1.comarca=='Lisboa'}">Comarca de Lisboa</option>
+                    <option value="LisboaOeste" th:selected="${formularioForm1.comarca=='LisboaOeste'}">Comarca de Lisboa Oeste</option>
+                    <option value="LisboaNorte" th:selected="${formularioForm1.comarca=='LisboaNorte'}">Comarca de Lisboa Norte</option>
+                    <option value="Porto" th:selected="${formularioForm1.comarca=='Porto'}">Comarca do Porto</option>
+                </select>
+                <p class="help-block" th:if="${#fields.hasErrors('comarca')}" th:errors="*{comarca}">Error</p>
+            </div>
+        </div>
+
+
+<!--                &lt;!&ndash; 1.2 &ndash;&gt;-->
+<!--                <div class="col-sm-9">-->
+<!--                    &lt;!&ndash; ver como se faz um dropdown &ndash;&gt;-->
+<!--                    <label for="juizo">Comarca:</label>-->
+<!--                    <select name="juizo" id="juizo">-->
+<!--                        <option value=""></option>-->
+<!--                        <option value="Juízo do Trabalho de Lisboa">Juízo do Trabalho de Lisboa</option>-->
+<!--                        <option value="Juízo do Trabalho de Cascais">Juízo do Trabalho de Cascais</option>-->
+<!--                        <option value="Juízo do Trabalho de Sintra">Juízo do Trabalho de Sintra</option>-->
+<!--                        <option value="Juízo do Trabalho de Loures">Juízo do Trabalho de Loures</option>-->
+<!--                        <option value="Juízo do Trabalho de Vila Nova de Gaia">Juízo do Trabalho de Vila Nova de Gaia </option>-->
+<!--                        <option value="Juízo do Trabalho do Porto">Juízo do Trabalho do Porto</option>-->
+<!--                        <option value="Juízo do Trabalho da Maia">Juízo do Trabalho da Maia</option>-->
+<!--                        <option value="Juízo do Trabalho de Valongo">Juízo do Trabalho de Valongo </option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--            </div>-->
+
 
         <!--2-->
         <div class="form-group">

@@ -535,12 +535,18 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
     @PostMapping(value = ["/new", "/edit/{processId}/1"])
-    fun postFormularioForm1(@Valid @ModelAttribute("formularioForm1") formularioForm1: FormularioForm1,
-                            @PathVariable("processId") processIdParam: String?,
-                            bindingResult: BindingResult, model:ModelMap,
+    fun postFormularioForm1(@PathVariable("processId") processIdParam: String?,
+                            @Valid @ModelAttribute("formularioForm1") formularioForm1: FormularioForm1,
+                            bindingResult: BindingResult,
+                            model:ModelMap,
                             redirectAttributes: RedirectAttributes) : String {
 
         if (bindingResult.hasErrors()) {
+            if (processIdParam == null) {
+                model["url"] = "new"
+            } else {
+                model["url"] = "edit/${processIdParam}/1"
+            }
             return "new-formulario-form1"
         }
 
@@ -795,6 +801,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
                 if (s1DB != null) {
                     s1DB.lastUpdate = data1.format(Date())
+                    s1FormularioRepository.save(s1DB);
                 }
                 return "redirect:/form/edit/${processId}/1"
             }  // volta a mostrar a página 1 em edição
@@ -1114,6 +1121,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
                 if (s1DB != null) {
                     s1DB.lastUpdate = data1.format(Date())
+                    s1FormularioRepository.save(s1DB);
                 }
                 return "redirect:/form/edit/${processId}/2"}  // volta a mostrar a página 2 em edição
 
@@ -1387,6 +1395,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
                 if (s1DB != null) {
                     s1DB.lastUpdate = data1.format(Date())
+                    s1FormularioRepository.save(s1DB);
                 }
                 return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
             }
@@ -1396,6 +1405,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 if (s1DB != null){
                     s1DB.estado = "Submetido"
                     s1DB.lastUpdate = data1.format(Date())
+                    s1FormularioRepository.save(s1DB);
                 }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"
