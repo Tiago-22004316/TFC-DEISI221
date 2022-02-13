@@ -14,9 +14,12 @@ data class FormularioForm1(
         @field:Size(max = 50, message = "Erro: O número de processo não pode ter mais do que 50 caracteres")
         var processId: String = "",
 
+        var comarca : String = "",
+        var juizo : String = "",
+        var submetido: Boolean = false,
+
         // pode ser "Gravar" ou "Avançar >>"
         var operation: String = "",
-        var comarca : String = "",
         var edit: Boolean = false,
 
         //secção 1

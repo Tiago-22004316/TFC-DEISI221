@@ -8,6 +8,9 @@ import javax.validation.constraints.NotNull
 data class FormularioForm3(
 
         var processId: String = "",
+        var comarca : String = "",
+        var juizo : String = "",
+        var submetido: Boolean = false,
 
         // pode ser "Gravar" ou "Submeter"
         var operation: String = "",
