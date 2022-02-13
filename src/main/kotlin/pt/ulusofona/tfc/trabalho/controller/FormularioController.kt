@@ -1328,7 +1328,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 redirectAttributes.addFlashAttribute("message", "Página 3 do formulário gravada. Pode continuar a preencher")
                 return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
             }
-            "Submetido >>" -> {
+            "Submeter" -> {
+                val s1DB = s1FormularioRepository.findByProcessId(processId)
+                if (s1DB != null){
+                    s1DB.estado = "Submetido"
+                }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"
             }
