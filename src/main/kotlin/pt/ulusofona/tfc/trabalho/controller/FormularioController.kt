@@ -1412,12 +1412,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             }
             "Fechar" -> {
                 redirectAttributes.addFlashAttribute("message", "Processo fechado") //pedir ao stor uma opiniao d messagem
-                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
-                val s1DB = s1FormularioRepository.findByProcessId(processId)
-                if (s1DB != null) {
-                    s1DB.lastUpdate = data1.format(Date())
-                    s1FormularioRepository.save(s1DB);
-                }
                 return "redirect:/form/list"  // volta para a lista de processos
             }
             else -> throw Exception("invalid operation: ${formularioForm3.operation}")
