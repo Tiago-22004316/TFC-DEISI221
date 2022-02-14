@@ -1411,7 +1411,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 return "redirect:/form/list"
             }
             "Fechar" -> {
-                redirectAttributes.addFlashAttribute("message", "Processo fechado") //pedir ao stor uma opiniao d messagem
                 return "redirect:/form/list"  // volta para a lista de processos
             }
             else -> throw Exception("invalid operation: ${formularioForm3.operation}")
