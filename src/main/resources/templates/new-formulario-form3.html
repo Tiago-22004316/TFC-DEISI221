@@ -29,7 +29,7 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <textarea id="s15" name="s15" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                        <textarea th:field="*{s15}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                     </div>
                 </div>
             </div>
@@ -111,8 +111,8 @@
                                 <input th:field="*{s17_1_B}" type="checkbox" class="grupo17-1"th:readonly="${formularioForm3.submetido}">B - Sim
                             </label>
                             <br>
-                            <label for="s17_1_B_f">17.1.1 - Se sim, quais os principais argumentos?</label>
-                            <textarea id="s17_1_B_f" name="s17_1_B_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                            <label th:for="s17_1_B_f">17.1.1 - Se sim, quais os principais argumentos?</label>
+                            <textarea th:field="*{s17_1_B_f}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                             <br>
                         </div>
                     </div>
@@ -123,8 +123,8 @@
                                 <input th:field="*{s17_2}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">17.2 - Reconhecimento de litispendência ou caso julgado - Ação proposta por iniciativa do trabalhador sob a forma do processo declarativo comum.
                             </label>
                             <br>
-                            <label for="s17_2_f">Descrição da situação:</label>
-                            <textarea id="s17_2_f" name="s17_2_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                            <label th:for="s17_2_f">Descrição da situação:</label>
+                            <textarea th:field="*{s17_2_f}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                             <br>
                         </div>
                     </div>
@@ -135,8 +135,8 @@
                                 <input th:field="*{s17_3}" type="checkbox" class=""th:readonly="${formularioForm3.submetido}">17.3 - Reconhecimento da inexistência de listispendência em sentido técnico - Suspensão da  instância para evitar decisões contraditórias.
                             </label>
                             <br>
-                            <label for="s17_3_f">Descrição da situação:</label>
-                            <textarea id="s17_3_f" name="s17_3_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                            <label th:for="s17_3_f">Descrição da situação:</label>
+                            <textarea th:field="*{s17_3_f}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                             <br>
                         </div>
                     </div>
@@ -351,8 +351,8 @@
                         </div>
                         <!-- 18.4.1 -->
                         <div class="col-sm-9">
-                            <label for="s18_4_1">18.4.1 - Fundamentos (que sejam dignos de nota):</label>
-                            <textarea id="s18_4_1" name="s18_4_1" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                            <label th:for="s18_4_1">18.4.1 - Fundamentos (que sejam dignos de nota):</label>
+                            <textarea th:field="*{s18_4_1}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                             <br>
                         </div>
                     </div>
@@ -409,8 +409,8 @@
                         <label class="control-label">19.2 - Modus operandi:</label>
                         <!-- 19.2.1 -->
                         <div class="col-sm-9">
-                            <label for="s19_2_1">19.2.1 - Recursos utilizados para mascarar a relação de trabalho (factos dados como provados):</label>
-                            <textarea id="s19_2_1" name="s19_2_1" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                            <label th:for="s19_2_1">19.2.1 - Recursos utilizados para mascarar a relação de trabalho (factos dados como provados):</label>
+                            <textarea th:field="*{s19_2_1}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                             <br>
                         </div>
                         <!-- 19.2.2 -->
@@ -431,8 +431,8 @@
                 <div class="form-group">
                     <!-- 20.1 -->
                     <div class="col-sm-9">
-                        <label for="s20_1">20.1 - Descrição:</label>
-                        <textarea id="s20_1" name="s20_1" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                        <label th:for="s20_1">20.1 - Descrição:</label>
+                        <textarea th:field="*{s20_1}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                         <br>
                     </div>
                 </div>
@@ -571,8 +571,8 @@
                             <br>
                             <!-- 21.3.1 -->
                             <div class="col-sm-9">
-                                <label for="s21_3_1">21.3.1- Síntese dos principais fundamentos:</label>
-                                <textarea id="s21_3_1" name="s21_3_1" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                                <label th:for="s21_3_1">21.3.1- Síntese dos principais fundamentos:</label>
+                                <textarea th:field="*{s21_3_1}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                                 <br>
                             </div>
                             <!-- 21.3.2 -->
@@ -588,7 +588,7 @@
                                     </label>
                                     <br>
                                     <label th:for="s21_3_2_B_f">Síntese das razões:</label>
-                                    <textarea id="s21_3_2_B_f" name="s21_3_2_B_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                                    <textarea th:field="*{s21_3_2_B_f}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                                     <br>
                                 </div>
                             </div>
@@ -631,7 +631,8 @@
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
-                    <input type="submit" name="operation" value="Gravar" class="btn btn-primary"/>
+                    <input type="submit" name="operation" value="Gravar" th:if="${formularioForm3.submetido == false}" class="btn btn-primary"/>
+                    <input type="submit" name="operation" th:if="${formularioForm3.submetido == true}" value="Fechar" class="btn btn-primary"/>
                     <input type="submit" name="operation" value="Submeter" class="btn btn-success"/>
                 </div>
             </div>

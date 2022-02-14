@@ -17,8 +17,9 @@ data class FormularioForm1(
         @field:NotEmpty(message = "Erro: A comarca tem que estar preenchida")
         var comarca : String = "",
 
-        // @field:NotEmpty(message = "Erro: O juízo tem que estar preenchido")
+        @field:NotEmpty(message = "Erro: A comarca tem que estar preenchida")
         var juizo : String = "",
+
         var submetido: Boolean = false,
 
         // pode ser "Gravar" ou "Avançar >>"

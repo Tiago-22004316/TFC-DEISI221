@@ -37,24 +37,24 @@
             </div>
         </div>
 
-
-<!--                &lt;!&ndash; 1.2 &ndash;&gt;-->
-<!--                <div class="col-sm-9">-->
-<!--                    &lt;!&ndash; ver como se faz um dropdown &ndash;&gt;-->
-<!--                    <label for="juizo">Comarca:</label>-->
-<!--                    <select name="juizo" id="juizo">-->
-<!--                        <option value=""></option>-->
-<!--                        <option value="Juízo do Trabalho de Lisboa">Juízo do Trabalho de Lisboa</option>-->
-<!--                        <option value="Juízo do Trabalho de Cascais">Juízo do Trabalho de Cascais</option>-->
-<!--                        <option value="Juízo do Trabalho de Sintra">Juízo do Trabalho de Sintra</option>-->
-<!--                        <option value="Juízo do Trabalho de Loures">Juízo do Trabalho de Loures</option>-->
-<!--                        <option value="Juízo do Trabalho de Vila Nova de Gaia">Juízo do Trabalho de Vila Nova de Gaia </option>-->
-<!--                        <option value="Juízo do Trabalho do Porto">Juízo do Trabalho do Porto</option>-->
-<!--                        <option value="Juízo do Trabalho da Maia">Juízo do Trabalho da Maia</option>-->
-<!--                        <option value="Juízo do Trabalho de Valongo">Juízo do Trabalho de Valongo </option>-->
-<!--                    </select>-->
-<!--                </div>-->
-<!--            </div>-->
+        <!-- 1.2 -->
+            <div class="form-group" th:classappend="${#fields.hasErrors('juizo')} ? 'has-error' : ''">
+            <label for="juizo" class="col-sm-3 control-label">Juízo</label>
+            <div class="col-sm-6">
+                <select th:field="*{juizo}" class="form-control" id="juizo">
+                    <option value="" th:selected="${formularioForm1.juizo==''}"></option>
+                    <option value="Trabalho de Lisboa" th:selected="${formularioForm1.juizo=='Trabalho de Lisboa'}">Juízo do Trabalho de Lisboa</option>
+                    <option value="Trabalho de Cascais" th:selected="${formularioForm1.juizo=='Trabalho de Cascais'}">Juízo do Trabalho de Cascais</option>
+                    <option value="Trabalho de Sintra" th:selected="${formularioForm1.juizo=='Trabalho de Sintra'}">Juízo do Trabalho de Sintra</option>
+                    <option value="Trabalho de Loures" th:selected="${formularioForm1.juizo=='Trabalho de Loures'}">Juízo do Trabalho de Loures</option>
+                    <option value="Trabalho de Vila Nova de Gaia" th:selected="${formularioForm1.juizo=='Trabalho de Vila Nova de Gaia'}">Juízo do Trabalho de Vila Nova de Gaia</option>
+                    <option value="Trabalho do Porto" th:selected="${formularioForm1.juizo=='Trabalho do Porto'}">Juízo do Trabalho do Porto</option>
+                    <option value="Trabalho da Maia" th:selected="${formularioForm1.juizo=='Trabalho da Maia'}">Juízo do Trabalho da Maia</option>
+                    <option value="Trabalho de Valongo" th:selected="${formularioForm1.juizo=='Trabalho da Maia'}">Juízo do Trabalho de Valongo</option>
+                </select>
+                <p class="help-block" th:if="${#fields.hasErrors('juizo')}" th:errors="*{juizo}">Error</p>
+            </div>
+        </div>
 
 
         <!--2-->
@@ -553,7 +553,7 @@
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
-                    <input type="submit" name="operation" value="Gravar" class="btn btn-primary"/>
+                    <input type="submit" name="operation" th:if="${formularioForm1.submetido == false}" value="Gravar" class="btn btn-primary"/>
                     <input type="submit" name="operation" value="Avançar >>" class="btn btn-primary"/>
                 </div>
             </div>

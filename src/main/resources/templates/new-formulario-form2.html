@@ -142,8 +142,8 @@
                         </div>
                         <div class="col-sm-9">
                             <div class="checkbox">
-                                <label for="s8_5_f">Descrição sucinta dos argumentos:</label>
-                                <textarea id="s8_5_f" name="s8_5_f" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
+                                <label th:for="s10_2_1">Descrição sucinta dos argumentos:</label>
+                                <textarea th:field="*{s8_5_f}" cols="10" rows="10" class="form-control" maxlength="1000"></textarea>
                                 <br>
                                 <br>
                             </div>
@@ -627,7 +627,7 @@
         <div class="panel">
             <div class="panel-body">
                 <div class="form-group">
-                    <input type="submit" name="operation" value="Gravar" class="btn btn-primary"/>
+                    <input type="submit" name="operation" th:if="${formularioForm2.submetido == false}" value="Gravar" class="btn btn-primary"/>
                     <input type="submit" name="operation" value="Avançar >>" class="btn btn-primary"/>
                 </div>
             </div>

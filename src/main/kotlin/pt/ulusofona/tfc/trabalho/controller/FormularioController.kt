@@ -1397,7 +1397,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     s1DB.lastUpdate = data1.format(Date())
                     s1FormularioRepository.save(s1DB);
                 }
-                return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 2 em edição
+                return "redirect:/form/edit/${processIdParam}/3"  // volta a mostrar a página 3 em edição
             }
             "Submeter" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
@@ -1409,6 +1409,16 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"
+            }
+            "Fechar" -> {
+                redirectAttributes.addFlashAttribute("message", "Processo fechado") //pedir ao stor uma opiniao d messagem
+                val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                val s1DB = s1FormularioRepository.findByProcessId(processId)
+                if (s1DB != null) {
+                    s1DB.lastUpdate = data1.format(Date())
+                    s1FormularioRepository.save(s1DB);
+                }
+                return "redirect:/form/list"  // volta para a lista de processos
             }
             else -> throw Exception("invalid operation: ${formularioForm3.operation}")
         }
