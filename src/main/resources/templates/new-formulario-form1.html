@@ -17,7 +17,7 @@
         <div class="form-group" th:classappend="${#fields.hasErrors('processId')} ? 'has-error' : ''">
             <label for="processId" class="col-sm-3 control-label">Processo nº:</label>
             <div class="col-sm-6">
-                <input th:field="*{processId}" type="text" class="form-control" id="processId" maxlength="50" th:readonly="${formularioForm1.edit}" />
+                <input th:field="*{processId}" type="text" class="form-control" id="processId" maxlength="50" th:disabled="${formularioForm1.edit}" />
                 <p class="help-block" th:if="${#fields.hasErrors('processId')}" th:errors="*{processId}">Error</p>
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="form-group" th:classappend="${#fields.hasErrors('comarca')} ? 'has-error' : ''">
             <label for="comarca" class="col-sm-3 control-label">Comarca</label>
             <div class="col-sm-6">
-                <select th:field="*{comarca}" class="form-control" id="comarca" th:readonly="${formularioForm1.submetido}">
+                <select th:field="*{comarca}" class="form-control" id="comarca" th:disabled="${formularioForm1.submetido}">
                     <option value="" th:selected="${formularioForm1.comarca==''}"></option>
                     <option value="Lisboa" th:selected="${formularioForm1.comarca=='Lisboa'}">Comarca de Lisboa</option>
                     <option value="LisboaOeste" th:selected="${formularioForm1.comarca=='LisboaOeste'}">Comarca de Lisboa Oeste</option>
@@ -41,7 +41,7 @@
             <div class="form-group" th:classappend="${#fields.hasErrors('juizo')} ? 'has-error' : ''">
             <label for="juizo" class="col-sm-3 control-label">Juízo</label>
             <div class="col-sm-6">
-                <select th:field="*{juizo}" class="form-control" id="juizo" th:readonly="${formularioForm1.submetido}">
+                <select th:field="*{juizo}" class="form-control" id="juizo" th:disabled="${formularioForm1.submetido}">
                     <option value="" th:selected="${formularioForm1.juizo==''}"></option>
                     <option value="Trabalho de Lisboa" th:selected="${formularioForm1.juizo=='Trabalho de Lisboa'}">Juízo do Trabalho de Lisboa</option>
                     <option value="Trabalho de Cascais" th:selected="${formularioForm1.juizo=='Trabalho de Cascais'}">Juízo do Trabalho de Cascais</option>
@@ -63,11 +63,11 @@
             <div class="col-sm-9">
                 <div class="checkbox">
                     <label>
-                        <input th:field="*{s2_A}" type="checkbox" class="grupo-2" th:readonly="${formularioForm1.submetido}">Situação contratual individual
+                        <input th:field="*{s2_A}" type="checkbox" class="grupo-2" th:disabled="${formularioForm1.submetido}">Situação contratual individual
                     </label>
                     <br>
                     <label>
-                        <input th:field="*{s2_B}" type="checkbox" class="grupo-2" th:readonly="${formularioForm1.submetido}">Múltiplas situações contratuais individuais
+                        <input th:field="*{s2_B}" type="checkbox" class="grupo-2" th:disabled="${formularioForm1.submetido}">Múltiplas situações contratuais individuais
                     </label>
                 </div>
             </div>
