@@ -834,9 +834,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                             bindingResult: BindingResult, model:ModelMap,
                             redirectAttributes: RedirectAttributes) : String {
 
-        if (bindingResult.hasErrors()) {
-            return "new-formulario-form2"
-        }
+        val s1DB = if (formularioForm2.processId == null) null else s1FormularioRepository.findByProcessId(formularioForm2.processId)
+
 
         val processId = formularioForm2.processId!!  // it is safe doing this since processId is a mandatory field
 
