@@ -362,78 +362,242 @@
 
         <!-- 19 -->
         <div class="panel panel-default">
-            <div class="panel-heading">19 - Em caso de procedência da ação, ainda que parcial - Aspetos da relação jurídica material</div>
-            <div class="panel-body">
-                <div class="form-group">
-                    <!-- 19.1 -->
-                    <div class="col-sm-9">
-                        <label class="control-label">19.1 - Situação de fraude:</label>
-                        <div class="checkbox indent">
-                            <label>
-                                <input th:field="*{s19_1_A}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A - falsos recibos verdes
-                            </label>
+        <div class="panel-heading">Em caso de prolação de decisão de mérito- valorização dos factos dados como provados</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <!-- 19.1 -->
+                <div class="col-sm-9">
+                    <label>
+                        <input th:field="*{s19_1}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A sentença reconheceu a existência de relação jurídica subordinada, valorizando os seguintes índices.
+                    </label>
+                    <div class="checkbox indent">
+                        <label>
+                            <input th:field="*{s19_1_1}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A atividade é realizada em local pertencente ao seu beneficiário ou por ele determinado
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_2}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Os equipamentos e instrumentos de trabalho utilizados pertencem ao beneficiário da atividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_3}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade observa horas de início e de termo da prestação, determinadas pelo beneficiário da mesma
                             <br>
-                            <label>
-                                <input th:field="*{s19_1_B}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">B - falsos  estagiários
-                            </label>
-                            <br>
-                            <label>
-                                <input th:field="*{s19_1_C}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">C - falsos bolseiros
-                            </label>
-                            <br>
-                            <label>
-                                <input th:field="*{s19_1_D}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">D - falsos voluntários
-                            </label>
-                            <br>
-                            <label>
-                                <input th:field="*{s19_1_E}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">E - trabalho com o auxílio de plataformas digitais
-                            </label>
-                            <br>
-                            <label>
-                                <input th:field="*{s19_1_F}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">F - outro tipo de trabalho à distância.
-                            </label>
-                            <br>
-                            <label th:for="s19_1_F_f">Outro:</label>
-                            <input th:field="*{s19_1_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
-                            <br>
-                        </div>
-                        <!-- 19.1.1 -->
-                        <div class="col-sm-9">
-                            <label th:for="s19_1_1">19.1.1 - Atividade contratada:</label>
-                            <input th:field="*{s19_1_1}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
-                            <br>
-                        </div>
+                        </label>
+                        <label>
+                            <input th:field="*{s19_1_4}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">É paga, com determinada periodicidade, uma quantia certa ao prestador de atividade, como contrapartida da mesma
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_5}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador de atividade desempenha funções de direção ou chefia na estrutura orgânica da empresa
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_6}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade recebe subsídio de férias e/ou de Natal
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_7}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O beneficiário da atividade fixa o período de férias
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_8}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">) O prestador da atividade está integrado na organização produtiva
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_9}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade submete-se à sanção disciplinar
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_10}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O serviço realizado é objeto de fiscalização ou retificação pelo beneficiário ou por alguém por este indicado
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_11}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade é sindicalizado
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_12}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade observa  o regime fiscal e da segurança social próprios do trabalho por conta de outrem
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_13}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O trabalho é realizado com exclusividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_14}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O trabalho é realizado com exclusividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_15}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O trabalho, não sendo prestado com exclusividade, deixa o trabalhador numa situação de dependência económica
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_16}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O beneficiário da atividade exigiu que o prestador realizasse a sua atividade através da constituição de uma pessoa coletiva
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_1_17}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Outros</label>
+                        <br>
+                        <label th:for="s19_1_17_f">Quais?</label>
+                        <input th:field="*{s19_1_17_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                        <br>
                     </div>
-                    <!-- 19.2 -->
-                    <div class="col-sm-9">
-                        <label class="control-label">19.2 - Modus operandi:</label>
-                        <!-- 19.2.1 -->
-                        <div class="col-sm-9">
-                            <label th:for="s19_2_1">19.2.1 - Recursos utilizados para mascarar a relação de trabalho (factos dados como provados):</label>
-                            <textarea th:field="*{s19_2_1}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
-                            <br>
-                        </div>
-                        <!-- 19.2.2 -->
-                        <div class="col-sm-9">
-                            <label th:for="s19_2_2">19.2.2 - Data do início do vínculo (facto dado como provado):</label>
-                            <input th:field="*{s19_2_2}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
-                            <br>
-                        </div>
+                </div>
+                <!-- 19.2 -->
+                <div class="col-sm-9">
+                    <label>
+                        <input th:field="*{s19_2}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A sentença não reconheceu a existência de relação jurídica subordinada, valorizando os seguintes índices
+                    </label>
+                    <div class="checkbox indent">
+                        <label>
+                            <input th:field="*{s19_2_1}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A atividade é realizada em local determinado pelo próprio prestador da atividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_2}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Os equipamentos e instrumentos de trabalho utilizados pertencem ao prestador da atividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_3}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade fixa as horas de início e de termo da sua prestação
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_4}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A retribuição é variável
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_5}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade decide quando deve afastar-se para o gozo de férias
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_6}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade não recebe subsídio de férias e/ou de Natal
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_7}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade observa  o regime fiscal e da segurança social próprios do trabalho por conta própria
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_8}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade emite recibos verdes
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_9}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade, não tendo atividade aberta nas Finanças, emitiu recibo ou fatura por um serviço ou venda feito de forma pontual ou esporádica (ato isolado)
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_10}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade subscreveu um seguro de acidentes de trabalho como trabalhador independente
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_11}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O trabalho é realizado sem exclusividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_12}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade assume os riscos próprios da sua atividade, tendo independência económica
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_13}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O trabalho é realizado com autonomia técnica
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_14}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">) O prestador da atividade tem, ao seu cargo, outros trabalhadores
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_15}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">) O prestador da atividade nunca reclamou perante o beneficiário créditos de natureza laboral
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_16}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">O prestador da atividade podia substituir-se por outro
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_17}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Objeto do contrato: obrigação de resultado
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_18}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Objeto do contrato: obrigação de meios, prestação de uma atividade
+                        </label>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_19}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A vontade contratual – o nomen iuris – é relevante
+                        </label>
+                        <br>
+                        <label th:for="s19_2_19_f">Qual o tipo contratual escolhido?</label>
+                        <textarea th:field="*{s19_2_19_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <br>
+                        <label>
+                            <input th:field="*{s19_2_20}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">Outros</label>
+                        <br>
+                        </label>
+                        <label th:for="s19_2_20_f">Quais?</label>
+                        <textarea th:field="*{s19_2_20_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <br>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
         <!-- 20 -->
-        <div class="panel panel-default"    >
-            <div class="panel-heading">20 -	Determinação da subordinação jurídica: valorização dos factos dados como provados</div>
+        <div class="panel panel-default">
+            <div class="panel-heading">20 - Em caso de procedência da ação, ainda que parcial - Aspetos da relação jurídica material</div>
             <div class="panel-body">
                 <div class="form-group">
                     <!-- 20.1 -->
                     <div class="col-sm-9">
-                        <label th:for="s20_1">20.1 - Descrição:</label>
-                        <textarea th:field="*{s20_1}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
-                        <br>
+                        <label class="control-label">20.1 - Situação de fraude:</label>
+                        <div class="checkbox indent">
+                            <label>
+                                <input th:field="*{s20_1_A}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">A - falsos recibos verdes
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s20_1_B}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">B - falsos  estagiários
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s20_1_C}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">C - falsos bolseiros
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s20_1_D}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">D - falsos voluntários
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s20_1_E}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">E - trabalho com o auxílio de plataformas digitais
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s20_1_F}" type="checkbox" class="grupo19-1" th:disabled="${formularioForm3.submetido}">F - outro tipo de trabalho à distância.
+                            </label>
+                            <br>
+                            <label th:for="s20_1_F_f">Outro:</label>
+                            <input th:field="*{s20_1_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <br>
+                        </div>
+                        <!-- 20.1.1 -->
+                        <div class="col-sm-9">
+                            <label th:for="s20_1_1">12.1.1 - Atividade contratada:</label>
+                            <input th:field="*{s20_1_1}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- 20.2 -->
+                    <div class="col-sm-9">
+                        <div class="col-sm-9">
+                            <label th:for="s20_2">20.2 - Data do início do vínculo (facto dado como provado):</label>
+                            <input th:field="*{s20_2}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <br>
+                        </div>
+                        <!-- 20.2.1 -->
+                        <div class="col-sm-9">
+                            <label th:for="s20_2_2">20.2.1 - Data do início do vínculo (facto dado como provado):</label>
+                            <input th:field="*{s20_2_1}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <br>
+                        </div>
                     </div>
                 </div>
             </div>
