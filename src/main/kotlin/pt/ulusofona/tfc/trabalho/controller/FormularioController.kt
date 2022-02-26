@@ -616,10 +616,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
                     processId = processId,
-                    comarca = formularioForm1.comarca, juizo = formularioForm1.juizo,
-                        s1_2_A = formularioForm1.s1_2_A,
-                        s1_2_B = formularioForm1.s1_2_B,
-                        s1_2_B_f = formularioForm1.s1_2_B_f
+                    comarca = formularioForm1.comarca,
+                    juizo = formularioForm1.juizo,
+                    s1_2_A = formularioForm1.s1_2_A,
+                    s1_2_B = formularioForm1.s1_2_B,
+                    s1_2_B_f = formularioForm1.s1_2_B_f
 
                 )
                 s1FormularioRepository.save(s1FormularioDAO)
@@ -747,17 +748,12 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
             } else {  // edit
 
-                val s1DB = s1FormularioRepository.findByProcessId(processId)!!
                 val s2DB = s2FormularioRepository.findByProcessId(processId)!!
                 val s3DB = s3FormularioRepository.findByProcessId(processId)!!
                 val s4DB = s4FormularioRepository.findByProcessId(processId)!!
                 val s5DB = s5FormularioRepository.findByProcessId(processId)!!
                 val s6DB = s6FormularioRepository.findByProcessId(processId)!!
                 val s7DB = s7FormularioRepository.findByProcessId(processId)!!
-
-                s1DB.s1_2_A = formularioForm1.s1_2_A
-                s1DB.s1_2_B = formularioForm1.s1_2_B
-                s1DB.s1_2_B_f = formularioForm1.s1_2_B_f
 
                 s2DB.s2_A = formularioForm1.s2_A
                 s2DB.s2_B = formularioForm1.s2_B
@@ -1192,6 +1188,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
         redirectAttributes.addFlashAttribute("message", "Página 2 do formulário gravada. Pode continuar a preencher")
+
         when (formularioForm2.operation) {
             "Gravar" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)

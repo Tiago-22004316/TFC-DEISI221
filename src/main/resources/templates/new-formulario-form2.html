@@ -28,121 +28,121 @@
             <div class="panel-heading">8 - Defesa</div>
             <div class="panel-body">
                 <div class="form-group">
+                    <!-- 8.1 -->
                     <div class="col-sm-9">
-                        <!-- 8.1 -->
                         <div class="checkbox">
                             <label>
                                 <input th:field="*{s8_1}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.1 - Sem defesa
                             </label>
                             <br>
                         </div>
-                        <!-- 8.2 -->
+                    </div>
+                    <!-- 8.2 -->
+                    <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
                                 <input th:field="*{s8_2}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.2 - Defesa por impugnação
                             </label>
                             <br>
                         </div>
-                        <!-- 8.3 -->
-                        <div class="col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input th:field="*{s8_3}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.3 - Defesa por exceção perentória
-                                </label>
-                                <br>
-                                <div class="checkbox indent">
-                                    <label>
-                                        <input th:field="*{s8_3_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Causa que impede o efeito jurídico pretendido.
-                                    </label>
-                                    <br>
-                                    <label th:for="s8_3_A_f">Qual?</label>
-                                    <input th:field="*{s8_3_A_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_3_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Causa que modifica o efeito jurídico pretendido.
-                                    </label>
-                                    <br>
-                                    <label th:for="s8_3_B_f">Qual?</label>
-                                    <input th:field="*{s8_3_B_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_3_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Causa que extingue o efeito jurídico pretendido.
-                                    </label>
-                                    <br>
-                                    <label th:for="s8_3_C_f">Qual?</label>
-                                    <input th:field="*{s8_3_C_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
-                                    <br>
-                                </div>
-                            </div>
+                    </div>
+                    <!-- 8.3 -->
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_3}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.3 - Defesa por exceção perentória
+                            </label>
+                            <br>
                         </div>
-                        <!-- 8.4 -->
-                        <div class="col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input th:field="*{s8_4}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.4 - Defesa por exceção dilatória /nulidade processual.
-                                </label>
-                                <br>
-                                <div class="checkbox indent">
-                                    <label>
-                                        <input th:field="*{s8_4_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Incompetência absoluta do tribunal – competência internacional
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Incompetência absoluta do tribunal – pacto privativo de jurisdição permitido por convenção internacional
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Incompetência relativa do tribunal – competência territorial
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_D}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">D - Nulidade de todo o processo – Ineptidão da Petição Inicial
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_E}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">E - Nulidade de todo o processo – falta de citação ou nulidade da citação
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_F}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">F - Nulidade de todo o processo – outra nulidade
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_G}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">G - Pluralidade subjetiva subsidiária (fora dos casos do art. 39º do CPC)
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_H}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">H - Litispendência
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_I}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">I - Caso julgado
-                                    </label>
-                                    <br>
-                                    <label>
-                                        <input th:field="*{s8_4_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Outra
-                                    </label>
-                                    <br>
-                                    <label th:for="s8_4_J_f">Qual?</label>
-                                    <input th:field="*{s8_4_J_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
-                                    <br>
-                                </div>
-                            </div>
+                        <div class="checkbox indent">
+                            <label>
+                                <input th:field="*{s8_3_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Causa que impede o efeito jurídico pretendido.
+                            </label>
+                            <br>
+                            <label th:for="s8_3_A_f">Qual?</label>
+                            <input th:field="*{s8_3_A_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_3_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Causa que modifica o efeito jurídico pretendido.
+                            </label>
+                            <br>
+                            <label th:for="s8_3_B_f">Qual?</label>
+                            <input th:field="*{s8_3_B_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_3_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Causa que extingue o efeito jurídico pretendido.
+                            </label>
+                            <br>
+                            <label th:for="s8_3_C_f">Qual?</label>
+                            <input th:field="*{s8_3_C_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
+                            <br>
                         </div>
-                        <!-- 8.5 -->
+                    </div>
+                    <!-- 8.4 -->
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input th:field="*{s8_4}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">8.4 - Defesa por exceção dilatória /nulidade processual.
+                            </label>
+                            <br>
+                        </div>
+                        <div class="checkbox indent">
+                            <label>
+                                <input th:field="*{s8_4_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Incompetência absoluta do tribunal – competência internacional
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Incompetência absoluta do tribunal – pacto privativo de jurisdição permitido por convenção internacional
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Incompetência relativa do tribunal – competência territorial
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_D}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">D - Nulidade de todo o processo – Ineptidão da Petição Inicial
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_E}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">E - Nulidade de todo o processo – falta de citação ou nulidade da citação
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_F}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">F - Nulidade de todo o processo – outra nulidade
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_G}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">G - Pluralidade subjetiva subsidiária (fora dos casos do art. 39º do CPC)
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_H}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">H - Litispendência
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_I}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">I - Caso julgado
+                            </label>
+                            <br>
+                            <label>
+                                <input th:field="*{s8_4_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Outra
+                            </label>
+                            <br>
+                            <label th:for="s8_4_J_f">Qual?</label>
+                            <input th:field="*{s8_4_J_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- 8.5 -->
+                    <div class="col-sm-9">
                         <div class="checkbox">
                             <label>
                                 <input th:field="*{s8_5}" type="checkbox" class="" th:readonly="${formularioForm2.submetido}">8.5 - Arguição da inconstitucionalidade da ARECT?
                             </label>
                             <br>
-                        </div>
-                        <div class="col-sm-9">
-                            <div class="checkbox">
-                                <label th:for="s8_5_f">Descrição sucinta dos argumentos:</label>
-                                <textarea th:field="*{s8_5_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:disabled="${formularioForm2.submetido}"></textarea>
-                                <br>
-                                <br>
-                            </div>
+                            <label th:for="s8_5_f">Descrição sucinta dos argumentos:</label>
+                            <textarea th:field="*{s8_5_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:disabled="${formularioForm2.submetido}"></textarea>
+                            <br>
+                            <br>
                         </div>
                     </div>
                 </div>
@@ -318,18 +318,18 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s11_1_A}" type="checkbox" class="grupo-11-1" th:disabled="${formularioForm2.submetido}">A - Em torno da existência do contrato de trabalho
+                                    <input th:field="*{s11_1_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Em torno da existência do contrato de trabalho
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s11_1_B}" type="checkbox" class="grupo-11-1" th:disabled="${formularioForm2.submetido}">B - Em torno da existência de outra modalidade contratual.
+                                    <input th:field="*{s11_1_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Em torno da existência de outra modalidade contratual.
                                 </label>
                                 <br>
                                 <label th:for="s11_1_B_f">Qual?</label>
                                 <input th:field="*{s11_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s11_1_C}" type="checkbox" class="grupo-11-1" th:disabled="${formularioForm2.submetido}">C - Outras
+                                    <input th:field="*{s11_1_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Outras
                                 </label>
                                 <br>
                                 <label th:for="s11_1_C_f">Quais?</label>
@@ -643,8 +643,7 @@
 
     $(document).ready(function() {
         let groups = [
-            "grupo-10", "grupo-10-2",
-            "grupo-11-1"
+            "grupo-10", "grupo-10-2"
         ]
         groups.forEach(mutuallyExclusive)
     });
