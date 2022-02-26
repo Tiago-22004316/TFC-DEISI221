@@ -12,6 +12,9 @@ data class S1Formulario(
         var lastUpdate : String = "",
         var comarca : String = "",
         var juizo : String = "",
+        var s1_2_A : Boolean = false,
+        var s1_2_B : Boolean = false,
+        var s1_2_B_f : String = "",
 
         @Column(length = 50, unique = true)
         var processId: String = ""

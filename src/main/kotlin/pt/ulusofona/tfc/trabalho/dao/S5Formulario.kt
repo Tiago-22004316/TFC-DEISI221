@@ -21,6 +21,7 @@ data class S5Formulario(
         var s5_1_2_B : Boolean = false,
         var s5_1_2_C : Boolean = false,
         var s5_1_2_D : Boolean = false,
+        var s5_1_2_E : Boolean = false,
                 //5.1.3
         var s5_1_3_A : Boolean = false,
         var s5_1_3_B : Boolean = false,

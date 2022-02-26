@@ -26,7 +26,12 @@ data class FormularioForm1(
         var operation: String = "",
         var edit: Boolean = false,
 
-        //secção 1
+        //secção 1.2
+        var s1_2_A : Boolean = false,
+        var s1_2_B : Boolean = false,
+        var s1_2_B_f : String = "",
+
+        //secção 2
         var s2_A : Boolean = false,
         var s2_B : Boolean = false,
 
@@ -64,6 +69,7 @@ data class FormularioForm1(
         var s5_1_2_B : Boolean = false,
         var s5_1_2_C : Boolean = false,
         var s5_1_2_D : Boolean = false,
+        var s5_1_2_E : Boolean = false,
         //5.1.3
         var s5_1_3_A : Boolean = false,
         var s5_1_3_B : Boolean = false,

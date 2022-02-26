@@ -24,7 +24,7 @@
 
         <!-- 1.1 -->
         <div class="form-group" th:classappend="${#fields.hasErrors('comarca')} ? 'has-error' : ''">
-            <label for="comarca" class="col-sm-3 control-label">Comarca</label>
+            <label for="comarca" class="col-sm-3 control-label">Comarca:</label>
             <div class="col-sm-6">
                 <select th:field="*{comarca}" class="form-control" id="comarca" th:disabled="${formularioForm1.submetido}">
                     <option value="" th:selected="${formularioForm1.comarca==''}"></option>
@@ -32,27 +32,41 @@
                     <option value="LisboaOeste" th:selected="${formularioForm1.comarca=='LisboaOeste'}">Comarca de Lisboa Oeste</option>
                     <option value="LisboaNorte" th:selected="${formularioForm1.comarca=='LisboaNorte'}">Comarca de Lisboa Norte</option>
                     <option value="Porto" th:selected="${formularioForm1.comarca=='Porto'}">Comarca do Porto</option>
+                    <option value="PortoEste" th:selected="${formularioForm1.comarca=='PortoEste'}">Comarca de Porto Este</option>
                 </select>
                 <p class="help-block" th:if="${#fields.hasErrors('comarca')}" th:errors="*{comarca}">Error</p>
             </div>
         </div>
 
         <!-- 1.2 -->
-            <div class="form-group" th:classappend="${#fields.hasErrors('juizo')} ? 'has-error' : ''">
-            <label for="juizo" class="col-sm-3 control-label">Juízo</label>
-            <div class="col-sm-6">
-                <select th:field="*{juizo}" class="form-control" id="juizo" th:disabled="${formularioForm1.submetido}">
-                    <option value="" th:selected="${formularioForm1.juizo==''}"></option>
-                    <option value="Trabalho de Lisboa" th:selected="${formularioForm1.juizo=='Trabalho de Lisboa'}">Juízo do Trabalho de Lisboa</option>
-                    <option value="Trabalho de Cascais" th:selected="${formularioForm1.juizo=='Trabalho de Cascais'}">Juízo do Trabalho de Cascais</option>
-                    <option value="Trabalho de Sintra" th:selected="${formularioForm1.juizo=='Trabalho de Sintra'}">Juízo do Trabalho de Sintra</option>
-                    <option value="Trabalho de Loures" th:selected="${formularioForm1.juizo=='Trabalho de Loures'}">Juízo do Trabalho de Loures</option>
-                    <option value="Trabalho de Vila Nova de Gaia" th:selected="${formularioForm1.juizo=='Trabalho de Vila Nova de Gaia'}">Juízo do Trabalho de Vila Nova de Gaia</option>
-                    <option value="Trabalho do Porto" th:selected="${formularioForm1.juizo=='Trabalho do Porto'}">Juízo do Trabalho do Porto</option>
-                    <option value="Trabalho da Maia" th:selected="${formularioForm1.juizo=='Trabalho da Maia'}">Juízo do Trabalho da Maia</option>
-                    <option value="Trabalho de Valongo" th:selected="${formularioForm1.juizo=='Trabalho da Maia'}">Juízo do Trabalho de Valongo</option>
-                </select>
-                <p class="help-block" th:if="${#fields.hasErrors('juizo')}" th:errors="*{juizo}">Error</p>
+        <div class="form-group">
+            <label class="col-sm-3 control-label"> Redistribuição posterior para uma comarca diversa?</label>
+            <div class="col-sm-9">
+                <div class="checkbox">
+                    <label>
+                        <input th:field="*{s1_2_A}" type="checkbox" class="grupo-1-2" th:disabled="${formularioForm1.submetido}">Não
+                    </label>
+                    <br>
+                    <label>
+                        <input th:field="*{s1_2_B}" type="checkbox" class="grupo-1-2" th:disabled="${formularioForm1.submetido}">Sim
+                    </label>
+                    <br>
+                    <div>
+                        <label th:for="s1_2_B_f">Para qual?</label>
+                        <input th:field="*{s1_2_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1.3 -->
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Juizo</label>
+            <div class="col-sm-9">
+                <div>
+                    <label th:for="juizo"></label>
+                    <input th:field="*{juizo}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
+                </div>
             </div>
         </div>
 
@@ -195,6 +209,10 @@
                                 <br>
                                 <label>
                                     <input th:field="*{s5_1_2_D}" type="checkbox" class="grupo-5-3" th:disabled="${formularioForm1.submetido}">D - Com 45 e mais anos
+                                </label>
+                                <br>
+                                <label>
+                                    <input th:field="*{s5_1_2_E}" type="checkbox" class="grupo-5-3" th:disabled="${formularioForm1.submetido}">E - Não apurado
                                 </label>
                                 <br>
                             </div>
@@ -461,7 +479,7 @@
                                     </label>
                                     <br>
                                     <label th:for="s6_1_B_f">Qual?</label>
-                                    <input th:field="*{s6_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
+                                    <textarea id="s6_1_B_f" name="s6_1_B_f" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm1.submetido}"></textarea>
                                     <br>
                                 </div>
                             </div>
@@ -483,60 +501,60 @@
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>
-                                    <input th:field="*{s7_1_A}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">A - Depoimento de parte (da parte contrária)
+                                    <input th:field="*{s7_1_A}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">A - Depoimento de parte (da parte contrária)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_B}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
+                                    <input th:field="*{s7_1_B}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">B - Apresentação de documentos por iniciativa própria / documentos coligidos pela ACT
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_C}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">C - Requerimento para que a parte contrária apresente documentos
+                                    <input th:field="*{s7_1_C}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">C - Requerimento para que a parte contrária apresente documentos
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_D}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">D - Requisição de documentos a organismos oficiais
+                                    <input th:field="*{s7_1_D}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">D - Requisição de documentos a organismos oficiais
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_E}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">E - Requisição de documentos às partes
+                                    <input th:field="*{s7_1_E}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">E - Requisição de documentos às partes
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_F}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">F - Requisição de documentos a terceiros
+                                    <input th:field="*{s7_1_F}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">F - Requisição de documentos a terceiros
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_G}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">G - Testemunhas (com algum vínculo à Ré)
+                                    <input th:field="*{s7_1_G}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">G - Testemunhas (com algum vínculo à Ré)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_H}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">H - Testemunhas (sem vínculo à Ré)
+                                    <input th:field="*{s7_1_H}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">H - Testemunhas (sem vínculo à Ré)
                                 </label>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_I}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">I - Prova pericial
+                                    <input th:field="*{s7_1_I}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">I - Prova pericial
                                 </label>
                                 <br>
                                 <label th:for="s7_1_I_f">Qual?</label>
                                 <input th:field="*{s7_1_I_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}" />
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_J}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}" >J - Prova por inspeção judicial
+                                    <input th:field="*{s7_1_J}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}" >J - Prova por inspeção judicial
                                 </label>
                                 <br>
                                 <label th:for="s7_1_J_f">Qual?</label>
                                 <input th:field="*{s7_1_J_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_L}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">L - Verificação não judicial qualificada
+                                    <input th:field="*{s7_1_L}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">L - Verificação não judicial qualificada
                                 </label>
                                 <br>
                                 <label th:for="s7_1_L_f">Qual?</label>
                                 <input th:field="*{s7_1_L_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                                 <br>
                                 <label>
-                                    <input th:field="*{s7_1_M}" type="checkbox" class="grupo-7" th:disabled="${formularioForm1.submetido}">M - Outra
+                                    <input th:field="*{s7_1_M}" type="checkbox" class="" th:disabled="${formularioForm1.submetido}">M - Outra
                                 </label>
                                 <br>
                                 <label th:for="s7_1_M_f">Qual?</label>
@@ -573,14 +591,14 @@
     }
 
     $(document).ready(function() {
-        let groups = [ "grupo-2",
+        let groups = [ "grupo-1-2",
+            "grupo-2",
             "grupo-5",
             "grupo-3",
             "grupo-4-1", "grupo-4-3-e",
             "grupo-4-2","grupo-4-2-1",
             "grupo-5-2","grupo-5-3", "grupo-5-4", "grupo-5-5","grupo-5-6","grupo-5-6-1",
-            "grupo-6","grupo-6-1",
-            "grupo-7"]
+            "grupo-6","grupo-6-1"]
         groups.forEach(mutuallyExclusive)
     });
 </script>

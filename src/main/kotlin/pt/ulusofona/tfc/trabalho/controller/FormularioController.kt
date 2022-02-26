@@ -77,6 +77,9 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         if (s1DB != null) {
             formularioForm1.comarca = s1DB.comarca
             formularioForm1.juizo = s1DB.juizo
+            formularioForm1.s1_2_A = s1DB.s1_2_A
+            formularioForm1.s1_2_B = s1DB.s1_2_B
+            formularioForm1.s1_2_B_f = s1DB.s1_2_B_f
         }
 
         if (s2DB != null) {
@@ -110,6 +113,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm1.s5_1_2_B = s5DB.s5_1_2_B
             formularioForm1.s5_1_2_C = s5DB.s5_1_2_C
             formularioForm1.s5_1_2_D = s5DB.s5_1_2_D
+            formularioForm1.s5_1_2_E = s5DB.s5_1_2_E
             formularioForm1.s5_1_3_A = s5DB.s5_1_3_A
             formularioForm1.s5_1_3_B = s5DB.s5_1_3_B
             formularioForm1.s5_1_3_C = s5DB.s5_1_3_C
@@ -612,7 +616,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
                     processId = processId,
-                    comarca = formularioForm1.comarca, juizo = formularioForm1.juizo
+                    comarca = formularioForm1.comarca, juizo = formularioForm1.juizo,
+                        s1_2_A = formularioForm1.s1_2_A,
+                        s1_2_B = formularioForm1.s1_2_B,
+                        s1_2_B_f = formularioForm1.s1_2_B_f
+
                 )
                 s1FormularioRepository.save(s1FormularioDAO)
 
@@ -653,6 +661,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     s5_1_2_B = formularioForm1.s5_1_2_B,
                     s5_1_2_C = formularioForm1.s5_1_2_C,
                     s5_1_2_D = formularioForm1.s5_1_2_D,
+                        s5_1_2_E = formularioForm1.s5_1_2_E,
                     s5_1_3_A = formularioForm1.s5_1_3_A,
                     s5_1_3_B = formularioForm1.s5_1_3_B,
                     s5_1_3_C = formularioForm1.s5_1_3_C,
@@ -746,6 +755,10 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val s6DB = s6FormularioRepository.findByProcessId(processId)!!
                 val s7DB = s7FormularioRepository.findByProcessId(processId)!!
 
+                s1DB.s1_2_A = formularioForm1.s1_2_A
+                s1DB.s1_2_B = formularioForm1.s1_2_B
+                s1DB.s1_2_B_f = formularioForm1.s1_2_B_f
+
                 s2DB.s2_A = formularioForm1.s2_A
                 s2DB.s2_B = formularioForm1.s2_B
                 s2FormularioRepository.save(s2DB)
@@ -773,6 +786,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s5DB.s5_1_2_B = formularioForm1.s5_1_2_B
                 s5DB.s5_1_2_C = formularioForm1.s5_1_2_C
                 s5DB.s5_1_2_D = formularioForm1.s5_1_2_D
+                s5DB.s5_1_2_E = formularioForm1.s5_1_2_E
                 s5DB.s5_1_3_A = formularioForm1.s5_1_3_A
                 s5DB.s5_1_3_B = formularioForm1.s5_1_3_B
                 s5DB.s5_1_3_C = formularioForm1.s5_1_3_C
