@@ -1,6 +1,5 @@
 package pt.ulusofona.tfc.trabalho.dao
 
-import java.util.*
 import javax.persistence.*
 
 @Entity

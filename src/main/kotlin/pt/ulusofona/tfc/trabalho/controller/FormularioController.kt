@@ -1190,6 +1190,9 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         redirectAttributes.addFlashAttribute("message", "Página 2 do formulário gravada. Pode continuar a preencher")
 
         when (formularioForm2.operation) {
+
+            "<< Recuar" -> return "redirect:/form/edit/${processId}/1"
+
             "Gravar" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
@@ -1546,6 +1549,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
 
         when (formularioForm3.operation) {
+
+            "<< Recuar" -> return "redirect:/form/edit/${processId}/2"
 
             "Gravar" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
