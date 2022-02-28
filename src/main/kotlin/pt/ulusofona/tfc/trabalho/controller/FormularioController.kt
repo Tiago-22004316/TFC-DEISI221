@@ -15,6 +15,7 @@ import java.security.Principal
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.validation.Valid
+import java.time.LocalDate
 
 @Controller
 @RequestMapping("/form")
@@ -599,6 +600,12 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         val s1DB = if (formularioForm1.processId == null) null else s1FormularioRepository.findByProcessId(formularioForm1.processId)
 
         if (bindingResult.hasErrors() && (s1DB == null || s1DB.estado != "Submetido")) {
+            return "new-formulario-form1"
+        }
+
+        val date = LocalDate.now().toString()
+        if (formularioForm1.s3_1 > date && formularioForm1.s3_2 > date && formularioForm1.s3_3 > date && formularioForm1.s3_4_1 > date){
+            bindingResult.rejectValue("s3_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
             return "new-formulario-form1"
         }
 
