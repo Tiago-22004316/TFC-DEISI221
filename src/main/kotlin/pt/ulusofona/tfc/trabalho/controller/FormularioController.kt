@@ -599,10 +599,12 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         val s1DB = if (formularioForm1.processId == null) null else s1FormularioRepository.findByProcessId(formularioForm1.processId)
 
+        
         if (bindingResult.hasErrors() && (s1DB == null || s1DB.estado != "Submetido")) {
             return "new-formulario-form1"
         }
 
+        //data
         val date = LocalDate.now().toString()
         if (formularioForm1.s3_1 > date){
             bindingResult.rejectValue("s3_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
@@ -620,6 +622,34 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s3_4_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
             return "new-formulario-form1"
         }
+
+        //quais e outras da pagina 1
+        if (formularioForm1.s4_1_2 && formularioForm1.s4_1_2_f == ""){
+            bindingResult.rejectValue("s4_1_2_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s5_1_3_D && formularioForm1.s5_1_3_D_f == ""){
+            bindingResult.rejectValue("s5_1_3_D_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s5_2_I && formularioForm1.s5_2_I_f == ""){
+            bindingResult.rejectValue("s5_2_I_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s6_B && formularioForm1.s6_B_f == ""){
+            bindingResult.rejectValue("s6_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s6_1_B && formularioForm1.s6_1_B_f == ""){
+            bindingResult.rejectValue("s6_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s7_1_M && formularioForm1.s7_1_M_f == ""){
+            bindingResult.rejectValue("s7_1_M_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+
+
 
         val processId = formularioForm1.processId!!  // it is safe doing this since processId is a mandatory field
 
@@ -908,6 +938,56 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         if (bindingResult.hasErrors() && (s1DB == null || s1DB.estado != "Submetido")) {
             return "new-formulario-form2"
+        }
+
+        //quais e outras da pagina2
+        if (formularioForm2.s8_3_A && formularioForm2.s8_3_A_f == ""){
+            bindingResult.rejectValue("s8_3_A_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s8_3_B && formularioForm2.s8_3_B_f == ""){
+            bindingResult.rejectValue("s8_3_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s8_3_C && formularioForm2.s8_3_C_f == ""){
+            bindingResult.rejectValue("s8_3_C_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s8_4_J && formularioForm2.s8_4_J_f == ""){
+            bindingResult.rejectValue("s8_4_J_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s9_1_1_B && formularioForm2.s9_1_1_B_f == ""){
+            bindingResult.rejectValue("s9_1_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s9_2_M && formularioForm2.s9_2_M_f == ""){
+            bindingResult.rejectValue("s9_2_M_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s11_1_C && formularioForm2.s11_1_C_f == ""){
+            bindingResult.rejectValue("s11_1_C_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s11_2_M && formularioForm2.s11_2_M_f == ""){
+            bindingResult.rejectValue("s11_2_M_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s12_D && formularioForm2.s12_D_f == ""){
+            bindingResult.rejectValue("s12_D_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s13_1_B && formularioForm2.s13_1_B_f == ""){
+            bindingResult.rejectValue("s13_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s13_2_N && formularioForm2.s13_2_N_f == ""){
+            bindingResult.rejectValue("s13_2_N_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s14_L && formularioForm2.s14_L_f == ""){
+            bindingResult.rejectValue("s14_L_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
         }
 
         val processId = formularioForm2.processId!!  // it is safe doing this since processId is a mandatory field
@@ -1238,6 +1318,84 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         if (bindingResult.hasErrors() && (s1DB == null || s1DB.estado != "Submetido")) {
             return "new-formulario-form3"
+        }
+
+        //quais e outras da página3
+        if (formularioForm3.s16_1_B && formularioForm3.s16_1_B_f == ""){
+            bindingResult.rejectValue("s16_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s17_E && formularioForm3.s17_E_f == ""){
+            bindingResult.rejectValue("s17_E_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s17_1_B && formularioForm3.s17_1_B_f == ""){
+            bindingResult.rejectValue("s17_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s17_2 && formularioForm3.s17_2_f == ""){
+            bindingResult.rejectValue("s17_2_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s17_3 && formularioForm3.s17_3_f == ""){
+            bindingResult.rejectValue("s17_3_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s17_4_2_B && formularioForm3.s17_4_2_B_f == ""){
+            bindingResult.rejectValue("s17_4_2_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_1_E && formularioForm3.s18_1_E_f == ""){
+            bindingResult.rejectValue("s18_1_E_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_2_G && formularioForm3.s18_2_G_f == ""){
+            bindingResult.rejectValue("s18_2_G_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_3_B && formularioForm3.s18_3_B_f == ""){
+            bindingResult.rejectValue("s18_3_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_4_C && formularioForm3.s18_4_C_f == ""){
+            bindingResult.rejectValue("s18_4_C_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_4_D && formularioForm3.s18_4_D_f == ""){
+            bindingResult.rejectValue("s18_4_D_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_4_E && formularioForm3.s18_4_E_f == ""){
+            bindingResult.rejectValue("s18_4_E_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s18_4_F && formularioForm3.s18_4_F_f == ""){
+            bindingResult.rejectValue("s18_4_F_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s19_1_17 && formularioForm3.s19_1_17_f == ""){
+            bindingResult.rejectValue("s19_1_17_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s19_2_20 && formularioForm3.s19_2_20_f == ""){
+            bindingResult.rejectValue("s19_2_20_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s20_1_F && formularioForm3.s20_1_F_f == ""){
+            bindingResult.rejectValue("s20_1_F_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s21_1_2_B && formularioForm3.s21_1_2_B_f == ""){
+            bindingResult.rejectValue("s21_1_2_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s21_2_2_B && formularioForm3.s21_2_2_B_f == ""){
+            bindingResult.rejectValue("s21_2_2_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s21_3_2_B && formularioForm3.s21_3_2_B_f == ""){
+            bindingResult.rejectValue("s21_3_2_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
         }
 
         val processId = formularioForm3.processId!!
