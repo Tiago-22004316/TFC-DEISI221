@@ -55,6 +55,7 @@
                                 <br>
                                 <label th:for="s16_1_B_f">Qual?</label>
                                 <input th:field="*{s16_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                                <p class="help-block" th:if="${#fields.hasErrors('s16_1_B_f')}" th:errors="*{s16_1_B_f}">Error</p>
                                 <br>
                             </div>
                         </div>
@@ -92,6 +93,7 @@
                             <br>
                             <label th:for="s17_E_f">Quais?</label>
                             <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s17_E_f')}" th:errors="*{s17_E_f}">Error</p>
                             <br>
                             <label>
                                 <input th:field="*{s17_F}" type="checkbox" class="grupo-17" th:disabled="${formularioForm3.submetido}">F - Sem vicissitudes dignas de nota.
@@ -113,6 +115,7 @@
                             <br>
                             <label th:for="s17_1_B_f">17.1.1 - Se sim, quais os principais argumentos?</label>
                             <textarea th:field="*{s17_1_B_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <p class="help-block" th:if="${#fields.hasErrors('s17_1_B_f')}" th:errors="*{s17_1_B_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -125,6 +128,7 @@
                             <br>
                             <label th:for="s17_2_f">Descrição da situação:</label>
                             <textarea th:field="*{s17_2_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <p class="help-block" th:if="${#fields.hasErrors('s17_2_f')}" th:errors="*{s17_2_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -137,6 +141,7 @@
                             <br>
                             <label th:for="s17_3_f">Descrição da situação:</label>
                             <textarea th:field="*{s17_3_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <p class="help-block" th:if="${#fields.hasErrors('s17_3_f')}" th:errors="*{s17_3_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -176,6 +181,7 @@
                                 <br>
                                 <label th:for="s17_4_2_B_f">Se sim, em que termos?</label>
                                 <input th:field="*{s17_4_2_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                                <p class="help-block" th:if="${#fields.hasErrors('s17_4_2_B_f')}" th:errors="*{s17_4_2_B_f}">Error</p>
                                 <br>
                             </div>
                         </div>
@@ -198,6 +204,7 @@
                             <br>
                             <label th:for="s17_6_f">Descrição da situação:</label>
                             <input th:field="*{s17_6_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s17_6_f')}" th:errors="*{s17_6_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -241,6 +248,7 @@
                             <br>
                             <label th:for="s18_1_E_f">Qual?</label>
                             <input th:field="*{s18_1_E_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_1_E_f')}" th:errors="*{s18_1_E_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -283,6 +291,7 @@
                             <br>
                             <label th:for="s18_2_G_f">Qual?</label>
                             <input th:field="*{s18_2_G_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_2_G_f')}" th:errors="*{s18_2_G_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -300,6 +309,7 @@
                             <br>
                             <label th:for="s18_3_B_f">Decaimento:</label>
                             <input th:field="*{s18_3_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_3_B_f')}" th:errors="*{s18_3_B_f}">Error</p>
                             <br>
                         </div>
                     </div>
@@ -326,6 +336,7 @@
                             <br>
                             <label th:for="s18_4_C_f">Qual?</label>
                             <input th:field="*{s18_4_C_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_3_B_f')}" th:errors="*{s18_3_B_f}">Error</p>
                             <br>
                             <label>
                                 <input th:field="*{s18_4_D}" type="checkbox" class="" th:disabled="${formularioForm3.submetido}">D - Causa que modifica o efeito jurídico pretendido.
@@ -333,6 +344,7 @@
                             <br>
                             <label th:for="s18_4_D_f">Qual?</label>
                             <input th:field="*{s18_4_D_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_4_D_f')}" th:errors="*{s18_4_D_f}">Error</p>
                             <br>
                             <label>
                                 <input th:field="*{s18_4_E}" type="checkbox" class="" th:disabled="${formularioForm3.submetido}">E - Causa que extingue o efeito jurídico pretendido.
@@ -340,6 +352,7 @@
                             <br>
                             <label th:for="s18_4_E_f">Qual?</label>
                             <input th:field="*{s18_4_E_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_4_E_f')}" th:errors="*{s18_4_E_f}">Error</p>
                             <br>
                             <label>
                                 <input th:field="*{s18_4_F}" type="checkbox" class="" th:disabled="${formularioForm3.submetido}">F - Outra.
@@ -347,6 +360,7 @@
                             <br>
                             <label th:for="s18_4_F_f">Qual?</label>
                             <input th:field="*{s18_4_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s18_4_F_f')}" th:errors="*{s18_4_F_f}">Error</p>
                             <br>
                         </div>
                         <!-- 18.4.1 -->
@@ -440,6 +454,7 @@
                         <br>
                         <label th:for="s19_1_17_f">Quais?</label>
                         <input th:field="*{s19_1_17_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                        <p class="help-block" th:if="${#fields.hasErrors('s19_1_17_f')}" th:errors="*{s19_1_17_f}">Error</p>
                         <br>
                     </div>
                 </div>
@@ -527,6 +542,7 @@
                         <br>
                         <label th:for="s19_2_19_f">Qual o tipo contratual escolhido?</label>
                         <textarea th:field="*{s19_2_19_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <p class="help-block" th:if="${#fields.hasErrors('s19_2_19_f')}" th:errors="*{s19_2_19_f}">Error</p>
                         <br>
                         <label>
                             <input th:field="*{s19_2_20}" type="checkbox" class="" th:disabled="${formularioForm3.submetido}">19.2.20 - Outros</label>
@@ -534,6 +550,7 @@
                         </label>
                         <label th:for="s19_2_20_f">Quais?</label>
                         <textarea th:field="*{s19_2_20_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <p class="help-block" th:if="${#fields.hasErrors('s19_2_20_f')}" th:errors="*{s19_2_20_f}">Error</p>
                         <br>
                     </div>
                 </div>
@@ -576,6 +593,7 @@
                             <br>
                             <label th:for="s20_1_F_f">Outro:</label>
                             <input th:field="*{s20_1_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s20_1_F_f')}" th:errors="*{s20_1_F_f}">Error</p>
                             <br>
                         </div>
                         <!-- 20.1.1 -->
@@ -654,6 +672,7 @@
                                 <br>
                                 <label th:for="s21_1_2_B_f">Síntese das razões:</label>
                                 <textarea id="s21_1_2_B_f" name="s21_1_2_B_f" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                <p class="help-block" th:if="${#fields.hasErrors('s21_1_2_B_f')}" th:errors="*{s21_1_2_B_f}">Error</p>
                                 <br>
                             </div>
                         </div>
@@ -704,6 +723,7 @@
                                 <br>
                                 <label for="s21_2_2_B_f">Síntese das razões:</label>
                                 <textarea id="s21_2_2_B_f" name="s21_2_2_B_f" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                <p class="help-block" th:if="${#fields.hasErrors('s21_2_2_B_f')}" th:errors="*{s21_2_2_B_f}">Error</p>
                                 <br>
                             </div>
                         </div>
@@ -753,6 +773,7 @@
                                     <br>
                                     <label th:for="s21_3_2_B_f">Síntese das razões:</label>
                                     <textarea th:field="*{s21_3_2_B_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                    <p class="help-block" th:if="${#fields.hasErrors('s21_3_2_B_f')}" th:errors="*{s21_3_2_B_f}">Error</p>
                                     <br>
                                 </div>
                             </div>

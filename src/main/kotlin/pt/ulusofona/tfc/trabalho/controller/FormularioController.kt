@@ -644,6 +644,22 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s6_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
+        if (formularioForm1.s7_1_I && formularioForm1.s7_1_I_f == ""){
+            bindingResult.rejectValue("s7_1_I_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s7_1_M && formularioForm1.s7_1_M_f == ""){
+            bindingResult.rejectValue("s7_1_M_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s7_1_J && formularioForm1.s7_1_J_f == ""){
+            bindingResult.rejectValue("s7_1_J_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm1.s7_1_L && formularioForm1.s7_1_L_f == ""){
+            bindingResult.rejectValue("s7_1_L_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
         if (formularioForm1.s7_1_M && formularioForm1.s7_1_M_f == ""){
             bindingResult.rejectValue("s7_1_M_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
@@ -961,12 +977,40 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s9_1_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
+        if (formularioForm2.s9_2_I && formularioForm2.s9_2_I_f == ""){
+            bindingResult.rejectValue("s9_2_I_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s9_2_J && formularioForm2.s9_2_J_f == ""){
+            bindingResult.rejectValue("s9_2_J_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s9_2_L && formularioForm2.s9_2_L_f == ""){
+            bindingResult.rejectValue("s9_2_L_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
         if (formularioForm2.s9_2_M && formularioForm2.s9_2_M_f == ""){
             bindingResult.rejectValue("s9_2_M_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
+        if (formularioForm2.s11_1_B && formularioForm2.s11_1_B_f == ""){
+            bindingResult.rejectValue("s11_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
         if (formularioForm2.s11_1_C && formularioForm2.s11_1_C_f == ""){
             bindingResult.rejectValue("s11_1_C_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s11_2_I && formularioForm2.s11_2_I_f == ""){
+            bindingResult.rejectValue("s11_2_I_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s11_2_J && formularioForm2.s11_2_J_f == ""){
+            bindingResult.rejectValue("s11_2_J_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s11_2_L && formularioForm2.s11_2_L_f == ""){
+            bindingResult.rejectValue("s11_2_L_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
         if (formularioForm2.s11_2_M && formularioForm2.s11_2_M_f == ""){
@@ -981,8 +1025,32 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s13_1_B_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
+        if (formularioForm2.s13_2_J && formularioForm2.s13_2_J_f == ""){
+            bindingResult.rejectValue("s13_2_J_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s13_2_L && formularioForm2.s13_2_L_f == ""){
+            bindingResult.rejectValue("s13_2_L_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s13_2_M && formularioForm2.s13_2_M_f == ""){
+            bindingResult.rejectValue("s13_2_M_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
         if (formularioForm2.s13_2_N && formularioForm2.s13_2_N_f == ""){
             bindingResult.rejectValue("s13_2_N_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s14_H && formularioForm2.s14_H_f == ""){
+            bindingResult.rejectValue("s14_H_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s14_I && formularioForm2.s14_I_f == ""){
+            bindingResult.rejectValue("s14_I_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm2.s14_J && formularioForm2.s14_J_f == ""){
+            bindingResult.rejectValue("s14_J_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
         if (formularioForm2.s14_L && formularioForm2.s14_L_f == ""){
@@ -1345,6 +1413,10 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s17_4_2_B_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
+        if (formularioForm3.s17_6 && formularioForm3.s17_6_f == ""){
+            bindingResult.rejectValue("s17_6_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
         if (formularioForm3.s18_1_E && formularioForm3.s18_1_E_f == ""){
             bindingResult.rejectValue("s18_1_E_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
@@ -1375,6 +1447,10 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
         if (formularioForm3.s19_1_17 && formularioForm3.s19_1_17_f == ""){
             bindingResult.rejectValue("s19_1_17_f", "Empty", "Erro: O campo tem que estar preenchido")
+            return "new-formulario-form1"
+        }
+        if (formularioForm3.s19_2_19 && formularioForm3.s19_2_19_f == ""){
+            bindingResult.rejectValue("s19_2_19_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
         if (formularioForm3.s19_2_20 && formularioForm3.s19_2_20_f == ""){
