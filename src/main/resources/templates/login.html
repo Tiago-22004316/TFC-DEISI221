@@ -27,10 +27,9 @@
         <div class="form-group">
             <div class="col-sm-6">
                 <label for="username" class="col-sm-3 control-label">Username</label>
+                <!-- falta definir tamanhos para o username e password -->
                 <input th:field="*{username}" type="text" class="form-control" id="username" maxlength="50" placeholder="Username" />
-                <p class="help-block" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Error</p>
                 <input th:field="*{password}" type="text" class="form-control" id="password" maxlength="50" placeholder="Password"/>
-                <p class="help-block" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error</p>
             </div>
         </div>
 

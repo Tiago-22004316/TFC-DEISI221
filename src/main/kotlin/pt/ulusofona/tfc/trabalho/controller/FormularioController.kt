@@ -40,12 +40,12 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                                   val s19FormularioRepository: S19FormularioRepository,
                                   val s20FormularioRepository: S20FormularioRepository,
                                   val s21FormularioRepository: S21FormularioRepository,
-                                  val LoginRepository : LoginRepository,)  {
+                                  val loginRepository : LoginRepository,)  {
+
 
     fun readFile(username: String, password: String) : Boolean{
 
         val inputStream: InputStream = File("example.txt").inputStream()
-        val lineList = mutableListOf<String>()
 
         while (inputStream.bufferedReader().readLine() != null){
             val user = inputStream.bufferedReader().readLine()
@@ -74,20 +74,22 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         val loginFormulario = LoginForm()
 
+        //leitura de ficheiro txt...
         val valid = readFile(loginFormulario.username,loginFormulario.password)
 
-        if (valid == false){
-            bindingResult.rejectValue( "invalidData", "Erro: O username ou password estão incorretos")
-            return "/login"
+        // criar uma tabela com o username para facilitar a escrever nas páginas e update ....
+        val loginDB = loginRepository.findByUsername(loginFormulario.username)
+        if (loginDB != null){
+            val loginDAO = Login(
+                username = loginFormulario.username
+            )
+            loginRepository.save(loginDAO)
         }
 
-        val loginDAO = Login(
-                username = loginFormulario.username
-        )
-        LoginRepository.save(loginDAO)
-
+        // falta mandar o username para quase todas as funções para poder no update e nas páginas....
         return "redirect:/form/list"
     }
+
 
     @GetMapping(value = ["/list"])
     fun listProcesso(model: ModelMap, principal: Principal?): String {
