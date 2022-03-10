@@ -67,6 +67,7 @@
                 <div>
                     <label th:for="juizo"></label>
                     <input th:field="*{juizo}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
+                    <p class="help-block" th:if="${#fields.hasErrors('juizo')}" th:errors="*{juizo}">Error</p>
                 </div>
             </div>
         </div>

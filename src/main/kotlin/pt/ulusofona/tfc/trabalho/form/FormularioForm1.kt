@@ -22,6 +22,8 @@ data class FormularioForm1(
 
         var submetido: Boolean = false,
 
+        var username : String = "",
+
         // pode ser "Gravar" ou "Avançar >>"
         var operation: String = "",
         var edit: Boolean = false,

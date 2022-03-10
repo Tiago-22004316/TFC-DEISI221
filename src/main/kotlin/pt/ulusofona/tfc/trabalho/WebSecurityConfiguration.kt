@@ -36,11 +36,17 @@ class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(auth: AuthenticationManagerBuilder) {
         auth.inMemoryAuthentication()
-            .withUser("u1").password(passwordEncoder().encode("p1")).roles("USER")
-            .and()
-            .withUser("u2").password(passwordEncoder().encode("p2")).roles("USER")
-            .and()
-            .withUser("admin").password(passwordEncoder().encode("adminPass123")).roles("ADMIN")
+                .withUser("pjesus").password(passwordEncoder().encode("trabjus")).roles("USER")
+                .and()
+                .withUser("tp").password(passwordEncoder().encode("123")).roles("USER")
+                .and()
+                .withUser("bferreira").password(passwordEncoder().encode("trabjus")).roles("USER")
+                .and()
+                .withUser("csilva").password(passwordEncoder().encode("trabjus")).roles("USER")
+                .and()
+                .withUser("scasimiro").password(passwordEncoder().encode("trabjus")).roles("USER")
+                .and()
+                .withUser("admin").password(passwordEncoder().encode("adminPass123")).roles("ADMIN")
     }
 
     @Bean

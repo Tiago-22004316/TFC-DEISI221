@@ -39,56 +39,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                                   val s18FormularioRepository: S18FormularioRepository,
                                   val s19FormularioRepository: S19FormularioRepository,
                                   val s20FormularioRepository: S20FormularioRepository,
-                                  val s21FormularioRepository: S21FormularioRepository,
-                                  val loginRepository : LoginRepository,)  {
-
-
-    fun readFile(username: String, password: String) : Boolean{
-
-        val inputStream: InputStream = File("example.txt").inputStream()
-
-        while (inputStream.bufferedReader().readLine() != null){
-            val user = inputStream.bufferedReader().readLine()
-            val pass = inputStream.bufferedReader().readLine()
-
-            if(user == username && pass == password) {
-                return true
-            }
-        }
-        return false
-    }
-
-    @GetMapping(value = ["/login"])
-    fun login(model: ModelMap, principal: Principal?): String {
-
-        model["loginForm"] = LoginForm()
-        model["url"] = "login"
-        return "login"
-    }
-
-    @PostMapping(value = [ "/login"])
-    fun postFormularioForm3(@Valid @ModelAttribute("login") login: Login,
-                            @PathVariable("processId") processIdParam: String?,
-                            bindingResult: BindingResult, model:ModelMap,
-                            redirectAttributes: RedirectAttributes) : String {
-
-        val loginFormulario = LoginForm()
-
-        //leitura de ficheiro txt...
-        val valid = readFile(loginFormulario.username,loginFormulario.password)
-
-        // criar uma tabela com o username para facilitar a escrever nas páginas e update ....
-        val loginDB = loginRepository.findByUsername(loginFormulario.username)
-        if (loginDB != null){
-            val loginDAO = Login(
-                username = loginFormulario.username
-            )
-            loginRepository.save(loginDAO)
-        }
-
-        // falta mandar o username para quase todas as funções para poder no update e nas páginas....
-        return "redirect:/form/list"
-    }
+                                  val s21FormularioRepository: S21FormularioRepository, )
+{
 
 
     @GetMapping(value = ["/list"])
@@ -126,6 +78,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         // começar a preencher os forms ( esperar q os campos sejam reajustados )
         if (s1DB != null) {
+            formularioForm1.username = s1DB.username
             formularioForm1.comarca = s1DB.comarca
             formularioForm1.juizo = s1DB.juizo
             formularioForm1.s1_2_A = s1DB.s1_2_A
@@ -654,6 +607,10 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             return "new-formulario-form1"
         }
 
+        if (formularioForm1.juizo == ""){
+            bindingResult.rejectValue("juizo", "emptyField", "Erro: O campo têm de ser preenchido")
+            return "new-formulario-form1"
+        }
         //data
         val date = LocalDate.now().toString()
         if (formularioForm1.s3_1 > date){
@@ -730,6 +687,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
+                        username = formularioForm1.username,
                     processId = processId,
                     comarca = formularioForm1.comarca,
                     juizo = formularioForm1.juizo,

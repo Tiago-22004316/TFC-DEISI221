@@ -10,6 +10,6 @@ class HomeController {
     fun home(): String{
         println("Chamei o home")
 
-        return "redirect:/form/login"
+        return "redirect:/form/list"
     }
 }

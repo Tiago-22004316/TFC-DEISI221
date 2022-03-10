@@ -6,6 +6,7 @@ import javax.persistence.*
 data class S1Formulario(
         @Id @GeneratedValue
         //secção 1
+        var username : String = "",
         val id: Long = 0,
         var estado : String = "Em edição",
         var lastUpdate : String = "",
