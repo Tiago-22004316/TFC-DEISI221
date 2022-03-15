@@ -163,7 +163,7 @@
                                     <input th:field="*{s4_1_2}" type="checkbox" class="grupo-4-1" th:disabled="${formularioForm1.submetido}">4.1.2 - Por qualquer outro meio
                                 </label>
                             </div>
-                            <div>
+                            <div th:classappend="${#fields.hasErrors('s4_1_2_f')} ? 'has-error' : ''">
                                 <label th:for="s4_1_2_f">Qual?</label>
                                 <input th:field="*{s4_1_2_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s4_1_2_f')}" th:errors="*{s4_1_2_f}">Error</p>

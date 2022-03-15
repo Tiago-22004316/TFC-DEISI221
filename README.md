@@ -26,4 +26,5 @@ grant all privileges on trabjus.* to 'trabjus'@'localhost';
 
 * Correr o mvn clean package para gerar o jar do projeto
 * Correr docker build -t trabjus .
-* Correr docker compose up
+* Correr docker compose up (em versões antigas: docker-compose up)
+  * Para correr em daemon mode acrecentar -d
