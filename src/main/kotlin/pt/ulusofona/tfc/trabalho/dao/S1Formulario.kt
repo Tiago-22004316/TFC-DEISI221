@@ -4,10 +4,10 @@ import javax.persistence.*
 
 @Entity
 data class S1Formulario(
-        @Id @GeneratedValue
         //secção 1
-        var username : String = "",
+        @Id @GeneratedValue
         val id: Long = 0,
+        var username : String = "",
         var estado : String = "Em edição",
         var lastUpdate : String = "",
         var comarca : String = "",

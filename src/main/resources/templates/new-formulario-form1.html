@@ -54,17 +54,17 @@
                     <div>
                         <label th:for="s1_2_B_f">Para qual?</label>
                         <input th:field="*{s1_2_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
-                        <p class="help-block" th:if="${#fields.hasErrors('processId')}" th:errors="*{processId}">Error</p>
+                        <p class="help-block" th:if="${#fields.hasErrors('s1_2_B_f')}" th:errors="*{s1_2_B_f}">Error</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- 1.3 -->
-        <div class="form-group">
+        <div class="form-group" th:classappend="${#fields.hasErrors('juizo')} ? 'has-error' : ''">
             <label class="col-sm-3 control-label">Juizo</label>
             <div class="col-sm-9">
-                <div>
+                <div >
                     <label th:for="juizo"></label>
                     <input th:field="*{juizo}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm1.submetido}"/>
                     <p class="help-block" th:if="${#fields.hasErrors('juizo')}" th:errors="*{juizo}">Error</p>
