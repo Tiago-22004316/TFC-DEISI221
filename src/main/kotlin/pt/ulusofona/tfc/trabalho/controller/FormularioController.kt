@@ -607,10 +607,16 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             return "new-formulario-form1"
         }
 
+        if (formularioForm1.comarca == ""){
+            bindingResult.rejectValue("comarca", "Empty", "Erro: A comarca têm de ser preenchido")
+            return "new-formulario-form1"
+        }
+
         if (formularioForm1.juizo == ""){
             bindingResult.rejectValue("juizo", "Empty", "Erro: O campo têm de ser preenchido")
             return "new-formulario-form1"
         }
+
         //data
         val date = LocalDate.now().toString()
         if (formularioForm1.s3_1 > date){
@@ -625,7 +631,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s3_3", "invalidDate", "Erro: A data não pode ser superior à data atual")
             return "new-formulario-form1"
         }
-        if (formularioForm1.s3_4_1 > date){
+        if (formularioForm1.s3_4_B && formularioForm1.s3_4_1 > date){
             bindingResult.rejectValue("s3_4_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
             return "new-formulario-form1"
         }
@@ -653,10 +659,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
         if (formularioForm1.s7_1_I && formularioForm1.s7_1_I_f == ""){
             bindingResult.rejectValue("s7_1_I_f", "Empty", "Erro: O campo tem que estar preenchido")
-            return "new-formulario-form1"
-        }
-        if (formularioForm1.s7_1_M && formularioForm1.s7_1_M_f == ""){
-            bindingResult.rejectValue("s7_1_M_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
         if (formularioForm1.s7_1_J && formularioForm1.s7_1_J_f == ""){

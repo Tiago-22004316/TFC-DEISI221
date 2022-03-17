@@ -14,7 +14,7 @@ data class FormularioForm1(
         @field:Size(max = 50, message = "Erro: O número de processo não pode ter mais do que 50 caracteres")
         var processId: String = "",
 
-        @field:NotEmpty(message = "Erro: A comarca tem que estar preenchida")
+        @field:NotEmpty(message = "Erro: O juízo tem de ser preenchido")
         var comarca : String = "",
 
         @field:NotEmpty(message = "Erro: O juizo tem que estar preenchido")
