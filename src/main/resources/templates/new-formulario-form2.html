@@ -59,25 +59,31 @@
                                 <input th:field="*{s8_3_A}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">A - Causa que impede o efeito jurídico pretendido.
                             </label>
                             <br>
+                            <div th:classappend="${#fields.hasErrors('s8_3_A_f')} ? 'has-error' : ''">
                             <label th:for="s8_3_A_f">Qual?</label>
                             <input th:field="*{s8_3_A_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s8_3_A_f')}" th:errors="*{s8_3_A_f}">Error</p>
+                            </div>
                             <br>
                             <label>
                                 <input th:field="*{s8_3_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Causa que modifica o efeito jurídico pretendido.
                             </label>
                             <br>
+                            <div th:classappend="${#fields.hasErrors('s8_3_B_f')} ? 'has-error' : ''">
                             <label th:for="s8_3_B_f">Qual?</label>
                             <input th:field="*{s8_3_B_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s8_3_B_f')}" th:errors="*{s8_3_B_f}">Error</p>
+                            </div>
                             <br>
                             <label>
                                 <input th:field="*{s8_3_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Causa que extingue o efeito jurídico pretendido.
                             </label>
                             <br>
+                            <div th:classappend="${#fields.hasErrors('s8_3_C_f')} ? 'has-error' : ''">
                             <label th:for="s8_3_C_f">Qual?</label>
                             <input th:field="*{s8_3_C_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s8_3_C_f')}" th:errors="*{s8_3_C_f}">Error</p>
+                            </div>
                             <br>
                         </div>
                     </div>
@@ -130,9 +136,11 @@
                                 <input th:field="*{s8_4_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Outra
                             </label>
                             <br>
+                            <div th:classappend="${#fields.hasErrors('s8_4_J_f')} ? 'has-error' : ''">
                             <label th:for="s8_4_J_f">Qual?</label>
                             <input th:field="*{s8_4_J_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s8_4_J_f')}" th:errors="*{s8_4_J_f}">Error</p>
+                            </div>
                             <br>
                         </div>
                     </div>
@@ -175,9 +183,11 @@
                                     <input th:field="*{s9_1_1_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Outras
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s9_1_1_B_f')} ? 'has-error' : ''">
                                 <label th:for="s9_1_1_B_f">Quais?</label>
                                 <input th:field="*{s9_1_1_B_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s9_1_1_B_f')}" th:errors="*{s9_1_1_B_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -223,33 +233,41 @@
                                     <input th:field="*{s9_2_I}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">I - Prova pericial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s9_2_I_f')} ? 'has-error' : ''">
                                 <label th:for="s9_2_I_f">Objeto da perícia:</label>
                                 <input th:field="*{s9_2_I_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm2.submetido}"/>
-                                <p class="help-block" th:if="${#fields.hasErrors('s9_1_1_B_f')}" th:errors="*{s9_1_1_B_f}">Error</p>
+                                <p class="help-block" th:if="${#fields.hasErrors('s9_2_I_f')}" th:errors="*{s9_2_I_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s9_2_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Prova por inspeção judicial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s9_2_J_f')} ? 'has-error' : ''">
                                 <label th:for="s9_2_J_f">Objeto da inspeção:</label>
                                 <input th:field="*{s9_2_J_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s9_2_J_f')}" th:errors="*{s9_2_J_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s9_2_L}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">L - Verificação não judicial qualificada.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s9_2_L_f')} ? 'has-error' : ''">
                                 <label th:for="s9_2_L_f">Objeto da verificação:</label>
                                 <input th:field="*{s9_2_L_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s9_2_L_f')}" th:errors="*{s9_2_L_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s9_2_M}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">M - Outra
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s9_2_M_f')} ? 'has-error' : ''">
                                 <label th:for="s9_2_M_f">Qual?</label>
                                 <input th:field="*{s9_2_M_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s9_2_M_f')}" th:errors="*{s9_2_M_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -334,17 +352,21 @@
                                     <input th:field="*{s11_1_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Em torno da existência de outra modalidade contratual.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_1_B_f')} ? 'has-error' : ''">
                                 <label th:for="s11_1_B_f">Qual?</label>
                                 <input th:field="*{s11_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_1_B_f')}" th:errors="*{s11_1_B_f}">Error</p>
+                                    </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s11_1_C}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">C - Outras
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_1_C_f')} ? 'has-error' : ''">
                                 <label th:for="s11_1_C_f">Quais?</label>
                                 <input th:field="*{s11_1_C_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_1_C_f')}" th:errors="*{s11_1_C_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -390,33 +412,41 @@
                                     <input th:field="*{s11_2_I}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">I - Prova pericial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_2_I_f')} ? 'has-error' : ''">
                                 <label th:for="s11_2_I_f">Objeto da perícia:</label>
                                 <input th:field="*{s11_2_I_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_2_I_f')}" th:errors="*{s11_2_I_f}">Error</p>
+                                    </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s11_2_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Prova por inspeção judicial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_2_J_f')} ? 'has-error' : ''">
                                 <label th:for="s11_2_J_f">Objeto da inspeção:</label>
                                 <input th:field="*{s11_2_J_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_2_J_f')}" th:errors="*{s11_2_J_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s11_2_L}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">L - Verificação não judicial qualificada.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_2_L_f')} ? 'has-error' : ''">
                                 <label th:for="s11_2_L_f">Objeto da verificação:</label>
                                 <input th:field="*{s11_2_L_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_2_L_f')}" th:errors="*{s11_2_L_f}">Error</p>
+                                    </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s11_2_M}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">Outra.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s11_2_M_f')} ? 'has-error' : ''">
                                 <label th:for="s11_2_M_f">Qual?</label>
                                 <input th:field="*{s11_2_M_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_2_M_f')}" th:errors="*{s11_2_M_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -449,9 +479,11 @@
                                     <input th:field="*{s12_D}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">D - Outra situação.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s12_D_f')} ? 'has-error' : ''">
                                 <label th:for="s12_D_f">Qual?</label>
                                 <input th:field="*{s12_D_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s12_D_f')}" th:errors="*{s12_D_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -478,9 +510,11 @@
                                     <input th:field="*{s13_1_B}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">B - Outra.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s13_1_B_f')} ? 'has-error' : ''">
                                 <label th:for="s13_1_B_f">Qual?</label>
                                 <input th:field="*{s13_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s13_1_B_f')}" th:errors="*{s13_1_B_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>
@@ -530,33 +564,41 @@
                                     <input th:field="*{s13_2_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Prova pericial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s13_2_J_f')} ? 'has-error' : ''">
                                 <label th:for="s13_2_J_f">Objeto da perícia:</label>
                                 <input th:field="*{s13_2_J_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s13_2_J_f')}" th:errors="*{s13_2_J_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s13_2_L}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">L - Prova por inspeção judicial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s13_2_L_f')} ? 'has-error' : ''">
                                 <label th:for="s13_2_L_f">Objeto da inspeção:</label>
                                 <input th:field="*{s13_2_L_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s13_2_L_f')}" th:errors="*{s13_2_L_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s13_2_M}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">M - Verificação não judicial qualificada.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s13_2_M_f')} ? 'has-error' : ''">
                                 <label th:for="s13_2_M_f">Objeto da verificação:</label>
                                 <input th:field="*{s13_2_M_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s13_2_M_f')}" th:errors="*{s13_2_M_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s13_2_N}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">N - Outra.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s13_2_N_f')} ? 'has-error' : ''">
                                 <label th:for="s13_2_N_f">Qual?</label>
                                 <input th:field="*{s13_2_N_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s13_2_N_f')}" th:errors="*{s13_2_N_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s13_2_O}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">O - Poder inquisitório em matéria alegatória / poder instrutório para a prova dos factos pelo tribunal
@@ -609,33 +651,41 @@
                                     <input th:field="*{s14_H}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">H - Prova pericial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s14_H_f')} ? 'has-error' : ''">
                                 <label th:for="s14_H_f">Objeto da perícia:</label>
                                 <input th:field="*{s14_H_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s14_H_f')}" th:errors="*{s14_H_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s14_I}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">I - Prova por inspeção judicial.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s14_I_f')} ? 'has-error' : ''">
                                 <label th:for="s14_I_f">Objeto da inspeção:</label>
                                 <input th:field="*{s14_I_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s14_I_f')}" th:errors="*{s14_I_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s14_J}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">J - Verificação não judicial qualificada.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s14_J_f')} ? 'has-error' : ''">
                                 <label th:for="s14_J_f">Objeto da verificação:</label>
                                 <input th:field="*{s14_J_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s14_J_f')}" th:errors="*{s14_J_f}">Error</p>
+                                </div>
                                 <br>
                                 <label>
                                     <input th:field="*{s14_L}" type="checkbox" class="" th:disabled="${formularioForm2.submetido}">L - Outra.
                                 </label>
                                 <br>
+                                <div th:classappend="${#fields.hasErrors('s14_L_f')} ? 'has-error' : ''">
                                 <label th:for="s14_L_f">Qual?</label>
                                 <input th:field="*{s14_L_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s14_L_f')}" th:errors="*{s14_L_f}">Error</p>
+                                </div>
                                 <br>
                             </div>
                         </div>

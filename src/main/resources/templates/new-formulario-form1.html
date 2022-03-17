@@ -23,7 +23,7 @@
         </div>
 
         <!-- 1.1 -->
-        <div class="form-group" th:classappend="${#fields.hasErrors('comarca')} ? 'has-error' : ''">
+        <div class="form-group">
             <label for="comarca" class="col-sm-3 control-label">Comarca:</label>
             <div class="col-sm-6">
                 <select th:field="*{comarca}" class="form-control" id="comarca" th:disabled="${formularioForm1.submetido}">
