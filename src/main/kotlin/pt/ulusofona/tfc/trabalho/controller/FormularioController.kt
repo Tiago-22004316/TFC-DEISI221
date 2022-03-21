@@ -474,47 +474,47 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         if (s19DB != null) {
             formularioForm3.s19_1 = s19DB.s19_1
-            formularioForm3.s19_1_1 = s19DB.s19_1_1
-            formularioForm3.s19_1_2 = s19DB.s19_1_2
-            formularioForm3.s19_1_3 = s19DB.s19_1_3
-            formularioForm3.s19_1_4 = s19DB.s19_1_4
-            formularioForm3.s19_1_5 = s19DB.s19_1_5
-            formularioForm3.s19_1_6 = s19DB.s19_1_6
-            formularioForm3.s19_1_7 = s19DB.s19_1_7
-            formularioForm3.s19_1_8 = s19DB.s19_1_8
-            formularioForm3.s19_1_9 = s19DB.s19_1_9
-            formularioForm3.s19_1_10 = s19DB.s19_1_10
-            formularioForm3.s19_1_11 = s19DB.s19_1_11
-            formularioForm3.s19_1_12 = s19DB.s19_1_12
-            formularioForm3.s19_1_13 = s19DB.s19_1_13
-            formularioForm3.s19_1_14 = s19DB.s19_1_14
-            formularioForm3.s19_1_15 = s19DB.s19_1_15
-            formularioForm3.s19_1_16 = s19DB.s19_1_16
-            formularioForm3.s19_1_17 = s19DB.s19_1_17
-            formularioForm3.s19_1_17_f = s19DB.s19_1_17_f
+            formularioForm3.s19_1_A = s19DB.s19_1_A
+            formularioForm3.s19_1_B = s19DB.s19_1_B
+            formularioForm3.s19_1_C = s19DB.s19_1_C
+            formularioForm3.s19_1_D = s19DB.s19_1_D
+            formularioForm3.s19_1_E = s19DB.s19_1_E
+            formularioForm3.s19_1_F = s19DB.s19_1_F
+            formularioForm3.s19_1_G= s19DB.s19_1_G
+            formularioForm3.s19_1_H = s19DB.s19_1_H
+            formularioForm3.s19_1_I = s19DB.s19_1_I
+            formularioForm3.s19_1_J = s19DB.s19_1_J
+            formularioForm3.s19_1_K = s19DB.s19_1_K
+            formularioForm3.s19_1_L = s19DB.s19_1_L
+            formularioForm3.s19_1_M = s19DB.s19_1_M
+            formularioForm3.s19_1_N = s19DB.s19_1_N
+            formularioForm3.s19_1_O = s19DB.s19_1_O
+            formularioForm3.s19_1_P = s19DB.s19_1_P
+            formularioForm3.s19_1_Q = s19DB.s19_1_Q
+            formularioForm3.s19_1_Q_f = s19DB.s19_1_Q_f
             formularioForm3.s19_2 = s19DB.s19_2
-            formularioForm3.s19_2_1 = s19DB.s19_2_1
-            formularioForm3.s19_2_2 = s19DB.s19_2_2
-            formularioForm3.s19_2_3 = s19DB.s19_2_3
-            formularioForm3.s19_2_4 = s19DB.s19_2_4
-            formularioForm3.s19_2_5 = s19DB.s19_2_5
-            formularioForm3.s19_2_6 = s19DB.s19_2_6
-            formularioForm3.s19_2_7 = s19DB.s19_2_7
-            formularioForm3.s19_2_8 = s19DB.s19_2_8
-            formularioForm3.s19_2_9 = s19DB.s19_2_9
-            formularioForm3.s19_2_10 = s19DB.s19_2_10
-            formularioForm3.s19_2_11 = s19DB.s19_2_11
-            formularioForm3.s19_2_12 = s19DB.s19_2_12
-            formularioForm3.s19_2_13 = s19DB.s19_2_13
-            formularioForm3.s19_2_14 = s19DB.s19_2_14
-            formularioForm3.s19_2_15 = s19DB.s19_2_15
-            formularioForm3.s19_2_16 = s19DB.s19_2_16
-            formularioForm3.s19_2_17 = s19DB.s19_2_17
-            formularioForm3.s19_2_18 = s19DB.s19_2_18
-            formularioForm3.s19_2_19 = s19DB.s19_2_19
-            formularioForm3.s19_2_19_f = s19DB.s19_2_19_f
-            formularioForm3.s19_2_20 = s19DB.s19_2_20
-            formularioForm3.s19_2_20_f = s19DB.s19_2_20_f
+            formularioForm3.s19_2_A = s19DB.s19_2_A
+            formularioForm3.s19_2_B = s19DB.s19_2_B
+            formularioForm3.s19_2_C = s19DB.s19_2_C
+            formularioForm3.s19_2_D = s19DB.s19_2_D
+            formularioForm3.s19_2_E = s19DB.s19_2_E
+            formularioForm3.s19_2_F = s19DB.s19_2_F
+            formularioForm3.s19_2_G = s19DB.s19_2_G
+            formularioForm3.s19_2_H = s19DB.s19_2_H
+            formularioForm3.s19_2_I = s19DB.s19_2_I
+            formularioForm3.s19_2_J = s19DB.s19_2_J
+            formularioForm3.s19_2_K = s19DB.s19_2_K
+            formularioForm3.s19_2_L = s19DB.s19_2_L
+            formularioForm3.s19_2_M = s19DB.s19_2_M
+            formularioForm3.s19_2_N = s19DB.s19_2_N
+            formularioForm3.s19_2_O = s19DB.s19_2_O
+            formularioForm3.s19_2_P = s19DB.s19_2_P
+            formularioForm3.s19_2_Q = s19DB.s19_2_Q
+            formularioForm3.s19_2_R = s19DB.s19_2_R
+            formularioForm3.s19_2_S = s19DB.s19_2_S
+            formularioForm3.s19_2_S_f = s19DB.s19_2_S_f
+            formularioForm3.s19_2_T = s19DB.s19_2_T
+            formularioForm3.s19_2_T_f = s19DB.s19_2_T_f
         }
 
         if (s20DB != null) {
@@ -1455,15 +1455,15 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             bindingResult.rejectValue("s18_4_F_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
-        if (formularioForm3.s19_1_17 && formularioForm3.s19_1_17_f == ""){
+        if (formularioForm3.s19_1_Q && formularioForm3.s19_1_Q_f == ""){
             bindingResult.rejectValue("s19_1_17_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
-        if (formularioForm3.s19_2_19 && formularioForm3.s19_2_19_f == ""){
+        if (formularioForm3.s19_2_S && formularioForm3.s19_2_S_f == ""){
             bindingResult.rejectValue("s19_2_19_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
-        if (formularioForm3.s19_2_20 && formularioForm3.s19_2_20_f == ""){
+        if (formularioForm3.s19_2_T && formularioForm3.s19_2_T_f == ""){
             bindingResult.rejectValue("s19_2_20_f", "Empty", "Erro: O campo tem que estar preenchido")
             return "new-formulario-form1"
         }
@@ -1643,91 +1643,91 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
             if(s19DB != null){
                 s19DB.s19_1 = formularioForm3.s19_1
-                s19DB.s19_1_1 = formularioForm3.s19_1_1
-                s19DB.s19_1_2 = formularioForm3.s19_1_2
-                s19DB.s19_1_3 = formularioForm3.s19_1_3
-                s19DB.s19_1_4 = formularioForm3.s19_1_4
-                s19DB.s19_1_5 = formularioForm3.s19_1_5
-                s19DB.s19_1_6 = formularioForm3.s19_1_6
-                s19DB.s19_1_7 = formularioForm3.s19_1_7
-                s19DB.s19_1_8 = formularioForm3.s19_1_8
-                s19DB.s19_1_9 = formularioForm3.s19_1_9
-                s19DB.s19_1_10 = formularioForm3.s19_1_10
-                s19DB.s19_1_11 = formularioForm3.s19_1_11
-                s19DB.s19_1_12 = formularioForm3.s19_1_12
-                s19DB.s19_1_13 = formularioForm3.s19_1_13
-                s19DB.s19_1_14 = formularioForm3.s19_1_14
-                s19DB.s19_1_15 = formularioForm3.s19_1_15
-                s19DB.s19_1_16 = formularioForm3.s19_1_16
-                s19DB.s19_1_17 = formularioForm3.s19_1_17
-                s19DB.s19_1_17_f = formularioForm3.s19_1_17_f
+                s19DB.s19_1_A = formularioForm3.s19_1_A
+                s19DB.s19_1_B = formularioForm3.s19_1_B
+                s19DB.s19_1_C = formularioForm3.s19_1_C
+                s19DB.s19_1_D = formularioForm3.s19_1_D
+                s19DB.s19_1_E = formularioForm3.s19_1_E
+                s19DB.s19_1_F = formularioForm3.s19_1_F
+                s19DB.s19_1_G = formularioForm3.s19_1_G
+                s19DB.s19_1_H = formularioForm3.s19_1_H
+                s19DB.s19_1_I = formularioForm3.s19_1_I
+                s19DB.s19_1_J = formularioForm3.s19_1_J
+                s19DB.s19_1_K = formularioForm3.s19_1_K
+                s19DB.s19_1_L = formularioForm3.s19_1_L
+                s19DB.s19_1_M = formularioForm3.s19_1_M
+                s19DB.s19_1_N = formularioForm3.s19_1_N
+                s19DB.s19_1_O = formularioForm3.s19_1_O
+                s19DB.s19_1_P = formularioForm3.s19_1_P
+                s19DB.s19_1_Q = formularioForm3.s19_1_Q
+                s19DB.s19_1_Q_f = formularioForm3.s19_1_Q_f
                 s19DB.s19_2 = formularioForm3.s19_2
-                s19DB.s19_2_1 = formularioForm3.s19_2_1
-                s19DB.s19_2_2 = formularioForm3.s19_2_2
-                s19DB.s19_2_3 = formularioForm3.s19_2_3
-                s19DB.s19_2_4 = formularioForm3.s19_2_4
-                s19DB.s19_2_5 = formularioForm3.s19_2_5
-                s19DB.s19_2_6 = formularioForm3.s19_2_6
-                s19DB.s19_2_7 = formularioForm3.s19_2_7
-                s19DB.s19_2_8 = formularioForm3.s19_2_8
-                s19DB.s19_2_9 = formularioForm3.s19_2_9
-                s19DB.s19_2_10 = formularioForm3.s19_2_10
-                s19DB.s19_2_11 = formularioForm3.s19_2_11
-                s19DB.s19_2_12 = formularioForm3.s19_2_12
-                s19DB.s19_2_13 = formularioForm3.s19_2_13
-                s19DB.s19_2_14 = formularioForm3.s19_2_14
-                s19DB.s19_2_15 = formularioForm3.s19_2_15
-                s19DB.s19_2_16 = formularioForm3.s19_2_16
-                s19DB.s19_2_17 = formularioForm3.s19_2_17
-                s19DB.s19_2_18 = formularioForm3.s19_2_17
-                s19DB.s19_2_19 = formularioForm3.s19_2_19
-                s19DB.s19_2_19_f = formularioForm3.s19_2_19_f
-                s19DB.s19_2_20 = formularioForm3.s19_2_20
-                s19DB.s19_2_20_f = formularioForm3.s19_2_20_f
+                s19DB.s19_2_A = formularioForm3.s19_2_A
+                s19DB.s19_2_B = formularioForm3.s19_2_B
+                s19DB.s19_2_C = formularioForm3.s19_2_C
+                s19DB.s19_2_D = formularioForm3.s19_2_D
+                s19DB.s19_2_E = formularioForm3.s19_2_E
+                s19DB.s19_2_F = formularioForm3.s19_2_F
+                s19DB.s19_2_G = formularioForm3.s19_2_G
+                s19DB.s19_2_H = formularioForm3.s19_2_H
+                s19DB.s19_2_I = formularioForm3.s19_2_I
+                s19DB.s19_2_J = formularioForm3.s19_2_J
+                s19DB.s19_2_K = formularioForm3.s19_2_K
+                s19DB.s19_2_L = formularioForm3.s19_2_L
+                s19DB.s19_2_M = formularioForm3.s19_2_M
+                s19DB.s19_2_N = formularioForm3.s19_2_N
+                s19DB.s19_2_O = formularioForm3.s19_2_O
+                s19DB.s19_2_P = formularioForm3.s19_2_P
+                s19DB.s19_2_Q = formularioForm3.s19_2_Q
+                s19DB.s19_2_R = formularioForm3.s19_2_R
+                s19DB.s19_2_S = formularioForm3.s19_2_S
+                s19DB.s19_2_S_f = formularioForm3.s19_2_S_f
+                s19DB.s19_2_T = formularioForm3.s19_2_T
+                s19DB.s19_2_T_f = formularioForm3.s19_2_T_f
             } else {
                 val s19FormularioDAO = S19Formulario(processId = formularioForm3.processId,
-                        s19_1 = formularioForm3.s19_1 ,
-                        s19_1_1 = formularioForm3.s19_1_1,
-                        s19_1_2 = formularioForm3.s19_1_2,
-                        s19_1_3 = formularioForm3.s19_1_3,
-                        s19_1_4 = formularioForm3.s19_1_4,
-                        s19_1_5 = formularioForm3.s19_1_5,
-                        s19_1_6 = formularioForm3.s19_1_6,
-                        s19_1_7 = formularioForm3.s19_1_7,
-                        s19_1_8 = formularioForm3.s19_1_8,
-                        s19_1_9 = formularioForm3.s19_1_9,
-                        s19_1_10 = formularioForm3.s19_1_10,
-                        s19_1_11 = formularioForm3.s19_1_11,
-                        s19_1_12 = formularioForm3.s19_1_12,
-                        s19_1_13 = formularioForm3.s19_1_13,
-                        s19_1_14 = formularioForm3.s19_1_14,
-                        s19_1_15 = formularioForm3.s19_1_15,
-                        s19_1_16 = formularioForm3.s19_1_16,
-                        s19_1_17 = formularioForm3.s19_1_17,
-                        s19_1_17_f = formularioForm3.s19_1_17_f,
+                        s19_1 = formularioForm3.s19_1,
+                        s19_1_A = formularioForm3.s19_1_A,
+                        s19_1_B = formularioForm3.s19_1_B,
+                        s19_1_C = formularioForm3.s19_1_C,
+                        s19_1_D = formularioForm3.s19_1_D,
+                        s19_1_E = formularioForm3.s19_1_E,
+                        s19_1_F = formularioForm3.s19_1_F,
+                        s19_1_G = formularioForm3.s19_1_G,
+                        s19_1_H = formularioForm3.s19_1_H ,
+                        s19_1_I = formularioForm3.s19_1_I,
+                        s19_1_J = formularioForm3.s19_1_J,
+                        s19_1_K = formularioForm3.s19_1_K,
+                        s19_1_L = formularioForm3.s19_1_L,
+                        s19_1_M = formularioForm3.s19_1_M,
+                        s19_1_N = formularioForm3.s19_1_N,
+                        s19_1_O = formularioForm3.s19_1_O,
+                        s19_1_P = formularioForm3.s19_1_P,
+                        s19_1_Q = formularioForm3.s19_1_Q,
+                        s19_1_Q_f = formularioForm3.s19_1_Q_f,
                         s19_2 = formularioForm3.s19_2,
-                        s19_2_1 = formularioForm3.s19_2_1,
-                        s19_2_2 = formularioForm3.s19_2_2,
-                        s19_2_3 = formularioForm3.s19_2_3,
-                        s19_2_4 = formularioForm3.s19_2_4,
-                        s19_2_5 = formularioForm3.s19_2_5,
-                        s19_2_6 = formularioForm3.s19_2_6,
-                        s19_2_7 = formularioForm3.s19_2_7,
-                        s19_2_8 = formularioForm3.s19_2_8,
-                        s19_2_9 = formularioForm3.s19_2_9,
-                        s19_2_10 = formularioForm3.s19_2_10,
-                        s19_2_11 = formularioForm3.s19_2_11,
-                        s19_2_12 = formularioForm3.s19_2_12,
-                        s19_2_13 = formularioForm3.s19_2_13,
-                        s19_2_14 = formularioForm3.s19_2_14,
-                        s19_2_15 = formularioForm3.s19_2_15,
-                        s19_2_16 = formularioForm3.s19_2_16,
-                        s19_2_17 = formularioForm3.s19_2_17,
-                        s19_2_18 = formularioForm3.s19_2_17,
-                        s19_2_19 = formularioForm3.s19_2_19,
-                        s19_2_19_f = formularioForm3.s19_2_19_f,
-                        s19_2_20 = formularioForm3.s19_2_20,
-                        s19_2_20_f = formularioForm3.s19_2_20_f,
+                        s19_2_A = formularioForm3.s19_2_A,
+                        s19_2_B = formularioForm3.s19_2_B,
+                        s19_2_C = formularioForm3.s19_2_C,
+                        s19_2_D = formularioForm3.s19_2_D,
+                        s19_2_E = formularioForm3.s19_2_E,
+                        s19_2_F = formularioForm3.s19_2_F,
+                        s19_2_G = formularioForm3.s19_2_G,
+                        s19_2_H = formularioForm3.s19_2_H,
+                        s19_2_I = formularioForm3.s19_2_I,
+                        s19_2_J = formularioForm3.s19_2_J,
+                        s19_2_K = formularioForm3.s19_2_K,
+                        s19_2_L = formularioForm3.s19_2_L,
+                        s19_2_M = formularioForm3.s19_2_M,
+                        s19_2_N = formularioForm3.s19_2_N,
+                        s19_2_O = formularioForm3.s19_2_O,
+                        s19_2_P = formularioForm3.s19_2_P,
+                        s19_2_Q = formularioForm3.s19_2_Q,
+                        s19_2_R = formularioForm3.s19_2_R,
+                        s19_2_S = formularioForm3.s19_2_S,
+                        s19_2_S_f = formularioForm3.s19_2_S_f,
+                        s19_2_T = formularioForm3.s19_2_T,
+                        s19_2_T_f = formularioForm3.s19_2_T_f,
                 )
                 s19FormularioRepository.save(s19FormularioDAO)
             }
