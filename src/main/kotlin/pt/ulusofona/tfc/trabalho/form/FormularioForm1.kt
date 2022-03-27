@@ -10,14 +10,14 @@ import javax.validation.constraints.Size
 data class FormularioForm1(
 
         //secção 1
-        @field:NotEmpty(message = "Erro: O número do processo tem que estar preenchido")
+        @field:NotEmpty(message = "Erro: O número do processo têm que estar preenchido")
         @field:Size(max = 50, message = "Erro: O número de processo não pode ter mais do que 50 caracteres")
         var processId: String = "",
 
-        @field:NotEmpty(message = "Erro: O juízo tem de ser preenchido")
+        @field:NotEmpty(message = "Erro: A comarca têm que estaer preenchida")
         var comarca : String = "",
 
-        @field:NotEmpty(message = "Erro: O juizo tem que estar preenchido")
+        @field:NotEmpty(message = "Erro: O juizo têm que estar preenchido")
         var juizo : String = "",
 
         var submetido: Boolean = false,

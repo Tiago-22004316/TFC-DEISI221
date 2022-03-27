@@ -600,6 +600,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             model["url"] = "edit/${processIdParam}/1"
         }
 
+        if (formularioForm1.processId.contains("/") || formularioForm1.processId.contains(";")){
+            bindingResult.rejectValue("processId", "InvalidCaracter", "Erro: O campo contêm caracteres inválidos")
+            return "new-formulario-form1"
+        }
+
         val s1DB = if (formularioForm1.processId == null) null else s1FormularioRepository.findByProcessId(formularioForm1.processId)
 
         
@@ -611,6 +616,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         // se já estiver submetido não faz nada (salta este if)
         if (s1DB == null || s1DB.estado != "Submetido") {
+
+            
 
             if (formularioForm1.comarca == ""){
                 bindingResult.rejectValue("comarca", "Empty", "Erro: A comarca tem de ser preenchida")
