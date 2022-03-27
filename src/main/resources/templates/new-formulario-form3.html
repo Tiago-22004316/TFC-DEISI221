@@ -29,7 +29,7 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <textarea th:field="*{s15}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <textarea th:field="*{s15}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                                 <br>
                                 <div th:classappend="${#fields.hasErrors('s16_1_B_f')} ? 'has-error' : ''">
                                 <label th:for="s16_1_B_f">Qual?</label>
-                                <input th:field="*{s16_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                                <input th:field="*{s16_1_B_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s16_1_B_f')}" th:errors="*{s16_1_B_f}">Error</p>
                                 <br>
                                 </div>
@@ -95,7 +95,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_E_f')} ? 'has-error' : ''">
                             <label th:for="s17_E_f">Quais?</label>
-                            <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="100" th:disabled="${formularioForm3.submetido}"/>
+                            <input th:field="*{s17_E_f}" type="text" class="form-control" maxlength="500" th:disabled="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s17_E_f')}" th:errors="*{s17_E_f}">Error</p>
                             <br>
                             </div>
@@ -119,7 +119,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_1_B_f')} ? 'has-error' : ''">
                             <label th:for="s17_1_B_f">17.1.1 - Se sim, quais os principais argumentos?</label>
-                            <textarea th:field="*{s17_1_B_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea th:field="*{s17_1_B_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <p class="help-block" th:if="${#fields.hasErrors('s17_1_B_f')}" th:errors="*{s17_1_B_f}">Error</p>
                             <br>
                             </div>
@@ -134,7 +134,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_2_f')} ? 'has-error' : ''">
                             <label th:for="s17_2_f">Descrição da situação:</label>
-                            <textarea th:field="*{s17_2_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea th:field="*{s17_2_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <p class="help-block" th:if="${#fields.hasErrors('s17_2_f')}" th:errors="*{s17_2_f}">Error</p>
                             <br>
                             </div>
@@ -149,7 +149,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_3_f')} ? 'has-error' : ''">
                             <label th:for="s17_3_f">Descrição da situação:</label>
-                            <textarea th:field="*{s17_3_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea th:field="*{s17_3_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <p class="help-block" th:if="${#fields.hasErrors('s17_3_f')}" th:errors="*{s17_3_f}">Error</p>
                             <br>
                             </div>
@@ -191,7 +191,7 @@
                                 <br>
                                 <div th:classappend="${#fields.hasErrors('s17_4_2_B_f')} ? 'has-error' : ''">
                                 <label th:for="s17_4_2_B_f">Se sim, em que termos?</label>
-                                <input th:field="*{s17_4_2_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                                <input th:field="*{s17_4_2_B_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s17_4_2_B_f')}" th:errors="*{s17_4_2_B_f}">Error</p>
                                 <br>
                                 </div>
@@ -216,7 +216,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_6_f')} ? 'has-error' : ''">
                             <label th:for="s17_6_f">Descrição da situação:</label>
-                            <input th:field="*{s17_6_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s17_6_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s17_6_f')}" th:errors="*{s17_6_f}">Error</p>
                             <br>
                             </div>
@@ -262,7 +262,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s17_E_f')} ? 'has-error' : ''">
                             <label th:for="s18_1_E_f">Qual?</label>
-                            <input th:field="*{s18_1_E_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_1_E_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_1_E_f')}" th:errors="*{s18_1_E_f}">Error</p>
                             <br>
                             </div>
@@ -307,7 +307,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_2_G_f')} ? 'has-error' : ''">
                             <label th:for="s18_2_G_f">Qual?</label>
-                            <input th:field="*{s18_2_G_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_2_G_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_2_G_f')}" th:errors="*{s18_2_G_f}">Error</p>
                             <br>
                             </div>
@@ -327,7 +327,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_3_B_f')} ? 'has-error' : ''">
                             <label th:for="s18_3_B_f">Decaimento:</label>
-                            <input th:field="*{s18_3_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_3_B_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_3_B_f')}" th:errors="*{s18_3_B_f}">Error</p>
                             <br>
                             </div>
@@ -356,7 +356,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_4_C_f')} ? 'has-error' : ''">
                             <label th:for="s18_4_C_f">Qual?</label>
-                            <input th:field="*{s18_4_C_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_4_C_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_4_C_f')}" th:errors="*{s18_3_B_f}">Error</p>
                             <br>
                             </div>
@@ -366,7 +366,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_4_D_f')} ? 'has-error' : ''">
                             <label th:for="s18_4_D_f">Qual?</label>
-                            <input th:field="*{s18_4_D_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_4_D_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_4_D_f')}" th:errors="*{s18_4_D_f}">Error</p>
                             <br>
                             </div>
@@ -376,7 +376,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_4_E_f')} ? 'has-error' : ''">
                             <label th:for="s18_4_E_f">Qual?</label>
-                            <input th:field="*{s18_4_E_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_4_E_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_4_E_f')}" th:errors="*{s18_4_E_f}">Error</p>
                             <br>
                             </div>
@@ -386,7 +386,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s18_4_F_f')} ? 'has-error' : ''">
                             <label th:for="s18_4_F_f">Qual?</label>
-                            <input th:field="*{s18_4_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s18_4_F_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s18_4_F_f')}" th:errors="*{s18_4_F_f}">Error</p>
                             <br>
                             </div>
@@ -394,7 +394,7 @@
                         <!-- 18.4.1 -->
                         <div class="col-sm-9">
                             <label th:for="s18_4_1">18.4.1 - Fundamentos (que sejam dignos de nota):</label>
-                            <textarea th:field="*{s18_4_1}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea th:field="*{s18_4_1}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <br>
                         </div>
                     </div>
@@ -482,7 +482,7 @@
                         <br>
                         <div th:classappend="${#fields.hasErrors('s19_1_Q_f')} ? 'has-error' : ''">
                         <label th:for="s19_1_Q_f">Quais?</label>
-                        <input th:field="*{s19_1_Q_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                        <input th:field="*{s19_1_Q_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                         <p class="help-block" th:if="${#fields.hasErrors('s19_1_Q_f')}" th:errors="*{s19_1_Q_f}">Error</p>
                         <br>
                         </div>
@@ -572,7 +572,7 @@
                         <div th:classappend="${#fields.hasErrors('s19_2_S_f')} ? 'has-error' : ''">
 
                         <label th:for="s19_2_S_f">Qual o tipo contratual escolhido?</label>
-                        <textarea th:field="*{s19_2_S_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <textarea th:field="*{s19_2_S_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                         <p class="help-block" th:if="${#fields.hasErrors('s19_2_S_f')}" th:errors="*{s19_2_S_f}">Error</p>
 
                         </div>
@@ -582,7 +582,7 @@
                         </label>
                         <div th:classappend="${#fields.hasErrors('s19_2_T_f')} ? 'has-error' : ''">
                         <label th:for="s19_2_T_f">Quais?</label>
-                        <textarea th:field="*{s19_2_T_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                        <textarea th:field="*{s19_2_T_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                         <p class="help-block" th:if="${#fields.hasErrors('s19_2_T_f')}" th:errors="*{s19_2_T_f}">Error</p>
                         <br>
                         </div>
@@ -627,7 +627,7 @@
                             <br>
                             <div th:classappend="${#fields.hasErrors('s20_1_F_f')} ? 'has-error' : ''">
                             <label th:for="s20_1_F_f">Outro:</label>
-                            <input th:field="*{s20_1_F_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s20_1_F_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <p class="help-block" th:if="${#fields.hasErrors('s20_1_F_f')}" th:errors="*{s20_1_F_f}">Error</p>
                             <br>
                             </div>
@@ -635,7 +635,7 @@
                         <!-- 20.1.1 -->
                         <div class="col-sm-9">
                             <label th:for="s20_1_1">20.1.1 - Atividade contratada:</label>
-                            <input th:field="*{s20_1_1}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s20_1_1}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -643,13 +643,13 @@
                     <div class="col-sm-9">
                         <div class="col-sm-9">
                             <label th:for="s20_2">20.2 - Data do início do vínculo (facto dado como provado):</label>
-                            <input th:field="*{s20_2}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s20_2}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                         <!-- 20.2.1 -->
                         <div class="col-sm-9">
                             <label th:for="s20_2_2">20.2.1 - Data do início do vínculo (facto dado como provado):</label>
-                            <input th:field="*{s20_2_1}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm3.submetido}"/>
+                            <input th:field="*{s20_2_1}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm3.submetido}"/>
                             <br>
                         </div>
                     </div>
@@ -691,7 +691,7 @@
                         <!-- 21.1.1 -->
                         <div class="col-sm-9">
                             <label for="s21_1_1">21.1.1 - Síntese dos principais fundamentos: </label>
-                            <textarea id="s21_1_1" name="s21_1_1" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea id="s21_1_1" name="s21_1_1" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <br>
                         </div>
                         <!-- 21.1.2 -->
@@ -708,7 +708,7 @@
                                 <br>
                                 <div th:classappend="${#fields.hasErrors('s21_1_2_B_f')} ? 'has-error' : ''">
                                 <label th:for="s21_1_2_B_f">Síntese das razões:</label>
-                                <textarea id="s21_1_2_B_f" name="s21_1_2_B_f" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                <textarea id="s21_1_2_B_f" name="s21_1_2_B_f" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                                 <p class="help-block" th:if="${#fields.hasErrors('s21_1_2_B_f')}" th:errors="*{s21_1_2_B_f}">Error</p>
                                 <br>
                                 </div>
@@ -760,7 +760,7 @@
                                 </label>
                                 <br>
                                 <label for="s21_2_2_B_f">Síntese das razões:</label>
-                                <textarea id="s21_2_2_B_f" name="s21_2_2_B_f" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                <textarea id="s21_2_2_B_f" name="s21_2_2_B_f" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                                 <p class="help-block" th:if="${#fields.hasErrors('s21_2_2_B_f')}" th:errors="*{s21_2_2_B_f}">Error</p>
                                 <br>
                             </div>
@@ -794,7 +794,7 @@
                             <!-- 21.3.1 -->
                             <div class="col-sm-9">
                                 <label th:for="s21_3_1">21.3.1- Síntese dos principais fundamentos:</label>
-                                <textarea th:field="*{s21_3_1}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                <textarea th:field="*{s21_3_1}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                                 <br>
                             </div>
                             <!-- 21.3.2 -->

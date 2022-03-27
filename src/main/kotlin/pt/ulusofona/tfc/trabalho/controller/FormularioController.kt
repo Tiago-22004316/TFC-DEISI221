@@ -694,7 +694,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     s1_2_A = formularioForm1.s1_2_A,
                     s1_2_B = formularioForm1.s1_2_B,
                     s1_2_B_f = formularioForm1.s1_2_B_f
-
                 )
                 s1FormularioRepository.save(s1FormularioDAO)
 
@@ -821,6 +820,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
             } else {  // edit
 
+                val s1DB = s1FormularioRepository.findByProcessId(processId)!!
                 val s2DB = s2FormularioRepository.findByProcessId(processId)!!
                 val s3DB = s3FormularioRepository.findByProcessId(processId)!!
                 val s4DB = s4FormularioRepository.findByProcessId(processId)!!
