@@ -54,7 +54,9 @@ data class S19Formulario(
         var s19_2_Q : Boolean = false,
         var s19_2_R : Boolean = false,
         var s19_2_S : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s19_2_S_f : String = "",
         var s19_2_T : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s19_2_T_f : String = "",
 )

@@ -14,5 +14,6 @@ data class S15Formulario(
         @Column(length = 50, unique = true)
         var processId: String = "",
                 //15
+        @Column(length = 2000, unique = true)
         var s15 : String = ""
 )

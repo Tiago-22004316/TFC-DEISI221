@@ -40,13 +40,18 @@ data class S18Formulario(
         var s18_4_A : Boolean = false,
         var s18_4_B : Boolean = false,
         var s18_4_C : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s18_4_C_f : String = "",
         var s18_4_D : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s18_4_D_f : String = "",
         var s18_4_E : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s18_4_E_f : String = "",
         var s18_4_F : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s18_4_F_f : String = "",
                 //18.4.1
+        @Column(length = 2000, unique = true)
         var s18_4_1 : String = "",
 )

@@ -24,12 +24,15 @@ data class S17Formulario(
                 //17.1
         var s17_1_A : Boolean = false,
         var s17_1_B : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s17_1_B_f : String = "",
                 //17.2
         var s17_2 : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s17_2_f : String = "",
                 //17.3
         var s17_3 : Boolean = false,
+        @Column(length = 2000, unique = true)
         var s17_3_f : String = "",
                 //17.4
         var s17_4 : Boolean = false,
