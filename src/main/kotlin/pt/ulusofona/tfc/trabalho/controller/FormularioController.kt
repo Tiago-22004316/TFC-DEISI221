@@ -625,7 +625,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             }
 
             if (formularioForm1.juizo == ""){
-                bindingResult.rejectValue("juizo", "Empty", "Erro: O campo têm de ser preenchido")
+                bindingResult.rejectValue("juizo", "Empty", "Erro: O campo do juizo tem de ser preenchido")
                 return "new-formulario-form1"
             }
 

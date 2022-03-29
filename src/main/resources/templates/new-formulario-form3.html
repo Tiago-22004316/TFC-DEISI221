@@ -744,7 +744,7 @@
                         <!-- 21.2.1 -->
                         <div class="col-sm-9">
                             <label for="s21_2_1">21.2.1 - Síntese dos principais fundamentos:</label>
-                            <textarea id="s21_2_1" name="s21_2_1" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                            <textarea id="s21_2_1" name="s21_2_1" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                             <br>
                         </div>
                         <!-- 21.2.2 -->
@@ -811,7 +811,7 @@
                                     <br>
                                     <div th:classappend="${#fields.hasErrors('s21_3_2_B_f')} ? 'has-error' : ''">
                                     <label th:for="s21_3_2_B_f">Síntese das razões:</label>
-                                    <textarea th:field="*{s21_3_2_B_f}" cols="10" rows="10" class="form-control" maxlength="1000" th:readonly="${formularioForm3.submetido}"></textarea>
+                                    <textarea th:field="*{s21_3_2_B_f}" cols="10" rows="10" class="form-control" maxlength="2000" th:readonly="${formularioForm3.submetido}"></textarea>
                                     <p class="help-block" th:if="${#fields.hasErrors('s21_3_2_B_f')}" th:errors="*{s21_3_2_B_f}">Error</p>
                                     <br>
                                     </div>

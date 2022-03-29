@@ -354,7 +354,7 @@
                                 <br>
                                 <div th:classappend="${#fields.hasErrors('s11_1_B_f')} ? 'has-error' : ''">
                                 <label th:for="s11_1_B_f">Qual?</label>
-                                <input th:field="*{s11_1_B_f}" type="text" class="form-control" maxlength="100" th:readonly="${formularioForm2.submetido}"/>
+                                <input th:field="*{s11_1_B_f}" type="text" class="form-control" maxlength="500" th:readonly="${formularioForm2.submetido}"/>
                                 <p class="help-block" th:if="${#fields.hasErrors('s11_1_B_f')}" th:errors="*{s11_1_B_f}">Error</p>
                                     </div>
                                 <br>
