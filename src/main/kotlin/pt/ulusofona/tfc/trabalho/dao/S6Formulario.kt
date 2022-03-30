@@ -20,6 +20,6 @@ data class S6Formulario(
                 //6.1
         var s6_1_A : Boolean = false,
         var s6_1_B : Boolean = false,
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s6_1_B_f : String = "",
         )

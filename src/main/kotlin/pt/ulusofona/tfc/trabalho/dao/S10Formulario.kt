@@ -21,7 +21,7 @@ data class S10Formulario(
         var s10_2_B : Boolean = false,
         var s10_2_C : Boolean = false,
                 //10.2.1
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s10_2_1 : String = "",
                 //10.3
         var s10_3 : Boolean = false,

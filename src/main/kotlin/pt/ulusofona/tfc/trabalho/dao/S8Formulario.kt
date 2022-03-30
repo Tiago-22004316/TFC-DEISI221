@@ -20,13 +20,13 @@ data class S8Formulario(
                 //8.3
         var s8_3 : Boolean = false,
         var s8_3_A : Boolean = false,
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s8_3_A_f : String = "",
         var s8_3_B : Boolean = false,
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s8_3_B_f : String = "",
         var s8_3_C : Boolean = false,
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s8_3_C_f : String = "",
                 //8.4
         var s8_4 : Boolean = false,
@@ -43,6 +43,6 @@ data class S8Formulario(
         var s8_4_J_f : String = "",
                 //8.5
         var s8_5 : Boolean = false,
-        @Column(length = 2000, unique = true)
+        @Column(length = 2000)
         var s8_5_f : String = "",
         )
