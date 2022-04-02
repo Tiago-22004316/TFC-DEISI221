@@ -630,20 +630,20 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             }
 
             //data
-            val date = LocalDate.now().toString()
-            if (formularioForm1.s3_1 > date){
+            val now = LocalDate.now()
+            if (formularioForm1.s3_1.isNotBlank() && LocalDate.parse(formularioForm1.s3_1).isAfter(now)){
                 bindingResult.rejectValue("s3_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
                 return "new-formulario-form1"
             }
-            if (formularioForm1.s3_2 > date){
+            if (formularioForm1.s3_2.isNotBlank() && LocalDate.parse(formularioForm1.s3_2).isAfter(now)){
                 bindingResult.rejectValue("s3_2", "invalidDate", "Erro: A data não pode ser superior à data atual")
                 return "new-formulario-form1"
             }
-            if (formularioForm1.s3_3 > date){
+            if (formularioForm1.s3_3.isNotBlank() && LocalDate.parse(formularioForm1.s3_3).isAfter(now)){
                 bindingResult.rejectValue("s3_3", "invalidDate", "Erro: A data não pode ser superior à data atual")
                 return "new-formulario-form1"
             }
-            if (formularioForm1.s3_4_B && formularioForm1.s3_4_1 > date){
+            if (formularioForm1.s3_4_B && formularioForm1.s3_4_1.isNotBlank() && LocalDate.parse(formularioForm1.s3_4_1).isAfter(now)){
                 bindingResult.rejectValue("s3_4_1", "invalidDate", "Erro: A data não pode ser superior à data atual")
                 return "new-formulario-form1"
             }
