@@ -600,7 +600,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             model["url"] = "edit/${processIdParam}/1"
         }
 
-        if (formularioForm1.processId.contains("/") || formularioForm1.processId.contains(";")){
+        if (formularioForm1.processId.contains("/") || formularioForm1.processId.contains(";") || formularioForm1.processId.contains("""\""")){
             bindingResult.rejectValue("processId", "InvalidCaracter", "Erro: O campo contêm caracteres inválidos")
             return "new-formulario-form1"
         }
