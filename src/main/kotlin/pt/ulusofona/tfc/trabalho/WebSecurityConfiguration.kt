@@ -51,6 +51,8 @@ class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
                 .withUser("scasimiro").password(passwordEncoder().encode("trabjus")).roles("USER")
                 .and()
                 .withUser("admin").password(passwordEncoder().encode("adminPass123")).roles("ADMIN")
+                .and()
+                .withUser("avaliador").password(passwordEncoder().encode("avaliador123")).roles("ADMIN")
     }
 
     @Bean
