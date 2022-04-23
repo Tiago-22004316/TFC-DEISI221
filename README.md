@@ -32,5 +32,5 @@ grant all privileges on trabjus.* to 'trabjus'@'localhost';
     * Password: avaliador123
 
 
-## Vídeo no youtube sobre a aplicaçã
+## Vídeo no youtube sobre a aplicação
 * https://youtu.be/H5koQdvP3pM
