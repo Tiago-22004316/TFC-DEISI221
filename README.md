@@ -30,3 +30,7 @@ grant all privileges on trabjus.* to 'trabjus'@'localhost';
   * Os dados para o login na aplicação, são os seguintes:
     * Username: avaliador
     * Password: avaliador123
+
+
+## Vídeo no youtube sobre a aplicaçã
+* https://youtu.be/H5koQdvP3pM
