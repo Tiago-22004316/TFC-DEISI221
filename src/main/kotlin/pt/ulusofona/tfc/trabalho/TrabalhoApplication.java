@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 @SpringBootApplication
 public class TrabalhoApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(TrabalhoApplication.class, args);
     }
