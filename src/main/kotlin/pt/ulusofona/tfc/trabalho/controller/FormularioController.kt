@@ -44,9 +44,14 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
     @GetMapping(value = ["/list"])
-    fun listProcesso(model: ModelMap, principal: Principal?): String {
+    fun listProcesso(@RequestParam("nome") nome: String?,model: ModelMap, principal: Principal?): String {
 
-        val processo = s1FormularioRepository.findAll()  // get all users from DB
+        val processo = if (nome == null) {
+            s1FormularioRepository.findAll()  // get all users from DB
+        } else {
+            model["nome"] = nome
+            s1FormularioRepository.findAllByProcessIdContaining(nome)
+        }
         model["processo"] = processo
 
         return "list-forms"
