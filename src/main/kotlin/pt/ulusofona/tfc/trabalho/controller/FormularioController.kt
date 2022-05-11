@@ -697,6 +697,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     return "new-formulario-form1"
                 }
 
+                formularioForm1.processId.trim();
+
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
                         username = formularioForm1.username,
