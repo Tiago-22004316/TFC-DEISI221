@@ -1,6 +1,6 @@
 package pt.ulusofona.tfc.trabalho.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult
 import org.springframework.web.bind.annotation.*
@@ -13,9 +13,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 import javax.validation.Valid
 import java.time.LocalDate
-import java.io.File
-import java.io.BufferedReader
-import java.io.InputStream
+import java.time.LocalDateTime
+import java.util.Date
+import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
+
 
 @Controller
 @RequestMapping("/form")
@@ -207,6 +209,11 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm1.edit = true
             formularioForm1.submetido = true
             model["url"] = "edit/${processId}/1"
+
+            val dt1 = LocalDate.parse(s3DB!!.s3_1)
+            val dt2 = LocalDate.parse(s3DB!!.s3_3)
+            val diff : Long = ChronoUnit.DAYS.between(dt1, dt2)
+            s1DB.duracao = diff
 
             return "new-formulario-form1"
         }
@@ -1861,10 +1868,16 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             }
             "Submeter" -> {
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
+                val s3DB = s3FormularioRepository.findByProcessId(processId)
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+                val dt1 = LocalDate.parse(s3DB!!.s3_1)
+                val dt2 = LocalDate.parse(s3DB!!.s3_3)
+                val diff : Long = ChronoUnit.DAYS.between(dt1, dt2)
+
                 if (s1DB != null){
                     s1DB.estado = "Submetido"
                     s1DB.lastUpdate = data1.format(Date())
+                    s1DB.duracao = diff
                     s1FormularioRepository.save(s1DB);
                 }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")

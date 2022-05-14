@@ -15,6 +15,7 @@ data class S1Formulario(
         var s1_2_A : Boolean = false,
         var s1_2_B : Boolean = false,
         var s1_2_B_f : String = "",
+        var duracao : Long = 0,
 
         @Column(length = 50, unique = true)
         var processId: String = ""
