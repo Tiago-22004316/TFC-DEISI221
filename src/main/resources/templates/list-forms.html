@@ -14,7 +14,7 @@
     </div>
     <h1 class="page-header">Listagem de processos</h1>
     <form th:action="@{/form/list}" method="get">
-        <label>Procurar com o nome:</label>
+        <label>Filtrar por nº de processo</label>
         <input type="text" name="nome" th:value="${nome}" />
         <input type="submit" value="filtrar">
     </form>

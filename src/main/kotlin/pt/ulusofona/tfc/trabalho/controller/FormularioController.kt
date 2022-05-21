@@ -704,12 +704,15 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     return "new-formulario-form1"
                 }
 
-                formularioForm1.processId.trim();
+                //quando faço este passo dá automaticamente erro ao gravar e observar apos uma submissão
+                //formularioForm1.processId.replace(" ","")
 
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
                         username = formularioForm1.username,
                     processId = processId,
+                    // também foi aplicada e dá o msm tipo de erros que o de cima
+                    //processId = processId.processId.replace(" ","")
                     comarca = formularioForm1.comarca,
                     juizo = formularioForm1.juizo,
                     s1_2_A = formularioForm1.s1_2_A,
@@ -729,7 +732,9 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     processId = processId,
                     s3_1 = formularioForm1.s3_1,
                     s3_2 = formularioForm1.s3_2,
-                    s3_3 = formularioForm1.s3_2,
+                    //o 3_3 estava a igualar ao 3_2 e não existia o 3_4
+                    s3_3 = formularioForm1.s3_3,
+                    s3_4 = formularioForm1.s3_4,
                     s3_4_A = formularioForm1.s3_4_A,
                     s3_4_B = formularioForm1.s3_4_B,
                     s3_4_1 = formularioForm1.s3_4_1,
@@ -841,7 +846,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
             } else {  // edit
 
-                val s1DB = s1FormularioRepository.findByProcessId(processId)!!
                 val s2DB = s2FormularioRepository.findByProcessId(processId)!!
                 val s3DB = s3FormularioRepository.findByProcessId(processId)!!
                 val s4DB = s4FormularioRepository.findByProcessId(processId)!!
