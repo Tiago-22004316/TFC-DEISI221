@@ -20,7 +20,6 @@ data class S3Formulario(
                 //3.3
         var s3_3 : String = "",
                 //3.4
-        var s3_4 : Boolean = false,
         var s3_4_A : Boolean = false,
         var s3_4_B : Boolean = false,
                 //3.4.1

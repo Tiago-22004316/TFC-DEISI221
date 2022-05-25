@@ -102,7 +102,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm1.s3_1 = s3DB.s3_1
             formularioForm1.s3_2 = s3DB.s3_2
             formularioForm1.s3_3 = s3DB.s3_3
-            formularioForm1.s3_4 = s3DB.s3_4
             formularioForm1.s3_4_A = s3DB.s3_4_A
             formularioForm1.s3_4_B = s3DB.s3_4_B
             formularioForm1.s3_4_1 = s3DB.s3_4_1
@@ -704,15 +703,13 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     return "new-formulario-form1"
                 }
 
-                //quando faço este passo dá automaticamente erro ao gravar e observar apos uma submissão
-                //formularioForm1.processId.replace(" ","")
+                formularioForm1.processId = formularioForm1.processId.replace(" ","")
+                //formularioForm1.processId = formularioForm1.processId.trim()
 
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
                         username = formularioForm1.username,
                     processId = processId,
-                    // também foi aplicada e dá o msm tipo de erros que o de cima
-                    //processId = processId.processId.replace(" ","")
                     comarca = formularioForm1.comarca,
                     juizo = formularioForm1.juizo,
                     s1_2_A = formularioForm1.s1_2_A,
@@ -734,7 +731,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     s3_2 = formularioForm1.s3_2,
                     //o 3_3 estava a igualar ao 3_2 e não existia o 3_4
                     s3_3 = formularioForm1.s3_3,
-                    s3_4 = formularioForm1.s3_4,
                     s3_4_A = formularioForm1.s3_4_A,
                     s3_4_B = formularioForm1.s3_4_B,
                     s3_4_1 = formularioForm1.s3_4_1,
@@ -860,7 +856,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s3DB.s3_1 = formularioForm1.s3_1
                 s3DB.s3_2 = formularioForm1.s3_2
                 s3DB.s3_3 = formularioForm1.s3_3
-                s3DB.s3_4 = formularioForm1.s3_4
                 s3DB.s3_4_A = formularioForm1.s3_4_A
                 s3DB.s3_4_B = formularioForm1.s3_4_B
                 s3DB.s3_4_1 = formularioForm1.s3_4_1
