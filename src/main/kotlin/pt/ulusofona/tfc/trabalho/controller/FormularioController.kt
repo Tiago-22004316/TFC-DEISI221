@@ -48,28 +48,28 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
     @GetMapping(value = ["/list"])
     fun listProcesso(@RequestParam("nome") nome: String?,model: ModelMap, principal: Principal?): String {
 
+        //calculo da duração media das datas e tamanho da lista
+        val s1DB = s1FormularioRepository.findAll()
+        var somaData1 : Long = 0
+        var somaData2 : Long = 0
+
+        //soma de todas as datas
+        for (form in s1DB) {
+            somaData1 += form.duracaoData1
+            somaData2 += form.duracaoData2
+        }
+
+        val diff = somaData2 - somaData1
+
+        //por a media em todos os processos, vai se la saber porque
+        for (form in s1DB) {
+            form.duracaoMedia = diff
+            form.numTotalProcessos = s1DB.size.toLong()
+        }
+        s1FormularioRepository.saveAll(s1DB)
+
         val processo = if (nome == null) {
             s1FormularioRepository.findAll()  // get all users from DB
-
-            //calculo da duração media das datas e tamanho da lista
-            val s1DB = s1FormularioRepository.findAll()
-            var somaData1 : Long = 0
-            var somaData2 : Long = 0
-
-            //soma de todas as datas
-            for (form in s1DB) {
-                somaData1 += form.duracaoData1
-                somaData2 += form.duracaoData2
-            }
-
-            val diff = somaData2 - somaData1
-
-            //por a media em todos os processos, vai se la saber porque
-            for (form in s1DB) {
-                form.duracaoMedia = diff
-                form.numTotalProcessos = s1DB.size.toLong()
-            }
-            s1FormularioRepository.saveAll(s1DB)
 
         } else {
             model["nome"] = nome
