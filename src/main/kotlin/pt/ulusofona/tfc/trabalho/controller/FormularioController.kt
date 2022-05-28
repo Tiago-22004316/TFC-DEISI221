@@ -50,6 +50,27 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
         val processo = if (nome == null) {
             s1FormularioRepository.findAll()  // get all users from DB
+
+            //calculo da duração media das datas e tamanho da lista
+            val s1DB = s1FormularioRepository.findAll()
+            var somaData1 : Long = 0
+            var somaData2 : Long = 0
+
+            //soma de todas as datas
+            for (form in s1DB) {
+                somaData1 += form.duracaoData1
+                somaData2 += form.duracaoData2
+            }
+
+            val diff = somaData2 - somaData1
+
+            //por a media em todos os processos, vai se la saber porque
+            for (form in s1DB) {
+                form.duracaoMedia = diff
+                form.numTotalProcessos = s1DB.size.toLong()
+            }
+            s1FormularioRepository.saveAll(s1DB)
+
         } else {
             model["nome"] = nome
             s1FormularioRepository.findAllByProcessIdContaining(nome)
@@ -220,9 +241,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
                 val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                 s1DB.duracaoData2 = diffData2
-
-                //calculo da duração media das datas
-                s1DB.duracaoMedia = diffData2 - diffData1
             }
             s1FormularioRepository.save(s1DB)
 
@@ -1893,7 +1911,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 if(s3DB.s3_4_A){
                     val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                     s1DB!!.duracaoData2 = diffData2
-                    s1DB!!.duracaoMedia = diffData2 - diffData1
                 }
 
                 if (s1DB != null){

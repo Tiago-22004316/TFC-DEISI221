@@ -18,6 +18,7 @@ data class S1Formulario(
         var duracaoData1 : Long = 0,
         var duracaoData2 : Long = 0,
         var duracaoMedia : Long = 0,
+        var numTotalProcessos : Long = 0,
 
         @Column(length = 50, unique = true)
         var processId: String = ""
