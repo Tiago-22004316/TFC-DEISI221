@@ -59,12 +59,10 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             somaData2 += form.duracaoData2
         }
 
-        val diff = somaData2 - somaData1
-
         //por a media em todos os processos, vai se la saber porque
         for (form in s1DB) {
-            form.duracaoMedia = diff
-            form.numTotalProcessos = s1DB.size.toLong()
+            form.duracaoMediaData1 = somaData1 / s1DB.size
+            form.duracaoMediaData2 = somaData2 / s1DB.size
         }
         s1FormularioRepository.saveAll(s1DB)
 
@@ -237,7 +235,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             s1DB.duracaoData1 = diffData1
 
             //Duração de dias no calculo da diferença entre a data do inicio da instância e data do trânsito em julgado
-            if (s3DB.s3_4_A){
+            if (s3DB.s3_4_B){
                 val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
                 val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                 s1DB.duracaoData2 = diffData2
@@ -1908,7 +1906,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val diffData1 : Long = ChronoUnit.DAYS.between(dt1, dt2)
 
                 //Duração de dias no calculo da diferença entre a data do inicio da instância e data do trânsito em julgado
-                if(s3DB.s3_4_A){
+                if(s3DB.s3_4_B){
                     val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                     s1DB!!.duracaoData2 = diffData2
                 }
