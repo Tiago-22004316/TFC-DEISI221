@@ -209,10 +209,19 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             formularioForm1.submetido = true
             model["url"] = "edit/${processId}/1"
 
+            //Duração de dias no calculo da diferença entre a data do inicio da instância e data da prolação da sentença
             val dt1 = LocalDate.parse(s3DB!!.s3_1)
             val dt2 = LocalDate.parse(s3DB!!.s3_3)
-            val diff : Long = ChronoUnit.DAYS.between(dt1, dt2)
-            s1DB.duracao = diff
+            val diffData1 : Long = ChronoUnit.DAYS.between(dt1, dt2)
+            s1DB.duracaoData1 = diffData1
+
+            //Duração de dias no calculo da diferença entre a data do inicio da instância e data do trânsito em julgado
+            if (s3DB.s3_4_A){
+                val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
+                val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
+                s1DB.duracaoData2 = diffData2
+            }
+            s1FormularioRepository.save(s1DB)
 
             return "new-formulario-form1"
         }
@@ -703,7 +712,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     return "new-formulario-form1"
                 }
 
-                formularioForm1.processId = formularioForm1.processId.replace(" ","")
+                //formularioForm1.processId = formularioForm1.processId.replace(" ","")
                 //formularioForm1.processId = formularioForm1.processId.trim()
 
                 //guardar na base de dados
@@ -1869,15 +1878,25 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val s1DB = s1FormularioRepository.findByProcessId(processId)
                 val s3DB = s3FormularioRepository.findByProcessId(processId)
                 val data1 = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+
                 val dt1 = LocalDate.parse(s3DB!!.s3_1)
                 val dt2 = LocalDate.parse(s3DB!!.s3_3)
-                val diff : Long = ChronoUnit.DAYS.between(dt1, dt2)
+                val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
+
+                //Duração de dias no calculo da diferença entre a data do inicio da instância e data da prolação da sentença
+                val diffData1 : Long = ChronoUnit.DAYS.between(dt1, dt2)
+
+                //Duração de dias no calculo da diferença entre a data do inicio da instância e data do trânsito em julgado
+                if(s3DB.s3_4_A){
+                    val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
+                    s1DB!!.duracaoData2 = diffData2
+                }
 
                 if (s1DB != null){
                     s1DB.estado = "Submetido"
                     s1DB.lastUpdate = data1.format(Date())
-                    s1DB.duracao = diff
-                    s1FormularioRepository.save(s1DB);
+                    s1DB.duracaoData1 = diffData1
+                    s1FormularioRepository.save(s1DB)
                 }
                 redirectAttributes.addFlashAttribute("message", "Processo ${processIdParam} submetido com sucesso.")
                 return "redirect:/form/list"
