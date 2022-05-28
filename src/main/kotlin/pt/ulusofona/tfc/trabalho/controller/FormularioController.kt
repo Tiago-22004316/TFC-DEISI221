@@ -220,6 +220,9 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
                 val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                 s1DB.duracaoData2 = diffData2
+
+                //calculo da duração media das datas
+                s1DB.duracaoMedia = diffData2 - diffData1
             }
             s1FormularioRepository.save(s1DB)
 
@@ -1890,6 +1893,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 if(s3DB.s3_4_A){
                     val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                     s1DB!!.duracaoData2 = diffData2
+                    s1DB!!.duracaoMedia = diffData2 - diffData1
                 }
 
                 if (s1DB != null){
