@@ -4,6 +4,12 @@
 </head>
 <body>
 <div th:replace="layout/layout :: header"></div>
+<style>
+    body {
+        /* Margin bottom by footer height */
+        margin-bottom: 70px;
+    }
+</style>
 
 <div class="container">
     <div class="alert alert-info" th:if="${message}" th:text="${message}">
