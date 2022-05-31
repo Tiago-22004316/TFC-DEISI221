@@ -95,17 +95,21 @@
             <div class="panel-body">
                 <div class="form-group">
                     <div class="col-sm-9">
-                        <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
-                        <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
-                        <p class="help-block" th:if="${#fields.hasErrors('s3_1')}" th:errors="*{s3_1}">Error</p>
+                        <div th:classappend="${#fields.hasErrors('s3_1')} ? 'has-error' : ''">
+                            <label th:for="s3_1">Início da instância (data do recebimento da participação):</label>
+                            <input th:field="*{s3_1}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s3_1')}" th:errors="*{s3_1}">Error</p>
+                        </div>
                         <br>
                         <label th:for="s3_2">Data da propositura da ação:</label>
                         <input th:field="*{s3_2}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
                         <p class="help-block" th:if="${#fields.hasErrors('s3_2')}" th:errors="*{s3_2}">Error</p>
                         <br>
-                        <label th:for="s3_3">Data da prolação da sentença:</label>
-                        <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
-                        <p class="help-block" th:if="${#fields.hasErrors('s3_3')}" th:errors="*{s3_3}">Error</p>
+                        <div th:classappend="${#fields.hasErrors('s3_3')} ? 'has-error' : ''">
+                            <label th:for="s3_3">Data da prolação da sentença:</label>
+                            <input th:field="*{s3_3}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s3_3')}" th:errors="*{s3_3}">Error</p>
+                        </div>
                         <br>
                         <label class="control-label">Trânsito em julgado</label>
                         <div class="checkbox">
@@ -119,9 +123,11 @@
                             </label>
                         </div>
                         <br/>
-                        <label th:for="s3_4_1">Data do trânsito em julgado: </label>
-                        <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
-                        <p class="help-block" th:if="${#fields.hasErrors('s3_4_1')}" th:errors="*{s3_4_1}">Error</p>
+                        <div th:classappend="${#fields.hasErrors('s3_4_1')} ? 'has-error' : ''">
+                            <label th:for="s3_4_1">Data do trânsito em julgado: </label>
+                            <input th:field="*{s3_4_1}" type="date" class="form-control" maxlength="100" th:disabled="${formularioForm1.submetido}"/>
+                            <p class="help-block" th:if="${#fields.hasErrors('s3_4_1')}" th:errors="*{s3_4_1}">Error</p>
+                        </div>
                         <div class="checkbox">
                             <div class="checkbox indent">
                                 <label>

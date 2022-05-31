@@ -46,34 +46,34 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
 
     @GetMapping(value = ["/list"])
-    fun listProcesso(@RequestParam("nome") nome: String?,model: ModelMap, principal: Principal?): String {
+    fun listProcesso(@RequestParam("numProcesso") numProcesso: String?,model: ModelMap, principal: Principal?): String {
 
-        //calculo da duração media das datas e tamanho da lista
-        val s1DB = s1FormularioRepository.findAll()
-        var somaData1 : Long = 0
-        var somaData2 : Long = 0
+        var somaDuracao1 : Long = 0
+        var somaDuracao2 : Long = 0
 
-        //soma de todas as datas
-        for (form in s1DB) {
-            somaData1 += form.duracaoData1
-            somaData2 += form.duracaoData2
-        }
-
-        //por a media em todos os processos, vai se la saber porque
-        for (form in s1DB) {
-            form.duracaoMediaData1 = somaData1 / s1DB.size
-            form.duracaoMediaData2 = somaData2 / s1DB.size
-        }
-        s1FormularioRepository.saveAll(s1DB)
-
-        val processo = if (nome == null) {
+        val processos = if (numProcesso == null) {
             s1FormularioRepository.findAll()  // get all users from DB
-
         } else {
-            model["nome"] = nome
-            s1FormularioRepository.findAllByProcessIdContaining(nome)
+            model["numProcesso"] = numProcesso
+            s1FormularioRepository.findAllByProcessIdContaining(numProcesso)
         }
-        model["processo"] = processo
+
+        // calcula média das durações
+        for (processo in processos) {
+            somaDuracao1 += processo.duracaoData1
+            somaDuracao2 += processo.duracaoData2
+        }
+
+        model["processos"] = processos
+        val countProcessosSubmetidos = processos.count { it.estado == "Submetido" }
+        if (countProcessosSubmetidos > 0) {
+            model["mediaDuracao1"] = somaDuracao1 / countProcessosSubmetidos
+        }
+
+        val countProcessosCom2oCriteiro = processos.count { it.duracaoData2 > 0 }
+        if (countProcessosCom2oCriteiro > 0) {
+            model["mediaDuracao2"] = somaDuracao2 / countProcessosCom2oCriteiro
+        }
 
         return "list-forms"
     }
@@ -651,7 +651,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             return "new-formulario-form1"
         }
 
-        val processId = formularioForm1.processId!!  // it is safe doing this since processId is a mandatory field
+        val processId = formularioForm1.processId!!.trim()  // it is safe doing this since processId is a mandatory field
 
         // se já estiver submetido não faz nada (salta este if)
         if (s1DB == null || s1DB.estado != "Submetido") {
@@ -665,6 +665,21 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
             if (formularioForm1.juizo == ""){
                 bindingResult.rejectValue("juizo", "Empty", "Erro: O campo do juizo tem de ser preenchido")
+                return "new-formulario-form1"
+            }
+
+            if (formularioForm1.s3_1.isBlank()){
+                bindingResult.rejectValue("s3_1", "inexistentDate", "Erro: A data tem que estar preenchida")
+                return "new-formulario-form1"
+            }
+
+            if (formularioForm1.s3_3.isBlank()){
+                bindingResult.rejectValue("s3_3", "inexistentDate", "Erro: A data tem que estar preenchida")
+                return "new-formulario-form1"
+            }
+
+            if (formularioForm1.s3_4_1.isBlank() && !formularioForm1.s3_4_2){
+                bindingResult.rejectValue("s3_4_1", "inexistentDate", "Erro: A data tem que estar preenchida ou dada indicação que não é possível apurar")
                 return "new-formulario-form1"
             }
 
@@ -730,9 +745,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                     bindingResult.rejectValue("processId", "processId.existent", "Já existe um processo com esse número. Use a opção editar.")
                     return "new-formulario-form1"
                 }
-
-                //formularioForm1.processId = formularioForm1.processId.replace(" ","")
-                //formularioForm1.processId = formularioForm1.processId.trim()
 
                 //guardar na base de dados
                 val s1FormularioDAO = S1Formulario(
@@ -1900,13 +1912,13 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
 
                 val dt1 = LocalDate.parse(s3DB!!.s3_1)
                 val dt2 = LocalDate.parse(s3DB!!.s3_3)
-                val dt3 = LocalDate.parse(s3DB!!.s3_4_1)
+                val dt3: LocalDate? = if (s3DB!!.s3_4_1.isNotBlank()) LocalDate.parse(s3DB!!.s3_4_1) else null
 
                 //Duração de dias no calculo da diferença entre a data do inicio da instância e data da prolação da sentença
                 val diffData1 : Long = ChronoUnit.DAYS.between(dt1, dt2)
 
                 //Duração de dias no calculo da diferença entre a data do inicio da instância e data do trânsito em julgado
-                if(s3DB.s3_4_B){
+                if(dt3 != null){
                     val diffData2 : Long = ChronoUnit.DAYS.between(dt1, dt3)
                     s1DB!!.duracaoData2 = diffData2
                 }
