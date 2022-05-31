@@ -1010,8 +1010,6 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
         }
     }
 
-
-
     @PostMapping(value = [ "/edit/{processId}/2"])
     fun postFormularioForm2(@Valid @ModelAttribute("formularioForm2") formularioForm2: FormularioForm2,
                             @PathVariable("processId") processIdParam: String?,
@@ -1936,6 +1934,15 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 return "redirect:/form/list"  // volta para a lista de processos
             }
             else -> throw Exception("invalid operation: ${formularioForm3.operation}")
+        }
+    }
+
+    @GetMapping("/fix")
+    fun fix() {
+        val processos = s1FormularioRepository.findAll()
+        for (processo in processos) {
+            processo.estado = "Em edição"
+            s1FormularioRepository.save(processo)
         }
     }
 }
