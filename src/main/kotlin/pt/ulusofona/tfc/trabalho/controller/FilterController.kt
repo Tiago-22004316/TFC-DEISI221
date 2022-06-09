@@ -18,8 +18,63 @@ class FilterController(val jdbcTemplate: JdbcTemplate,
     fun filter(@RequestParam("fields") fields: List<String>?,
                @RequestParam("values") values: List<String>?,
                model: ModelMap, principal: Principal?): String {
+        var valor = false
+        if (values != null){
+            valor = values[values.size - 1] == "SIM"
+        }
 
+        var campo = ""
+        var saberForm = ""
+        var query = ""
         // adaptar para usar os fields e os values para construir a string sql
+        if (fields != null && values != null){
+            campo = fields[fields.size - 1].replace(".","_")
+            saberForm = campo[0].toString() + campo[1] + campo[2]
+            when (saberForm){
+                "s2_" -> query = "SELECT process_id FROM s2formulario where $campo = $valor"
+
+                "s3_" -> query = "SELECT process_id FROM s3formulario where $campo = $valor"
+
+                "s4_" -> query = "SELECT process_id FROM s4formulario where $campo = $valor"
+
+                "s5_" -> query = "SELECT process_id FROM s5formulario where $campo = $valor"
+
+                "s6_" -> query = "SELECT process_id FROM s6formulario where $campo = $valor"
+
+                "s7_" -> query = "SELECT process_id FROM s7formulario where $campo = $valor"
+
+                "s8_" -> query = "SELECT process_id FROM s8formulario where $campo = $valor"
+
+                "s9_" -> query = "SELECT process_id FROM s9formulario where $campo = $valor"
+
+                "s10" -> query = "SELECT process_id FROM s10formulario where $campo = $valor"
+
+                "s11" -> query = "SELECT process_id FROM s11formulario where $campo = $valor"
+
+                "s12" -> query = "SELECT process_id FROM s12formulario where $campo = $valor"
+
+                "s13" -> query = "SELECT process_id FROM s13formulario where $campo = $valor"
+
+                "s14" -> query = "SELECT process_id FROM s14formulario where $campo = $valor"
+
+                "s15" -> query = "SELECT process_id FROM s15formulario where $campo = $valor"
+
+                "s16" -> query = "SELECT process_id FROM s16formulario where $campo = $valor"
+
+                "s17" -> query = "SELECT process_id FROM s17formulario where $campo = $valor"
+
+                "s18" -> query = "SELECT process_id FROM s18formulario where $campo = $valor"
+
+                "s19" -> query = "SELECT process_id FROM s19formulario where $campo = $valor"
+
+                "s20" -> query = "SELECT process_id FROM s20formulario where $campo = $valor"
+
+                "s21" -> query = "SELECT process_id FROM s21formulario where $campo = $valor"
+
+            }
+        }
+
+
         val sql = "SELECT process_id FROM s5formulario where s5_1_1_a = 0"
         val processoIds: List<String> = jdbcTemplate.query(sql) { rs, _ -> rs.getString("process_id") }
 

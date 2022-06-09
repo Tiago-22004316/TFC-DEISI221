@@ -1,47 +1,48 @@
 package pt.ulusofona.tfc.trabalho.controller;
 
 import org.springframework.stereotype.Controller
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.ModelMap
 import org.springframework.validation.BindingResult
 import org.springframework.web.bind.annotation.*
 import org.springframework.web.servlet.mvc.support.RedirectAttributes
 import pt.ulusofona.tfc.trabalho.dao.*
-import pt.ulusofona.tfc.trabalho.form.*
+import pt.ulusofona.tfc.trabalho.form.FormularioForm1
+import pt.ulusofona.tfc.trabalho.form.FormularioForm2
+import pt.ulusofona.tfc.trabalho.form.FormularioForm3
 import pt.ulusofona.tfc.trabalho.repository.*
 import java.security.Principal
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.temporal.ChronoUnit
 import java.util.*
 import javax.validation.Valid
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.util.Date
-import java.time.format.DateTimeFormatter
-import java.time.temporal.ChronoUnit
 
 
 @Controller
 @RequestMapping("/form")
-public class FormularioController(val s1FormularioRepository: S1FormularioRepository,
-                                  val s2FormularioRepository: S2FormularioRepository,
-                                  val s3FormularioRepository: S3FormularioRepository,
-                                  val s4FormularioRepository: S4FormularioRepository,
-                                  val s5FormularioRepository: S5FormularioRepository,
-                                  val s6FormularioRepository: S6FormularioRepository,
-                                  val s7FormularioRepository: S7FormularioRepository,
-                                  val s8FormularioRepository: S8FormularioRepository,
-                                  val s9FormularioRepository: S9FormularioRepository,
-                                  val s10FormularioRepository: S10FormularioRepository,
-                                  val s11FormularioRepository: S11FormularioRepository,
-                                  val s12FormularioRepository: S12FormularioRepository,
-                                  val s13FormularioRepository: S13FormularioRepository,
-                                  val s14FormularioRepository: S14FormularioRepository,
-                                  val s15FormularioRepository: S15FormularioRepository,
-                                  val s16FormularioRepository: S16FormularioRepository,
-                                  val s17FormularioRepository: S17FormularioRepository,
-                                  val s18FormularioRepository: S18FormularioRepository,
-                                  val s19FormularioRepository: S19FormularioRepository,
-                                  val s20FormularioRepository: S20FormularioRepository,
-                                  val s21FormularioRepository: S21FormularioRepository, )
+public class FormularioController(
+        val s1FormularioRepository: S1FormularioRepository,
+        val s2FormularioRepository: S2FormularioRepository,
+        val s3FormularioRepository: S3FormularioRepository,
+        val s4FormularioRepository: S4FormularioRepository,
+        val s5FormularioRepository: S5FormularioRepository,
+        val s6FormularioRepository: S6FormularioRepository,
+        val s7FormularioRepository: S7FormularioRepository,
+        val s8FormularioRepository: S8FormularioRepository,
+        val s9FormularioRepository: S9FormularioRepository,
+        val s10FormularioRepository: S10FormularioRepository,
+        val s11FormularioRepository: S11FormularioRepository,
+        val s12FormularioRepository: S12FormularioRepository,
+        val s13FormularioRepository: S13FormularioRepository,
+        val s14FormularioRepository: S14FormularioRepository,
+        val s15FormularioRepository: S15FormularioRepository,
+        val s16FormularioRepository: S16FormularioRepository,
+        val s17FormularioRepository: S17FormularioRepository,
+        val s18FormularioRepository: S18FormularioRepository,
+        val s19FormularioRepository: S19FormularioRepository,
+        val s20FormularioRepository: S20FormularioRepository,
+        val s21FormularioRepository: S21FormularioRepository,
+)
 {
 
 
@@ -1560,7 +1561,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
             if(s15DB != null){
                 s15DB.s15 = formularioForm3.s15
             } else {
-                val s15FormularioDAO = S15Formulario(processId = formularioForm3.processId,
+                val s15FormularioDAO = S15Formulario(
+                        processId = formularioForm3.processId,
                         s15 = formularioForm3.s15,
                 )
                 s15FormularioRepository.save(s15FormularioDAO)
@@ -1571,7 +1573,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s16DB.s16_1_B = formularioForm3.s16_1_B
                 s16DB.s16_1_B_f = formularioForm3.s16_1_B_f
             } else {
-                val s16FormularioDAO = S16Formulario(processId = formularioForm3.processId,
+                val s16FormularioDAO = S16Formulario(
+                        processId = formularioForm3.processId,
                         s16_1_A = formularioForm3.s16_1_A,
                         s16_1_B = formularioForm3.s16_1_B,
                         s16_1_B_f = formularioForm3.s16_1_B_f,
@@ -1604,7 +1607,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s17DB.s17_6 = formularioForm3.s17_6
                 s17DB.s17_6_f = formularioForm3.s17_6_f
             } else {
-                val s17FormularioDAO = S17Formulario(processId = formularioForm3.processId,
+                val s17FormularioDAO = S17Formulario(
+                        processId = formularioForm3.processId,
                         s17_A = formularioForm3.s17_A,
                         s17_B = formularioForm3.s17_B,
                         s17_C = formularioForm3.s17_C,
@@ -1665,7 +1669,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s18DB.s18_4_F_f = formularioForm3.s18_4_F_f
                 s18DB.s18_4_1 = formularioForm3.s18_4_1
             } else {
-                val s18FormularioDAO = S18Formulario(processId = formularioForm3.processId,
+                val s18FormularioDAO = S18Formulario(
+                        processId = formularioForm3.processId,
                         s18_1 = formularioForm3.s18_1,
                         s18_1_A = formularioForm3.s18_1_A,
                         s18_1_B = formularioForm3.s18_1_B,
@@ -1745,7 +1750,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s19DB.s19_2_T = formularioForm3.s19_2_T
                 s19DB.s19_2_T_f = formularioForm3.s19_2_T_f
             } else {
-                val s19FormularioDAO = S19Formulario(processId = formularioForm3.processId,
+                val s19FormularioDAO = S19Formulario(
+                        processId = formularioForm3.processId,
                         s19_1 = formularioForm3.s19_1,
                         s19_1_A = formularioForm3.s19_1_A,
                         s19_1_B = formularioForm3.s19_1_B,
@@ -1754,7 +1760,7 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                         s19_1_E = formularioForm3.s19_1_E,
                         s19_1_F = formularioForm3.s19_1_F,
                         s19_1_G = formularioForm3.s19_1_G,
-                        s19_1_H = formularioForm3.s19_1_H ,
+                        s19_1_H = formularioForm3.s19_1_H,
                         s19_1_I = formularioForm3.s19_1_I,
                         s19_1_J = formularioForm3.s19_1_J,
                         s19_1_K = formularioForm3.s19_1_K,
@@ -1804,12 +1810,13 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s20DB.s20_2 = formularioForm3.s20_2
                 s20DB.s20_2_1 = formularioForm3.s20_2_1
             } else {
-                val s20FormularioDAO = S20Formulario(processId = formularioForm3.processId,
+                val s20FormularioDAO = S20Formulario(
+                        processId = formularioForm3.processId,
                         s20_1_A = formularioForm3.s20_1_A,
                         s20_1_B = formularioForm3.s20_1_B,
                         s20_1_C = formularioForm3.s20_1_C,
                         s20_1_D = formularioForm3.s20_1_D,
-                        s20_1_E =  formularioForm3.s20_1_E,
+                        s20_1_E = formularioForm3.s20_1_E,
                         s20_1_F = formularioForm3.s20_1_F,
                         s20_1_F_f = formularioForm3.s20_1_F_f,
                         s20_1_1 = formularioForm3.s20_1_1,
@@ -1852,7 +1859,8 @@ public class FormularioController(val s1FormularioRepository: S1FormularioReposi
                 s21DB.s21_4_1_A = formularioForm3.s21_4_1_A
                 s21DB.s21_4_1_B = formularioForm3.s21_4_1_B
             } else {
-                val s21FormularioDAO = S21Formulario(processId = formularioForm3.processId,
+                val s21FormularioDAO = S21Formulario(
+                        processId = formularioForm3.processId,
                         s21_1_A = formularioForm3.s21_1_A,
                         s21_1_B = formularioForm3.s21_1_B,
                         s21_1_C = formularioForm3.s21_1_C,
