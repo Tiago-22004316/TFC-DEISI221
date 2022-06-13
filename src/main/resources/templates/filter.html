@@ -27,6 +27,7 @@
                 <input class="form-control" type="text" name="values" th:value="${values.get(iterStat.index)}"/>
             </div>
         </div>
+
 <!--        <div>-->
 <!--            <input type="text" name="fields" th:value="${fields[1]}" />-->
 <!--            <label>=</label>-->
@@ -36,7 +37,6 @@
             <input type="submit" class="btn btn-primary" value="filtrar">
         </div>
     </form>
-    </br>
     <div>
         <table name="tabela" class="table" th:if="${!processos.isEmpty()}">
             <thead>
