@@ -6,7 +6,6 @@ import org.springframework.ui.ModelMap
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
-import pt.ulusofona.tfc.trabalho.dao.S1Formulario
 import pt.ulusofona.tfc.trabalho.repository.S1FormularioRepository
 import java.security.Principal
 
