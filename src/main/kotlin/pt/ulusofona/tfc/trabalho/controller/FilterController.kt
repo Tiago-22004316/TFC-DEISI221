@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
+import pt.ulusofona.tfc.trabalho.dao.S1Formulario
 import pt.ulusofona.tfc.trabalho.repository.S1FormularioRepository
 import java.security.Principal
 
@@ -76,13 +77,13 @@ class FilterController(val jdbcTemplate: JdbcTemplate,
 
         // adaptar para usar os fields e os values para construir a string sql
         //val sql = "SELECT process_id FROM s5formulario where s5_1_1_a = 0"
-        if (query != ""){
+        val processos = if (query != ""){
             val processoIds: List<String> = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
-            val processos = processoIds.map { s1FormularioRepository.findByProcessId(it)!! }
-            model["processos"] = processos
-        }
+            processoIds.map { s1FormularioRepository.findByProcessId(it)!! }
+        } else {}
 
 
+        model["processos"] = processos
         // adiciono sempre um novo campo vazio
         val fieldsPlusOne = fields?.toMutableList() ?: ArrayList()
         fieldsPlusOne.add("")
