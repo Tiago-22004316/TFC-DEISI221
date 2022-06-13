@@ -44,7 +44,7 @@ public class FormularioController(
         val s21FormularioRepository: S21FormularioRepository,
 )
 {
-
+    
 
     @GetMapping(value = ["/list"])
     fun listProcesso(@RequestParam("numProcesso") numProcesso: String?,model: ModelMap, principal: Principal?): String {
@@ -679,7 +679,7 @@ public class FormularioController(
                 return "new-formulario-form1"
             }
 
-            if (formularioForm1.s3_4_1.isBlank() && !formularioForm1.s3_4_2){
+            if (formularioForm1.s3_4_1.isBlank() && !formularioForm1.s3_4_2 && formularioForm1.s3_4_B){
                 bindingResult.rejectValue("s3_4_1", "inexistentDate", "Erro: A data tem que estar preenchida ou dada indicação que não é possível apurar")
                 return "new-formulario-form1"
             }

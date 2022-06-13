@@ -18,15 +18,13 @@ class FilterController(val jdbcTemplate: JdbcTemplate,
     fun filter(@RequestParam("fields") fields: List<String>?,
                @RequestParam("values") values: List<String>?,
                model: ModelMap, principal: Principal?): String {
-        var valor = false
-        if (values != null){
-            valor = values[values.size - 1] == "SIM"
-        }
+
+
+        val valor : Boolean = if (values != null && values[values.size - 1] == "SIM") true else false
 
         var campo = ""
         var saberForm = ""
         var query = ""
-        // adaptar para usar os fields e os values para construir a string sql
         if (fields != null && values != null){
             campo = fields[fields.size - 1].replace(".","_")
             saberForm = campo[0].toString() + campo[1] + campo[2]
@@ -74,9 +72,9 @@ class FilterController(val jdbcTemplate: JdbcTemplate,
             }
         }
 
-
-        val sql = "SELECT process_id FROM s5formulario where s5_1_1_a = 0"
-        val processoIds: List<String> = jdbcTemplate.query(sql) { rs, _ -> rs.getString("process_id") }
+        // adaptar para usar os fields e os values para construir a string sql
+        //val sql = "SELECT process_id FROM s5formulario where s5_1_1_a = 0"
+        val processoIds: List<String> = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
 
         val processos = processoIds.map { s1FormularioRepository.findByProcessId(it)!! }
 
