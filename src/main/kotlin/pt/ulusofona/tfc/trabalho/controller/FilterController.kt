@@ -79,7 +79,9 @@ class FilterController(val jdbcTemplate: JdbcTemplate,
         val processos = if (query != ""){
             val processoIds: List<String> = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
             processoIds.map { s1FormularioRepository.findByProcessId(it)!! }
-        } else {}
+        } else {
+            emptyList()
+        }
 
 
         model["processos"] = processos
