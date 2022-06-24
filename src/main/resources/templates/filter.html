@@ -15,10 +15,14 @@
     <div class="alert alert-info" th:if="${message}" th:text="${message}">
         Message...
     </div>
-    <div class="alert alert-error" th:if="${error}" th:text="${error}">
+    <div class="alert alert-danger" th:if="${error}" th:text="${error}">
         Message...
     </div>
     <h1 class="page-header">Listagem de processos</h1>
+    <div class="alert alert-info">
+        Os filtros devem estar neste formato sX.X.X = SIM ou sX.X.X = NÃO<br/>
+        Exemplos: s5.1.2.C=SIM ou s10.1=NÃO
+    </div>
     <form th:action="@{/filter/new}" method="get" class="form-horizontal">
         <div class="form-inline" th:each="field, iterStat: ${fields}" style="padding-bottom: 10px">
             <div class="form-group">
@@ -38,6 +42,9 @@
         </div>
     </form>
     <div>
+        <!--Número de processos-->
+        <p th:if="${!processos.isEmpty()}" class="pull-right">Nº de processos : <bold th:text="${processos.size}"></bold></p>
+
         <table name="tabela" class="table" th:if="${!processos.isEmpty()}">
             <thead>
             <tr>
