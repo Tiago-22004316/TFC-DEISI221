@@ -15,17 +15,17 @@ import java.security.Principal
 @Controller
 @RequestMapping("/filter")
 class FilterController(
-    val jdbcTemplate: JdbcTemplate,
-    val s1FormularioRepository: S1FormularioRepository
+        val jdbcTemplate: JdbcTemplate,
+        val s1FormularioRepository: S1FormularioRepository
 ) {
 
     val LOG = LoggerFactory.getLogger(this.javaClass.name)
 
     @GetMapping(value = ["/new"])
     fun filter(
-        @RequestParam("fields") fields: List<String>?,
-        @RequestParam("values") values: List<String>?,
-        model: ModelMap, principal: Principal?
+            @RequestParam("fields") fields: List<String>?,
+            @RequestParam("values") values: List<String>?,
+            model: ModelMap, principal: Principal?
     ): String {
 
 
