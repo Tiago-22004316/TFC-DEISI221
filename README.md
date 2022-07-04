@@ -33,4 +33,4 @@ grant all privileges on trabjus.* to 'trabjus'@'localhost';
 
 
 ## Vídeo no youtube sobre a aplicação
-* https://youtu.be/H5koQdvP3pM
+* https://youtu.be/HKOnL0BNuwQ
