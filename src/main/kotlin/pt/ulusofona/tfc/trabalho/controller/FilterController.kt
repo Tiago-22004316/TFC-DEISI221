@@ -35,6 +35,7 @@ class FilterController(
         var campo = ""
         var saberForm = ""
         var query = ""
+        var listaDeStrings = HashMap<Int,ArrayList<String>>()
 
         if (fields != null && values != null) {
 
@@ -49,58 +50,232 @@ class FilterController(
                     campo = field.replace(".", "_")
                     valor = values[i] == "SIM"
                     saberForm = campo[0].toString() + campo[1] + campo[2]
+                    var listinha = ArrayList<String>()
                     when (saberForm) {
-                        "s2_" -> query = "SELECT process_id FROM s2formulario where $campo = $valor"
+                        "s2_" -> {
+                            if (listaDeStrings.containsKey(2)){
+                                listaDeStrings[2]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(2,listinha)
+                            }
+                        }
 
-                        "s3_" -> query = "SELECT process_id FROM s3formulario where $campo = $valor"
+                        "s3_" -> {
+                            if (listaDeStrings.containsKey(3)){
+                                listaDeStrings[3]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(3,listinha)
+                            }
+                        }
 
-                        "s4_" -> query = "SELECT process_id FROM s4formulario where $campo = $valor"
+                        "s4_" -> {
+                            if (listaDeStrings.containsKey(4)){
+                                listaDeStrings[4]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(4,listinha)
+                            }
+                        }
 
-                        "s5_" -> query = "SELECT process_id FROM s5formulario where $campo = $valor"
+                        "s5_" -> {
+                            if (listaDeStrings.containsKey(5)){
+                                listaDeStrings[5]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(5,listinha)
+                            }
+                        }
 
-                        "s6_" -> query = "SELECT process_id FROM s6formulario where $campo = $valor"
+                        "s6_" -> {
+                            if (listaDeStrings.containsKey(6)){
+                                listaDeStrings[6]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(6,listinha)
+                            }
+                        }
 
-                        "s7_" -> query = "SELECT process_id FROM s7formulario where $campo = $valor"
+                        "s7_" -> {
+                            if (listaDeStrings.containsKey(7)){
+                                listaDeStrings[7]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(7,listinha)
+                            }
+                        }
 
-                        "s8_" -> query = "SELECT process_id FROM s8formulario where $campo = $valor"
+                        "s8_" -> {
+                            if (listaDeStrings.containsKey(8)){
+                                listaDeStrings[8]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(8,listinha)
+                            }
+                        }
 
-                        "s9_" -> query = "SELECT process_id FROM s9formulario where $campo = $valor"
+                        "s9_" -> {
+                            if (listaDeStrings.containsKey(9)){
+                                listaDeStrings[9]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(9,listinha)
+                            }
+                        }
 
-                        "s10" -> query = "SELECT process_id FROM s10formulario where $campo = $valor"
+                        "s10" -> {
+                            if (listaDeStrings.containsKey(10)){
+                                listaDeStrings[10]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(10,listinha)
+                            }
+                        }
 
-                        "s11" -> query = "SELECT process_id FROM s11formulario where $campo = $valor"
+                        "s11" -> {
+                            if (listaDeStrings.containsKey(11)){
+                                listaDeStrings[11]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(11,listinha)
+                            }
+                        }
 
-                        "s12" -> query = "SELECT process_id FROM s12formulario where $campo = $valor"
+                        "s12" -> {
+                            if (listaDeStrings.containsKey(12)){
+                                listaDeStrings[12]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(12,listinha)
+                            }
+                        }
 
-                        "s13" -> query = "SELECT process_id FROM s13formulario where $campo = $valor"
+                        "s13" -> {
+                            if (listaDeStrings.containsKey(13)){
+                                listaDeStrings[13]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(13,listinha)
+                            }
+                        }
 
-                        "s14" -> query = "SELECT process_id FROM s14formulario where $campo = $valor"
+                        "s14" -> {
+                            if (listaDeStrings.containsKey(14)){
+                                listaDeStrings[14]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(14,listinha)
+                            }
+                        }
 
-                        "s15" -> query = "SELECT process_id FROM s15formulario where $campo = $valor"
+                        "s15" -> {
+                            if (listaDeStrings.containsKey(15)){
+                                listaDeStrings[15]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(15,listinha)
+                            }
+                        }
 
-                        "s16" -> query = "SELECT process_id FROM s16formulario where $campo = $valor"
+                        "s16" -> {
+                            if (listaDeStrings.containsKey(16)){
+                                listaDeStrings[16]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(16,listinha)
+                            }
+                        }
 
-                        "s17" -> query = "SELECT process_id FROM s17formulario where $campo = $valor"
+                        "s17" -> {
+                            if (listaDeStrings.containsKey(17)){
+                                listaDeStrings[17]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(17,listinha)
+                            }
+                        }
 
-                        "s18" -> query = "SELECT process_id FROM s18formulario where $campo = $valor"
+                        "s18" -> {
+                            if (listaDeStrings.containsKey(18)){
+                                listaDeStrings[18]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(18,listinha)
+                            }
+                        }
 
-                        "s19" -> query = "SELECT process_id FROM s19formulario where $campo = $valor"
+                        "s19" -> {
+                            if (listaDeStrings.containsKey(19)){
+                                listaDeStrings[19]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(19,listinha)
+                            }
+                        }
 
-                        "s20" -> query = "SELECT process_id FROM s20formulario where $campo = $valor"
+                        "s20" -> {
+                            if (listaDeStrings.containsKey(20)){
+                                listaDeStrings[20]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(20,listinha)
+                            }
+                        }
 
-                        "s21" -> query = "SELECT process_id FROM s21formulario where $campo = $valor"
+                        "s21" -> {
+                            if (listaDeStrings.containsKey(21)){
+                                listaDeStrings[21]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(21,listinha)
+                            }
+                        }
 
-                        else -> query = "SELECT process_id FROM s1formulario where $campo != NULL "
-                    }
-                    try {
-                        LOG.info(query)
-                        processoIds += jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
-                    } catch (e: BadSqlGrammarException) {
-                        model["error"] = "O campo indicado não existe"
-                        LOG.error("O campo indicado não existe")
-                        break
+                        else -> break
                     }
                     i++
+                }
+                var verifica = false
+                var campo = ArrayList<String>(1)
+               for (i in 2..21){
+                   var listinha = ArrayList<String>()
+                   if (listaDeStrings.containsKey(i) && !verifica){
+                       listinha = listaDeStrings.get(i)!!
+                       campo[0] = "s$i" + "fomulario"
+                       var campoString = campo[0]
+                       query = "SELECT process_id FROM $campoString where "
+                       for (o in 0..listinha.size - 1){
+                           var string =  listinha[o]
+                           if (o < listinha.size - 1){
+                               query += "$string,"
+                           } else {
+                               query += "$string"
+                           }
+                       }
+                       verifica = true
+                   } else if (listaDeStrings.containsKey(i) && verifica){
+                       var campoString = "s$i" + "fomulario"
+                       var campoStringIni = campo[0]
+                       listinha = listaDeStrings.get(i)!!
+                       query += " INNER JOIN $campoString ON campoStringIni.CustomerID = $campoString.CustomerID where "
+                       for (o in 0..listinha.size - 1){
+                           var string =  listinha[o]
+                           if (o < listinha.size - 1){
+                               query += "$string,"
+                           } else {
+                               query += "$string"
+                           }
+                       }
+                   }
+               }
+
+                try {
+                    LOG.info(query)
+                    processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
+                } catch (e: BadSqlGrammarException) {
+                    model["error"] = "O campo indicado não existe"
+                    LOG.error("O campo indicado não existe")
                 }
             }
         }
