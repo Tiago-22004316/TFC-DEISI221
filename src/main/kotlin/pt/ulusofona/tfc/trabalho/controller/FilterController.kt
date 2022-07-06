@@ -238,37 +238,39 @@ class FilterController(
                 }
                 var verifica = false
                 var campoList = ArrayList<String>(1)
-               for (i in 2..21){
-                   var listinha = ArrayList<String>()
-                   if (listaDeStrings.containsKey(i) && !verifica){
-                       listinha = listaDeStrings.get(i)!!
-                       campoList[0] = "s$i" + "fomulario"
-                       var campoString = campo[0]
-                       query = "SELECT process_id FROM $campoString where "
-                       for (o in 0..listinha.size - 1){
-                           var string =  listinha[o]
-                           if (o < listinha.size - 1){
-                               query += "$string,"
-                           } else {
-                               query += "$string"
-                           }
-                       }
-                       verifica = true
-                   } else if (listaDeStrings.containsKey(i) && verifica){
-                       var campoString = "s$i" + "fomulario"
-                       var campoStringIni = campoList[0]
-                       listinha = listaDeStrings.get(i)!!
-                       query += " INNER JOIN $campoString ON $campoStringIni.process_id = $campoString.process_id where "
-                       for (o in 0..listinha.size - 1){
-                           var string =  listinha[o]
-                           if (o < listinha.size - 1){
-                               query += "$string,"
-                           } else {
-                               query += "$string"
-                           }
-                       }
-                   }
-               }
+                for (i in 2..21){
+                    var listinha = ArrayList<String>()
+                    if (listaDeStrings.containsKey(i) && !verifica){
+                        listinha = listaDeStrings.get(i)!!
+                        campoList.add("s$i" + "formulario")
+                        var campoString = campoList[0]
+                        println(campoString)
+                        query = "SELECT process_id FROM $campoString where "
+                        for (o in 0..listinha.size - 1){
+                            var string =  listinha[o]
+                            if (o < listinha.size - 1){
+                                query += "$string AND "
+                            } else {
+                                query += "$string"
+                            }
+                        }
+                        verifica = true
+                    } else if (listaDeStrings.containsKey(i) && verifica){
+                        var campoString = "s$i" + "formulario"
+                        var campoStringIni = campoList[0]
+                        listinha = listaDeStrings.get(i)!!
+                        query += " INNER JOIN $campoString ON $campoStringIni.process_id = $campoString.process_id where "
+                        for (o in 0..listinha.size - 1){
+                            var string =  listinha[o]
+                            if (o < listinha.size - 1){
+                                query += "$string AND "
+                            } else {
+                                query += "$string"
+                            }
+                        }
+                    }
+                }
+                println(query)
 
                 try {
                     LOG.info(query)
