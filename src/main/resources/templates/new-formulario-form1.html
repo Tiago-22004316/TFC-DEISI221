@@ -32,7 +32,7 @@
                     <option value="LisboaOeste" th:selected="${formularioForm1.comarca=='LisboaOeste'}">Comarca de Lisboa Oeste</option>
                     <option value="LisboaNorte" th:selected="${formularioForm1.comarca=='LisboaNorte'}">Comarca de Lisboa Norte</option>
                     <option value="Porto" th:selected="${formularioForm1.comarca=='Porto'}">Comarca do Porto</option>
-                    <option value="Porto Este" th:selected="${formularioForm1.comarca=='Porto Este'}">Comarca de Porto Este</option>
+                    <option value="PortoEste" th:selected="${formularioForm1.comarca=='PortoEste'}">Comarca de Porto Este</option>
                 </select>
                 <p class="help-block" th:if="${#fields.hasErrors('comarca')}" th:errors="*{comarca}">Error</p>
             </div>
