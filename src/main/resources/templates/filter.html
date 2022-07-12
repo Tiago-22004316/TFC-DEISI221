@@ -21,7 +21,7 @@
     <h1 class="page-header">Listagem de processos</h1>
     <div class="alert alert-info">
         Os filtros devem estar neste formato sX.X.X = SIM ou sX.X.X = NÃO<br/>
-        Exemplos: s5.1.2.C=SIM ou s10.1=NÃO
+        Exemplos: s5.1.2.C=SIM ou s10.1=NÃO ou comarca = Lisboa Norte
     </div>
     <form th:action="@{/filter/new}" method="get" class="form-horizontal">
         <div class="form-inline" th:each="field, iterStat: ${fields}" style="padding-bottom: 10px">

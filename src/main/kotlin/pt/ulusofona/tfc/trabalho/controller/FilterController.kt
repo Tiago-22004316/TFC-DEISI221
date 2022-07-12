@@ -51,7 +51,7 @@ class FilterController(
                     valor = values[i] == "SIM"
                     saberForm = campo[0].toString() + campo[1] + campo[2]
                     var listinha = ArrayList<String>()
-                    when (saberForm) {
+                    when (saberForm.toLowerCase()) {
                         "s2_" -> {
                             if (listaDeStrings.containsKey(2)){
                                 listaDeStrings[2]!!.add("$campo = $valor")
@@ -229,6 +229,15 @@ class FilterController(
                             } else {
                                 listinha.add("$campo = $valor")
                                 listaDeStrings.put(21,listinha)
+                            }
+                        }
+
+                        "com" -> {
+                            if (listaDeStrings.containsKey(1)){
+                                listaDeStrings[1]!!.add("$campo = $valor")
+                            } else {
+                                listinha.add("$campo = $valor")
+                                listaDeStrings.put(1,listinha)
                             }
                         }
 
