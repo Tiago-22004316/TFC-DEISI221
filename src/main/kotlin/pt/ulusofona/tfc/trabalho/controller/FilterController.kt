@@ -42,9 +42,9 @@ class FilterController(
 
             if (fields.isEmpty() || values.isEmpty()) {
                 model["error"] = "Erro: Tem que preencher um filtro"
-            } else if (!fields.all { it.startsWith("s") && it.contains(".") }) {
+            } else if (!fields.all { (it.startsWith("s") && it.contains(".")) || it.startsWith("c") }) {
                 model["error"] = "Erro: Filtro mal preenchido"
-            } else if (!values.all { it == "SIM" || it == "NÃO" }) {
+            } else if (!values.all { it == "SIM" || it == "NÃO" || it == "Lisboa" || it == "Lisboa Oeste" || it == "Lisboa Norte" || it == "Porto" || it == "Porto Este"}) {
                 model["error"] = "Erro: Os valores têm que ser SIM ou NÃO"
             } else {
                 for (field in fields) {
@@ -52,7 +52,8 @@ class FilterController(
                     if (campo != "comarca"){
                         valor = values[i] == "SIM"
                     } else {
-                        valorComarca = values[i]
+                        var value = values[i].replace(" ","")
+                        valorComarca = """'$value'"""
                     }
                     saberForm = campo[0].toString() + campo[1] + campo[2]
                     var listinha = ArrayList<String>()
@@ -250,9 +251,10 @@ class FilterController(
                     }
                     i++
                 }
+
                 var verifica = false
                 var campoList = ArrayList<String>(1)
-                for (i in 2..21){
+                for (i in 1..21){
                     var listinha = ArrayList<String>()
                     if (listaDeStrings.containsKey(i) && !verifica){
                         listinha = listaDeStrings.get(i)!!
@@ -283,6 +285,7 @@ class FilterController(
                         }
                     }
                 }
+                println(query)
 
                 try {
                     LOG.info(query)
