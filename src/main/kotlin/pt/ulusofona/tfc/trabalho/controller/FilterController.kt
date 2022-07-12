@@ -31,6 +31,7 @@ class FilterController(
 
         var processoIds: List<String> = emptyList()
         var valor: Boolean = false
+        var valorComarca = ""
         var i = 0
         var campo = ""
         var saberForm = ""
@@ -48,7 +49,11 @@ class FilterController(
             } else {
                 for (field in fields) {
                     campo = field.replace(".", "_").toLowerCase()
-                    valor = values[i] == "SIM"
+                    if (campo != "comarca"){
+                        valor = values[i] == "SIM"
+                    } else {
+                        valorComarca = values[i]
+                    }
                     saberForm = campo[0].toString() + campo[1] + campo[2]
                     var listinha = ArrayList<String>()
                     when (saberForm.toLowerCase()) {
@@ -234,9 +239,9 @@ class FilterController(
 
                         "com" -> {
                             if (listaDeStrings.containsKey(1)){
-                                listaDeStrings[1]!!.add("$campo = $valor")
+                                listaDeStrings[1]!!.add("$campo = $valorComarca")
                             } else {
-                                listinha.add("$campo = $valor")
+                                listinha.add("$campo = $valorComarca")
                                 listaDeStrings.put(1,listinha)
                             }
                         }
@@ -253,7 +258,6 @@ class FilterController(
                         listinha = listaDeStrings.get(i)!!
                         campoList.add("s$i" + "formulario")
                         var campoString = campoList[0]
-                        println(campoString)
                         query = "SELECT process_id FROM $campoString where "
                         for (o in 0..listinha.size - 1){
                             var string =  listinha[o]
@@ -279,7 +283,6 @@ class FilterController(
                         }
                     }
                 }
-                println(query)
 
                 try {
                     LOG.info(query)
