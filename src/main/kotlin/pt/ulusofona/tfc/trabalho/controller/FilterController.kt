@@ -47,7 +47,7 @@ class FilterController(
                 model["error"] = "Erro: Os valores têm que ser SIM ou NÃO"
             } else {
                 for (field in fields) {
-                    campo = field.replace(".", "_")
+                    campo = field.replace(".", "_").toLowerCase()
                     valor = values[i] == "SIM"
                     saberForm = campo[0].toString() + campo[1] + campo[2]
                     var listinha = ArrayList<String>()
