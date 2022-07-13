@@ -42,9 +42,9 @@ class FilterController(
 
             if (fields.isEmpty() || values.isEmpty()) {
                 model["error"] = "Erro: Tem que preencher um filtro"
-            } else if (!fields.all { it.startsWith("s") && it.contains(".") }) {
+            } else if (!fields.all { it.startsWith("s") && it.contains(".") || it == "comarca" }) {
                 model["error"] = "Erro: Filtro mal preenchido"
-            } else if (!values.all { it == "SIM" || it == "NÃO" }) {
+            } else if (!values.filterIndexed { idx, _ -> idx != fields.indexOf("comarca") }.all { it == "SIM" || it == "NÃO" }) {
                 model["error"] = "Erro: Os valores têm que ser SIM ou NÃO"
             } else {
                 for (field in fields) {
@@ -239,9 +239,9 @@ class FilterController(
 
                         "com" -> {
                             if (listaDeStrings.containsKey(1)){
-                                listaDeStrings[1]!!.add("$campo = $valorComarca")
+                                listaDeStrings[1]!!.add("$campo = '$valorComarca'")
                             } else {
-                                listinha.add("$campo = $valorComarca")
+                                listinha.add("$campo = '$valorComarca'")
                                 listaDeStrings.put(1,listinha)
                             }
                         }
@@ -252,7 +252,7 @@ class FilterController(
                 }
                 var verifica = false
                 var campoList = ArrayList<String>(1)
-                for (i in 2..21){
+                for (i in 1..21){
                     var listinha = ArrayList<String>()
                     if (listaDeStrings.containsKey(i) && !verifica){
                         listinha = listaDeStrings.get(i)!!
