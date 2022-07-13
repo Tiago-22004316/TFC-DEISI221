@@ -252,7 +252,7 @@ class FilterController(
                 }
                 var verifica = false
                 var campoList = ArrayList<String>(1)
-                for (i in 2..21){
+                for (i in 1..21){
                     var listinha = ArrayList<String>()
                     if (listaDeStrings.containsKey(i) && !verifica){
                         listinha = listaDeStrings.get(i)!!
