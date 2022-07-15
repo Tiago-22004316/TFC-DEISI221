@@ -23,13 +23,13 @@ class FilterController(
 
     @GetMapping(value = ["/new"])
     fun filter(
-            @RequestParam("fields") fields: List<String>?,
-            @RequestParam("values") values: List<String>?,
+            @RequestParam("fields") fieldsParam: List<String>?,
+            @RequestParam("values") valuesParam: List<String>?,
             model: ModelMap, principal: Principal?
     ): String {
 
 
-        var processoIds: List<String> = emptyList()
+        var intersectedProcessoIds = emptySet<String>()
         var valor: Boolean = false
         var valorComarca = ""
         var i = 0
@@ -38,7 +38,17 @@ class FilterController(
         var query = ""
         var listaDeStrings = HashMap<Int,ArrayList<String>>()
 
+        // need to convert params to mutable lists so that I can change them later
+        val fields = fieldsParam?.toMutableList()
+        val values = valuesParam?.toMutableList()
+
         if (fields != null && values != null) {
+
+            // let's remove the last empty field/value
+            if (fields.size > 1 && values.size > 1 && fields.last().isEmpty() && values.last().isEmpty()) {
+                fields.removeLast()
+                values.removeLast()
+            }
 
             if (fields.isEmpty() || values.isEmpty()) {
                 model["error"] = "Erro: Tem que preencher um filtro"
@@ -250,68 +260,87 @@ class FilterController(
                     }
                     i++
                 }
-                var verifica = false
-                var campoList = ArrayList<String>(1)
-                for (i in 1..21){
-                    var listinha = ArrayList<String>()
-                    if (listaDeStrings.containsKey(i) && !verifica){
-                        listinha = listaDeStrings.get(i)!!
-                        campoList.add("s$i" + "formulario")
-                        var campoString = campoList[0]
-                        query = "SELECT process_id FROM $campoString where "
-                        for (o in 0..listinha.size - 1){
-                            var string =  listinha[o]
-                            if (o < listinha.size - 1){
-                                query += "$string AND "
-                            } else {
-                                query += "$string"
-                            }
-                        }
-                        verifica = true
-                    } else if (listaDeStrings.containsKey(i) && verifica){
-                        var campoString = "s$i" + "formulario"
-                        var campoStringIni = campoList[0]
-                        listinha = listaDeStrings.get(i)!!
-                        query += " INNER JOIN $campoString ON $campoStringIni.process_id = $campoString.process_id where "
-                        for (o in 0..listinha.size - 1){
-                            var string =  listinha[o]
-                            if (o < listinha.size - 1){
-                                query += "$string AND "
-                            } else {
-                                query += "$string"
-                            }
+
+                val allProcessoIds = mutableListOf<List<String>>() // uma lista de listas de processoId's
+                for (formularioId in listaDeStrings.keys) {
+                    for (whereClause in listaDeStrings[formularioId]!!) {
+                        val query = "SELECT process_id FROM s${formularioId}Formulario where ${whereClause}"
+                        try {
+                            LOG.info(query)
+                            val processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
+                            allProcessoIds.add(processoIds)
+                        } catch (e: BadSqlGrammarException) {
+                            model["error"] = "O campo indicado não existe"
+                            LOG.error("O campo indicado não existe")
                         }
                     }
                 }
 
-                try {
-                    LOG.info(query)
-                    processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
-                } catch (e: BadSqlGrammarException) {
-                    model["error"] = "O campo indicado não existe"
-                    LOG.error("O campo indicado não existe")
+                // insersect all the lists within allProcessoIds
+                intersectedProcessoIds = allProcessoIds[0].toSet()
+                for (i in 1 until allProcessoIds.size) {
+                    intersectedProcessoIds = intersectedProcessoIds.intersect(allProcessoIds[i].toSet())
                 }
+
+//                var verifica = false
+//                var campoList = ArrayList<String>(1)
+//                for (i in 1..21){
+//                    var listinha = ArrayList<String>()
+//                    if (listaDeStrings.containsKey(i) && !verifica){
+//                        listinha = listaDeStrings.get(i)!!
+//                        campoList.add("s$i" + "formulario")
+//                        var campoString = campoList[0]
+//                        query = "SELECT process_id FROM $campoString where "
+//                        for (o in 0..listinha.size - 1){
+//                            var string =  listinha[o]
+//                            if (o < listinha.size - 1){
+//                                query += "$string AND "
+//                            } else {
+//                                query += "$string"
+//                            }
+//                        }
+//                        verifica = true
+//                    } else if (listaDeStrings.containsKey(i) && verifica){
+//                        var campoString = "s$i" + "formulario"
+//                        var campoStringIni = campoList[0]
+//                        listinha = listaDeStrings.get(i)!!
+//                        query += " INNER JOIN $campoString ON $campoStringIni.process_id = $campoString.process_id where "
+//                        for (o in 0..listinha.size - 1){
+//                            var string =  listinha[o]
+//                            if (o < listinha.size - 1){
+//                                query += "$string AND "
+//                            } else {
+//                                query += "$string"
+//                            }
+//                        }
+//                    }
+//                }
+//
+//                try {
+//                    LOG.info(query)
+//                    processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
+//                } catch (e: BadSqlGrammarException) {
+//                    model["error"] = "O campo indicado não existe"
+//                    LOG.error("O campo indicado não existe")
+//                }
             }
         }
 
-        // adaptar para usar os fields e os values para construir a string sql
-        //val sql = "SELECT process_id FROM s5formulario where s5_1_1_a = 0"
-        val processos = if (processoIds.isNotEmpty()) {
-            processoIds.map { s1FormularioRepository.findByProcessId(it)!! }
+        val processos = if (intersectedProcessoIds.isNotEmpty()) {
+            intersectedProcessoIds.map { s1FormularioRepository.findByProcessId(it)!! }
         } else {
             emptyList()
         }
 
-
         model["processos"] = processos
         // adiciono sempre um novo campo vazio
-        val fieldsPlusOne = fields?.toMutableList() ?: ArrayList()
+        val fieldsPlusOne = fields ?: ArrayList()
         if (model["error"] == null) {
             fieldsPlusOne.add("")
         }
 
         // adiciono sempre um novo valor vazio
-        val valuesPlusOne = values?.toMutableList() ?: ArrayList()
+        val valuesPlusOne = values ?: ArrayList()
         if (model["error"] == null) {
             valuesPlusOne.add("")
         }
