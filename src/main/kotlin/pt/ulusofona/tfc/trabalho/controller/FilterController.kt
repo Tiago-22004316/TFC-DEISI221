@@ -264,7 +264,7 @@ class FilterController(
                 val allProcessoIds = mutableListOf<List<String>>() // uma lista de listas de processoId's
                 for (formularioId in listaDeStrings.keys) {
                     for (whereClause in listaDeStrings[formularioId]!!) {
-                        val query = "SELECT process_id FROM s${formularioId}Formulario where ${whereClause}"
+                        val query = "SELECT process_id FROM s${formularioId}formulario where ${whereClause}"
                         try {
                             LOG.info(query)
                             val processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
@@ -277,7 +277,7 @@ class FilterController(
                 }
 
                 // insersect all the lists within allProcessoIds
-                intersectedProcessoIds = allProcessoIds[0].toSet()
+                intersectedProcessoIds = if (allProcessoIds.size > 0) allProcessoIds[0].toSet() else emptySet()
                 for (i in 1 until allProcessoIds.size) {
                     intersectedProcessoIds = intersectedProcessoIds.intersect(allProcessoIds[i].toSet())
                 }
