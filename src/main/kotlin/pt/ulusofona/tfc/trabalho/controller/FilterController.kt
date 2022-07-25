@@ -54,6 +54,8 @@ class FilterController(
                 model["error"] = "Erro: Tem que preencher um filtro"
             } else if (!fields.all { it.startsWith("s") && it.contains(".") || it == "comarca" }) {
                 model["error"] = "Erro: Filtro mal preenchido"
+            } else if (!fields.all { it == "juizo" }) {
+                model["error"] = "Erro: Filtro inexistente"
             } else if (!values.filterIndexed { idx, _ -> idx != fields.indexOf("comarca") }.all { it == "SIM" || it == "NÃO" }) {
                 model["error"] = "Erro: Os valores têm que ser SIM ou NÃO"
             } else {
@@ -275,54 +277,13 @@ class FilterController(
                         }
                     }
                 }
-
+                println(query)
                 // insersect all the lists within allProcessoIds
                 intersectedProcessoIds = if (allProcessoIds.size > 0) allProcessoIds[0].toSet() else emptySet()
                 for (i in 1 until allProcessoIds.size) {
                     intersectedProcessoIds = intersectedProcessoIds.intersect(allProcessoIds[i].toSet())
                 }
 
-//                var verifica = false
-//                var campoList = ArrayList<String>(1)
-//                for (i in 1..21){
-//                    var listinha = ArrayList<String>()
-//                    if (listaDeStrings.containsKey(i) && !verifica){
-//                        listinha = listaDeStrings.get(i)!!
-//                        campoList.add("s$i" + "formulario")
-//                        var campoString = campoList[0]
-//                        query = "SELECT process_id FROM $campoString where "
-//                        for (o in 0..listinha.size - 1){
-//                            var string =  listinha[o]
-//                            if (o < listinha.size - 1){
-//                                query += "$string AND "
-//                            } else {
-//                                query += "$string"
-//                            }
-//                        }
-//                        verifica = true
-//                    } else if (listaDeStrings.containsKey(i) && verifica){
-//                        var campoString = "s$i" + "formulario"
-//                        var campoStringIni = campoList[0]
-//                        listinha = listaDeStrings.get(i)!!
-//                        query += " INNER JOIN $campoString ON $campoStringIni.process_id = $campoString.process_id where "
-//                        for (o in 0..listinha.size - 1){
-//                            var string =  listinha[o]
-//                            if (o < listinha.size - 1){
-//                                query += "$string AND "
-//                            } else {
-//                                query += "$string"
-//                            }
-//                        }
-//                    }
-//                }
-//
-//                try {
-//                    LOG.info(query)
-//                    processoIds = jdbcTemplate.query(query) { rs, _ -> rs.getString("process_id") }
-//                } catch (e: BadSqlGrammarException) {
-//                    model["error"] = "O campo indicado não existe"
-//                    LOG.error("O campo indicado não existe")
-//                }
             }
         }
 
